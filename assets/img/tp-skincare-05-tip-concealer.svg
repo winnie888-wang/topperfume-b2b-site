@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 980" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5f2ef"/><stop offset="1" stop-color="#f4ddd5"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".72"/><stop offset="1" stop-color="#e8faf5" stop-opacity=".35"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#2a171b" flood-opacity=".16"/></filter>
+  </defs>
+  <rect width="1200" height="980" fill="url(#bg)"/>
+  <circle cx="1010" cy="130" r="250" fill="#fff" opacity=".45"/>
+  <circle cx="145" cy="820" r="210" fill="#fff" opacity=".55"/>
+  <rect x="88" y="780" width="1024" height="42" rx="21" fill="#fff" opacity=".55"/>
+  
+  <g filter="url(#shadow)">
+    <g transform="translate(175 280) rotate(-11)">
+      <rect x="0" y="0" width="760" height="90" rx="45" fill="#2d2728"/>
+      <rect x="84" y="16" width="520" height="58" rx="28" fill="#d6b287"/>
+      <rect x="600" y="5" width="135" height="80" rx="36" fill="#111"/>
+      <text x="275" y="52" text-anchor="middle" font-family="Arial" font-size="26" fill="#2a171b" font-weight="700">COVER PERFECTION TIP CONCEALER</text>
+    </g>
+    <g transform="translate(260 430) rotate(-7)">
+      <rect x="0" y="0" width="760" height="90" rx="45" fill="#2d2728"/>
+      <rect x="84" y="16" width="520" height="58" rx="28" fill="#c99f73"/>
+      <rect x="600" y="5" width="135" height="80" rx="36" fill="#111"/>
+      <text x="275" y="52" text-anchor="middle" font-family="Arial" font-size="26" fill="#2a171b" font-weight="700">TOPPERFUME BEAUTY LABS</text>
+    </g>
+    <g transform="translate(165 585) rotate(-12)">
+      <rect x="0" y="0" width="760" height="90" rx="45" fill="#2d2728"/>
+      <rect x="84" y="16" width="520" height="58" rx="28" fill="#e0c09d"/>
+      <rect x="600" y="5" width="135" height="80" rx="36" fill="#111"/>
+      <text x="275" y="52" text-anchor="middle" font-family="Arial" font-size="26" fill="#2a171b" font-weight="700">MULTI-SHADE OPTIONS</text>
+    </g>
+  </g>
+  <text x="600" y="200" text-anchor="middle" font-family="Georgia, serif" font-size="60" fill="#2a171b">Tip Concealer</text>
+  <text x="600" y="248" text-anchor="middle" font-family="Arial" font-size="24" fill="#7f625b" letter-spacing="5">PRIVATE LABEL COLOR MAKEUP</text>
+
+  <text x="600" y="910" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#7f625b" letter-spacing="5">PRIVATE LABEL · OEM / ODM · WHOLESALE</text>
+</svg>

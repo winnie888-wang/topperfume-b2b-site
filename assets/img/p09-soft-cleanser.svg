@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F6F3F1"/><stop offset="1" stop-color="#F5E2DA"/></linearGradient>
+        <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF" stop-opacity="0.93"/><stop offset="1" stop-color="#F4DED7" stop-opacity="0.88"/></linearGradient>
+      </defs>
+      <rect width="1200" height="900" rx="54" fill="url(#bg)"/>
+      <circle cx="246" cy="208" r="138" fill="#D8DDE6" opacity="0.12"/>
+      <circle cx="945" cy="695" r="180" fill="#241619" opacity="0.06"/>
+      <path d="M140 710 C240 646 330 646 430 710" stroke="#D8DDE6" stroke-width="4" opacity="0.32"/>
+      
+        <ellipse cx="600" cy="590" rx="210" ry="54" fill="#241619" opacity="0.10"/>
+        <rect x="400" y="365" width="400" height="190" rx="76" fill="url(#glass)" stroke="#E5C5BA" stroke-width="8"/>
+        <rect x="432" y="310" width="336" height="92" rx="46" fill="#241619"/>
+        <text x="600" y="468" text-anchor="middle" font-family="Georgia" font-size="42" letter-spacing="5" fill="#241619">VELORIA</text>
+        <text x="600" y="512" text-anchor="middle" font-family="Arial" font-size="18" letter-spacing="5" fill="#8C625B">SKINCARE</text>
+        
+      <text x="98" y="118" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="6" fill="#9E6D63">PRIVATE LABEL BEAUTY</text>
+      <text x="98" y="178" font-family="Georgia, 'Times New Roman', serif" font-size="54" fill="#241619">Soft Cloud Cleanser</text>
+      <text x="100" y="226" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#7E5E58">Gentle face cleanser</text>
+      <rect x="98" y="268" width="240" height="54" rx="27" fill="#241619"/>
+      <text x="218" y="303" text-anchor="middle" font-family="Arial" font-size="18" fill="#FFF7F3">Custom Available</text>
+    </svg>

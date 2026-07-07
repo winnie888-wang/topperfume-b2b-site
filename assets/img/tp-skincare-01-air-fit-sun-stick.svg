@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 980" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7fbfa"/><stop offset="1" stop-color="#f4ddd5"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".72"/><stop offset="1" stop-color="#e8faf5" stop-opacity=".35"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#2a171b" flood-opacity=".16"/></filter>
+  </defs>
+  <rect width="1200" height="980" fill="url(#bg)"/>
+  <circle cx="1010" cy="130" r="250" fill="#fff" opacity=".45"/>
+  <circle cx="145" cy="820" r="210" fill="#fff" opacity=".55"/>
+  <rect x="88" y="780" width="1024" height="42" rx="21" fill="#fff" opacity=".55"/>
+  
+  <g filter="url(#shadow)">
+    <rect x="250" y="170" width="310" height="590" rx="28" fill="#f9fbfb" stroke="#dfe7e6" stroke-width="5"/>
+    <rect x="264" y="185" width="282" height="560" rx="22" fill="#ffffff"/>
+    <text x="405" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="58" fill="#382327">TOPPERFUME</text>
+    <text x="405" y="322" text-anchor="middle" font-family="Arial" font-size="25" fill="#79706e" letter-spacing="5">BEAUTY LABS</text>
+    <text x="405" y="420" text-anchor="middle" font-family="Arial" font-size="38" font-weight="700" fill="#2f2a2a">AIR FIT FRESH</text>
+    <text x="405" y="468" text-anchor="middle" font-family="Arial" font-size="37" font-weight="700" fill="#2f2a2a">SUN STICK</text>
+    <line x1="333" y1="520" x2="477" y2="520" stroke="#cab08e" stroke-width="3"/>
+    <text x="405" y="570" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#65534f">SILKY &amp; FRESH</text>
+    <text x="405" y="638" text-anchor="middle" font-family="Arial" font-size="25" fill="#2f2a2a">SPF 50+ PA++++</text>
+    <text x="405" y="700" text-anchor="middle" font-family="Arial" font-size="22" fill="#9b8f8d">19g · NET WT 0.67 OZ</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="660" y="170" width="255" height="590" rx="66" fill="#f8fbfa" stroke="#dfe7e6" stroke-width="6"/>
+    <path d="M661 625 C700 600,762 625,814 598 C853 578,884 586,915 604 L915 726 C913 746,895 760,875 760 L701 760 C679 760,661 743,661 720 Z" fill="#ddc098" opacity=".78"/>
+    <text x="788" y="282" text-anchor="middle" font-family="Georgia, serif" font-size="54" fill="#382327">TOPPERFUME</text>
+    <text x="788" y="370" text-anchor="middle" font-family="Arial" font-size="33" font-weight="700" fill="#2f2a2a">SUN STICK</text>
+    <text x="788" y="455" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700" fill="#65534f">SILKY &amp; FRESH</text>
+    <text x="788" y="535" text-anchor="middle" font-family="Arial" font-size="24" fill="#2f2a2a">SPF 50+ PA++++</text>
+  </g>
+
+  <text x="600" y="910" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#7f625b" letter-spacing="5">PRIVATE LABEL · OEM / ODM · WHOLESALE</text>
+</svg>

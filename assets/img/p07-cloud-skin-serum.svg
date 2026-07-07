@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F4F2EC"/><stop offset="1" stop-color="#F5E2DA"/></linearGradient>
+        <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF" stop-opacity="0.93"/><stop offset="1" stop-color="#F4DED7" stop-opacity="0.88"/></linearGradient>
+      </defs>
+      <rect width="1200" height="900" rx="54" fill="url(#bg)"/>
+      <circle cx="246" cy="208" r="138" fill="#A4B7AE" opacity="0.12"/>
+      <circle cx="945" cy="695" r="180" fill="#241619" opacity="0.06"/>
+      <path d="M140 710 C240 646 330 646 430 710" stroke="#A4B7AE" stroke-width="4" opacity="0.32"/>
+      
+        <rect x="545" y="138" width="110" height="80" rx="28" fill="#241619"/>
+        <rect x="586" y="84" width="28" height="70" rx="14" fill="#241619"/>
+        <rect x="493" y="210" width="214" height="414" rx="44" fill="url(#glass)" stroke="#E5C5BA" stroke-width="8"/>
+        <rect x="535" y="288" width="130" height="205" rx="60" fill="#A4B7AE" opacity="0.35"/>
+        <text x="600" y="406" text-anchor="middle" font-family="Georgia" font-size="34" letter-spacing="4" fill="#241619">VELORIA</text>
+        <text x="600" y="447" text-anchor="middle" font-family="Arial" font-size="16" letter-spacing="4" fill="#8C625B">SERUM</text>
+        <rect x="516" y="626" width="168" height="32" rx="16" fill="#241619" opacity="0.12"/>
+        
+      <text x="98" y="118" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="6" fill="#9E6D63">PRIVATE LABEL BEAUTY</text>
+      <text x="98" y="178" font-family="Georgia, 'Times New Roman', serif" font-size="54" fill="#241619">Cloud Skin Serum</text>
+      <text x="100" y="226" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#7E5E58">Hydrating skincare formula</text>
+      <rect x="98" y="268" width="240" height="54" rx="27" fill="#241619"/>
+      <text x="218" y="303" text-anchor="middle" font-family="Arial" font-size="18" fill="#FFF7F3">Custom Available</text>
+    </svg>

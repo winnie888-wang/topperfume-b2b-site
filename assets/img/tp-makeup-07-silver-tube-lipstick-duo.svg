@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="TopPerfume private label makeup product concept">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f7f7f7"/><stop offset="1" stop-color="#dedede"/></linearGradient>
+    <linearGradient id="gold" x1="0" x2="1"><stop offset="0" stop-color="#c7a45a"/><stop offset="0.5" stop-color="#fff1bd"/><stop offset="1" stop-color="#9c7435"/></linearGradient>
+    <linearGradient id="roseGold" x1="0" x2="1"><stop offset="0" stop-color="#b98673"/><stop offset="0.5" stop-color="#f8d7ca"/><stop offset="1" stop-color="#8f5c4c"/></linearGradient>
+    <linearGradient id="silver" x1="0" x2="1"><stop offset="0" stop-color="#d9d9d9"/><stop offset="0.45" stop-color="#ffffff"/><stop offset="1" stop-color="#8e8e8e"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#312322" flood-opacity="0.18"/></filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <circle cx="1000" cy="170" r="210" fill="#ffffff" opacity="0.33"/>
+  <circle cx="120" cy="760" r="260" fill="#ffffff" opacity="0.22"/>
+  <g filter="url(#shadow)"><rect x="360" y="455" width="130" height="210" rx="10" fill="url(#silver)"/><rect x="384" y="305" width="82" height="180" rx="28" fill="#e23f4d"/><rect x="392" y="480" width="66" height="94" fill="#fff" opacity="0.9"/><text x="425" y="700" font-family="Arial" font-size="20" fill="#4c4c4c" text-anchor="middle" font-weight="800">CHROME</text></g>
+<g filter="url(#shadow)"><rect x="610" y="455" width="130" height="210" rx="10" fill="url(#silver)"/><rect x="634" y="305" width="82" height="180" rx="28" fill="#e23f4d"/><rect x="642" y="480" width="66" height="94" fill="#fff" opacity="0.9"/><text x="675" y="700" font-family="Arial" font-size="20" fill="#4c4c4c" text-anchor="middle" font-weight="800">CHROME</text></g>
+<g filter="url(#shadow)"><rect x="150" y="355" width="140" height="310" rx="10" fill="url(#silver)"/><text x="220" y="525" font-family="Arial" font-size="82" fill="#939393" text-anchor="middle" font-family="Georgia">T</text><text x="220" y="582" font-family="Arial" font-size="26" fill="#777" text-anchor="middle" font-weight="700">TOP</text></g>
+<g filter="url(#shadow)"><rect x="910" y="355" width="140" height="310" rx="10" fill="url(#silver)"/><text x="980" y="525" font-family="Arial" font-size="82" fill="#939393" text-anchor="middle" font-family="Georgia">P</text><text x="980" y="582" font-family="Arial" font-size="26" fill="#777" text-anchor="middle" font-weight="700">PERFUME</text></g>
+<text x="600" y="100" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="800" fill="#333" text-anchor="middle">SILVER TUBE LIPSTICK DUO</text>
+<text x="600" y="145" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="500" fill="#777" text-anchor="middle">Chrome finish packaging · US$8 / pc</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="TopPerfume private label makeup product concept">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fff3f7"/><stop offset="1" stop-color="#f2c6d0"/></linearGradient>
+    <linearGradient id="gold" x1="0" x2="1"><stop offset="0" stop-color="#c7a45a"/><stop offset="0.5" stop-color="#fff1bd"/><stop offset="1" stop-color="#9c7435"/></linearGradient>
+    <linearGradient id="roseGold" x1="0" x2="1"><stop offset="0" stop-color="#b98673"/><stop offset="0.5" stop-color="#f8d7ca"/><stop offset="1" stop-color="#8f5c4c"/></linearGradient>
+    <linearGradient id="silver" x1="0" x2="1"><stop offset="0" stop-color="#d9d9d9"/><stop offset="0.45" stop-color="#ffffff"/><stop offset="1" stop-color="#8e8e8e"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#312322" flood-opacity="0.18"/></filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <circle cx="1000" cy="170" r="210" fill="#ffffff" opacity="0.33"/>
+  <circle cx="120" cy="760" r="260" fill="#ffffff" opacity="0.22"/>
+  <g filter="url(#shadow)"><rect x="260" y="390" width="105" height="270" rx="35" fill="#f1b4bd"/><rect x="280" y="285" width="65" height="140" rx="24" fill="#cc7d8c"/><rect x="278" y="425" width="69" height="120" fill="url(#silver)"/><path d="M288 480 C315 455,328 510,348 474" stroke="#2b2b2b" stroke-width="6" fill="none" opacity="0.5"/><text x="312" y="710" font-family="Arial" font-size="18" fill="#754e59" text-anchor="middle" font-weight="700">SOFT TINT</text></g>
+<g filter="url(#shadow)"><rect x="430" y="390" width="105" height="270" rx="35" fill="#f1b4bd"/><rect x="450" y="285" width="65" height="140" rx="24" fill="#cc7d8c"/><rect x="448" y="425" width="69" height="120" fill="url(#silver)"/><path d="M458 480 C485 455,498 510,518 474" stroke="#2b2b2b" stroke-width="6" fill="none" opacity="0.5"/><text x="482" y="710" font-family="Arial" font-size="18" fill="#754e59" text-anchor="middle" font-weight="700">SOFT TINT</text></g>
+<g filter="url(#shadow)"><rect x="600" y="390" width="105" height="270" rx="35" fill="#f1b4bd"/><rect x="620" y="285" width="65" height="140" rx="24" fill="#cc7d8c"/><rect x="618" y="425" width="69" height="120" fill="url(#silver)"/><path d="M628 480 C655 455,668 510,688 474" stroke="#2b2b2b" stroke-width="6" fill="none" opacity="0.5"/><text x="652" y="710" font-family="Arial" font-size="18" fill="#754e59" text-anchor="middle" font-weight="700">SOFT TINT</text></g>
+<g filter="url(#shadow)"><rect x="770" y="390" width="105" height="270" rx="35" fill="#f1b4bd"/><rect x="790" y="285" width="65" height="140" rx="24" fill="#cc7d8c"/><rect x="788" y="425" width="69" height="120" fill="url(#silver)"/><path d="M798 480 C825 455,838 510,858 474" stroke="#2b2b2b" stroke-width="6" fill="none" opacity="0.5"/><text x="822" y="710" font-family="Arial" font-size="18" fill="#754e59" text-anchor="middle" font-weight="700">SOFT TINT</text></g>
+<text x="600" y="105" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" fill="#3b2a2e" text-anchor="middle">SOFT PINK SHINE LIP BALM STICK</text>
+<text x="600" y="148" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="500" fill="#895e67" text-anchor="middle">Moisturizing lip color · US$8 / pc</text>
+</svg>
