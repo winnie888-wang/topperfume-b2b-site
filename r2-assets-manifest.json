@@ -1,0 +1,54 @@
+{
+  "recommended_bucket": "topperfume-assets",
+  "recommended_custom_domain": "https://assets.topperfume.cn",
+  "upload_prefixes": [
+    "img/",
+    "brand/",
+    "catalog/"
+  ],
+  "local_asset_folders": [
+    "assets/img",
+    "assets/brand"
+  ],
+  "config_file": "assets/js/config.js",
+  "how_to_enable": "Upload assets/img and assets/brand to R2, bind public domain, then set window.TOPPERFUME_CONFIG.r2AssetBase to https://assets.topperfume.cn",
+  "new_perfume_product_assets": [
+    "assets/img/tp-perfume-01-ribbon-luxe-duo.svg",
+    "assets/img/tp-perfume-02-classic-spray-collection.svg",
+    "assets/img/tp-perfume-03-mint-discovery-gift-set.svg",
+    "assets/img/tp-perfume-04-round-bloom-edp.svg",
+    "assets/img/tp-perfume-05-noir-cylinder-men-edp.svg",
+    "assets/img/tp-perfume-06-golden-square-edp.svg",
+    "assets/img/tp-perfume-07-blue-homme-rectangular-edp.svg",
+    "assets/img/tp-perfume-08-minimal-clear-cologne.svg",
+    "assets/img/tp-perfume-09-silver-homme-edp.svg",
+    "assets/img/tp-perfume-10-dark-mini-discovery-set.svg",
+    "assets/img/tp-perfume-11-bunny-cap-edp.svg"
+  ],
+  "price_update": "Perfume concepts display US$15 / pc or set. Skincare concepts and selected makeup concepts display US$1.50 / pc or pack.",
+  "new_skincare_product_assets": [
+    "assets/img/tp-skincare-01-air-fit-sun-stick.svg",
+    "assets/img/tp-skincare-02-collagen-bubble-pack.svg",
+    "assets/img/tp-skincare-03-mung-bean-serum.svg",
+    "assets/img/tp-skincare-04-cooling-hydrogel-patch.svg",
+    "assets/img/tp-skincare-05-tip-concealer.svg",
+    "assets/img/tp-skincare-06-daily-routine-line.svg",
+    "assets/img/tp-skincare-07-pdrn-glow-cream.svg"
+  ],
+  "brand_safety_note": "Uploaded reference photos containing third-party brand names/logos were converted into original TopPerfume private-label concepts; third-party brand names/logos are not used on the public site.",
+  "img": [
+    "assets/img/tp-makeup-02-pure-color-lipstick-line.svg",
+    "assets/img/tp-makeup-03-slim-nude-liquid-lip.svg",
+    "assets/img/tp-makeup-04-noir-red-matte-lipstick.svg",
+    "assets/img/tp-makeup-05-rose-matte-multi-pack.svg",
+    "assets/img/tp-makeup-06-soft-pink-balm-stick.svg",
+    "assets/img/tp-makeup-07-silver-tube-lipstick-duo.svg",
+    "assets/img/tp-makeup-08-warm-nude-eyeshadow-palette.svg"
+  ],
+  "updated": "2026-07-07",
+  "product_pricing": {
+    "perfume": "US$15 / pc",
+    "skincare": "US$1.50 / pc or pack",
+    "lipstick_eyeshadow": "US$8 / pc or palette"
+  }
+}
