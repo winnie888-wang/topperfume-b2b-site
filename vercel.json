@@ -5,6 +5,9 @@
   "cleanUrls": true,
   "trailingSlash": false
 }{
+  "cleanUrls": true,
+  "trailingSlash": false
+}{
   "cleanUrls": false,
   "trailingSlash": false,
   "outputDirectory": ".",
