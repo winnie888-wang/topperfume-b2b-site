@@ -42,6 +42,15 @@
 - [x] 冻结 Collection、Product Detail、Inquiry Logic、产品数据与其他页面；不 Merge main。
 - [x] 完成 Desktop 与 Mobile Hero 完整截图，供用户视觉审核。
 
+## Phase 3 — Real Business Content & Conversion Setup
+
+- [x] 保持已批准 Homepage Hero 和整体 Maison Mercantile 视觉系统不变；不重新设计首页。
+- [x] 优化 Fragrance、Skincare、Makeup Collection 的 B2B 浏览、筛选、产品说明与采购决策信息。
+- [x] 完善 Product Detail 的 MOQ、Lead Time、Packaging、Private Label、Logo Customization、Formula / Fragrance / Shade 字段；无真实资料均标注 `[TO CONFIRM]`。
+- [x] 将 Request Sample、Get Quote、WhatsApp 设计为可用的、自动携带产品名称、URL 与分类上下文的询盘流程。
+- [x] 不编造认证、工厂数据、MOQ、交期、配方、包装或联系人信息；真实收件邮箱与 WhatsApp 号码缺失时明确标注 `[TO CONFIRM]`。
+- [x] 验证 Homepage、三个 Collection、Product Detail 与 Inquiry Flow 的 Desktop / Mobile；不 Merge main、不正式发布、不开始 SEO。
+
 ### 本轮真实素材与公开命名保护
 
 - [x] 将新增护肤与彩妆真实产品照片作为用户已授权展示的实物验证素材导入独立 Preview。
