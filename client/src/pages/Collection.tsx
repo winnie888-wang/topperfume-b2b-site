@@ -11,9 +11,9 @@ import { products, type ProductCategory } from "@/data/products";
 
 const validCategories = ["fragrance", "skincare", "makeup"] as const;
 const collectionCopy: Record<ProductCategory, { index: string; title: string; intro: string; image: string; status: string }> = {
-  fragrance: { index: "01 / FRAGRANCE PRODUCTS", title: "Private Label Fragrance", intro: "Browse fragrance formats, scent families and product references. Select a product to request a sample or quote.", image: "/manus-storage/fragrance-lineup_4d5ea1a4.jpg", status: "Supplied product visuals" },
-  skincare: { index: "02 / SKINCARE PRODUCTS", title: "Private Label Skincare", intro: "Browse skincare formats for daily care, targeted care and routine development. Product photography is still required for final rollout.", image: "/manus-storage/topperfume-skincare-materials_26725f79.jpg", status: "Material study — photos needed" },
-  makeup: { index: "03 / MAKEUP PRODUCTS", title: "Private Label Makeup", intro: "Browse colour-makeup formats, shade expressions and component directions. Product photography is still required for final rollout.", image: "/manus-storage/topperfume-makeup-pigments_73aec62b.jpg", status: "Material study — photos needed" },
+  fragrance: { index: "01 / FRAGRANCE PRODUCTS", title: "Private Label Fragrance", intro: "Browse fragrance-mist formats and authorised product visuals. Select a product to request a sample or quote.", image: "/manus-storage/fragrance-jam-spill_f3448635.jpg", status: "Authorized visual · title [NAME TO CONFIRM]" },
+  skincare: { index: "02 / SKINCARE PRODUCTS", title: "Private Label Skincare", intro: "Browse real body-care and personal-care formats. Every third-party product title stays [NAME TO CONFIRM] until released for publication.", image: "/manus-storage/skincare-body-lotion-lineup_028ae330.webp", status: "Authorized visual · title [NAME TO CONFIRM]" },
+  makeup: { index: "03 / MAKEUP PRODUCTS", title: "Private Label Makeup", intro: "Browse real colour-makeup and gift-set formats. Every third-party product title stays [NAME TO CONFIRM] until released for publication.", image: "/manus-storage/makeup-lip-color-collection_f464b653.jpg", status: "Authorized visual · title [NAME TO CONFIRM]" },
 };
 
 export default function Collection() {

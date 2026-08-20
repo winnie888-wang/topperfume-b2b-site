@@ -2,6 +2,16 @@
 
 ## Phase 2.1 — Prototype Refinement
 
+### 本轮真实素材与公开命名保护
+
+- [x] 将新增护肤与彩妆真实产品照片作为用户已授权展示的实物验证素材导入独立 Preview。
+- [x] 对任何可识别为第三方品牌的公开产品标题保留为 `[NAME TO CONFIRM]`，不以原始品牌名作为 TopPerfume 的公开产品标题。
+- [ ] 强化 Hero 的 Beauty Product Development & Manufacturing 商业定位，并保留编辑型品牌表达。
+- [ ] 确保 Fragrance、Skincare、Makeup 获得平衡产品入口和同等视觉权重。
+- [ ] 将 Collection 保持为一屏内可进入产品 Grid 的 Product-First 浏览体验。
+- [ ] 复核 Product Card、Product Detail、分意图询盘与 Trust 模块均符合本轮 B2B 决策需求。
+- [ ] 重新验证五个页面的 Desktop/Mobile Preview；不批量上架、不做 SEO 扩张、不合并 main。
+
 - [x] 重新核对五页原型与 Phase 2.1 的商业定位、产品浏览和询盘要求。
 - [x] 将首页第一屏明确为 Fragrance / Skincare / Makeup 的 Private Label、OEM、ODM Beauty B2B Partner 定位。
 - [x] 在首页以均衡、真实可见的产品入口呈现三大品类，并增加不虚构数据的 Trust 层。
