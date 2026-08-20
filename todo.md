@@ -26,6 +26,22 @@
 - [x] 保留已批准的商业标题与 B2B 信息；冻结 Collection、Product Card、Product Detail、产品数据与其余页面。
 - [x] 核验 Hero Desktop / Mobile，更新独立 Preview；不 Merge main、不发布。
 
+### Hero Sync Check（仅 Preview 与 GitHub v2-prototype）
+
+- [x] 确认当前 Preview Hero 为一款真实香水主视觉，且主标题为 `Beauty products built for your brand.`。
+- [x] 确认旧 Fragrance / Skincare / Makeup 三产品叠放、`hero-orbit-one`、`hero-orbit-two`、装饰圆形及重叠产品视觉均未在 Hero 输出。
+- [x] 将当前 Hero 完整同步并推送至 GitHub `v2-prototype`，不修改或 Merge `main`。
+- [x] 比对 Preview 源码、当地 `v2-prototype` 与远端 GitHub SHA，明确确认 `Preview Hero = GitHub v2-prototype`。
+
+### Phase 2.3 — Hero Final Polish（仅 Homepage Hero）
+
+- [x] 为单一真实香水 Hero 视觉建立集中、可替换的图片接口，不虚构或变更最终可售瓶型。
+- [x] Desktop 将方框标签降重为 `FRAGRANCE · SKINCARE · MAKEUP`，不重复展示 Private Label / OEM / ODM。
+- [x] Mobile 将 H1 降低约 15–20%、缩短文案与 CTA 间距，移除六个独立标签，并让产品图在首屏或轻微下滑内出现。
+- [x] 保留 Porcelain Ivory、自然光、洞石、单一香水、Plum Ink 排版及已批准 B2B 商业文案。
+- [x] 冻结 Collection、Product Detail、Inquiry Logic、产品数据与其他页面；不 Merge main。
+- [x] 完成 Desktop 与 Mobile Hero 完整截图，供用户视觉审核。
+
 ### 本轮真实素材与公开命名保护
 
 - [x] 将新增护肤与彩妆真实产品照片作为用户已授权展示的实物验证素材导入独立 Preview。
