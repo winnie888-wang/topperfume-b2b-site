@@ -9,6 +9,14 @@
 - [x] 复核 Homepage、三个 Collection 与 Product Detail 的 Desktop / Mobile Preview。
 - [x] 对比当前 Preview 工作树、GitHub `v2-prototype` 最新 Commit 与远端分支，确认一致后完整 Push；不修改或 Merge `main`。
 
+### Homepage Hero — Visual Art Direction Refinement（仅视觉重构）
+
+- [x] 将 Hero 改为单一真实香水主视觉，移除三品类叠放和电商海报式构图。
+- [x] 以 Warm Ivory / Porcelain、石材、半透明玻璃、自然定向光、接触阴影与留白建立利基香氛编辑式场景。
+- [x] 降低 Mineral Rose 面积，移除或大幅减少粉色拱门、圆形、轨道线和非必要说明；保留 Plum Ink 识别与小面积 Mineral Rose 强调。
+- [x] 保留现有商业标题及首屏 B2B 信息，并让 Fragrance / Skincare / Makeup 在第二屏获得同等真实视觉权重。
+- [x] 核验 Homepage Hero 的 Desktop / Mobile 构图并更新独立 Preview；不新增产品、不 Merge main、不正式发布。
+
 ### 本轮真实素材与公开命名保护
 
 - [x] 将新增护肤与彩妆真实产品照片作为用户已授权展示的实物验证素材导入独立 Preview。

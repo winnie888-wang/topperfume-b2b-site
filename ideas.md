@@ -89,3 +89,7 @@ Logo 使用无文字图形标记：两个相交的细线拱门围合一个抽象
 - 获授权的真实产品图必须统一经过“目录版画”处理：象牙纸框、受控裁切、产品色彩切片与小型目录标题共同作用，使原始供应商参考图也呈现为被策展的买手视觉，而非直接贴入页面。
 - `[NAME TO CONFIRM]` 与 `[TO CONFIRM]` 只作为 Mineral Rose 的采购注释出现。产品类别、通用格式与功能描述保持主要叙事位置，避免未确认标记成为页面情绪中心。
 - “采购脊柱”是全站核心识别：编号细线、全大写字段标签与紧凑买家矩阵应贯穿产品卡、Collection 导览与产品决策模块，而不只用于单个 Collection 的顶部说明。
+- **Homepage Hero Art Direction（2026-08-20）：** Hero 只使用一款获授权香水作为主视觉。使用 Warm Ivory / Porcelain、洞石、半透明玻璃、自然定向光、真实接触阴影和大量留白建立编辑式摄影感；不得回退为粉色拱门、轨道线、圆形装饰或三品类叠放。
+- **Colour restraint：** Plum Ink 负责品牌识别；Mineral Rose 只用于细小的编辑强调、hover 或确认注释，不作为 Hero 背景大面积使用。
+- **Hero hierarchy：** 主 H1 始终为 `Beauty products built for your brand.`，B2B 范围在首屏立即明确；`Make the product the reason to begin.` 仅作为次级编辑文案。Fragrance、Skincare、Makeup 的三类同权真实产品入口留在下一屏。
+- **Evidence, not icon grids：** Buyer trust must appear as numbered verification fields, documentation notes and fine-line procurement rows. Avoid generic SaaS-style capability icon cards. Every real product reference is treated as a curated catalogue plate through controlled crop, ivory framing, editorial captioning and a single product-colour accent.
