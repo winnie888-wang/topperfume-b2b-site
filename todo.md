@@ -2,6 +2,13 @@
 
 ## Phase 2.1 — Prototype Refinement
 
+### Prototype Sync & QA（仅同步与核验）
+
+- [x] 将 Homepage 主 H1 固定为 `Beauty products built for your brand.`，把 Editorial 表达降为次级文案。
+- [x] 确认首屏明确显示 Fragrance / Skincare / Makeup、Private Label / OEM / ODM、Beauty Product Development & Manufacturing。
+- [x] 复核 Homepage、三个 Collection 与 Product Detail 的 Desktop / Mobile Preview。
+- [x] 对比当前 Preview 工作树、GitHub `v2-prototype` 最新 Commit 与远端分支，确认一致后完整 Push；不修改或 Merge `main`。
+
 ### 本轮真实素材与公开命名保护
 
 - [x] 将新增护肤与彩妆真实产品照片作为用户已授权展示的实物验证素材导入独立 Preview。
