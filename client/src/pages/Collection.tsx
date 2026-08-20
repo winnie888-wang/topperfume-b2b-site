@@ -12,9 +12,9 @@ import { products, type ProductCategory } from "@/data/products";
 
 const validCategories = ["fragrance", "skincare", "makeup"] as const;
 const collectionCopy: Record<ProductCategory, { index: string; title: string; intro: string; image: string; status: string }> = {
-  fragrance: { index: "01 / FRAGRANCE PRODUCTS", title: "Private Label Fragrance", intro: "Browse fragrance-mist formats and authorised product visuals. Select a product to request a sample or quote.", image: "/manus-storage/fragrance-jam-spill_f3448635.jpg", status: "Authorized visual / reference plate" },
-  skincare: { index: "02 / SKINCARE PRODUCTS", title: "Private Label Skincare", intro: "Browse real body-care and personal-care formats. Public product naming remains subject to confirmation.", image: "/manus-storage/skincare-body-lotion-lineup_028ae330.webp", status: "Authorized visual / reference plate" },
-  makeup: { index: "03 / MAKEUP PRODUCTS", title: "Private Label Makeup", intro: "Browse real colour-makeup and gift-set formats. Public product naming remains subject to confirmation.", image: "/manus-storage/makeup-lip-color-collection_f464b653.jpg", status: "Authorized visual / reference plate" },
+  fragrance: { index: "01 / FRAGRANCE PRODUCTS", title: "Private Label Fragrance", intro: "Browse fragrance-mist product references. Select a product to request a sample or quote.", image: "/manus-storage/fragrance-jam-spill_f3448635.jpg", status: "Product visual / reference plate" },
+  skincare: { index: "02 / SKINCARE PRODUCTS", title: "Private Label Skincare", intro: "Browse body-care and personal-care product references. Public product naming remains subject to confirmation.", image: "/manus-storage/skincare-body-lotion-lineup_028ae330.webp", status: "Product visual / reference plate" },
+  makeup: { index: "03 / MAKEUP PRODUCTS", title: "Private Label Makeup", intro: "Browse colour-makeup and gift-set product references. Public product naming remains subject to confirmation.", image: "/manus-storage/makeup-lip-color-collection_f464b653.jpg", status: "Product visual / reference plate" },
 };
 
 export default function Collection() {

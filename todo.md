@@ -93,3 +93,13 @@
 - [x] 验证 Desktop 与 Mobile 页面、产品浏览、筛选与询盘路径。
 - [ ] 创建独立 Preview 检查点并提交审核链接、截图、设计系统及缺失素材清单。
 - [x] 不批量上架全部产品，不做 SEO 规模化工作，不正式上线，不合并 main。
+
+## Phase 4 — Final Commercial QA（仅 v2-prototype）
+
+- [x] 以当前真实性边界为基线审计 Homepage、Fragrance、Skincare、Makeup、Product Detail 的内容、真实订单条款与公开英文。
+- [x] 核验 Standard Order（MOQ 2 pcs、约 7 天、免费样品）与 Custom Order（Logo、Packaging、Fragrance 100 pcs 起）在页面和询盘摘要中一致。
+- [x] 核验 Request Sample、Get Quote、Start Your Project、WhatsApp、Email、移动端 CTA、全部链接、按钮和表单路径。
+- [x] 核验 Desktop / Mobile 响应式、页面加载、可读性、产品上下文传递及产品名称保护标记。
+- [x] 审计所有 `[TO CONFIRM]`、`[CERTIFICATE TO CONFIRM]` 与 `Illustrative / Concept Visual` 披露，不将概念图或未证实事实表述为真实公司资料。
+- [x] 检查并修复不会引入未证实事实的 placeholder、prototype 残留、失效 CTA、错误链接、重复内容与不专业英文。
+- [ ] 保存 QA 检查点、仅推送 GitHub `v2-prototype` 并交付剩余待确认/概念视觉清单与 Final QA Report；绝不修改、合并或发布 `main`。
