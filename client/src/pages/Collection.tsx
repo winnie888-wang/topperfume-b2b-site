@@ -1,71 +1,37 @@
 /**
- * Maison Mercantile design reminder: a collection is an editorial browsing surface,
- * never a generic factory grid. Product visuals lead; filter, format and inquiry signals remain lightweight and precise.
+ * Maison Mercantile design reminder: collections stay editorial in surface but Shopify-fast in function.
+ * Keep the category statement compact, put the product grid near the top, and use commercial language buyers can act on.
  */
 import { useMemo, useState } from "react";
 import { Link, useParams } from "wouter";
 import { ArrowRight, ChevronDown, SlidersHorizontal } from "lucide-react";
 import { SiteShell, InquiryDrawer } from "@/components/SiteShell";
 import { ProductCard } from "@/components/ProductCard";
-import { categoryMeta, products, type ProductCategory } from "@/data/products";
+import { products, type ProductCategory } from "@/data/products";
 
 const validCategories = ["fragrance", "skincare", "makeup"] as const;
+const collectionCopy: Record<ProductCategory, { index: string; title: string; intro: string; image: string; status: string }> = {
+  fragrance: { index: "01 / FRAGRANCE PRODUCTS", title: "Private Label Fragrance", intro: "Browse fragrance formats, scent families and product references. Select a product to request a sample or quote.", image: "/manus-storage/fragrance-lineup_4d5ea1a4.jpg", status: "Supplied product visuals" },
+  skincare: { index: "02 / SKINCARE PRODUCTS", title: "Private Label Skincare", intro: "Browse skincare formats for daily care, targeted care and routine development. Product photography is still required for final rollout.", image: "/manus-storage/topperfume-skincare-materials_26725f79.jpg", status: "Material study — photos needed" },
+  makeup: { index: "03 / MAKEUP PRODUCTS", title: "Private Label Makeup", intro: "Browse colour-makeup formats, shade expressions and component directions. Product photography is still required for final rollout.", image: "/manus-storage/topperfume-makeup-pigments_73aec62b.jpg", status: "Material study — photos needed" },
+};
 
 export default function Collection() {
   const params = useParams<{ category: ProductCategory }>();
   const category = validCategories.includes(params.category as ProductCategory) ? (params.category as ProductCategory) : "fragrance";
-  const meta = categoryMeta[category];
-  const filteredProducts = products.filter((product) => product.category === category);
-  const leadProduct = filteredProducts[0];
-  const tags = Array.from(new Set(filteredProducts.flatMap((product) => product.tags.slice(1))));
-  const [activeTag, setActiveTag] = useState("All directions");
+  const copy = collectionCopy[category];
+  const allProducts = products.filter((product) => product.category === category);
+  const tags = Array.from(new Set(allProducts.flatMap((product) => product.tags.slice(1))));
+  const [activeTag, setActiveTag] = useState("All products");
   const [sort, setSort] = useState("Featured");
-  const visibleProducts = useMemo(() => {
-    const list = activeTag === "All directions" ? filteredProducts : filteredProducts.filter((product) => product.tags.includes(activeTag));
-    return sort === "A–Z" ? [...list].sort((a, b) => a.name.localeCompare(b.name)) : list;
-  }, [activeTag, category, sort]);
-
-  return (
-    <SiteShell>
-      <section className={`collection-hero collection-${meta.tone}`}>
-        <div className="collection-hero-copy"><p className="eyebrow">{meta.eyebrow}</p><h1>{meta.title}</h1><p>{meta.intro}</p><div className="collection-hero-meta"><span>{filteredProducts.length} directions</span><span>{meta.materials}</span></div></div>
-        <div className="collection-hero-visual">
-          {category === "fragrance" ? <img src="/manus-storage/fragrance-lineup_4d5ea1a4.jpg" alt="TopPerfume real fragrance product lineup" /> : category === "skincare" ? <img src="/manus-storage/topperfume-skincare-materials_26725f79.jpg" alt="Skincare materials" /> : <img src="/manus-storage/topperfume-makeup-pigments_73aec62b.jpg" alt="Makeup pigments" />}
-          <span>{category === "fragrance" ? "Real product image" : "Category direction"}</span>
-        </div>
-      </section>
-
-      <section className="collection-controls">
-        <div className="filter-label"><SlidersHorizontal size={16} /> Filter by</div>
-        <div className="filter-chips"><button className={activeTag === "All directions" ? "active" : ""} onClick={() => setActiveTag("All directions")}>All directions</button>{tags.map((tag) => <button onClick={() => setActiveTag(tag)} className={activeTag === tag ? "active" : ""} key={tag}>{tag}</button>)}</div>
-        <label className="sort-control">Sort<select value={sort} onChange={(event) => setSort(event.target.value)}><option>Featured</option><option>A–Z</option></select><ChevronDown size={15} /></label>
-      </section>
-
-      <section className="collection-body">
-        <article className={`collection-lead collection-lead-${meta.tone}`}>
-          <div className="collection-lead-image">
-            {category === "fragrance" ? <img src={leadProduct.image} alt={`${leadProduct.name} real product visual`} /> : category === "skincare" ? <img src="/manus-storage/topperfume-skincare-materials_26725f79.jpg" alt="Skincare material and texture study" /> : <img src="/manus-storage/topperfume-makeup-pigments_73aec62b.jpg" alt="Makeup pigment and texture study" />}
-            <span>{category === "fragrance" ? "REAL PRODUCT STUDY" : "ART-DIRECTED MATERIAL STUDY"}</span>
-          </div>
-          <div className="collection-lead-copy">
-            <p className="eyebrow">01 / LEAD DIRECTION</p>
-            <h2>{leadProduct.name}</h2>
-            <p>{leadProduct.briefing}</p>
-            <div className="collection-field-grid">
-              <span><b>Format</b>{leadProduct.format}</span>
-              <span><b>Sample</b>Brief-led</span>
-              <span><b>Custom</b>{category === "fragrance" ? "Scent + label" : category === "skincare" ? "Formula + component" : "Shade + component"}</span>
-              <span><b>Brief readiness</b>Direction set</span>
-            </div>
-            <Link href={`/products/${leadProduct.slug}`} className="text-link">Open direction brief <ArrowRight size={16} /></Link>
-          </div>
-        </article>
-        <div className="collection-context"><span>{String(visibleProducts.length).padStart(2, "0")} / {String(filteredProducts.length).padStart(2, "0")}</span><p>{category === "fragrance" ? "Authentic client-provided product photography is featured in this initial fragrance pilot." : "The current packaging-direction cards are deliberately marked as concept visuals. Supplied product photography will replace these in the next review cycle."}</p></div>
-        <div className="product-grid collection-grid">{visibleProducts.map((product, index) => <ProductCard product={product} index={index} key={product.slug} />)}</div>
-      </section>
-
-      <section className="collection-cta"><div><p className="eyebrow">NOT SEEING YOUR EXACT FORMAT?</p><h2>Use a direction as a starting point.</h2><p>Bring us your market, format priority and brand point of view. The right next step may be a sample brief, not another scroll.</p></div><InquiryDrawer triggerLabel="Request a matching brief" /></section>
-      <section className="next-category"><span>Keep browsing</span><Link href={category === "fragrance" ? "/collections/skincare" : category === "skincare" ? "/collections/makeup" : "/collections/fragrance"}>{category === "fragrance" ? "Skincare" : category === "skincare" ? "Makeup" : "Fragrance"} <ArrowRight size={18} /></Link></section>
-    </SiteShell>
-  );
+  const visibleProducts = useMemo(() => { const list = activeTag === "All products" ? allProducts : allProducts.filter((product) => product.tags.includes(activeTag)); return sort === "A–Z" ? [...list].sort((a, b) => a.name.localeCompare(b.name)) : list; }, [activeTag, allProducts, sort]);
+  const leadProduct = allProducts[0];
+  const customization = category === "fragrance" ? "Fragrance + logo" : category === "skincare" ? "Formula + logo" : "Shade + logo";
+  return <SiteShell>
+    <section className={`collection-hero collection-hero-compact collection-${category}`}><div className="collection-hero-copy"><p className="eyebrow">{copy.index}</p><h1>{copy.title}</h1><p>{copy.intro}</p><div className="collection-hero-meta"><span>{allProducts.length} products</span><span>Private Label · OEM · ODM</span></div></div><div className="collection-hero-visual"><img src={copy.image} alt={`${category} category visual`} /><span>{copy.status}</span></div></section>
+    <section className="collection-controls"><div className="filter-label"><SlidersHorizontal size={16} /> Filter products</div><div className="filter-chips"><button className={activeTag === "All products" ? "active" : ""} onClick={() => setActiveTag("All products")}>All products</button>{tags.map((tag) => <button onClick={() => setActiveTag(tag)} className={activeTag === tag ? "active" : ""} key={tag}>{tag}</button>)}</div><label className="sort-control">Sort<select value={sort} onChange={(event) => setSort(event.target.value)}><option>Featured</option><option>A–Z</option></select><ChevronDown size={15} /></label></section>
+    <section className="collection-body collection-body-fast"><div className="collection-context"><div><span>{String(visibleProducts.length).padStart(2, "0")}</span><strong>Products available to browse</strong></div><p>Select a product for specifications, customization options and direct sample or quote actions.</p></div><aside className="collection-spine"><div className="spine-index">01 / BUYING NOTE</div><div className="spine-product"><strong>{leadProduct.name}</strong><span>{leadProduct.format}</span></div><div className="spine-field"><b>Sample</b>Request from product page</div><div className="spine-field"><b>Customization</b>{customization}</div><div className="spine-field"><b>Quote</b>Volume and market [TO CONFIRM]</div><Link href={`/products/${leadProduct.slug}`} className="spine-link">View lead product <ArrowRight size={14} /></Link></aside><div className="product-grid collection-grid">{visibleProducts.map((product, index) => <ProductCard product={product} index={index} key={product.slug} />)}</div></section>
+    <section className="collection-cta"><div><p className="eyebrow">NEED A DIFFERENT FORMAT?</p><h2>Move from product reference to quote.</h2><p>Bring the format, target market and customization level you need. The next live workflow will guide your sample, quote and project-planning conversation.</p></div><InquiryDrawer triggerLabel="Get a Project Quote" intent="quote" /></section>
+    <section className="next-category"><span>Continue browsing</span><Link href={category === "fragrance" ? "/collections/skincare" : category === "skincare" ? "/collections/makeup" : "/collections/fragrance"}>{category === "fragrance" ? "Skincare" : category === "skincare" ? "Makeup" : "Fragrance"} <ArrowRight size={18} /></Link></section>
+  </SiteShell>;
 }

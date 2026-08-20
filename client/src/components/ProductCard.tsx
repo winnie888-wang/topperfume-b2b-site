@@ -1,31 +1,17 @@
 /**
- * Maison Mercantile design reminder: product photographs lead, while the concise
- * purchase signal remains available beneath it. Cards should feel like catalogue spreads, not generic UI tiles.
+ * Maison Mercantile design reminder: product photographs lead, while concise B2B decisions
+ * and request actions stay immediately available. Cards must feel like a premium buying catalogue, not an agency moodboard.
  */
 import { Link } from "wouter";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { InquiryDrawer } from "@/components/SiteShell";
 import type { Product } from "@/data/products";
 
 export function ProductCard({ product, index }: { product: Product; index: number }) {
-  const customization = product.category === "fragrance" ? "Scent + label brief" : product.category === "skincare" ? "Formula + component brief" : "Shade + component brief";
-  return (
-    <article className={`product-card product-card-${product.category}`}>
-      <Link href={`/products/${product.slug}`} className="product-image-wrap" aria-label={`View ${product.name}`}>
-        <div className="product-card-index">{String(index + 1).padStart(2, "0")}</div>
-        <img src={product.image} alt={`${product.name} product visual`} className="product-image" />
-        <span className="product-view">View brief <ArrowUpRight size={15} /></span>
-      </Link>
-      <div className="product-meta">
-        <div className="product-format"><span>{product.category}</span><span>{product.realImage ? "Real visual" : "Concept visual"}</span></div>
-        <Link href={`/products/${product.slug}`} className="product-name">{product.name}</Link>
-        <p>{product.descriptor}</p>
-        <div className="procurement-fields">
-          <span><b>Format</b>{product.format}</span>
-          <span><b>Sample</b>Brief-led</span>
-          <span><b>Custom</b>{customization}</span>
-          <span><b>Visual</b>{product.realImage ? "Supplied product" : "Packaging direction"}</span>
-        </div>
-      </div>
-    </article>
-  );
+  const customField = product.category === "fragrance" ? "Fragrance + Logo" : product.category === "skincare" ? "Formula + Logo" : "Shade + Logo";
+  const context = { productName: product.name, productUrl: `/products/${product.slug}`, category: product.category };
+  return <article className={`product-card product-card-${product.category}`}>
+    <Link href={`/products/${product.slug}`} className="product-image-wrap" aria-label={`View ${product.name}`}><div className="product-card-index">{String(index + 1).padStart(2, "0")}</div><img src={product.image} alt={`${product.name} product visual`} className="product-image" /><span className="product-view">View Details <ArrowRight size={15} /></span></Link>
+    <div className="product-meta"><div className="product-format"><span>{product.category}</span><span>{product.realImage ? "Product visual" : "Concept visual"}</span></div><Link href={`/products/${product.slug}`} className="product-name">{product.name}</Link><p className="product-type">{product.format}</p><div className="product-commercial"><span><b>Product Type</b>{product.descriptor}</span><span><b>Customizable</b>{customField}</span><span><b>Private Label</b>Available [TO CONFIRM]</span></div><div className="product-card-actions"><Link href={`/products/${product.slug}`} className="card-details-action">View Details <ArrowRight size={14} /></Link><InquiryDrawer triggerLabel="Request Sample" intent="sample" context={context} triggerClassName="card-sample-action" /></div></div>
+  </article>;
 }

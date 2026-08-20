@@ -1,70 +1,35 @@
 /**
- * Maison Mercantile design reminder: a high-end fragrance catalogue as a B2B home page.
- * Let the user's authentic Jam Spill visual carry the hero; use warm paper, plum ink and Mineral Rose for an editorial purchasing path.
+ * Maison Mercantile design reminder: retain the editorial product composition, but communicate B2B scope in three seconds.
+ * Fragrance, Skincare and Makeup must have equal visual weight; supplied product imagery stays transparent about its status.
  */
 import { Link } from "wouter";
-import { ArrowDownRight, ArrowRight, Check, Sparkles } from "lucide-react";
+import { ArrowRight, Check, Factory, FlaskConical, PackageCheck, ShieldCheck, Sparkles } from "lucide-react";
 import { SiteShell, InquiryDrawer } from "@/components/SiteShell";
 import { ProductCard } from "@/components/ProductCard";
-import { products } from "@/data/products";
+import { products, type ProductCategory } from "@/data/products";
 
-const featured = products.filter((product) => product.category === "fragrance").slice(0, 4);
+const categoryEntries: { category: ProductCategory; title: string; intro: string; href: string }[] = [
+  { category: "fragrance", title: "Fragrance", intro: "Mists, scent profiles and private-label packaging.", href: "/collections/fragrance" },
+  { category: "skincare", title: "Skincare", intro: "Care formats, routine products and custom development.", href: "/collections/skincare" },
+  { category: "makeup", title: "Makeup", intro: "Colour formats, shade stories and branded components.", href: "/collections/makeup" },
+];
+const categoryProducts = categoryEntries.map((entry) => ({ ...entry, product: products.find((product) => product.category === entry.category)! }));
 
 export default function Home() {
-  return (
-    <SiteShell>
-      <section className="hero-section">
-        <img className="hero-paper" src="/manus-storage/topperfume-hero-paper-still-life_92fd6502.jpg" alt="" />
-        <div className="hero-copy">
-          <p className="eyebrow">BEAUTY B2B / PRODUCT DIRECTIONS 2026</p>
-          <h1>Make the product<br /><em>the reason to begin.</em></h1>
-          <p className="hero-intro">TopPerfume brings product direction, packaging possibility and development conversation into one considered buying experience.</p>
-          <div className="hero-actions"><Link href="/collections/fragrance" className="text-link">Browse Fragrance <ArrowRight size={16} /></Link><InquiryDrawer triggerLabel="Start a project" /></div>
-          <div className="hero-index"><span>01</span><span>Three beauty categories. One tailored launch path.</span></div>
-        </div>
-        <div className="hero-product-stage">
-          <div className="hero-orbit hero-orbit-one" /><div className="hero-orbit hero-orbit-two" />
-          <img className="hero-product" src="/manus-storage/fragrance-jam-spill_f3448635.jpg" alt="Jam Spill fragrance mist" />
-          <div className="hero-caption"><span>FRAGRANCE MIST</span><strong>Jam Spill</strong><span>FLORAL · FRUITY</span></div>
-        </div>
-      </section>
+  return <SiteShell>
+    <section className="hero-section hero-refined"><img className="hero-paper" src="/manus-storage/topperfume-hero-paper-still-life_92fd6502.jpg" alt="" /><div className="hero-copy"><p className="eyebrow">BEAUTY B2B PARTNER / PRIVATE LABEL · OEM · ODM</p><h1>Beauty products<br /><em>built for your brand.</em></h1><p className="hero-intro">We help beauty brands develop and manufacture <strong>Fragrance, Skincare and Makeup</strong>—from product concept and packaging to samples and production planning.</p><div className="hero-b2b-line"><span>PRIVATE LABEL</span><span>OEM</span><span>ODM</span></div><div className="hero-actions"><Link href="#products" className="text-link">Browse Products <ArrowRight size={16} /></Link><InquiryDrawer triggerLabel="Start Your Project" /></div><div className="hero-index"><span>01</span><span>Product-led development for beauty brands.</span></div></div><div className="hero-product-stage"><div className="hero-orbit hero-orbit-one" /><div className="hero-orbit hero-orbit-two" /><img className="hero-product" src="/manus-storage/fragrance-jam-spill_f3448635.jpg" alt="Jam Spill fragrance mist" /><div className="hero-caption"><span>SUPPLIED PRODUCT VISUAL</span><strong>Jam Spill</strong><span>FRAGRANCE · 250 ML MIST</span></div><div className="hero-category-switch"><span>Fragrance</span><span>Skincare</span><span>Makeup</span></div></div></section>
 
-      <section className="manifesto-section">
-        <div className="section-index">01 / THE POINT OF VIEW</div>
-        <h2>Not a factory catalogue.<br />A considered starting point.</h2>
-        <div className="manifesto-body"><p>High-growth beauty brands do not begin with a price list. They begin with a product worth making their own. This V2 direction leads with real products, then makes the path to sampling, adaptation and project discussion easy to understand.</p><Link href="/collections/fragrance" className="circle-arrow"><ArrowDownRight size={24} /></Link></div>
-      </section>
+    <section className="business-statement"><div className="section-index">01 / WHAT WE DO</div><h2>Develop the product.<br />Build the brand experience.</h2><div className="manifesto-body"><p>Start with a product reference, select your level of customization, then move to sample, quotation and project planning. The experience is deliberately designed for international beauty buyers—not for price-first browsing.</p><Link href="#products" className="circle-arrow"><ArrowRight size={24} /></Link></div></section>
 
-      <section className="category-rail">
-        <div className="rail-heading"><p className="eyebrow">SHOP BY PRODUCT DIRECTION</p><h2>Three places to start.</h2></div>
-        <div className="category-grid">
-          <Link href="/collections/fragrance" className="category-panel fragrance-panel"><span>01 / Fragrance</span><h3>Scents with a shelf story.</h3><p>Mists, scent directions and visual worlds built for private-label adaptation.</p><ArrowRight size={18} /></Link>
-          <Link href="/collections/skincare" className="category-panel skincare-panel"><span>02 / Skincare</span><h3>Care rituals with clarity.</h3><p>Format-led routines that make product development feel considered and approachable.</p><ArrowRight size={18} /></Link>
-          <Link href="/collections/makeup" className="category-panel makeup-panel"><span>03 / Makeup</span><h3>Colour worth collecting.</h3><p>Packaging and shade directions for beauty brands shaping a complete point of view.</p><ArrowRight size={18} /></Link>
-        </div>
-      </section>
+    <section id="products" className="category-rail category-rail-refined"><div className="rail-heading"><div><p className="eyebrow">BROWSE BY CATEGORY</p><h2>Three equal ways to start.</h2></div><p className="category-rail-note">Each category opens to a fast product grid with sample and quotation paths.</p></div><div className="category-grid">{categoryProducts.map(({ category, title, intro, href, product }, index) => <Link href={href} className={`category-panel category-panel-refined ${category}-panel`} key={category}><img src={product.image} className="category-visual" alt={`${title} product visual`} /><div className="category-panel-body"><span>0{index + 1} / {title}</span><h3>{title}</h3><p>{intro}</p><small>{product.realImage ? "Supplied product visual" : "Concept visual — real photo needed"}</small></div><ArrowRight size={18} /></Link>)}</div></section>
 
-      <section className="featured-section">
-        <div className="section-head"><div><p className="eyebrow">LIVE PRODUCT VISUALS</p><h2>Start with a fragrance direction.</h2></div><Link href="/collections/fragrance" className="text-link">View all Fragrance <ArrowRight size={16} /></Link></div>
-        <div className="product-grid featured-grid">{featured.map((product, index) => <ProductCard product={product} index={index} key={product.slug} />)}</div>
-      </section>
+    <section className="featured-section balanced-products"><div className="section-head"><div><p className="eyebrow">PRODUCTS AT A GLANCE</p><h2>One product from every category.</h2></div><Link href="/collections/fragrance" className="text-link">View all products <ArrowRight size={16} /></Link></div><div className="product-grid balanced-grid">{categoryProducts.map(({ product }, index) => <ProductCard product={product} index={index} key={product.slug} />)}</div></section>
 
-      <section id="capabilities" className="capabilities-section">
-        <div className="capabilities-image"><img src="/manus-storage/topperfume-packaging-study_f7ac65c2.jpg" alt="Unbranded beauty packaging development materials" /></div>
-        <div className="capabilities-copy"><p className="eyebrow">FROM ONE REFERENCE TO A LAUNCH BRIEF</p><h2>The work behind a product that feels yours.</h2><div className="capability-list"><p><Check size={17} /> Product direction &amp; assortment thinking</p><p><Check size={17} /> Formula, format &amp; fragrance conversation</p><p><Check size={17} /> Component, artwork &amp; packaging alignment</p><p><Check size={17} /> Samples &amp; next-step project briefing</p></div><InquiryDrawer triggerLabel="Discuss a direction" /></div>
-      </section>
+    <section id="capabilities" className="capabilities-section"><div className="capabilities-image"><img src="/manus-storage/topperfume-packaging-study_f7ac65c2.jpg" alt="Unbranded beauty packaging development materials" /></div><div className="capabilities-copy"><p className="eyebrow">CUSTOM DEVELOPMENT, NOT A GENERIC CATALOGUE</p><h2>The work behind a product that feels yours.</h2><div className="capability-list"><p><Check size={17} /> Product development &amp; product selection</p><p><Check size={17} /> Formula, fragrance &amp; shade customization</p><p><Check size={17} /> Packaging, artwork &amp; logo customization</p><p><Check size={17} /> Sample requests, quotations &amp; project planning</p></div><InquiryDrawer triggerLabel="Start Your Project" /></div></section>
 
-      <section className="process-section">
-        <div><p className="eyebrow">A SIMPLE BUYER PATH</p><h2>From “I like this”<br />to “let’s make it ours.”</h2></div>
-        <div className="process-grid">
-          <article><span>01</span><h3>Browse</h3><p>See a product direction, format or colour story that fits your next collection.</p></article>
-          <article><span>02</span><h3>Brief</h3><p>Share market, product priorities and the degree of customization you need.</p></article>
-          <article><span>03</span><h3>Develop</h3><p>Move into a focused conversation around samples, adaptation and launch readiness.</p></article>
-        </div>
-      </section>
+    <section className="trust-section"><div className="trust-heading"><p className="eyebrow">BUYER TRUST LAYER</p><h2>What buyers need<br />to evaluate next.</h2><p>We will replace every confirmation marker below with approved factory and certification evidence before the production website goes live.</p></div><div className="trust-grid"><article><FlaskConical size={18} /><h3>Product Development</h3><p>Product scope and development workflow [TO CONFIRM]</p></article><article><PackageCheck size={18} /><h3>Packaging</h3><p>Component, artwork and logo scope [TO CONFIRM]</p></article><article><ShieldCheck size={18} /><h3>Quality Control</h3><p>Quality process and documentation [TO CONFIRM]</p></article><article><Sparkles size={18} /><h3>Sample Development</h3><p>Sample process and timelines [TO CONFIRM]</p></article><article><Factory size={18} /><h3>Factory Capability</h3><p>Facility, capacity and market coverage [TO CONFIRM]</p></article><article><Check size={18} /><h3>Certifications</h3><p>Verified certificates and claims [TO CONFIRM]</p></article></div></section>
 
-      <section className="closing-banner"><Sparkles size={20} /><p>Built for brand teams who want beauty that looks as intentional as it performs.</p><InquiryDrawer triggerLabel="Request a project brief" /></section>
-    </SiteShell>
-  );
+    <section className="process-section"><div><p className="eyebrow">A CLEAR BUYER PATH</p><h2>Browse products.<br />Make decisions.</h2></div><div className="process-grid"><article><span>01</span><h3>Browse</h3><p>Choose a category and compare product formats with the key B2B fields in view.</p></article><article><span>02</span><h3>Request</h3><p>Request a sample or quote from the specific product you are considering.</p></article><article><span>03</span><h3>Develop</h3><p>Confirm customization, MOQ and lead time with the right project context.</p></article></div></section>
+    <section className="closing-banner"><Sparkles size={20} /><p>Choose a product, then move to sample, quote or customization.</p><InquiryDrawer triggerLabel="Start Your Project" /></section>
+  </SiteShell>;
 }
-
