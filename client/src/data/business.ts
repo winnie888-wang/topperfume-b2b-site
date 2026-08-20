@@ -1,18 +1,38 @@
 /**
  * Phase 3 business-content reminder: these labels organise a buyer conversation only.
- * Never convert a reference visual into an unverified claim; every unconfirmed commercial field stays [TO CONFIRM].
+ * Verified commercial terms are stated exactly; product-specific requirements remain [TO CONFIRM].
  */
 import type { Product, ProductCategory } from "@/data/products";
 
 export const TO_CONFIRM = "[TO CONFIRM]";
 
+export const businessProfile = {
+  companyName: "Guiqi Technology Co., Ltd.",
+  email: "melody888666@yeah.net",
+  whatsappNumber: "8619066782710",
+  whatsappDisplay: "+86 190 6678 2710",
+} as const;
+
+export const commercialTerms = {
+  standard: [
+    { label: "Standard MOQ", value: "2 pcs" },
+    { label: "Lead Time", value: "Approx. 7 days" },
+    { label: "Free Samples", value: "Available" },
+  ],
+  custom: [
+    { label: "Custom Logo", value: "From 100 pcs" },
+    { label: "Custom Packaging", value: "From 100 pcs" },
+    { label: "Custom Fragrance", value: "From 100 pcs" },
+  ],
+} as const;
+
 /**
- * Add verified routing values through deployment environment variables when approved.
- * Empty values intentionally keep this prototype from inventing an email address or WhatsApp number.
+ * Verified direct routes are public business contact details. Environment values remain
+ * optional overrides for a future staging or production configuration.
  */
 export const inquiryRouting = {
-  email: (import.meta.env.VITE_INQUIRY_EMAIL || "").trim(),
-  whatsappNumber: (import.meta.env.VITE_WHATSAPP_NUMBER || "").replace(/\D/g, ""),
+  email: (import.meta.env.VITE_INQUIRY_EMAIL || businessProfile.email).trim(),
+  whatsappNumber: (import.meta.env.VITE_WHATSAPP_NUMBER || businessProfile.whatsappNumber).replace(/\D/g, ""),
 };
 
 export type InquiryIntentKey = "sample" | "quote" | "project" | "whatsapp";
@@ -38,6 +58,7 @@ const inquiryTitle: Record<InquiryIntentKey, string> = {
 export function buildInquirySummary(input: InquirySummaryInput) {
   const lines = [
     `TOPPERFUME B2B / ${inquiryTitle[input.intent]}`,
+    `For: ${businessProfile.companyName}`,
     "",
     `Product: ${input.context?.productName || TO_CONFIRM}`,
     `Product URL: ${input.context?.productUrl || TO_CONFIRM}`,
@@ -50,7 +71,8 @@ export function buildInquirySummary(input: InquirySummaryInput) {
     `Customization: ${input.customization || TO_CONFIRM}`,
     `Notes: ${input.notes || TO_CONFIRM}`,
     "",
-    "MOQ, lead time, packaging, formula and final commercial terms require confirmation.",
+    "Standard order: MOQ 2 pcs; approx. 7 days; free samples available.",
+    "Custom logo, packaging and fragrance: from 100 pcs. Product-specific scope and final terms require confirmation.",
   ];
   return lines.join("\n");
 }
@@ -73,9 +95,9 @@ const variableByCategory: Record<ProductCategory, { label: string; value: string
 };
 
 export const collectionBuyerGuide: Record<ProductCategory, { reference: BuyerGuideField; variable: BuyerGuideField; packaging: BuyerGuideField; commercial: BuyerGuideField }> = {
-  fragrance: { reference: { value: "Fragrance formats shown", status: TO_CONFIRM }, variable: { value: "Fragrance brief", status: TO_CONFIRM }, packaging: { value: "Bottle, cap and carton", status: TO_CONFIRM }, commercial: { value: "MOQ + lead time", status: TO_CONFIRM } },
-  skincare: { reference: { value: "Body-care formats shown", status: TO_CONFIRM }, variable: { value: "Formula + claims", status: TO_CONFIRM }, packaging: { value: "Pump, component and carton", status: TO_CONFIRM }, commercial: { value: "MOQ + lead time", status: TO_CONFIRM } },
-  makeup: { reference: { value: "Colour and gift formats shown", status: TO_CONFIRM }, variable: { value: "Shade + finish", status: TO_CONFIRM }, packaging: { value: "Component, artwork and carton", status: TO_CONFIRM }, commercial: { value: "MOQ + lead time", status: TO_CONFIRM } },
+  fragrance: { reference: { value: "Fragrance formats shown", status: TO_CONFIRM }, variable: { value: "Fragrance brief", status: TO_CONFIRM }, packaging: { value: "Bottle, cap and carton", status: TO_CONFIRM }, commercial: { value: "Standard 2 pcs / approx. 7 days · custom from 100 pcs" } },
+  skincare: { reference: { value: "Body-care formats shown", status: TO_CONFIRM }, variable: { value: "Formula + claims", status: TO_CONFIRM }, packaging: { value: "Pump, component and carton", status: TO_CONFIRM }, commercial: { value: "Standard 2 pcs / approx. 7 days · custom from 100 pcs" } },
+  makeup: { reference: { value: "Colour and gift formats shown", status: TO_CONFIRM }, variable: { value: "Shade + finish", status: TO_CONFIRM }, packaging: { value: "Component, artwork and carton", status: TO_CONFIRM }, commercial: { value: "Standard 2 pcs / approx. 7 days · custom from 100 pcs" } },
 };
 
 export function getCustomizationLabel(category: ProductCategory) {
@@ -87,11 +109,11 @@ export function getProductDecisionRows(product: Product): DecisionField[] {
   return [
     { label: "Available Size", value: `Reference format shown: ${product.format}`, status: TO_CONFIRM },
     { label: variable.label, value: variable.value, status: TO_CONFIRM },
-    { label: "Packaging", value: "Component, closure and carton options", status: TO_CONFIRM },
-    { label: "Logo Customization", value: "Logo placement and artwork handoff", status: TO_CONFIRM },
-    { label: "Private Label", value: "Availability and programme terms", status: TO_CONFIRM },
-    { label: "MOQ", value: "Commercial threshold", status: TO_CONFIRM },
-    { label: "Lead Time", value: "Production scheduling", status: TO_CONFIRM },
+    { label: "Packaging", value: "Reference packaging · custom packaging from 100 pcs" },
+    { label: "Logo Customization", value: "Custom logo from 100 pcs" },
+    { label: "Private Label", value: "Project pathway and final scope", status: TO_CONFIRM },
+    { label: "MOQ", value: "Standard: 2 pcs · Custom: from 100 pcs" },
+    { label: "Lead Time", value: "Standard: approx. 7 days · Custom schedule", status: TO_CONFIRM },
   ];
 }
 

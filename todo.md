@@ -51,6 +51,16 @@
 - [x] 不编造认证、工厂数据、MOQ、交期、配方、包装或联系人信息；真实收件邮箱与 WhatsApp 号码缺失时明确标注 `[TO CONFIRM]`。
 - [x] 验证 Homepage、三个 Collection、Product Detail 与 Inquiry Flow 的 Desktop / Mobile；不 Merge main、不正式发布、不开始 SEO。
 
+### Phase 3 — Business Trust & Real Conversion（仅 v2-prototype）
+
+- [x] 仅使用已确认的 Guiqi Technology Co., Ltd. 公司名称、`melody888666@yeah.net` 邮箱与 `+86 190 6678 2710` WhatsApp 号码接通询盘动作。
+- [x] 将 Standard Order 写为 MOQ 2 pcs、约 7 天交期与可申请免费样品；将 Custom Order 写为 Logo、Packaging、Fragrance 自定义起订 100 pcs。
+- [x] 在 Product Detail 清楚区分 Standard Order 与 Custom Order，保留产品上下文、样品、报价、项目和 WhatsApp 的转换路径。
+- [x] 在首页加入克制、产品不让位的 Buyer Trust Section，覆盖 Product Development、Packaging Development、Quality Control、R&D、Production 与 Certifications。
+- [x] 仅将用户提供的工厂、研发、包装、质检图片标记为 `Illustrative / Concept Visual`，不将其表述为 Guiqi Technology Co., Ltd. 的真实设施、团队或产线。
+- [x] 对未提供的真实认证使用高级占位布局与 `[CERTIFICATE TO CONFIRM]`，不虚构 ISO、GMP、FDA、厂房、产能、人数、出口市场或合作品牌。
+- [x] 已完成 Homepage Trust Section 与 Product Detail 的 Desktop / Mobile 核验；待保存检查点后将本轮修改推送至 GitHub `v2-prototype`，绝不修改、合并或发布 `main`。
+
 ### 本轮真实素材与公开命名保护
 
 - [x] 将新增护肤与彩妆真实产品照片作为用户已授权展示的实物验证素材导入独立 Preview。
