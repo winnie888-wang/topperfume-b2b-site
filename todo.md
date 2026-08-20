@@ -17,6 +17,15 @@
 - [x] 保留现有商业标题及首屏 B2B 信息，并让 Fragrance / Skincare / Makeup 在第二屏获得同等真实视觉权重。
 - [x] 核验 Homepage Hero 的 Desktop / Mobile 构图并更新独立 Preview；不新增产品、不 Merge main、不正式发布。
 
+### Phase 2.2 — Hero Art Direction Only（严格冻结其他页面）
+
+- [x] 只保留一款授权 Fragrance 作为右侧 Iconic Hero Product；不在 Hero 呈现 Skincare、Makeup 或叠放产品。
+- [x] 用 Porcelain Ivory、自然洞石、柔和定向日光、真实玻璃反射、接触阴影与大留白建立单品 campaign 摄影感。
+- [x] 保持瓶身、瓶盖、标签和比例不变；只优化背景、光影、反射、阴影、构图、裁切与比例。
+- [x] 完全移除 orbit circles、粉色拱门、重叠卡片、图形装饰、大型 caption 和非必要线条；Mineral Rose 仅保留细小 accent。
+- [x] 保留已批准的商业标题与 B2B 信息；冻结 Collection、Product Card、Product Detail、产品数据与其余页面。
+- [x] 核验 Hero Desktop / Mobile，更新独立 Preview；不 Merge main、不发布。
+
 ### 本轮真实素材与公开命名保护
 
 - [x] 将新增护肤与彩妆真实产品照片作为用户已授权展示的实物验证素材导入独立 Preview。

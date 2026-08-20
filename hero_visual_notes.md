@@ -11,3 +11,7 @@ The warm amber bottle visual (`fragrance-vanilla-amber.jpg`) is selected as the 
 ## Approved composition rules
 
 The Hero will feature only this one fragrance product. Its photographic treatment will be a warm ivory / porcelain field with travertine, translucent glass, soft directional light, subtle realistic contact shadow and substantial negative space. The existing pink arch, circular-orbit language, stacked category pictures and excess captioning will not carry into the new composition. Mineral Rose will be limited to restrained editorial emphasis; Plum Ink stays the primary graphic identification colour.
+
+## Phase 2.2 verification
+
+The final Hero uses one authorised warm-amber fragrance product in a warm ivory, travertine and translucent-glass campaign scene. Desktop and mobile checks confirm one product only, a right-shifted bottle, clear left-side commercial copy, no Hero caption card, no orbit circles, no pink arch and no stacked category visuals. Collection, Product Card, Product Detail and all product data remain frozen for this pass.
