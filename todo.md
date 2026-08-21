@@ -102,4 +102,20 @@
 - [x] 核验 Desktop / Mobile 响应式、页面加载、可读性、产品上下文传递及产品名称保护标记。
 - [x] 审计所有 `[TO CONFIRM]`、`[CERTIFICATE TO CONFIRM]` 与 `Illustrative / Concept Visual` 披露，不将概念图或未证实事实表述为真实公司资料。
 - [x] 检查并修复不会引入未证实事实的 placeholder、prototype 残留、失效 CTA、错误链接、重复内容与不专业英文。
-- [ ] 保存 QA 检查点、仅推送 GitHub `v2-prototype` 并交付剩余待确认/概念视觉清单与 Final QA Report；绝不修改、合并或发布 `main`。
+- [x] 保存 QA 检查点、仅推送 GitHub `v2-prototype` 并交付剩余待确认/概念视觉清单与 Final QA Report；绝不修改、合并或发布 `main`。
+
+## Phase 5 — First 5 Fragrance SKU Data（仅 v2-prototype）
+
+- [x] 锁定累积规则：每张新上传的不同产品图按 Product 01、02、03… 顺序新增 SKU；只有用户明确标注为补充图、侧面图、包装图、细节图或场景图时才归属既有 SKU，绝不覆盖或删除前序产品。
+- [ ] 接收并建立 Product 01–05 的原始资料清单；Product 01 已确认 Category: Fragrance、Size: 250 ml、Private Label: Yes，其余字段暂为 `[TO CONFIRM]`；Product 02 已确认类别为 Fragrance Layering Discovery Set、图片可公开展示 GUIQI 品牌、容量为 7 × 1.7 mL，公开名称待确认。
+- [ ] 仅以用户提供的真实产品图作为 SKU 视觉参考；不将图片中的任何第三方品牌名称、标识或香型名称用作正式公开产品名。
+- [ ] 为每个未确认公开名称的 SKU 提供 3 个无明显第三方品牌指向的中性英文命名候选，等待用户确认后再写入数据模型。
+- [ ] 对已确认名称的 SKU 逐项建立 Product Card、Product Detail 与自动携带 Product Name / Product URL / Category 的 Sample、Quote、WhatsApp 询盘上下文。
+- [ ] 使用确认的 Standard MOQ 2 pcs、约 7 天交期、免费样品，以及 Logo / Packaging / Fragrance 100 pcs 起；未确认 Formula / Shade customization MOQ 保留 `[TO CONFIRM]`。
+- [ ] 完成首批 5 个 Fragrance SKU 的 Desktop / Mobile 核验、保存检查点并仅同步 GitHub `v2-prototype`；不扩展至 15 SKU、不合并或发布 main。
+
+### Product 01 — Dior Sauvage Parfum Spray for Men（已明确授权）
+
+- [x] 记录用户明确允许本轮公开使用 Dior 品牌和 `Sauvage Parfum Spray for Men` 产品名称；替代先前未确认的 Product 01 参考资料，不影响独立的 Product 02。
+- [x] 接入已确认 SKU `FR-DI-SAU-100`、100 ml / 3.4 oz、Parfum、Men、Earthy & Woody、Bergamot / Pepper / Amber Wood、Private Label、建议 B2B 价格 US$20.00 / pc 与深色瓶身/礼盒展示信息。
+- [ ] 仅展示 B2B 产品卡、产品详情、Sample / Quote / WhatsApp 询盘与已确认商业规则；不复制截图中的零售价 US$165、Shop Pay、Add to Cart、Shipping calculated at checkout 或原零售网站界面。

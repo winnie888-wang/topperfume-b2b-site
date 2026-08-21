@@ -106,12 +106,16 @@ export function getCustomizationLabel(category: ProductCategory) {
 
 export function getProductDecisionRows(product: Product): DecisionField[] {
   const variable = variableByCategory[product.category];
+  const hasConfirmedData = product.dataStatus === "confirmed";
+  const variableValue = product.category === "fragrance" && product.fragranceFamily
+    ? `${product.fragranceFamily}${product.concentration ? ` · ${product.concentration}` : ""}`
+    : variable.value;
   return [
-    { label: "Available Size", value: `Reference format shown: ${product.format}`, status: TO_CONFIRM },
-    { label: variable.label, value: variable.value, status: TO_CONFIRM },
-    { label: "Packaging", value: "Reference packaging · custom packaging from 100 pcs" },
+    { label: "Available Size", value: product.format, status: hasConfirmedData ? undefined : TO_CONFIRM },
+    { label: variable.label, value: variableValue, status: hasConfirmedData && product.category === "fragrance" ? undefined : TO_CONFIRM },
+    { label: "Packaging", value: product.packaging || "Reference packaging · custom packaging from 100 pcs", status: product.packaging ? undefined : TO_CONFIRM },
     { label: "Logo Customization", value: "Custom logo from 100 pcs" },
-    { label: "Private Label", value: "Project pathway and final scope", status: TO_CONFIRM },
+    { label: "Private Label", value: product.privateLabelAvailable ? "Available" : "Project pathway and final scope", status: product.privateLabelAvailable ? undefined : TO_CONFIRM },
     { label: "MOQ", value: "Standard: 2 pcs · Custom: from 100 pcs" },
     { label: "Lead Time", value: "Standard: approx. 7 days · Custom schedule", status: TO_CONFIRM },
   ];

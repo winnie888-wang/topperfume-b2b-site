@@ -12,9 +12,18 @@ export type Product = {
   tags: string[];
   notes?: { top: string; heart: string; base: string };
   briefing: string;
+  sku?: string;
+  b2bPrice?: string;
+  concentration?: string;
+  gender?: string;
+  fragranceFamily?: string;
+  packaging?: string;
+  privateLabelAvailable?: boolean;
+  dataStatus?: "confirmed" | "reference";
 };
 
 const realVisual = {
+  diorSauvage: "/manus-storage/product-01-dior-sauvage-bottle-box_51b02500.png",
   fragranceRose: "/manus-storage/fragrance-jam-spill_f3448635.jpg",
   fragranceViolet: "/manus-storage/fragrance-my-soul_c875037f.jpg",
   fragranceAmber: "/manus-storage/fragrance-vanilla-amber_ac1dc3b6.jpg",
@@ -35,7 +44,7 @@ const realVisual = {
 const nameToConfirm = "[NAME TO CONFIRM]";
 
 export const products: Product[] = [
-  { slug: "rose-fragrance-mist", name: "Rose Fragrance Mist", nameStatus: nameToConfirm, category: "fragrance", format: "250 ml fragrance mist", descriptor: "Floral · Fruity", image: realVisual.fragranceRose, realImage: true, tags: ["Fragrance Mist", "Private Label", "Product visual"], briefing: "Product image used as a reference for a private-label fragrance-mist format. Product name, fragrance brief and commercial details require confirmation." },
+  { slug: "dior-sauvage-parfum-spray-men", name: "Dior Sauvage Parfum Spray for Men", category: "fragrance", format: "100 ml / 3.4 oz", descriptor: "Earthy · Woody · Spicy", image: realVisual.diorSauvage, realImage: true, tags: ["Men’s Perfume", "Parfum", "Private Label"], notes: { top: "Bergamot", heart: "Pepper", base: "Amber Wood" }, briefing: "A bold woody fragrance with a fresh masculine signature. Sauvage combines bright bergamot freshness with pepper and warm amber wood, creating a powerful fragrance profile for customers who prefer fresh, woody and sophisticated scents.", sku: "FR-DI-SAU-100", b2bPrice: "US$20.00 / pc", concentration: "Parfum", gender: "Men", fragranceFamily: "Earthy & Woody", packaging: "Dark navy-to-black gradient glass bottle with black cylindrical cap and matching premium black gift box.", privateLabelAvailable: true, dataStatus: "confirmed" },
   { slug: "violet-fragrance-mist", name: "Violet Fragrance Mist", nameStatus: nameToConfirm, category: "fragrance", format: "250 ml fragrance mist", descriptor: "Floral · Warm", image: realVisual.fragranceViolet, realImage: true, tags: ["Fragrance Mist", "Private Label", "Product visual"], briefing: "Product image used as a reference for a colour-led fragrance-mist format. Product name and development parameters require confirmation." },
   { slug: "amber-fragrance-mist", name: "Amber Fragrance Mist", nameStatus: nameToConfirm, category: "fragrance", format: "250 ml fragrance mist", descriptor: "Warm · Amber", image: realVisual.fragranceAmber, realImage: true, tags: ["Fragrance Mist", "Giftable", "Product visual"], briefing: "Product image used as a reference for a warm packaging and fragrance-mist direction. Product name and final brief require confirmation." },
   { slug: "blue-fragrance-mist", name: "Blue Fragrance Mist", nameStatus: nameToConfirm, category: "fragrance", format: "250 ml fragrance mist", descriptor: "Fresh · Musky", image: realVisual.fragranceBlue, realImage: true, tags: ["Fragrance Mist", "Fresh", "Product visual"], briefing: "Product image used as a reference for a cool-toned fragrance-mist format. Commercial details require confirmation." },
