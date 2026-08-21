@@ -125,3 +125,9 @@
 - [x] 记录用户明确允许本轮公开使用 Carolina Herrera、Good Girl Blush Tweed Talk 和 GUIQI 的相关信息；图片为 Product 02 独立 SKU，不覆盖 Product 01。
 - [x] 接入已确认 SKU `FR-CH-GGBT-080`、80 ml / 2.7 oz、Eau de Parfum、Women、Oriental Floral、2025 Edition、Private Label、建议 B2B 价格 US$20.00 / pc 与高跟鞋瓶身/格纹礼盒展示信息。
 - [x] 将 Key Notes、配方与截图未确认的信息保持 `[TO CONFIRM]`；仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘，不复制 US$140 零售价、Shop Pay、Add to Cart、运费、社交分享或原零售网站界面。
+
+### Product 03 — Carolina Herrera Very Good Girl Glam（已明确授权）
+
+- [x] 记录用户明确允许本轮公开使用 Carolina Herrera、Very Good Girl Glam 与 GUIQI 相关信息；图片为 Product 03 独立 SKU，不覆盖 Product 01 或 Product 02。
+- [x] 接入已确认 SKU `FR-CH-VGGG-080`、80 ml / 2.7 fl oz、Eau de Parfum、Women、Citrus · Aromatic · Woody、Bergamot / Mandarin / Cherry Character、Private Label、建议 B2B 价格 US$20.00 / pc 与深粉闪粉高跟鞋瓶身/礼盒展示信息。
+- [x] 将其余香调、成分、功效及截图未确认信息保持 `[TO CONFIRM]`；仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘，不复制 US$150 零售价、Shop Pay、Add to Cart、运费、分期或原零售网站界面。
