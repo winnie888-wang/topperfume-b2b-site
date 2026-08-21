@@ -160,3 +160,11 @@
 - [x] 保留 MOQ 和 Fragrance 为 `[TO CONFIRM]`；仅使用“helps improve the appearance of...”等美容护理表达，不加入医学治疗承诺。
 - [x] 仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘；不复制 Amazon rating、Review count、Amazon Store information、原 Amazon 标题或 UI。
 - [x] 已完成 Product 06 与 Product 07 的 TypeScript、生产构建及 Skincare Collection / Product Detail 桌面与移动端核验；各自产品上下文会传递至 Sample、Quote 与 WhatsApp。
+
+### Product 08 — Jergens Ultra Healing Body Lotion
+
+- [x] 以用户提供截图中的大尺寸白色泵头身体乳瓶为独立 Skincare / Body Care SKU 裁切并上传；不得覆盖 Product 01 至 Product 07。
+- [x] 接入确认资料：SKU `SK-BL-JER-UH-946`、946 ml / 32 fl oz、Vitamin C / Vitamin E / Vitamin B5、Intensive Moisturizing Body Lotion、Extra Dry Skin、Fast-absorbing lotion、Dermatologist Tested 与约 7 天交期。
+- [x] 保留 B2B Price、MOQ 与 Fragrance 为 `[TO CONFIRM]`；正文仅采用保湿、滋润、柔滑及改善干燥肌肤感受的非医疗描述，不将 Ultra Healing 扩大为疾病治疗功效。
+- [x] 仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘；不复制 Amazon rating、Review count、Amazon’s Choice、Amazon Store information、原 Amazon 标题或 UI。
+- [x] 已完成 TypeScript、生产构建及 Skincare Collection / Product Detail 的桌面与移动端核验；产品上下文会传递至 Sample、Quote 与 WhatsApp。

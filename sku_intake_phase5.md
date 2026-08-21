@@ -176,3 +176,33 @@
 | Product Image | `/manus-storage/product-07-olay-dark-spot-body-lotion_8520dc7b.png` — cropped from the user-provided screenshot to the bottle only; source-site viewing prompt, lifestyle props and all marketplace UI are excluded. |
 | Retail UI Exclusions | Do not reproduce Amazon rating, review count, Amazon Store information, original Amazon title or source-site UI. |
 | IP / Naming Boundary | User explicitly confirmed Olay brand and product-name use for this SKU in the current round; this record does not extend permission to other brands or SKUs. |
+
+## Product 08
+
+| Field | Status |
+|---|---|
+| Intake ID | `SKN-08` |
+| Public Product Name | Jergens Ultra Healing Body Lotion |
+| Suggested Website Title | Jergens Ultra Healing Moisturizing Body Lotion for Extra Dry Skin 946 ml / 32 fl oz |
+| Public Brand Display | Jergens — user explicitly confirmed that the brand name and product name may remain for this SKU. |
+| SKU | `SK-BL-JER-UH-946` |
+| Category | Skincare / Body Care / Body Lotion |
+| Product Type | Intensive Moisturizing Body Lotion / Dry Skin Body Care |
+| Size / Volume | 946 ml / 32 fl oz |
+| Key Vitamins | Vitamin C / Vitamin E / Vitamin B5 |
+| Primary Product Positioning | Extra dry-skin moisturizer; intensive hydration body lotion; daily moisturizing body care; fast-absorbing formula. |
+| Main Benefit | Moisturizing / Hydrating / Smoothing |
+| Skin Type | Extra Dry Skin |
+| Texture | Fast-absorbing lotion |
+| Dermatologist Tested | Yes — according to supplied product information. |
+| Fragrance | `[TO CONFIRM]` |
+| Standard MOQ | `[TO CONFIRM]` |
+| Custom MOQ | Logo / packaging / formulation scope `[TO CONFIRM]`; universal confirmed custom-logo and custom-packaging threshold remains from 100 pcs. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free-sample availability is the confirmed general commercial rule. |
+| Suggested B2B Price | `[TO CONFIRM]` |
+| Packaging Details | Large white pump bottle with clean minimal packaging and orange accent design. |
+| Product Image | `/manus-storage/product-08-jergens-ultra-healing-body-lotion_bd2450c3.png` — tightly cropped from the user-provided screenshot to create a complete, higher-weight bottle visual; source-site UI, ratings, Amazon’s Choice and bottom black band are excluded. |
+| Retail UI Exclusions | Do not reproduce Amazon rating, review count, Amazon’s Choice, Amazon Store information, original Amazon title or source-site UI. |
+| Claims Boundary | Do not interpret “Ultra Healing” as a medical or skin-disease-treatment claim. Use only non-medical moisturizing, softening, smoothing and dry-skin-comfort language. |
+| IP / Naming Boundary | User explicitly confirmed Jergens brand and product-name use for this SKU in the current round; this record does not extend permission to other brands or SKUs. |

@@ -99,3 +99,6 @@ Logo 使用无文字图形标记：两个相交的细线拱门围合一个抽象
 - **Catalogue plate hierarchy（2026-08-21）：** 所有真实 SKU 图必须通过受控裁切、暖象牙载台、细小产品色彩边与目录说明成为统一的 Catalogue Plate；供应商式背景、手持/台面语境不得以 Hero 级原图主导页面。
 - **Procurement spine priority（2026-08-21）：** Collection 优先展示精简 Buyer Readiness 与产品网格，Buying Note 作为网格后的采购锚点；字段矩阵以编号、细线、全大写标签重复出现，避免多个小标签在首屏同时竞争。
 - **Decision-first PDP spread（2026-08-21）：** 详情页首屏先呈现产品目录版画、标题、可扫描决策字段和询盘动作；产品叙述移为次级说明。Mineral Rose 只作为状态、选择与买家提示的持续品牌信号，产品提取色仅用于低调的目录注释。
+- **Catalogue plate scale（2026-08-22）：** 每个 SKU 的目录版画必须以受控的瓶身尺度、象牙载台、细线内框、编号与单一低调产品色彩锚点呈现；不让原始截图留白使产品在 PDP 首屏像孤立缩略图。
+- **Skincare editorial rhythm（2026-08-22）：** Skincare 页面在 Buyer Readiness 后用单一编号的 Product Catalogue 分段引入网格，再以 Buying Note 收束采购路径；它必须形成买手目录节奏，而非连续数据卡片。
+- **Visual truth hierarchy（2026-08-22）：** 在所有真实产品视觉不被伪装为重新拍摄的前提下，以裁切、载台、边框与目录标签建立一致性；`[TO CONFIRM]` 继续作为低对比度的采购注释，不与产品叙事竞争。
