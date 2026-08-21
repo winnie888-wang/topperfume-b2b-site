@@ -55,3 +55,34 @@
 | Packaging Details | Spray-vial discovery-set reference; final public packaging detail `[TO CONFIRM]`. |
 | Product Image | `/home/ubuntu/upload/pasted_file_4ANs2j_image.png` — user-supplied reference. |
 | IP / Naming Boundary | GUIQI may be visible. Do not use visible third-party collection wording, product names, label artwork or individual fragrance names in public listing copy without explicit approval. |
+
+## Product 04
+
+| Field | Status |
+|---|---|
+| Intake ID | `FRG-04` |
+| Public Product Name | Yves Saint Laurent Mon Paris Parfum for Women |
+| Public Brand Display | Yves Saint Laurent — user explicitly authorised use for this SKU in the current round. |
+| SKU | `FR-YSL-MP-001` |
+| Category | Fragrance |
+| Product Type | Women’s Perfume |
+| Size / Volume | `[TO CONFIRM]` |
+| Gender | Women |
+| Release Year | 2016 |
+| Private Label | Yes — confirmed user statement for the SKU group |
+| Logo Customization | From 100 pcs — confirmed universal commercial rule |
+| Custom Packaging | From 100 pcs — confirmed universal commercial rule |
+| Custom Fragrance | From 100 pcs — confirmed universal commercial rule |
+| Standard MOQ | 2 pcs |
+| Custom MOQ | From 100 pcs, according to confirmed customization type |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free samples available |
+| Suggested B2B Price | US$20.00 / pc |
+| Fragrance Style | Sweet / Fruity / Floral |
+| Top Notes | Pear / Strawberry / Calabrian Bergamot / Raspberry |
+| Heart Notes | Peony / Orange Blossom / Datura / Chinese Jasmine / Sambac Jasmine |
+| Base Notes | Ambrox / Crystal White Musk / Indonesian Patchouli / Guatemala Patchouli |
+| Packaging Details | Faceted clear glass bottle with soft pink fragrance liquid, black decorative neck bow, metallic silver spray hardware and gold-tone YSL emblem detail. |
+| Product Image | `/manus-storage/product-04-mon-paris-bottle_3357056d.png` — user-supplied screenshot cropped to bottle only; original retail UI excluded. |
+| Retail UI Exclusions | Do not reproduce US$155 retail price, Shop Pay, Add to Cart, Shipping calculated at checkout, instalment messaging, social sharing or original retailer layout. |
+| IP / Naming Boundary | User explicitly confirmed brand and product-name use for the current round; this record does not extend permission to other brands or SKUs. |

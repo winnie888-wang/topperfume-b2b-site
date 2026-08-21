@@ -131,3 +131,9 @@
 - [x] 记录用户明确允许本轮公开使用 Carolina Herrera、Very Good Girl Glam 与 GUIQI 相关信息；图片为 Product 03 独立 SKU，不覆盖 Product 01 或 Product 02。
 - [x] 接入已确认 SKU `FR-CH-VGGG-080`、80 ml / 2.7 fl oz、Eau de Parfum、Women、Citrus · Aromatic · Woody、Bergamot / Mandarin / Cherry Character、Private Label、建议 B2B 价格 US$20.00 / pc 与深粉闪粉高跟鞋瓶身/礼盒展示信息。
 - [x] 将其余香调、成分、功效及截图未确认信息保持 `[TO CONFIRM]`；仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘，不复制 US$150 零售价、Shop Pay、Add to Cart、运费、分期或原零售网站界面。
+
+### Product 04 — Yves Saint Laurent Mon Paris（已明确授权）
+
+- [x] 记录用户明确允许本轮公开使用 Yves Saint Laurent、Mon Paris 与 GUIQI 相关信息；图片为 Product 04 独立 SKU，不覆盖 Product 01 至 Product 03。
+- [x] 接入已确认 SKU `FR-YSL-MP-001`、Women、Parfum、2016、Sweet · Fruity · Floral、完整 Top / Heart / Base Notes、Private Label、建议 B2B 价格 US$20.00 / pc 与粉色液体/黑色蝴蝶结瓶身展示信息。
+- [x] 将 Size / Volume 继续保持 `[TO CONFIRM]`；仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘，不复制 US$155 零售价、Shop Pay、Add to Cart、运费、分期、社交分享或原零售网站界面。
