@@ -118,4 +118,10 @@
 
 - [x] 记录用户明确允许本轮公开使用 Dior 品牌和 `Sauvage Parfum Spray for Men` 产品名称；替代先前未确认的 Product 01 参考资料，不影响独立的 Product 02。
 - [x] 接入已确认 SKU `FR-DI-SAU-100`、100 ml / 3.4 oz、Parfum、Men、Earthy & Woody、Bergamot / Pepper / Amber Wood、Private Label、建议 B2B 价格 US$20.00 / pc 与深色瓶身/礼盒展示信息。
-- [ ] 仅展示 B2B 产品卡、产品详情、Sample / Quote / WhatsApp 询盘与已确认商业规则；不复制截图中的零售价 US$165、Shop Pay、Add to Cart、Shipping calculated at checkout 或原零售网站界面。
+- [x] 仅展示 B2B 产品卡、产品详情、Sample / Quote / WhatsApp 询盘与已确认商业规则；不复制截图中的零售价 US$165、Shop Pay、Add to Cart、Shipping calculated at checkout 或原零售网站界面。
+
+### Product 02 — Carolina Herrera Good Girl Blush Tweed Talk（已明确授权）
+
+- [x] 记录用户明确允许本轮公开使用 Carolina Herrera、Good Girl Blush Tweed Talk 和 GUIQI 的相关信息；图片为 Product 02 独立 SKU，不覆盖 Product 01。
+- [x] 接入已确认 SKU `FR-CH-GGBT-080`、80 ml / 2.7 oz、Eau de Parfum、Women、Oriental Floral、2025 Edition、Private Label、建议 B2B 价格 US$20.00 / pc 与高跟鞋瓶身/格纹礼盒展示信息。
+- [x] 将 Key Notes、配方与截图未确认的信息保持 `[TO CONFIRM]`；仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘，不复制 US$140 零售价、Shop Pay、Add to Cart、运费、社交分享或原零售网站界面。
