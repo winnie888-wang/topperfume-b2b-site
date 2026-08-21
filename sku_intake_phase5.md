@@ -1,4 +1,4 @@
-# Phase 5 — Fragrance SKU Intake
+# Phase 5 — SKU Intake
 
 > **Use:** This intake file records only user-confirmed SKU facts. It is not public website copy and does not replace the product-data review required before a SKU is published.
 
@@ -86,3 +86,32 @@
 | Product Image | `/manus-storage/product-04-mon-paris-bottle_3357056d.png` — user-supplied screenshot cropped to bottle only; original retail UI excluded. |
 | Retail UI Exclusions | Do not reproduce US$155 retail price, Shop Pay, Add to Cart, Shipping calculated at checkout, instalment messaging, social sharing or original retailer layout. |
 | IP / Naming Boundary | User explicitly confirmed brand and product-name use for the current round; this record does not extend permission to other brands or SKUs. |
+
+## Product 05
+
+| Field | Status |
+|---|---|
+| Intake ID | `SKN-05` |
+| Public Product Name | MEDIX Vitamin C + Niacinamide Brightening Body Lotion |
+| Suggested Website Title | MEDIX Vitamin C + Niacinamide Brightening Body Lotion 444 ml / 15 fl oz |
+| Public Brand Display | MEDIX 5.5 is source-product identification; public copy uses the user-specified generic product-card name until explicit public brand-display confirmation is received. |
+| SKU | `SK-BL-VC-444` |
+| Category | Skincare / Body Care / Body Lotion |
+| Product Type | Brightening Body Lotion / Body Moisturizer |
+| Size / Volume | 444 ml / 15 fl oz |
+| Gender | Women & Men / Unisex |
+| Key Ingredients / Actives | Vitamin C / Niacinamide / Turmeric |
+| Product Positioning | Brightening body care; daily body moisturizer; firming and smoothing body care; uneven-looking skin-tone care. |
+| Texture | Body Cream / Lotion `[TO CONFIRM]` |
+| Skin Type | `[TO CONFIRM]` |
+| Fragrance | `[TO CONFIRM]` |
+| SPF | `[TO CONFIRM]` — no public SPF, UVA/UVB, Broad Spectrum or Sunscreen claim until source values or test material are supplied. |
+| Standard MOQ | 12 pcs — SKU-specific user-confirmed requirement. |
+| Custom MOQ | Logo / packaging / formulation scope `[TO CONFIRM]`; universal confirmed custom-logo and custom-packaging threshold remains from 100 pcs. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free-sample availability is the confirmed general commercial rule. |
+| Suggested B2B Price | US$3.99 / pc |
+| Packaging Details | Rectangular amber-orange pump bottle with a white pump dispenser and modern minimal body-care presentation. |
+| Product Image | `/manus-storage/product-05-medix-vitamin-c-body-lotion_9c412e12.png` — cropped from the user-provided screenshot to product visual only; the source-site viewing prompt is excluded. |
+| Retail UI Exclusions | Do not reproduce Amazon rating, Amazon’s Choice, review count, store interface, original Amazon title or source-site UI. |
+| IP / Naming Boundary | This record only reflects the user-provided brand and public product name for the current SKU. |

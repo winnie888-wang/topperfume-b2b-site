@@ -137,3 +137,11 @@
 - [x] 记录用户明确允许本轮公开使用 Yves Saint Laurent、Mon Paris 与 GUIQI 相关信息；图片为 Product 04 独立 SKU，不覆盖 Product 01 至 Product 03。
 - [x] 接入已确认 SKU `FR-YSL-MP-001`、Women、Parfum、2016、Sweet · Fruity · Floral、完整 Top / Heart / Base Notes、Private Label、建议 B2B 价格 US$20.00 / pc 与粉色液体/黑色蝴蝶结瓶身展示信息。
 - [x] 将 Size / Volume 继续保持 `[TO CONFIRM]`；仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘，不复制 US$155 零售价、Shop Pay、Add to Cart、运费、分期、社交分享或原零售网站界面。
+
+### Product 05 — MEDIX Vitamin C + Niacinamide Brightening Body Lotion
+
+- [x] 以用户提供截图中的单一琥珀橙色泵头瓶为独立 Skincare / Body Care SKU 裁切并上传；不得覆盖 Product 01 至 Product 04。
+- [x] 接入确认资料：SKU `SK-BL-VC-444`、444 ml / 15 fl oz、Unisex、Vitamin C / Niacinamide / Turmeric、建议 B2B 价格 US$3.99 / pc、MOQ 12 pcs、约 7 天交期与泵头包装信息。
+- [x] 将 Texture、Skin Type、Fragrance 与 SPF 均保留为 `[TO CONFIRM]`；不在公开页面作 SPF30、SPF50、Broad Spectrum、UVA / UVB Protection 或 Sunscreen 声明。
+- [x] 仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘；不复制 Amazon rating、Amazon’s Choice、评价数量、店铺界面、原 Amazon 标题或 UI。
+- [x] 已完成 TypeScript、生产构建及 Skincare Collection / Product Detail 的桌面与移动端核验；SKU 专属 MOQ 12 pcs 已在产品卡、详情、标准订单路径与询盘摘要中传递。

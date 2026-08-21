@@ -38,7 +38,7 @@ export const inquiryRouting = {
 export type InquiryIntentKey = "sample" | "quote" | "project" | "whatsapp";
 export type InquirySummaryInput = {
   intent: InquiryIntentKey;
-  context?: { productName?: string; productUrl?: string; category?: string };
+  context?: { productName?: string; productUrl?: string; category?: string; standardMoq?: string; leadTime?: string; sampleAvailability?: string };
   name?: string;
   country?: string;
   email?: string;
@@ -56,6 +56,12 @@ const inquiryTitle: Record<InquiryIntentKey, string> = {
 };
 
 export function buildInquirySummary(input: InquirySummaryInput) {
+  const standardMoq = input.context?.standardMoq || commercialTerms.standard[0].value;
+  const leadTime = input.context?.leadTime || commercialTerms.standard[1].value;
+  const sampleAvailability = input.context?.sampleAvailability || commercialTerms.standard[2].value;
+  const customTerms = input.context?.category === "skincare"
+    ? "Custom logo and packaging: from 100 pcs. Formula, claims and testing scope require confirmation."
+    : "Custom logo, packaging and fragrance: from 100 pcs. Product-specific scope and final terms require confirmation.";
   const lines = [
     `TOPPERFUME B2B / ${inquiryTitle[input.intent]}`,
     `For: ${businessProfile.companyName}`,
@@ -71,8 +77,8 @@ export function buildInquirySummary(input: InquirySummaryInput) {
     `Customization: ${input.customization || TO_CONFIRM}`,
     `Notes: ${input.notes || TO_CONFIRM}`,
     "",
-    "Standard order: MOQ 2 pcs; approx. 7 days; free samples available.",
-    "Custom logo, packaging and fragrance: from 100 pcs. Product-specific scope and final terms require confirmation.",
+    `Standard order: MOQ ${standardMoq}; ${leadTime}; Free samples: ${sampleAvailability}.`,
+    customTerms,
   ];
   return lines.join("\n");
 }
@@ -109,16 +115,37 @@ export function getProductDecisionRows(product: Product): DecisionField[] {
   const hasConfirmedData = product.dataStatus === "confirmed";
   const variableValue = product.category === "fragrance" && product.fragranceFamily
     ? `${product.fragranceFamily}${product.concentration ? ` · ${product.concentration}` : ""}`
-    : variable.value;
+    : product.category === "skincare" && product.keyIngredients
+      ? product.keyIngredients
+      : variable.value;
   return [
     { label: "Available Size", value: product.format, status: hasConfirmedData ? undefined : TO_CONFIRM },
-    { label: variable.label, value: variableValue, status: hasConfirmedData && product.category === "fragrance" ? undefined : TO_CONFIRM },
+    { label: variable.label, value: variableValue, status: hasConfirmedData && ((product.category === "fragrance" && product.fragranceFamily) || (product.category === "skincare" && product.keyIngredients)) ? undefined : TO_CONFIRM },
     { label: "Packaging", value: product.packaging || "Reference packaging · custom packaging from 100 pcs", status: product.packaging ? undefined : TO_CONFIRM },
     { label: "Logo Customization", value: "Custom logo from 100 pcs" },
     { label: "Private Label", value: product.privateLabelAvailable ? "Available" : "Project pathway and final scope", status: product.privateLabelAvailable ? undefined : TO_CONFIRM },
-    { label: "MOQ", value: "Standard: 2 pcs · Custom: from 100 pcs" },
+    { label: "MOQ", value: `Standard: ${product.standardMoq || "2 pcs"} · Custom: from 100 pcs` },
     { label: "Lead Time", value: "Standard: approx. 7 days · Custom schedule", status: TO_CONFIRM },
   ];
+}
+
+export function getProductStandardTerms(product: Product) {
+  return [
+    { label: "Standard MOQ", value: product.standardMoq || commercialTerms.standard[0].value },
+    { label: "Lead Time", value: product.leadTime || commercialTerms.standard[1].value },
+    { label: "Free Samples", value: product.sampleAvailability || commercialTerms.standard[2].value },
+  ];
+}
+
+export function getProductCustomTerms(product: Product) {
+  if (product.category === "skincare") {
+    return [
+      { label: "Custom Logo", value: "From 100 pcs" },
+      { label: "Custom Packaging", value: "From 100 pcs" },
+      { label: "Formula / Claims", value: TO_CONFIRM },
+    ];
+  }
+  return commercialTerms.custom;
 }
 
 export function getDevelopmentScope(category: ProductCategory) {

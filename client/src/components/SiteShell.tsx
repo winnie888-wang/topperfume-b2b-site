@@ -20,7 +20,7 @@ const nav = [
 ];
 
 export type InquiryIntent = "sample" | "quote" | "project";
-export type InquiryContext = { productName?: string; productUrl?: string; category?: string };
+export type InquiryContext = { productName?: string; productUrl?: string; category?: string; standardMoq?: string; leadTime?: string; sampleAvailability?: string };
 
 const inquiryCopy: Record<InquiryIntent, { eyebrow: string; title: string; intro: string; submit: string }> = {
   sample: { eyebrow: "SAMPLE REQUEST", title: "Request a product sample.", intro: "Share the product reference, market and estimated quantity. Your product context is attached automatically and can be sent directly to Guiqi Technology Co., Ltd.", submit: "Prepare sample request" },
