@@ -115,3 +115,64 @@
 | Product Image | `/manus-storage/product-05-medix-vitamin-c-body-lotion_9c412e12.png` — cropped from the user-provided screenshot to product visual only; the source-site viewing prompt is excluded. |
 | Retail UI Exclusions | Do not reproduce Amazon rating, Amazon’s Choice, review count, store interface, original Amazon title or source-site UI. |
 | IP / Naming Boundary | This record only reflects the user-provided brand and public product name for the current SKU. |
+
+## Product 06
+
+| Field | Status |
+|---|---|
+| Intake ID | `SKN-06` |
+| Public Product Name | Retinol + Ferulic Acid Firming Body Lotion |
+| Suggested Website Title | MEDIX 5.5 Retinol + Ferulic Acid Firming Body Lotion 444 ml / 15 fl oz |
+| Public Brand Display | MEDIX 5.5 is source-product identification; public copy uses the user-specified generic product-card name until explicit public brand-display confirmation is received. |
+| SKU | `SK-BL-RET-444` |
+| Category | Skincare / Body Care / Body Lotion |
+| Product Type | Firming Body Lotion / Retinol Body Cream |
+| Size / Volume | 444 ml / 15 fl oz |
+| Gender | Women / Unisex Body Care |
+| Key Ingredients / Actives | Retinol / Ferulic Acid |
+| Product Positioning | Firming body lotion; retinol body care; smoothing body moisturizer; mature-skin body care; age-supporting body cream. |
+| Confirmed Benefit Framing | Helps improve the appearance of crepey-looking skin, visible fine lines and uneven texture while supporting softer and smoother-looking skin. No medical or outcome-guarantee claim. |
+| Texture | Body Cream / Lotion `[TO CONFIRM]` |
+| Skin Type | `[TO CONFIRM]` |
+| Fragrance | `[TO CONFIRM]` |
+| Ingredient Concentrations | `[TO CONFIRM]` — do not infer or publish. |
+| Standard MOQ | `[TO CONFIRM]` |
+| Custom MOQ | Logo / packaging / formulation scope `[TO CONFIRM]`; universal confirmed custom-logo and custom-packaging threshold remains from 100 pcs. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free-sample availability is the confirmed general commercial rule. |
+| Suggested B2B Price | `[TO CONFIRM]` |
+| Packaging Details | Modern rectangular deep-pink pump bottle with a white pump dispenser and minimalist body-care presentation. |
+| Product Image | `/manus-storage/product-06-medix-retinol-body-lotion_82595db9.png` — cropped from the user-provided screenshot to the full bottle visual; source-site viewing prompt and all marketplace UI are excluded. |
+| Retail UI Exclusions | Do not reproduce Amazon rating, review count, Overall Pick, Amazon Store information, original Amazon title or source-site UI. |
+| Claims Boundary | Do not add medical-treatment claims, a definite anti-aging result, or unconfirmed ingredient concentrations. |
+| IP / Naming Boundary | This record only reflects the user-provided brand and public product name for the current SKU. |
+
+## Product 07
+
+| Field | Status |
+|---|---|
+| Intake ID | `SKN-07` |
+| Public Product Name | Olay Dark Spot Correcting Body Lotion |
+| Suggested Website Title | Olay Dark Spot Correcting Body Lotion with AHA, Vitamin C & Niacinamide 502 ml / 17 fl oz |
+| Public Brand Display | Olay — user explicitly confirmed that the brand name and product name may remain for this SKU. |
+| SKU | `SK-BL-OLAY-AHA-502` |
+| Category | Skincare / Body Care / Body Lotion |
+| Product Type | Brightening / Tone-Enhancing Body Lotion |
+| Size / Volume | 502 ml / 17 fl oz |
+| Gender | Women / suitable for general body-care use |
+| Key Ingredients / Actives | AHA / Vitamin C / Niacinamide / Vitamin B3 Complex |
+| Main Benefits | Brightening / Hydrating / Tone Care |
+| Moisture Positioning | 24-hour hydration |
+| Skin Type | All Skin Types |
+| Texture | Fast-absorbing body lotion |
+| Fragrance | `[TO CONFIRM]` |
+| Standard MOQ | `[TO CONFIRM]` |
+| Custom MOQ | Logo / packaging / formulation scope `[TO CONFIRM]`; universal confirmed custom-logo and custom-packaging threshold remains from 100 pcs. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free-sample availability is the confirmed general commercial rule. |
+| Suggested B2B Price | US$2.99 / pc |
+| Confirmed Benefit Framing | Helps improve the appearance of dark spots, discoloration and uneven-looking skin tone while providing lasting hydration. No medical-treatment or outcome-guarantee claim. |
+| Packaging Details | Tall premium pump bottle with a warm gold/orange upper section, white lower body and gold-tone pump detail. |
+| Product Image | `/manus-storage/product-07-olay-dark-spot-body-lotion_8520dc7b.png` — cropped from the user-provided screenshot to the bottle only; source-site viewing prompt, lifestyle props and all marketplace UI are excluded. |
+| Retail UI Exclusions | Do not reproduce Amazon rating, review count, Amazon Store information, original Amazon title or source-site UI. |
+| IP / Naming Boundary | User explicitly confirmed Olay brand and product-name use for this SKU in the current round; this record does not extend permission to other brands or SKUs. |

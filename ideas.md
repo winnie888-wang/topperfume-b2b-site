@@ -96,3 +96,6 @@ Logo 使用无文字图形标记：两个相交的细线拱门围合一个抽象
 - **Confirmation hierarchy：** `[TO CONFIRM]` and `[NAME TO CONFIRM]` remain mandatory truth markers, but must appear as small Mineral Rose procurement annotations after a verified-neutral field description—not inside a product name, descriptor or headline-sized message.
 - **Catalogue plate consistency：** Every product card uses an ivory mount, a restrained product-colour edge, controlled image treatment and a small reference caption. The field row beneath repeats the same fine-line buyer grammar across Fragrance, Skincare and Makeup.
 - **Decision-first product language：** Reference format, product type, customization and private-label availability lead the decision surface; confirmation status stays visually secondary while no unsupported claim is introduced.
+- **Catalogue plate hierarchy（2026-08-21）：** 所有真实 SKU 图必须通过受控裁切、暖象牙载台、细小产品色彩边与目录说明成为统一的 Catalogue Plate；供应商式背景、手持/台面语境不得以 Hero 级原图主导页面。
+- **Procurement spine priority（2026-08-21）：** Collection 优先展示精简 Buyer Readiness 与产品网格，Buying Note 作为网格后的采购锚点；字段矩阵以编号、细线、全大写标签重复出现，避免多个小标签在首屏同时竞争。
+- **Decision-first PDP spread（2026-08-21）：** 详情页首屏先呈现产品目录版画、标题、可扫描决策字段和询盘动作；产品叙述移为次级说明。Mineral Rose 只作为状态、选择与买家提示的持续品牌信号，产品提取色仅用于低调的目录注释。

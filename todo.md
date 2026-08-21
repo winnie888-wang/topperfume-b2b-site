@@ -145,3 +145,18 @@
 - [x] 将 Texture、Skin Type、Fragrance 与 SPF 均保留为 `[TO CONFIRM]`；不在公开页面作 SPF30、SPF50、Broad Spectrum、UVA / UVB Protection 或 Sunscreen 声明。
 - [x] 仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘；不复制 Amazon rating、Amazon’s Choice、评价数量、店铺界面、原 Amazon 标题或 UI。
 - [x] 已完成 TypeScript、生产构建及 Skincare Collection / Product Detail 的桌面与移动端核验；SKU 专属 MOQ 12 pcs 已在产品卡、详情、标准订单路径与询盘摘要中传递。
+
+### Product 06 — Retinol + Ferulic Acid Firming Body Lotion
+
+- [x] 以用户提供截图中的单一深粉色泵头身体乳瓶为独立 Skincare / Body Care SKU 裁切并上传；不得覆盖 Product 01 至 Product 05。
+- [x] 接入确认资料：SKU `SK-BL-RET-444`、444 ml / 15 fl oz、Retinol / Ferulic Acid、Firming Body Lotion / Retinol Body Cream、约 7 天交期与白色泵头包装信息。
+- [x] 将 B2B Price、MOQ、Texture、Skin Type 与 Fragrance 均保留为 `[TO CONFIRM]`；不得增加医学治疗、确定抗衰结果或未经确认的成分浓度。
+- [x] 仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘；不复制 Amazon rating、Review count、Overall Pick、Amazon Store information、原 Amazon 标题或 UI。
+
+### Product 07 — Olay Dark Spot Correcting Body Lotion
+
+- [x] 以用户提供截图中的金橙色泵头身体乳瓶为独立 Skincare / Body Care SKU 裁切并上传；不得覆盖 Product 01 至 Product 06。
+- [x] 接入确认资料：SKU `SK-BL-OLAY-AHA-502`、502 ml / 17 fl oz、AHA / Vitamin C / Niacinamide / Vitamin B3、Brightening / Tone-Enhancing Body Lotion、建议 B2B 价格 US$2.99 / pc、约 7 天交期与金橙/白色泵头包装信息。
+- [x] 保留 MOQ 和 Fragrance 为 `[TO CONFIRM]`；仅使用“helps improve the appearance of...”等美容护理表达，不加入医学治疗承诺。
+- [x] 仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘；不复制 Amazon rating、Review count、Amazon Store information、原 Amazon 标题或 UI。
+- [x] 已完成 Product 06 与 Product 07 的 TypeScript、生产构建及 Skincare Collection / Product Detail 桌面与移动端核验；各自产品上下文会传递至 Sample、Quote 与 WhatsApp。
