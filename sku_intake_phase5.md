@@ -443,3 +443,38 @@
 | Product Image | `/manus-storage/product-16-vegan-pressed-powder-eyeshadow-palette_faef4ea4.png` — cropped user-supplied real product visual retaining the two palette color stories and display tray while excluding the source image's upper marketing header and right-side UI control. |
 | Claims Boundary | Do not infer net weight, pan weight, ingredients, shade names / codes, certification, private-label availability, customization capability or customization MOQ. Use cosmetic positioning only; no medical claims. |
 | Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title or the terms “Chemical,” “Fair Skin Tone,” or “Wholesale” as public website copy. The user-confirmed public name is 16-Shade Vegan Pressed Powder Eyeshadow Palette. |
+
+## Product 17
+
+> **Sequence note:** The user supplied this as “Product 16 — Makeup / Face,” but Product 16 is already the independently integrated 16-Shade Vegan Pressed Powder Eyeshadow Palette. Under the agreed accumulation rule, this distinct visual is recorded as Product 17 and does not replace any previous SKU.
+
+| Field | Status |
+|---|---|
+| Intake ID | `MUP-17` |
+| Public Product Name | 8ml Lightweight Hydrating Liquid Concealer |
+| Suggested Website Title | 8ml Lightweight Hydrating Liquid Concealer \| Multi-Shade Custom Logo Face Makeup |
+| Public Brand Display | Not supplied; do not invent or display a brand. |
+| SKU | `MU-FACE-CON-008` |
+| Category | Makeup / Face Makeup / Concealer |
+| Product Type | Liquid Concealer |
+| Net Volume | 8 ml |
+| Visible Shade Range | Approximately 6 visible shades from light beige to deep brown. Suggested directions: Light Ivory, Light Beige, Natural Beige, Warm Tan, Caramel and Deep Brown. Exact names / codes `[TO CONFIRM]`. |
+| Texture | Lightweight Liquid / Cream |
+| Coverage Level | `[TO CONFIRM]` |
+| Finish | `[TO CONFIRM]` |
+| Positioning | Lightweight / Moisturizing / Hydrating / Natural-looking complexion coverage. |
+| Ingredients | `[TO CONFIRM]` |
+| Shade Codes | `[TO CONFIRM]` |
+| Standard MOQ | 12 pcs |
+| Custom MOQ | `[TO CONFIRM]` — no customization threshold is inferred for this Makeup SKU. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free-sample availability is the confirmed general commercial rule. |
+| Suggested B2B Price | US$2.99 / pc |
+| Private Label | Available according to supplied product information. |
+| Logo Customization | Available according to supplied product information. |
+| Custom Packaging | `[TO CONFIRM]` |
+| Custom Shade Range | `[TO CONFIRM]` |
+| Packaging Details | Slim transparent 8 ml concealer tube with a soft pink cap, with product shades visible through the tube. The supplied “YOUR LOGO” placement demonstrates customizable branding potential. |
+| Product Image | `/manus-storage/product-17-lightweight-hydrating-liquid-concealer_231c2117.png` — cropped user-supplied real product visual retaining the complete six-tube shade arrangement and visible “YOUR LOGO” demonstration while removing outer source margins. |
+| Claims Boundary | Do not infer coverage, finish, ingredients, exact shade names / codes, certification, custom packaging, custom shade range or customization MOQ. Use cosmetic positioning only; no repair, treatment or medical claims. |
+| Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title, “Isolation Repair,” or “Wholesale” as public website copy. The user-confirmed public name is 8ml Lightweight Hydrating Liquid Concealer. |

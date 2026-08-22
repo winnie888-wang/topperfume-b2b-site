@@ -232,3 +232,12 @@
 - [x] 将 Net Weight、Individual Pan Weight、Ingredients、Shade Names / Codes、Private Label、Custom Logo、Custom Outer Packaging、Custom Shade Combination 与所有定制 MOQ 均保持 `[TO CONFIRM]`；未声称 Vegan Certified。
 - [x] 已完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘；产品面向不同妆容风格和多种肤色，未增加未确认净含量、配方、色号、认证或定制能力。
 - [x] 已完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；确认产品上下文传递至 Sample、Quote 与 WhatsApp，且询盘摘要会保留该 SKU 的定制范围待确认边界。
+
+### Product 17 — 8ml Lightweight Hydrating Liquid Concealer
+
+- [x] 将用户提供的六支粉盖透明液体遮瑕管实拍图作为独立 Makeup / Face SKU 裁切并上传；不得覆盖既有 Product 16 十六色眼影盘 SKU 或其他前序产品。
+- [x] 接入确认资料：SKU `MU-FACE-CON-008`、Liquid Concealer、8 ml、约 6 个可见肤色方向、Lightweight Liquid / Cream、Moisturizing / Hydrating、US$2.99 / pc、MOQ 12 pcs 与约 7 天交期。
+- [x] 使用用户确认的公开主名称 `8ml Lightweight Hydrating Liquid Concealer`；不使用原 Alibaba 标题中的 “Isolation Repair”、关键词堆砌或夸大的修复/治疗性表达。
+- [x] 以 “YOUR LOGO” 仅呈现确认的 Custom Logo 与 Private Label 可用性（according to supplied product information）；Custom Packaging、Custom Shade Range、Customization MOQ、Coverage Level、Finish、Ingredients、Exact Shade Names / Codes 均保持 `[TO CONFIRM]`。
+- [x] 完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘上下文，不增加未确认配方、遮盖力、妆效、色号、认证或定制 MOQ。
+- [x] 完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；保存隔离检查点，不合并 main、不推送 GitHub、不发布。

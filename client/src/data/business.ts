@@ -115,7 +115,8 @@ export function getCustomizationLabel(category: ProductCategory) {
 export function getProductDecisionRows(product: Product): DecisionField[] {
   const variable = variableByCategory[product.category];
   const hasConfirmedData = product.dataStatus === "confirmed";
-  const productCustomScopeNeedsConfirmation = product.customizationStatus === TO_CONFIRM;
+  const customMoq = product.customizationMoq || (product.customizationStatus === TO_CONFIRM ? TO_CONFIRM : "from 100 pcs");
+  const productCustomScopeNeedsConfirmation = customMoq === TO_CONFIRM;
   const variableValue = product.category === "fragrance" && product.fragranceFamily
     ? `${product.fragranceFamily}${product.concentration ? ` · ${product.concentration}` : ""}`
     : product.category === "skincare" && product.keyIngredients
@@ -128,9 +129,9 @@ export function getProductDecisionRows(product: Product): DecisionField[] {
     { label: "Available Size", value: product.format, status: hasConfirmedData && product.format !== TO_CONFIRM ? undefined : TO_CONFIRM },
     { label: variable.label, value: variableValue, status: hasConfirmedData && hasConfirmedVariable ? undefined : TO_CONFIRM },
     { label: "Packaging", value: product.packaging || "Reference packaging · custom packaging from 100 pcs", status: product.packaging ? undefined : TO_CONFIRM },
-    { label: "Logo Customization", value: productCustomScopeNeedsConfirmation ? "Product-specific logo scope" : "Custom logo from 100 pcs", status: productCustomScopeNeedsConfirmation ? TO_CONFIRM : undefined },
-    { label: "Private Label", value: product.privateLabelAvailable ? "Available" : "Project pathway and final scope", status: product.privateLabelAvailable ? undefined : TO_CONFIRM },
-    { label: "MOQ", value: `Standard: ${product.standardMoq || "2 pcs"} · Custom: ${productCustomScopeNeedsConfirmation ? TO_CONFIRM : "from 100 pcs"}`, status: productCustomScopeNeedsConfirmation ? TO_CONFIRM : undefined },
+    { label: "Logo Customization", value: product.customLogoStatus || (productCustomScopeNeedsConfirmation ? "Product-specific logo scope" : "Custom logo from 100 pcs"), status: product.customLogoStatus ? undefined : productCustomScopeNeedsConfirmation ? TO_CONFIRM : undefined },
+    { label: "Private Label", value: product.privateLabelStatus || (product.privateLabelAvailable ? "Available" : "Project pathway and final scope"), status: product.privateLabelStatus || product.privateLabelAvailable ? undefined : TO_CONFIRM },
+    { label: "MOQ", value: `Standard: ${product.standardMoq || "2 pcs"} · Custom: ${customMoq}`, status: productCustomScopeNeedsConfirmation ? TO_CONFIRM : undefined },
     { label: "Lead Time", value: "Standard: approx. 7 days · Custom schedule", status: TO_CONFIRM },
   ];
 }
@@ -144,6 +145,16 @@ export function getProductStandardTerms(product: Product) {
 }
 
 export function getProductCustomTerms(product: Product) {
+  const hasExplicitCustomTerms = Boolean(product.privateLabelStatus || product.customLogoStatus || product.customPackagingStatus || product.customShadesStatus || product.customizationMoq);
+  if (hasExplicitCustomTerms) {
+    return [
+      { label: "Private Label", value: product.privateLabelStatus || TO_CONFIRM },
+      { label: "Custom Logo", value: product.customLogoStatus || TO_CONFIRM },
+      { label: "Custom Packaging", value: product.customPackagingStatus || TO_CONFIRM },
+      { label: "Custom Shades", value: product.customShadesStatus || TO_CONFIRM },
+      { label: "Customization MOQ", value: product.customizationMoq || TO_CONFIRM },
+    ];
+  }
   if (product.customizationStatus === TO_CONFIRM) {
     return product.category === "makeup"
       ? [
@@ -169,6 +180,9 @@ export function getProductCustomTerms(product: Product) {
 }
 
 export function getProductInquiryCustomizationNote(product: Product) {
+  if (product.privateLabelStatus || product.customLogoStatus || product.customPackagingStatus || product.customShadesStatus || product.customizationMoq) {
+    return "Private Label and Custom Logo are available according to supplied product information. Custom Packaging, Custom Shade Range and all customization MOQ require confirmation.";
+  }
   return product.customizationStatus === TO_CONFIRM
     ? "Private label, custom logo, custom packaging, custom shades and all customization MOQ require confirmation."
     : product.category === "skincare"
