@@ -168,3 +168,11 @@
 - [x] 保留 B2B Price、MOQ 与 Fragrance 为 `[TO CONFIRM]`；正文仅采用保湿、滋润、柔滑及改善干燥肌肤感受的非医疗描述，不将 Ultra Healing 扩大为疾病治疗功效。
 - [x] 仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘；不复制 Amazon rating、Review count、Amazon’s Choice、Amazon Store information、原 Amazon 标题或 UI。
 - [x] 已完成 TypeScript、生产构建及 Skincare Collection / Product Detail 的桌面与移动端核验；产品上下文会传递至 Sample、Quote 与 WhatsApp。
+
+### Product 10 — Victoria’s Secret Bare Vanilla Body Fragrance Mist
+
+- [x] 以用户提供截图中的透明裸米色香氛喷雾瓶为独立 Fragrance / Body Mist SKU 裁切并上传；不得覆盖 Product 01 至 Product 08。
+- [x] 接入确认资料：SKU `FR-VS-BV-250`、250 ml / 8.4 fl oz、Women、Warm / Sweet / Vanilla、Vanilla scent identity、建议 B2B 价格 US$2.00 / pc、MOQ 2 pcs、约 7 天交期、免费样品与金色瓶盖包装信息。
+- [x] 将 Additional Notes 保留为 `[TO CONFIRM]`；不得自行增加额外香调、功效或未确认产品资料。
+- [x] 仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘；不复制 Amazon rating、Review count、Amazon Store information、原 Amazon 标题或 UI。
+- [x] 已完成 TypeScript、生产构建及 Fragrance Collection / Product Detail 的桌面与移动端核验；确认 US$2.00 / pc、MOQ 2 pcs、约 7 天交期与免费样品会传递至产品上下文询盘。

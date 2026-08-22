@@ -206,3 +206,30 @@
 | Retail UI Exclusions | Do not reproduce Amazon rating, review count, Amazon’s Choice, Amazon Store information, original Amazon title or source-site UI. |
 | Claims Boundary | Do not interpret “Ultra Healing” as a medical or skin-disease-treatment claim. Use only non-medical moisturizing, softening, smoothing and dry-skin-comfort language. |
 | IP / Naming Boundary | User explicitly confirmed Jergens brand and product-name use for this SKU in the current round; this record does not extend permission to other brands or SKUs. |
+
+## Product 10
+
+| Field | Status |
+|---|---|
+| Intake ID | `FRG-10` |
+| Public Product Name | Victoria’s Secret Bare Vanilla Body Fragrance Mist |
+| Suggested Website Title | Victoria’s Secret Bare Vanilla Body Fragrance Mist 250 ml / 8.4 fl oz |
+| Public Brand Display | Victoria’s Secret — user explicitly confirmed that brand and product name may remain for this SKU in the current round. |
+| SKU | `FR-VS-BV-250` |
+| Category | Fragrance / Body Mist |
+| Product Type | Body Fragrance Mist |
+| Size / Volume | 250 ml / 8.4 fl oz |
+| Gender | Women |
+| Fragrance Character | Warm / Sweet / Vanilla |
+| Confirmed Scent Identity | Vanilla character; warm sweet body-mist positioning. |
+| Additional Notes | `[TO CONFIRM]` — do not infer or publish further scent notes. |
+| Standard MOQ | 2 pcs |
+| Custom MOQ | From 100 pcs for custom logo, custom packaging and custom fragrance. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free samples available |
+| Suggested B2B Price | **US$2.00 / pc** — explicitly reconfirmed by user after price conflict in the initial intake. |
+| Private Label / Customization | Custom Logo / Custom Packaging / Custom Fragrance: From 100 pcs. |
+| Packaging Details | Tall transparent body-mist bottle with soft nude-beige fragrance liquid, rectangular front label and metallic gold cap. |
+| Product Image | `/manus-storage/product-10-bare-vanilla-body-mist_bf37ea81.png` — cropped from the user-provided screenshot to bottle visual only; source-site UI, ratings, store information and viewing prompt are excluded. |
+| Retail UI Exclusions | Do not reproduce Amazon rating, review count, Amazon Store information, original Amazon title or source-site UI. |
+| IP / Naming Boundary | User explicitly confirmed brand and product-name use for the current round; this record does not extend permission to other brands or SKUs. |
