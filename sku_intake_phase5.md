@@ -405,3 +405,41 @@
 | Product Image | `/manus-storage/product-15-bracelet-lip-gloss-palette_84ef5aef.png` — cropped user-supplied real product visual, retaining the compact, retail box and bracelet chain while excluding the source image’s upper marketing text and swatch collage. |
 | Claims Boundary | Do not infer net weight, ingredients, shade names/codes, certification, private-label availability, customization capability or customization MOQ. Use cosmetic positioning only; no medical claims. |
 | Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title as public website copy. The user-confirmed public name is 2-in-1 Bracelet Lip Gloss Palette with Mirror. |
+
+## Product 16
+
+> **Sequence note:** The user supplied this as “Product 15 — Makeup / Eye Makeup,” but Product 15 is already the independently integrated Bracelet Lip Gloss Palette SKU. Under the agreed accumulation rule, this distinct visual is recorded as Product 16 and does not replace any previous SKU.
+
+| Field | Status |
+|---|---|
+| Intake ID | `MUP-16` |
+| Public Product Name | 16-Shade Vegan Pressed Powder Eyeshadow Palette |
+| Suggested Website Title | 16-Shade Vegan Eyeshadow Palette \| High-Pigment Matte & Shimmer Eye Makeup |
+| Public Brand Display | Not supplied; do not invent or display a brand. |
+| SKU | `MU-EYE-ULT-016` |
+| Category | Makeup / Eye Makeup / Eyeshadow Palette |
+| Product Type | Pressed Powder Eyeshadow Palette |
+| Number of Shades | 16 |
+| Color Stories | Warm Neutrals / Vintage Jean Baby |
+| Finish | Matte + Shimmer |
+| Pigmentation | High-Pigment Positioning |
+| Vegan | Vegan positioning according to supplied product information; do not claim Vegan Certified without certification evidence. |
+| Visible Color Directions | Warm Neutrals: Beige, Nude, Caramel, Warm Brown, Chocolate, Bronze and Copper-inspired tones. Vintage Jean Baby: Silver, Cool Nude, Taupe, Rose, Blue, Denim-inspired tones and deep accents. Exact names / codes `[TO CONFIRM]`. |
+| Net Weight | `[TO CONFIRM]` |
+| Individual Pan Weight | `[TO CONFIRM]` |
+| Ingredients | `[TO CONFIRM]` |
+| Shade Names / Codes | `[TO CONFIRM]` |
+| Standard MOQ | 12 pcs |
+| Custom MOQ | `[TO CONFIRM]` — no customization threshold is inferred for this Makeup SKU. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free-sample availability is the confirmed general commercial rule. |
+| Suggested B2B Price | US$2.99 / pc |
+| OEM / ODM | Available according to supplied product information. |
+| Private Label | `[TO CONFIRM]` |
+| Logo Customization | `[TO CONFIRM]` |
+| Custom Outer Packaging | `[TO CONFIRM]` |
+| Custom Shade Combination | `[TO CONFIRM]` |
+| Packaging Details | Rectangular black eyeshadow palette with a transparent front window; supplied visual shows Warm Neutrals and Vintage Jean Baby color stories. |
+| Product Image | `/manus-storage/product-16-vegan-pressed-powder-eyeshadow-palette_faef4ea4.png` — cropped user-supplied real product visual retaining the two palette color stories and display tray while excluding the source image's upper marketing header and right-side UI control. |
+| Claims Boundary | Do not infer net weight, pan weight, ingredients, shade names / codes, certification, private-label availability, customization capability or customization MOQ. Use cosmetic positioning only; no medical claims. |
+| Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title or the terms “Chemical,” “Fair Skin Tone,” or “Wholesale” as public website copy. The user-confirmed public name is 16-Shade Vegan Pressed Powder Eyeshadow Palette. |

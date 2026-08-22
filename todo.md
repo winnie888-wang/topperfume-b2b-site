@@ -222,3 +222,13 @@
 - [x] 仅呈现确认的可见色彩组合：Mauve / Rose Pink、Brick Red / Coral Pink、Berry / Rose、Warm Nude / Coral Red；Net Weight、Ingredients、Shade Codes、Private Label、Custom Logo、Custom Outer Packaging、Custom Shade Combination 与所有定制 MOQ 均保持 `[TO CONFIRM]`。
 - [x] 已完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘，突出 Bracelet + Mirror + Dual Lip Color + Portable Beauty；未增加未确认净含量、配方、色号、认证或定制能力。
 - [x] 已完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；确认产品上下文传递至 Sample、Quote 与 WhatsApp，且询盘摘要会保留该 SKU 的定制范围待确认边界。
+
+### Product 16 — 16-Shade Vegan Pressed Powder Eyeshadow Palette
+
+- [x] 将用户提供的两种十六色眼影盘陈列图作为独立 Makeup / Eyes SKU 裁切并上传；不得覆盖既有 Product 15 手链式唇彩盘 SKU 或其他前序产品。
+- [x] 接入确认资料：SKU `MU-EYE-ULT-016`、Pressed Powder Eyeshadow Palette、16 色、Matte + Shimmer、Warm Neutrals / Vintage Jean Baby、High-Pigment Positioning、Vegan positioning according to supplied product information、OEM / ODM Available、US$2.99 / pc、MOQ 12 pcs 与约 7 天交期。
+- [x] 使用用户确认的公开主名称 `16-Shade Vegan Pressed Powder Eyeshadow Palette`；未采用原 Alibaba 关键词堆砌标题，也未使用 “Chemical”、“Fair Skin Tone” 或 “Wholesale” 作为公开标题表述。
+- [x] 仅呈现确认的色彩方向：Warm Neutrals 的 Beige、Nude、Caramel、Warm Brown、Chocolate、Bronze、Copper，以及 Vintage Jean Baby 的 Silver、Cool Nude、Taupe、Rose、Blue、Denim-inspired tones；Exact shade names / codes 保持 `[TO CONFIRM]`。
+- [x] 将 Net Weight、Individual Pan Weight、Ingredients、Shade Names / Codes、Private Label、Custom Logo、Custom Outer Packaging、Custom Shade Combination 与所有定制 MOQ 均保持 `[TO CONFIRM]`；未声称 Vegan Certified。
+- [x] 已完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘；产品面向不同妆容风格和多种肤色，未增加未确认净含量、配方、色号、认证或定制能力。
+- [x] 已完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；确认产品上下文传递至 Sample、Quote 与 WhatsApp，且询盘摘要会保留该 SKU 的定制范围待确认边界。
