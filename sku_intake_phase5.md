@@ -337,3 +337,38 @@
 | Product Image | `/manus-storage/product-13-mocha-chocolate-eyeshadow-palette_ca2216bd.png` — cropped user-supplied real product visual, retaining the transparent-lid nine-pan palette presentation. |
 | Claims Boundary | Do not infer net weight, individual pan weight, ingredients, exact shade names/codes, certification, private-label availability, customization capability or customization MOQ. Use cosmetic positioning only; no medical claims. |
 | Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title as public website copy. Do not use “for Black Girls” as a public H1 or unnecessary audience label; use the user-confirmed professional wording that warm brown shades are suitable for medium-to-deep skin tones. |
+
+## Product 14
+
+> **Sequence note:** The user supplied this as “Product 13 — Makeup / Lip,” but Product 13 is already the independently integrated Mocha Chocolate 9-Shade Eyeshadow Palette SKU. Under the agreed accumulation rule, this distinct visual is recorded as Product 14 and does not replace any previous SKU.
+
+| Field | Status |
+|---|---|
+| Intake ID | `MUP-14` |
+| Public Product Name | Radiant Glow Moisturizing Lip Gloss |
+| Suggested Website Title | Radiant Glow Moisturizing Lip Gloss \| Silky Smooth High-Shine Lip Color |
+| Public Brand Display | Not supplied; do not invent or display a brand. |
+| SKU | `MU-LIP-GLOSS-003` |
+| Category | Makeup / Lip Makeup / Lip Gloss |
+| Product Type | Moisturizing Lip Gloss / Gloss Gel |
+| Finish | Glossy / Radiant |
+| Texture | Silky Smooth |
+| Product Positioning | Glossy / Moisturizing / Silky Smooth / Easy Apply / Long-Lasting Hydration |
+| Shade Options | 8 colors |
+| Visible Shade Direction | Clear / Milky White / Ice Blue / Peach Nude / Soft Pink / Bright Red / Rose Pink / Warm Nude Brown / Deep Berry. Final shade names and codes `[TO CONFIRM]`. |
+| Net Weight | `[TO CONFIRM]` |
+| Ingredients | `[TO CONFIRM]` |
+| Shade Codes | `[TO CONFIRM]` |
+| Standard MOQ | 12 pcs |
+| Custom MOQ | `[TO CONFIRM]` — no customization threshold is inferred for this Makeup SKU. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free-sample availability is the confirmed general commercial rule. |
+| Suggested B2B Price | US$1.99 / pc |
+| Private Label | `[TO CONFIRM]` |
+| Logo Customization | `[TO CONFIRM]` |
+| Custom Packaging | `[TO CONFIRM]` |
+| Custom Shades | `[TO CONFIRM]` |
+| Packaging Details | Soft pink tube-style lip-gloss packaging with transparent applicator-style tip; supplied visual shows a glossy formula and eight color options. |
+| Product Image | `/manus-storage/product-14-radiant-glow-lip-gloss_e7660ba0.png` — cropped user-supplied real product visual, retaining the product tubes while excluding the source heading and source-site navigation panel. |
+| Claims Boundary | Do not infer net weight, ingredients, shade names/codes, certification, private-label availability, customization capability or customization MOQ. Use cosmetic positioning only; no medical claims. |
+| Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title or “Chemical Gel” wording as public website copy. The user-confirmed public name is Radiant Glow Moisturizing Lip Gloss. |

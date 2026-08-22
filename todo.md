@@ -204,3 +204,12 @@
 - [x] 将 Net Weight、Individual Pan Weight、Ingredients、Shade Names / Codes、Private Label、Custom Logo、Custom Outer Packaging、Custom Shade Combination 与所有定制 MOQ 保持 `[TO CONFIRM]`。
 - [x] 已完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘；未添加未确认净含量、配方、色号、认证或定制能力。
 - [x] 已完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；确认产品上下文传递至 Sample、Quote 与 WhatsApp，且询盘摘要会保留该 SKU 的定制范围待确认边界。
+
+### Product 14 — Radiant Glow Moisturizing Lip Gloss
+
+- [x] 将用户提供的八色粉色管装唇彩组合图作为独立 Makeup / Lip SKU 裁切并上传；不得覆盖既有 Product 13 眼影盘 SKU 或其他前序产品。
+- [x] 接入确认资料：SKU `MU-LIP-GLOSS-003`、Lip Gloss / Gloss Gel、Glossy / Radiant、Silky Smooth、Moisturizing / Hydrating、8 色可选、US$1.99 / pc、MOQ 12 pcs 与约 7 天交期。
+- [x] 使用用户确认的公开主名称 `Radiant Glow Moisturizing Lip Gloss`；未采用原 Alibaba 关键词堆砌标题，且未使用 “Chemical Gel” 作为公开产品表述。
+- [x] 仅呈现确认的色彩方向：Clear / Milky White、Ice Blue、Peach Nude、Soft Pink、Bright Red、Rose Pink、Warm Nude Brown、Deep Berry；Net Weight、Ingredients、Shade Codes、Private Label、Custom Logo、Custom Packaging、Custom Shades 与所有定制 MOQ 均保持 `[TO CONFIRM]`。
+- [x] 已完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘；未增加未确认净含量、成分、色号、认证或定制能力。
+- [x] 已完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；确认产品上下文传递至 Sample、Quote 与 WhatsApp，且询盘摘要会保留该 SKU 的定制范围待确认边界。
