@@ -301,3 +301,39 @@
 | Product Image | `/manus-storage/product-12-hydrating-mirror-shine-lip-glaze_d0866c8c.png` — cropped user-supplied real product arrangement; the non-product heading strip is excluded. |
 | Claims Boundary | Do not infer net weight, ingredients, shade names or codes, certification, private-label availability, customization capability or customization MOQ. Retain cosmetic positioning only; do not add medical claims. |
 | Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title as public website copy. The user-confirmed public name is Hydrating Mirror-Shine Lip Glaze. |
+
+## Product 13
+
+> **Sequence note:** The user supplied this as “Product 12 — Makeup / Eyes,” but Product 12 is already the independently integrated Hydrating Mirror-Shine Lip Glaze SKU. Under the agreed accumulation rule, this distinct visual is recorded as Product 13 and does not replace any previous SKU.
+
+| Field | Status |
+|---|---|
+| Intake ID | `MUP-13` |
+| Public Product Name | Mocha Chocolate 9-Shade Eyeshadow Palette |
+| Suggested Website Title | Mocha Chocolate 9-Shade Eyeshadow Palette \| Warm Brown Matte & Shimmer Eye Makeup |
+| Public Brand Display | Not supplied; do not invent or display a brand. |
+| SKU | `MU-EYE-MOCHA-009` |
+| Category | Makeup / Eye Makeup / Eyeshadow Palette |
+| Product Type | 9-Color Eyeshadow Palette |
+| Number of Shades | 9 |
+| Color Family | Mocha / Chocolate / Warm Brown / Neutral |
+| Finish | Matte + Shimmer |
+| Product Positioning | Mocha Brown / Warm Neutral / Matte & Shimmer / Everyday Glam / Deep Skin Friendly |
+| Visible Finish Mix | Matte Nude / Matte Beige / Warm Caramel / Mocha Brown / Deep Chocolate / Bronze Shimmer / Champagne / Gold Shimmer. Exact shade names and codes `[TO CONFIRM]`. |
+| Net Weight | `[TO CONFIRM]` |
+| Individual Pan Weight | `[TO CONFIRM]` |
+| Ingredients | `[TO CONFIRM]` |
+| Shade Names / Codes | `[TO CONFIRM]` |
+| Standard MOQ | 12 pcs |
+| Custom MOQ | `[TO CONFIRM]` — no customization threshold is inferred for this Makeup SKU. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free-sample availability is the confirmed general commercial rule. |
+| Suggested B2B Price | US$2.99 / pc |
+| Private Label | `[TO CONFIRM]` |
+| Logo Customization | `[TO CONFIRM]` |
+| Custom Outer Packaging | `[TO CONFIRM]` |
+| Custom Shade Combination | `[TO CONFIRM]` |
+| Packaging Details | Compact square 9-pan eyeshadow palette with transparent lid and deep brown base; warm nude, caramel and mocha mattes are paired with bronze and gold shimmer shades. |
+| Product Image | `/manus-storage/product-13-mocha-chocolate-eyeshadow-palette_ca2216bd.png` — cropped user-supplied real product visual, retaining the transparent-lid nine-pan palette presentation. |
+| Claims Boundary | Do not infer net weight, individual pan weight, ingredients, exact shade names/codes, certification, private-label availability, customization capability or customization MOQ. Use cosmetic positioning only; no medical claims. |
+| Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title as public website copy. Do not use “for Black Girls” as a public H1 or unnecessary audience label; use the user-confirmed professional wording that warm brown shades are suitable for medium-to-deep skin tones. |

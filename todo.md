@@ -194,3 +194,13 @@
 - [x] 仅将可见色彩方向描述为 Rose Pink、Berry Red、Deep Wine、Warm Brown、Coral Red、Bright Pink；Net Weight、Ingredients、Shade Codes、Private Label、Custom Logo、Custom Packaging、Custom Shades 与所有定制 MOQ 均保持 `[TO CONFIRM]`。
 - [x] 仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘；不得增加未确认净含量、成分、色号、认证或定制能力。
 - [x] 已完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；确认产品上下文传递至 Sample、Quote 与 WhatsApp，且询盘摘要会保留该 SKU 的定制范围待确认边界。
+
+### Product 13 — Mocha Chocolate 9-Shade Eyeshadow Palette
+
+- [x] 将用户提供的透明盖九色暖棕眼影盘实拍图作为独立 Makeup / Eyes SKU 裁切并上传；不得覆盖既有 Product 12 唇釉 SKU 或其他前序产品。
+- [x] 接入确认资料：SKU `MU-EYE-MOCHA-009`、9-Color Eyeshadow Palette、Mocha / Chocolate / Warm Brown / Neutral、Matte + Shimmer、US$2.99 / pc、MOQ 12 pcs 与约 7 天交期。
+- [x] 使用用户确认的公开主名称 `Mocha Chocolate 9-Shade Eyeshadow Palette`；不得使用原 Alibaba 关键词堆砌标题，且正文不将 “for Black Girls” 用作主标题或不必要的人群标签。
+- [x] 仅呈现确认的色彩与妆效方向：Matte Nude、Matte Beige、Warm Caramel、Mocha Brown、Deep Chocolate、Bronze Shimmer、Champagne / Gold Shimmer，以及适合 medium-to-deep skin tones 的专业表述。
+- [x] 将 Net Weight、Individual Pan Weight、Ingredients、Shade Names / Codes、Private Label、Custom Logo、Custom Outer Packaging、Custom Shade Combination 与所有定制 MOQ 保持 `[TO CONFIRM]`。
+- [x] 已完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘；未添加未确认净含量、配方、色号、认证或定制能力。
+- [x] 已完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；确认产品上下文传递至 Sample、Quote 与 WhatsApp，且询盘摘要会保留该 SKU 的定制范围待确认边界。

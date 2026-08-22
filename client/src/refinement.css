@@ -22,6 +22,8 @@
 /* Product 11: retain the complete four-tube real visual inside the Maison Mercantile catalogue plate. */
 .product-sku-vegan-hydrating-lip-oil-gloss .product-image { background: #fcfaf6; object-fit: contain; padding: 7%; }.pdp-product-vegan-hydrating-lip-oil-gloss img { background: #fcfaf6; object-fit: contain; padding: clamp(16px, 3vw, 42px); }
 .product-sku-hydrating-mirror-shine-lip-glaze .product-image { background: #fcfaf6; object-fit: contain; padding: 5%; }.pdp-product-hydrating-mirror-shine-lip-glaze img { background: #fcfaf6; object-fit: contain; padding: clamp(12px, 2.25vw, 32px); }
+/* Product 13: retain the full transparent-lid palette as the confirmed product evidence inside the catalogue plate. */
+.product-sku-mocha-chocolate-9-shade-eyeshadow-palette .product-image { background: #fcfaf6; object-fit: contain; padding: 4%; }.pdp-product-mocha-chocolate-9-shade-eyeshadow-palette img { background: #fcfaf6; object-fit: contain; padding: clamp(10px, 2vw, 28px); }
 
 /* Homepage commercial hierarchy: the buyer proposition leads; the editorial line is deliberately secondary. */
 .hero-editorial-note { border-left: 1px solid var(--rose); color: rgba(41,27,46,.72); font-family: var(--font-display); font-size: clamp(18px,1.6vw,24px); font-style: italic; line-height: 1.05; margin: -9px 0 20px; max-width: 310px; padding-left: 12px; }
