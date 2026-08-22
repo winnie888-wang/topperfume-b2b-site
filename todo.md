@@ -333,3 +333,17 @@
 - [x] 验证已重新授权的 `winnie888-wang/topperfume-b2b-site` 可读取，且仅可安全写入 GitHub `v2-prototype` 分支；不得修改、合并或推送 main，不开始 SEO。
 - [x] 仅同步已保存的 Phase 7 询盘提交审核版本至 GitHub `v2-prototype`，记录最终 Commit SHA 与远端 main 不变的核验结果。
 - [x] GitHub 验证通过后诊断 Resend 邮件实际收件路径；如有失败，仅报告状态码与错误信息，不修改其他页面。
+
+### Controlled Website Inquiry Email Test
+
+- [x] 仅从 `inquiry@mail.topperfume.cn` 向 `melody888666@yeah.net` 发送一封主题为 `TopPerfume Website Inquiry Test`、正文为 `This is a controlled website inquiry email test.` 的受控 QA 邮件。
+- [x] 安全记录并交付 Resend request ID、HTTP 状态与 accepted 结果；不显示 API Key，不开始 SEO，不修改 main，不正式发布。
+
+### Phase 8 — Final Pre-Launch Website QA
+
+- [x] 审核 Homepage Desktop / Mobile、Fragrance、Skincare / Body Care、Makeup Collection、Product Card 与 Product Detail 的加载、内容、图片与导航完整性。
+- [x] 审核 Request Sample、Get Quote、Start Your Project、WhatsApp 与 Email Inquiry Submission 的产品上下文、校验、成功/失败状态及移动端可用性。
+- [x] 审核 Navigation / Footer、404 / broken links、响应式行为、产品 Price / MOQ / Lead Time 一致性与 Customer-facing `[TO CONFIRM] = 0`。
+- [x] 仅修复阻断上线的 RED 问题，并复验类型检查、单元测试、生产构建与核心路由。（本轮未发现需修复的 RED 阻断问题。）
+- [x] 生成 Homepage Desktop / Mobile、三类 Collection、一个 PDP 与 Inquiry success-state 截图，归类 RED / YELLOW / GREEN 审核结论。
+- [x] 保存隔离检查点并仅同步 GitHub `v2-prototype`；不修改、合并 main，不发布，不开始 SEO，交付 Preview、SHA 与最终审核结果。
