@@ -145,13 +145,13 @@ export function getProductStandardTerms(product: Product) {
 }
 
 export function getProductCustomTerms(product: Product) {
-  const hasExplicitCustomTerms = Boolean(product.privateLabelStatus || product.customLogoStatus || product.customPackagingStatus || product.customShadesStatus || product.customizationMoq);
+  const hasExplicitCustomTerms = Boolean(product.privateLabelStatus || product.customLogoStatus || product.customPackagingStatus || product.customShadesStatus || product.customFragranceStatus || product.customizationMoq);
   if (hasExplicitCustomTerms) {
     return [
       { label: "Private Label", value: product.privateLabelStatus || TO_CONFIRM },
       { label: "Custom Logo", value: product.customLogoStatus || TO_CONFIRM },
       { label: "Custom Packaging", value: product.customPackagingStatus || TO_CONFIRM },
-      { label: "Custom Shades", value: product.customShadesStatus || TO_CONFIRM },
+      { label: product.category === "fragrance" ? "Custom Fragrance" : "Custom Shades", value: product.customFragranceStatus || product.customShadesStatus || TO_CONFIRM },
       { label: "Customization MOQ", value: product.customizationMoq || TO_CONFIRM },
     ];
   }
@@ -180,8 +180,14 @@ export function getProductCustomTerms(product: Product) {
 }
 
 export function getProductInquiryCustomizationNote(product: Product) {
-  if (product.privateLabelStatus || product.customLogoStatus || product.customPackagingStatus || product.customShadesStatus || product.customizationMoq) {
+  const explicitCustomValues = [product.privateLabelStatus, product.customLogoStatus, product.customPackagingStatus, product.customShadesStatus, product.customFragranceStatus, product.customizationMoq];
+  if (explicitCustomValues.some((value) => value && value !== TO_CONFIRM)) {
     return "Private Label and Custom Logo are available according to supplied product information. Custom Packaging, Custom Shade Range and all customization MOQ require confirmation.";
+  }
+  if (explicitCustomValues.some(Boolean)) {
+    return product.category === "fragrance"
+      ? "Private label, custom logo, custom packaging, custom fragrance and all customization MOQ require confirmation."
+      : "Private label, custom logo, custom packaging, custom shades and all customization MOQ require confirmation.";
   }
   return product.customizationStatus === TO_CONFIRM
     ? "Private label, custom logo, custom packaging, custom shades and all customization MOQ require confirmation."

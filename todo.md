@@ -290,3 +290,12 @@
 - [x] 仅按供货资料表述 Vegan positioning 与 Private Label；不得定义底部三格为统一配方，Custom Logo、Outer Packaging、Shade Combination 与 Customization MOQ 均保持 `[TO CONFIRM]`。
 - [x] 完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘上下文，不增加未确认配方、色号、认证、妆效或定制能力。
 - [x] 完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；保存隔离检查点，不合并 main、不推送 GitHub、不发布。
+
+### Product 23 — Pure Seduction Fragrance Mist & Lotion Set
+
+- [x] 将用户提供的粉色 Fragrance Mist 与 Lotion 套装图作为独立 Fragrance / Body Care / Gift Set SKU 裁切并上传；该图片虽附带 Product 22 文案，但因已存在 Product 22 修容校正盘，按累计规则作为 Product 23，不覆盖任何既有 SKU。
+- [x] 接入确认资料：SKU `FR-SET-PS-250236`、Pure Seduction Fragrance Mist & Lotion Set、2 件套、Fragrance Mist 250 ml / 8.4 fl oz、Fragrance Lotion 236 ml / 8 fl oz、Women、US$3.99 / set、MOQ 12 sets 与约 7 天交期。
+- [x] 使用用户确认的公开主名称 `Pure Seduction Fragrance Mist & Lotion Set`；不采用原 Alibaba 关键词堆砌标题，且不自行扩展香调、配方、认证或具体功效。
+- [x] 仅呈现确认的 Body Mist + Lotion、Fragrance Layering、Gift Ready、协调粉色包装和两件套礼赠方向；Fragrance Notes / Scent Profile、Ingredients、Private Label、Custom Logo、Custom Packaging、Custom Fragrance 与 Customization MOQ 均保持 `[TO CONFIRM]`。
+- [x] 完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘上下文，不增加未确认产品资料。
+- [x] 完成 TypeScript、生产构建及 Fragrance Collection / Product Detail 的桌面与移动端核验；保存隔离检查点，不合并 main、不推送 GitHub、不发布。

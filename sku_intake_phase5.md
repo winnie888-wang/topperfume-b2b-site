@@ -665,3 +665,38 @@
 | Product Image | `/manus-storage/product-22-face-contour-correcting-palette_ca36111f.png` — cropped user-supplied real purple palette visual, mounted on a neutral ivory portrait catalogue plate while excluding retail background, hand, and source control. |
 | Claims Boundary | Cosmetic positioning only. Do not infer exact finish, coverage, formula structure, ingredients, weights, shade codes, certification, customization scope or customization MOQ. The bottom three vivid pans may be described only as correcting or artistic accent directions depending on final confirmed formula and shade positioning; no medical, treatment, complexion-result or performance guarantee claims. |
 | Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title. The user-confirmed public name is 12-Color Face Contour & Correcting Palette. Public Vegan wording must be exactly “Vegan positioning according to supplied product information”; never use “Vegan Certified.” |
+
+## Product 23
+
+> **Sequence note:** The new distinct user-supplied fragrance and body-care visual is accumulated as Product 23 because Product 22 is already assigned to the 12-Color Face Contour & Correcting Palette. It does not replace any earlier Fragrance, Body Mist or Makeup SKU.
+
+| Field | Status |
+|---|---|
+| Intake ID | `FRP-23` |
+| Public Product Name | Pure Seduction Fragrance Mist & Lotion Set |
+| Suggested Website Title | Pure Seduction Fragrance Mist & Lotion Set \| 2-Piece Women’s Body Care Gift Set |
+| Public Brand Display | Not supplied for public use; do not invent or display a brand. |
+| SKU | `FR-SET-PS-250236` |
+| Category | Fragrance / Body Care / Gift Set |
+| Product Type | 2-Piece Fragrance Mist & Body Lotion Set |
+| Number of Pieces | 2 |
+| Set Includes | Pure Seduction Fragrance Mist — 250 ml / 8.4 fl oz; Pure Seduction Fragrance Lotion — 236 ml / 8 fl oz. |
+| Target User | Women, according to supplied product information. |
+| Confirmed Positioning | Feminine / Romantic / Sweet Body Fragrance / Body Care Set / Gift-Ready. |
+| Confirmed Format Directions | Body Mist + Lotion / Fragrance Layering / Gift Ready. |
+| Fragrance Notes / Scent Profile | `[TO CONFIRM]` |
+| Ingredients | `[TO CONFIRM]` |
+| Specific Benefits / Claims | `[TO CONFIRM]` — use only routine body-fragrance and body-care positioning; no guaranteed effect or performance claim. |
+| Standard MOQ | 12 sets |
+| Custom MOQ | `[TO CONFIRM]` — no customization threshold is inferred for this SKU. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free-sample availability is the confirmed general commercial rule. |
+| Suggested B2B Price | US$3.99 / set |
+| Private Label | `[TO CONFIRM]` |
+| Custom Logo | `[TO CONFIRM]` |
+| Custom Packaging | `[TO CONFIRM]` |
+| Custom Fragrance | `[TO CONFIRM]` |
+| Packaging Details | Transparent pink fragrance-mist bottle with a gold-tone cap paired with a soft metallic-pink fragrance-lotion tube; supplied visual is styled as a coordinated pink floral gift presentation. |
+| Product Image | `/manus-storage/product-23-pure-seduction-mist-lotion-set_c74ce5a3.png` — central crop of the user-supplied real product photograph, placed on an ivory portrait catalogue plate. The complete mist bottle and lotion tube are retained; no retailer or source controls are present. |
+| Claims Boundary | Do not infer scent notes, formula, ingredients, certification, functionality, customization availability or customization MOQ. Do not make medical, treatment, body-result, longevity, “popular,” or performance-guarantee claims. |
+| Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title. The user-confirmed public name is Pure Seduction Fragrance Mist & Lotion Set. |
