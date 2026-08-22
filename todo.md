@@ -307,3 +307,13 @@
 - [x] 运行类型检查与生产构建；复核 Homepage 桌面/移动端、三类正式 Collection，以及 Fragrance、Skincare / Body Care、Makeup 各一个正式 PDP。
 - [x] 保存隔离审核检查点并同步至 GitHub `v2-prototype` 分支；不修改、合并或推送 `main`，不正式发布，也不开始 SEO。
 - [ ] 汇总 Preview URL、GitHub Commit SHA、SKU 总量和按类数量，以及剩余 `[TO CONFIRM]` 清单后停止等待最终审核。
+
+### Final Catalog Correction — Before SEO
+
+- [x] 核对此前提交的 Vaseline Cocoa Radiant Intensive Care Body Lotion；如曾因目录清理遗漏，则恢复其真实 SKU、图片与已确认资料，并重新统计正式 SKU 数量。
+- [x] 将 Retinol + Ferulic Acid Firming Body Lotion 修正为 US$3.99 / pc、MOQ 12 pcs、Approx. 7 days；不再显示该 SKU 的价格或 MOQ 待确认状态。
+- [x] 移除 Homepage、Collection、Buyer Guide 与 Footer 中任何“所有产品 MOQ 2 pcs”的暗示，统一改为 SKU 级 MOQ 逻辑与用户指定的说明。
+- [x] 确保 Product Card、Product Detail、Collection、Buyer Guide 与 Customization Module 不显示原始 `[TO CONFIRM]`；隐藏可选未确认字段，必要时显示 “Contact us for details”。
+- [x] 为产品数据建立 Branded Wholesale 与 Private Label / OEM ODM 两种商业类型；未经用户确认的第三方品牌成品不得展示 Private Label Available。
+- [x] 保留 prototype Email / Quote draft 流程，但在公开流程和内部审核中记录 “MUST FIX BEFORE LAUNCH：直接表单提交至 melody888666@yeah.net”；保留 WhatsApp +86 190 6678 2710。
+- [ ] 完成 MOQ、公开字段、SKU 数量与跨端核验；保存隔离检查点并仅同步 GitHub `v2-prototype`，不修改、合并 main，不发布，不开始 SEO。

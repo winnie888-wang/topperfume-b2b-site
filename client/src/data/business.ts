@@ -1,10 +1,36 @@
 /**
  * Phase 3 business-content reminder: these labels organise a buyer conversation only.
- * Verified commercial terms are stated exactly; product-specific requirements remain [TO CONFIRM].
+ * Verified commercial terms are stated exactly; internal pending source fields never render raw on buyer-facing pages.
  */
 import type { Product, ProductCategory } from "@/data/products";
 
 export const TO_CONFIRM = "[TO CONFIRM]";
+export const CUSTOMER_DETAILS = "Contact us for details";
+export const catalogueMoqGuidance = "Low MOQ available — MOQ varies by SKU. Selected fragrance products from 2 pcs. Many skincare and makeup products from 12 pcs.";
+
+const brandedWholesaleSlugs = new Set([
+  "dior-sauvage-parfum-spray-men",
+  "carolina-herrera-good-girl-blush-tweed-talk-edp-women",
+  "carolina-herrera-very-good-girl-glam-edp-women",
+  "yves-saint-laurent-mon-paris-parfum-women",
+  "vitamin-c-niacinamide-brightening-body-lotion",
+  "retinol-ferulic-acid-firming-body-lotion",
+  "olay-dark-spot-correcting-body-lotion",
+  "jergens-ultra-healing-body-lotion",
+  "victorias-secret-bare-vanilla-body-fragrance-mist",
+]);
+
+export function isPendingValue(value?: string) {
+  return !value || value === TO_CONFIRM;
+}
+
+export function customerValue(value?: string) {
+  return isPendingValue(value) ? CUSTOMER_DETAILS : value ?? CUSTOMER_DETAILS;
+}
+
+export function getProductCommercialType(product: Product) {
+  return brandedWholesaleSlugs.has(product.slug) ? "Branded Wholesale" : "Private Label / OEM ODM";
+}
 
 export const businessProfile = {
   companyName: "Guiqi Technology Co., Ltd.",
@@ -15,8 +41,8 @@ export const businessProfile = {
 
 export const commercialTerms = {
   standard: [
-    { label: "Standard MOQ", value: "2 pcs" },
-    { label: "Lead Time", value: "Approx. 7 days" },
+    { label: "MOQ guidance", value: "MOQ varies by SKU" },
+    { label: "Lead Time", value: "Approx. 7 days for selected SKUs" },
     { label: "Free Samples", value: "Available" },
   ],
   custom: [
@@ -56,28 +82,26 @@ const inquiryTitle: Record<InquiryIntentKey, string> = {
 };
 
 export function buildInquirySummary(input: InquirySummaryInput) {
-  const standardMoq = input.context?.standardMoq || commercialTerms.standard[0].value;
+  const standardMoq = customerValue(input.context?.standardMoq);
   const leadTime = input.context?.leadTime || commercialTerms.standard[1].value;
   const sampleAvailability = input.context?.sampleAvailability || commercialTerms.standard[2].value;
   const customTerms = input.context?.customizationNote
     ? input.context.customizationNote
-    : input.context?.category === "skincare"
-    ? "Custom logo and packaging: from 100 pcs. Formula, claims and testing scope require confirmation."
-    : "Custom logo, packaging and fragrance: from 100 pcs. Product-specific scope and final terms require confirmation.";
+    : "Contact us for product-specific customization scope and commercial terms.";
   const lines = [
     `TOPPERFUME B2B / ${inquiryTitle[input.intent]}`,
     `For: ${businessProfile.companyName}`,
     "",
-    `Product: ${input.context?.productName || TO_CONFIRM}`,
-    `Product URL: ${input.context?.productUrl || TO_CONFIRM}`,
-    `Category: ${input.context?.category || TO_CONFIRM}`,
-    `Name: ${input.name || TO_CONFIRM}`,
-    `Country / Market: ${input.country || TO_CONFIRM}`,
-    `Email: ${input.email || TO_CONFIRM}`,
-    `WhatsApp: ${input.whatsapp || TO_CONFIRM}`,
-    `Estimated Quantity: ${input.quantity || TO_CONFIRM}`,
-    `Customization: ${input.customization || TO_CONFIRM}`,
-    `Notes: ${input.notes || TO_CONFIRM}`,
+    `Product: ${input.context?.productName || "Not specified"}`,
+    `Product URL: ${input.context?.productUrl || "Not specified"}`,
+    `Category: ${input.context?.category || "Not specified"}`,
+    `Name: ${input.name || "Not provided"}`,
+    `Country / Market: ${input.country || "Not provided"}`,
+    `Email: ${input.email || "Not provided"}`,
+    `WhatsApp: ${input.whatsapp || "Not provided"}`,
+    `Estimated Quantity: ${input.quantity || "Not provided"}`,
+    `Customization: ${input.customization || "Not provided"}`,
+    `Notes: ${input.notes || "Not provided"}`,
     "",
     `Standard order: MOQ ${standardMoq}; ${leadTime}; Free samples: ${sampleAvailability}.`,
     customTerms,
@@ -103,9 +127,9 @@ const variableByCategory: Record<ProductCategory, { label: string; value: string
 };
 
 export const collectionBuyerGuide: Record<ProductCategory, { reference: BuyerGuideField; variable: BuyerGuideField; packaging: BuyerGuideField; commercial: BuyerGuideField }> = {
-  fragrance: { reference: { value: "Fragrance formats shown", status: TO_CONFIRM }, variable: { value: "Fragrance brief", status: TO_CONFIRM }, packaging: { value: "Bottle, cap and carton", status: TO_CONFIRM }, commercial: { value: "Standard 2 pcs / approx. 7 days · custom from 100 pcs" } },
-  skincare: { reference: { value: "Body-care formats shown", status: TO_CONFIRM }, variable: { value: "Formula + claims", status: TO_CONFIRM }, packaging: { value: "Pump, component and carton", status: TO_CONFIRM }, commercial: { value: "Standard 2 pcs / approx. 7 days · custom from 100 pcs" } },
-  makeup: { reference: { value: "Colour and gift formats shown", status: TO_CONFIRM }, variable: { value: "Shade + finish", status: TO_CONFIRM }, packaging: { value: "Component, artwork and carton", status: TO_CONFIRM }, commercial: { value: "Standard 2 pcs / approx. 7 days · custom from 100 pcs" } },
+  fragrance: { reference: { value: "Confirmed fragrance formats" }, variable: { value: "Fragrance brief — contact us for details" }, packaging: { value: "Bottle, cap and carton — contact us for details" }, commercial: { value: "MOQ varies by SKU · selected fragrance products from 2 pcs" } },
+  skincare: { reference: { value: "Confirmed body-care formats" }, variable: { value: "Formula + claims — contact us for details" }, packaging: { value: "Pump, component and carton — contact us for details" }, commercial: { value: "MOQ varies by SKU · many skincare products from 12 pcs" } },
+  makeup: { reference: { value: "Confirmed colour-makeup formats" }, variable: { value: "Shade + finish — contact us for details" }, packaging: { value: "Component, artwork and carton — contact us for details" }, commercial: { value: "MOQ varies by SKU · many makeup products from 12 pcs" } },
 };
 
 export function getCustomizationLabel(category: ProductCategory) {
@@ -115,8 +139,7 @@ export function getCustomizationLabel(category: ProductCategory) {
 export function getProductDecisionRows(product: Product): DecisionField[] {
   const variable = variableByCategory[product.category];
   const hasConfirmedData = product.dataStatus === "confirmed";
-  const customMoq = product.customizationMoq || (product.customizationStatus === TO_CONFIRM ? TO_CONFIRM : "from 100 pcs");
-  const productCustomScopeNeedsConfirmation = customMoq === TO_CONFIRM;
+  const commercialType = getProductCommercialType(product);
   const variableValue = product.category === "fragrance" && product.fragranceFamily
     ? `${product.fragranceFamily}${product.concentration ? ` · ${product.concentration}` : ""}`
     : product.category === "skincare" && product.keyIngredients
@@ -125,75 +148,91 @@ export function getProductDecisionRows(product: Product): DecisionField[] {
         ? product.shadeOptions
       : variable.value;
   const hasConfirmedVariable = (product.category === "fragrance" && Boolean(product.fragranceFamily)) || (product.category === "skincare" && Boolean(product.keyIngredients)) || (product.category === "makeup" && Boolean(product.shadeOptions));
-  return [
-    { label: "Available Size", value: product.format, status: hasConfirmedData && product.format !== TO_CONFIRM ? undefined : TO_CONFIRM },
-    { label: variable.label, value: variableValue, status: hasConfirmedData && hasConfirmedVariable ? undefined : TO_CONFIRM },
-    { label: "Packaging", value: product.packaging || "Reference packaging · custom packaging from 100 pcs", status: product.packaging ? undefined : TO_CONFIRM },
-    { label: "Logo Customization", value: product.customLogoStatus || (productCustomScopeNeedsConfirmation ? "Product-specific logo scope" : "Custom logo from 100 pcs"), status: product.customLogoStatus ? undefined : productCustomScopeNeedsConfirmation ? TO_CONFIRM : undefined },
-    { label: "Private Label", value: product.privateLabelStatus || (product.privateLabelAvailable ? "Available" : "Project pathway and final scope"), status: product.privateLabelStatus || product.privateLabelAvailable ? undefined : TO_CONFIRM },
-    { label: "MOQ", value: `Standard: ${product.standardMoq || "2 pcs"} · Custom: ${customMoq}`, status: productCustomScopeNeedsConfirmation ? TO_CONFIRM : undefined },
-    { label: "Lead Time", value: "Standard: approx. 7 days · Custom schedule", status: TO_CONFIRM },
+  const sharedRows = [
+    { label: "Available Size", value: customerValue(product.format) },
+    { label: variable.label, value: hasConfirmedVariable ? variableValue : CUSTOMER_DETAILS },
+    { label: "Packaging", value: customerValue(product.packaging) },
+    { label: "Commercial Type", value: commercialType },
+    { label: "MOQ", value: customerValue(product.standardMoq) },
+    { label: "Lead Time", value: customerValue(product.leadTime) },
   ];
+  return commercialType === "Branded Wholesale"
+    ? [...sharedRows.slice(0, 4), { label: "Wholesale Terms", value: CUSTOMER_DETAILS }, ...sharedRows.slice(4)]
+    : [...sharedRows.slice(0, 4), { label: "Private Label", value: customerValue(product.privateLabelStatus) }, ...sharedRows.slice(4)];
 }
 
 export function getProductStandardTerms(product: Product) {
   return [
-    { label: "Standard MOQ", value: product.standardMoq || commercialTerms.standard[0].value },
-    { label: "Lead Time", value: product.leadTime || commercialTerms.standard[1].value },
-    { label: "Free Samples", value: product.sampleAvailability || commercialTerms.standard[2].value },
+    { label: "MOQ", value: customerValue(product.standardMoq) },
+    { label: "Lead Time", value: customerValue(product.leadTime) },
+    { label: "Free Samples", value: product.sampleAvailability || "Available" },
   ];
 }
 
 export function getProductCustomTerms(product: Product) {
+  if (getProductCommercialType(product) === "Branded Wholesale") {
+    return [
+      { label: "Commercial Type", value: "Branded Wholesale" },
+      { label: "Wholesale Terms", value: "Contact us for details" },
+    ];
+  }
   const hasExplicitCustomTerms = Boolean(product.privateLabelStatus || product.customLogoStatus || product.customPackagingStatus || product.customShadesStatus || product.customFragranceStatus || product.customizationMoq);
   if (hasExplicitCustomTerms) {
     return [
-      { label: "Private Label", value: product.privateLabelStatus || TO_CONFIRM },
-      { label: "Custom Logo", value: product.customLogoStatus || TO_CONFIRM },
-      { label: "Custom Packaging", value: product.customPackagingStatus || TO_CONFIRM },
-      { label: product.category === "fragrance" ? "Custom Fragrance" : "Custom Shades", value: product.customFragranceStatus || product.customShadesStatus || TO_CONFIRM },
-      { label: "Customization MOQ", value: product.customizationMoq || TO_CONFIRM },
+      { label: "Commercial Type", value: "Private Label / OEM ODM" },
+      { label: "Private Label", value: customerValue(product.privateLabelStatus) },
+      { label: "Custom Logo", value: customerValue(product.customLogoStatus) },
+      { label: "Custom Packaging", value: customerValue(product.customPackagingStatus) },
+      { label: product.category === "fragrance" ? "Custom Fragrance" : "Custom Shades", value: customerValue(product.customFragranceStatus || product.customShadesStatus) },
+      { label: "Customization MOQ", value: customerValue(product.customizationMoq) },
     ];
   }
   if (product.customizationStatus === TO_CONFIRM) {
     return product.category === "makeup"
       ? [
-        { label: "Private Label", value: TO_CONFIRM },
-        { label: "Custom Logo", value: TO_CONFIRM },
-        { label: "Custom Packaging", value: TO_CONFIRM },
-        { label: "Custom Shades", value: TO_CONFIRM },
+        { label: "Commercial Type", value: "Private Label / OEM ODM" },
+        { label: "Private Label", value: CUSTOMER_DETAILS },
+        { label: "Custom Logo", value: CUSTOMER_DETAILS },
+        { label: "Custom Packaging", value: CUSTOMER_DETAILS },
+        { label: "Custom Shades", value: CUSTOMER_DETAILS },
       ]
       : [
-        { label: "Custom Logo", value: TO_CONFIRM },
-        { label: "Custom Packaging", value: TO_CONFIRM },
-        { label: "Product Scope", value: TO_CONFIRM },
+        { label: "Commercial Type", value: "Private Label / OEM ODM" },
+        { label: "Custom Logo", value: CUSTOMER_DETAILS },
+        { label: "Custom Packaging", value: CUSTOMER_DETAILS },
+        { label: "Product Scope", value: CUSTOMER_DETAILS },
       ];
   }
   if (product.category === "skincare") {
     return [
-      { label: "Custom Logo", value: "From 100 pcs" },
-      { label: "Custom Packaging", value: "From 100 pcs" },
-      { label: "Formula / Claims", value: TO_CONFIRM },
+      { label: "Commercial Type", value: "Private Label / OEM ODM" },
+      { label: "Custom Logo", value: CUSTOMER_DETAILS },
+      { label: "Custom Packaging", value: CUSTOMER_DETAILS },
+      { label: "Formula / Claims", value: CUSTOMER_DETAILS },
     ];
   }
-  return commercialTerms.custom;
+  return [
+    { label: "Commercial Type", value: "Private Label / OEM ODM" },
+    { label: "Private Label", value: CUSTOMER_DETAILS },
+    { label: "Custom Logo", value: CUSTOMER_DETAILS },
+    { label: "Custom Packaging", value: CUSTOMER_DETAILS },
+    { label: product.category === "fragrance" ? "Custom Fragrance" : "Custom Shades", value: CUSTOMER_DETAILS },
+  ];
 }
 
 export function getProductInquiryCustomizationNote(product: Product) {
   const explicitCustomValues = [product.privateLabelStatus, product.customLogoStatus, product.customPackagingStatus, product.customShadesStatus, product.customFragranceStatus, product.customizationMoq];
   if (explicitCustomValues.some((value) => value && value !== TO_CONFIRM)) {
-    return "Private Label and Custom Logo are available according to supplied product information. Custom Packaging, Custom Shade Range and all customization MOQ require confirmation.";
+    return "Private Label and Custom Logo are available according to supplied product information. Contact us for details on packaging, shades and customization MOQ.";
   }
   if (explicitCustomValues.some(Boolean)) {
     return product.category === "fragrance"
-      ? "Private label, custom logo, custom packaging, custom fragrance and all customization MOQ require confirmation."
-      : "Private label, custom logo, custom packaging, custom shades and all customization MOQ require confirmation.";
+      ? "Contact us for details on private label, custom logo, packaging, fragrance and customization MOQ."
+      : "Contact us for details on private label, custom logo, packaging, shades and customization MOQ.";
   }
   return product.customizationStatus === TO_CONFIRM
-    ? "Private label, custom logo, custom packaging, custom shades and all customization MOQ require confirmation."
-    : product.category === "skincare"
-      ? "Custom logo and packaging: from 100 pcs. Formula, claims and testing scope require confirmation."
-      : "Custom logo, packaging and fragrance: from 100 pcs. Product-specific scope and final terms require confirmation.";
+    ? "Contact us for details on private label, custom logo, packaging, shades and customization MOQ."
+    : "Contact us for product-specific customization scope and commercial terms.";
 }
 
 export function getDevelopmentScope(category: ProductCategory) {
