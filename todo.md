@@ -270,3 +270,13 @@
 - [x] 仅以 “according to supplied product information” 呈现 Custom Logo；Private Label、Custom Outer Packaging、Custom Color Combination 和 Customization MOQ 均保持 `[TO CONFIRM]`。图片中的 Before / After 仅作为颜色效果参考，不作为效果保证。
 - [x] 完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘上下文，不增加未确认配方、色号、认证、妆效或定制能力。
 - [x] 完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；保存隔离检查点，不合并 main、不推送 GitHub、不发布。
+
+### Product 21 — Creamy Contour & Foundation Stick
+
+- [x] 将用户提供的五支双头修容粉底棒实拍图作为独立 Makeup / Face SKU 裁切并上传；不得覆盖现有 Product 20 腮红盘或其他前序 SKU。
+- [x] 接入确认资料：SKU `MU-FACE-STICK-005`、Creamy Contour & Foundation Stick、Contour Stick / Foundation Stick、5 个可见色彩方向、Creamy Stick、US$2.99 / pc、MOQ 12 pcs 与约 7 天交期。
+- [x] 使用用户确认的公开主名称 `Creamy Contour & Foundation Stick`；不采用原 Alibaba 关键词堆砌标题，且不使用 Black Makeup Stick 等不适合公开站点的来源表达。
+- [x] 仅呈现 Fair、Light、Medium、Tan、Medium Dark 五个可见色彩方向；Finish、Coverage、Net Weight、Ingredients、Shade Codes 及未确认妆效保持 `[TO CONFIRM]`，不得将肤色示例扩展成适用性或效果保证。
+- [x] 仅以 “according to supplied product information” 呈现 Private Label；Custom Logo、Custom Packaging、Custom Shade Range 与 Customization MOQ 均保持 `[TO CONFIRM]`。
+- [x] 完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘上下文，不增加未确认配方、色号、认证、妆效或定制能力。
+- [x] 完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；保存隔离检查点，不合并 main、不推送 GitHub、不发布。

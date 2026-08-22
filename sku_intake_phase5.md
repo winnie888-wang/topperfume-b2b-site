@@ -590,3 +590,39 @@
 | Product Image | `/manus-storage/product-20-blush-duo-palette_8af7b46f.png` — cropped user-supplied real product visual retaining the five compact palette variations while excluding portrait-effect examples, Before text, shade-number captions and source control; mounted on a neutral portrait catalogue plate to retain the complete horizontal product row in the PDP. |
 | Claims Boundary | Before / After and illustrated cheek applications are color-effect references only, not proof of guaranteed results. Do not infer finish, exact formula format, ingredients, weights, exact shade names / codes, certification, private-label availability, packaging customization, colour-combination customization or customization MOQ. Use cosmetic positioning only; no treatment or performance guarantee claims. |
 | Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title as public website copy. The user-confirmed public name is 2-in-1 Blush Duo Palette. |
+
+## Product 21
+
+> **Sequence note:** The user supplied this as “Product 20 — Makeup / Face,” but Product 20 is already the independently integrated 2-in-1 Blush Duo Palette. Under the agreed accumulation rule, this distinct visual is recorded as Product 21 and does not replace any previous SKU.
+
+| Field | Status |
+|---|---|
+| Intake ID | `MUP-21` |
+| Public Product Name | Creamy Contour & Foundation Stick |
+| Suggested Website Title | Creamy Contour & Foundation Stick \| Private Label Face Sculpting Makeup |
+| Public Brand Display | Not supplied; do not invent or display a brand. |
+| SKU | `MU-FACE-STICK-005` |
+| Category | Makeup / Face Makeup / Contour Stick |
+| Product Type | Contour Stick / Foundation Stick |
+| Visible Shade Options | 5: Fair, Light, Medium, Tan and Medium Dark. Exact shade codes `[TO CONFIRM]`. |
+| Texture | Creamy stick positioning according to supplied product information. |
+| Primary Uses | Contouring / Complexion Enhancement / Face Sculpting. |
+| Finish | `[TO CONFIRM]` |
+| Coverage | `[TO CONFIRM]` |
+| Net Weight | `[TO CONFIRM]` |
+| Ingredients | `[TO CONFIRM]` |
+| Shade Codes | `[TO CONFIRM]` |
+| Standard MOQ | 12 pcs |
+| Custom MOQ | `[TO CONFIRM]` — no customization threshold is inferred for this Makeup SKU. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free-sample availability is the confirmed general commercial rule. |
+| Suggested B2B Price | US$2.99 / pc |
+| Private Label | Available according to supplied product information. |
+| Logo Customization | `[TO CONFIRM]` |
+| Custom Packaging | `[TO CONFIRM]` |
+| Custom Shade Range | `[TO CONFIRM]` |
+| Packaging Details | Sleek rose-nude rectangular stick packaging with angled bullet profile; supplied visual shows five visible complexion directions. |
+| Product Image | `/manus-storage/product-21-creamy-contour-foundation-stick_5b359b7c.png` — updated cropped user-supplied real product visual retaining the complete five-stick lineup and matching color smears while excluding complexion-model images, shade-label strips and the source control; mounted on an ivory portrait catalogue plate. |
+| Visual QA | Makeup Collection and PDP confirmed on desktop and mobile after the updated portrait catalogue plate was applied; all five real sticks and matching color smears remain visible without source UI. |
+| Claims Boundary | Complexion-model images are color-direction references only; do not imply fit or performance for any person. Do not infer finish, coverage, net weight, ingredients, shade codes, certification, customization scope or customization MOQ. Use cosmetic positioning only; no medical claims or performance guarantees. |
+| Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title or “Black Makeup Stick” as public website copy. The user-confirmed public name is Creamy Contour & Foundation Stick. |
