@@ -5,12 +5,12 @@
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { InquiryDrawer } from "@/components/SiteShell";
-import { getCustomizationLabel, TO_CONFIRM } from "@/data/business";
+import { getCustomizationLabel, getProductInquiryCustomizationNote, TO_CONFIRM } from "@/data/business";
 import type { Product } from "@/data/products";
 
 export function ProductCard({ product, index }: { product: Product; index: number }) {
   const customField = getCustomizationLabel(product.category);
-  const context = { productName: product.name, productUrl: `/products/${product.slug}`, category: product.category, standardMoq: product.standardMoq, leadTime: product.leadTime, sampleAvailability: product.sampleAvailability };
+  const context = { productName: product.name, productUrl: `/products/${product.slug}`, category: product.category, standardMoq: product.standardMoq, leadTime: product.leadTime, sampleAvailability: product.sampleAvailability, customizationNote: getProductInquiryCustomizationNote(product) };
   const hasConfirmedData = product.dataStatus === "confirmed";
   return <article className={`product-card product-card-${product.category} product-sku-${product.slug}`}>
     <Link href={`/products/${product.slug}`} className="product-image-wrap" aria-label={`View ${product.name}`}><div className="product-card-index">{String(index + 1).padStart(2, "0")}</div><img src={product.image} alt={`${product.name} product visual`} className="product-image" /><span className="catalogue-plate-caption">{hasConfirmedData ? "Catalogue plate / product visual" : "Product reference plate"}</span><span className="product-view">View Details <ArrowRight size={15} /></span></Link>

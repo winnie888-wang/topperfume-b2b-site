@@ -233,3 +233,37 @@
 | Product Image | `/manus-storage/product-10-bare-vanilla-body-mist_bf37ea81.png` — cropped from the user-provided screenshot to bottle visual only; source-site UI, ratings, store information and viewing prompt are excluded. |
 | Retail UI Exclusions | Do not reproduce Amazon rating, review count, Amazon Store information, original Amazon title or source-site UI. |
 | IP / Naming Boundary | User explicitly confirmed brand and product-name use for the current round; this record does not extend permission to other brands or SKUs. |
+
+## Product 11
+
+> **Sequence note:** The user supplied this as “Product 10 — Makeup / Lip Care,” but Product 10 is already the independently integrated Bare Vanilla fragrance SKU. Under the agreed accumulation rule, this distinct visual is recorded as Product 11 and does not replace any previous SKU.
+
+| Field | Status |
+|---|---|
+| Intake ID | `MUP-11` |
+| Public Product Name | Vegan Hydrating Lip Oil Gloss |
+| Suggested Website Title | Vegan Moisturizing Lip Oil Gloss Mirror Shine Hydrating Plumping Lip Care |
+| Public Brand Display | `[TO CONFIRM]` — do not display Rejiu or Rejiu LIP GLOSS as a public brand or product name. |
+| SKU | `MU-LIP-OIL-001` |
+| Category | Makeup / Lip Makeup / Lip Oil & Lip Gloss |
+| Product Type | Hydrating Lip Oil / Lip Gloss |
+| Finish | Mirror Shine / Glossy |
+| Texture | Watery / Smooth |
+| Product Positioning | Moisturizing / Hydrating / Mirror Shine / Watery Gloss / Smooth Lip Finish |
+| Vegan | Yes — according to supplied product information; vegan certification documents `[TO CONFIRM]`. |
+| Visible Shade Options | Deep Berry Pink / Rose Pink / Peach Nude / Soft Pink — final shade names and shade codes `[TO CONFIRM]`. |
+| Net Weight / Volume | `[TO CONFIRM]` |
+| Ingredients | `[TO CONFIRM]` |
+| Standard MOQ | 12 pcs |
+| Custom MOQ | `[TO CONFIRM]` — no customisation threshold is inferred for this Makeup SKU. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free-sample availability is the confirmed general commercial rule. |
+| Suggested B2B Price | US$2.00 / pc |
+| Private Label | `[TO CONFIRM]` |
+| Logo Customization | `[TO CONFIRM]` |
+| Custom Packaging | `[TO CONFIRM]` |
+| Custom Shades | `[TO CONFIRM]` |
+| Packaging Details | Squeezable glossy lip-oil tube in bright pink, rose and peach variations with a decorative transparent jewel-style applicator base. |
+| Product Image | `/manus-storage/product-11-vegan-hydrating-lip-oil-gloss_f92e8c52.png` — cropped user-supplied product image mounted as the real catalogue visual; public copy does not use Rejiu / Rejiu LIP GLOSS as brand or product name. |
+| Claims Boundary | Do not infer ingredients, net weight, shade codes, certification, vegan certification documents, customisation capability or customisation MOQ. Use visual/cosmetic framing only; no medical claims. |
+| IP / Naming Boundary | Rejiu / Rejiu LIP GLOSS is not approved for public display. Public copy uses only the generic user-confirmed name Vegan Hydrating Lip Oil Gloss. |

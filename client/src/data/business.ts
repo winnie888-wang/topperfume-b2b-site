@@ -38,7 +38,7 @@ export const inquiryRouting = {
 export type InquiryIntentKey = "sample" | "quote" | "project" | "whatsapp";
 export type InquirySummaryInput = {
   intent: InquiryIntentKey;
-  context?: { productName?: string; productUrl?: string; category?: string; standardMoq?: string; leadTime?: string; sampleAvailability?: string };
+  context?: { productName?: string; productUrl?: string; category?: string; standardMoq?: string; leadTime?: string; sampleAvailability?: string; customizationNote?: string };
   name?: string;
   country?: string;
   email?: string;
@@ -59,7 +59,9 @@ export function buildInquirySummary(input: InquirySummaryInput) {
   const standardMoq = input.context?.standardMoq || commercialTerms.standard[0].value;
   const leadTime = input.context?.leadTime || commercialTerms.standard[1].value;
   const sampleAvailability = input.context?.sampleAvailability || commercialTerms.standard[2].value;
-  const customTerms = input.context?.category === "skincare"
+  const customTerms = input.context?.customizationNote
+    ? input.context.customizationNote
+    : input.context?.category === "skincare"
     ? "Custom logo and packaging: from 100 pcs. Formula, claims and testing scope require confirmation."
     : "Custom logo, packaging and fragrance: from 100 pcs. Product-specific scope and final terms require confirmation.";
   const lines = [
@@ -113,18 +115,22 @@ export function getCustomizationLabel(category: ProductCategory) {
 export function getProductDecisionRows(product: Product): DecisionField[] {
   const variable = variableByCategory[product.category];
   const hasConfirmedData = product.dataStatus === "confirmed";
+  const productCustomScopeNeedsConfirmation = product.customizationStatus === TO_CONFIRM;
   const variableValue = product.category === "fragrance" && product.fragranceFamily
     ? `${product.fragranceFamily}${product.concentration ? ` · ${product.concentration}` : ""}`
     : product.category === "skincare" && product.keyIngredients
       ? product.keyIngredients
+      : product.category === "makeup" && product.shadeOptions
+        ? product.shadeOptions
       : variable.value;
+  const hasConfirmedVariable = (product.category === "fragrance" && Boolean(product.fragranceFamily)) || (product.category === "skincare" && Boolean(product.keyIngredients)) || (product.category === "makeup" && Boolean(product.shadeOptions));
   return [
-    { label: "Available Size", value: product.format, status: hasConfirmedData ? undefined : TO_CONFIRM },
-    { label: variable.label, value: variableValue, status: hasConfirmedData && ((product.category === "fragrance" && product.fragranceFamily) || (product.category === "skincare" && product.keyIngredients)) ? undefined : TO_CONFIRM },
+    { label: "Available Size", value: product.format, status: hasConfirmedData && product.format !== TO_CONFIRM ? undefined : TO_CONFIRM },
+    { label: variable.label, value: variableValue, status: hasConfirmedData && hasConfirmedVariable ? undefined : TO_CONFIRM },
     { label: "Packaging", value: product.packaging || "Reference packaging · custom packaging from 100 pcs", status: product.packaging ? undefined : TO_CONFIRM },
-    { label: "Logo Customization", value: "Custom logo from 100 pcs" },
+    { label: "Logo Customization", value: productCustomScopeNeedsConfirmation ? "Product-specific logo scope" : "Custom logo from 100 pcs", status: productCustomScopeNeedsConfirmation ? TO_CONFIRM : undefined },
     { label: "Private Label", value: product.privateLabelAvailable ? "Available" : "Project pathway and final scope", status: product.privateLabelAvailable ? undefined : TO_CONFIRM },
-    { label: "MOQ", value: `Standard: ${product.standardMoq || "2 pcs"} · Custom: from 100 pcs` },
+    { label: "MOQ", value: `Standard: ${product.standardMoq || "2 pcs"} · Custom: ${productCustomScopeNeedsConfirmation ? TO_CONFIRM : "from 100 pcs"}`, status: productCustomScopeNeedsConfirmation ? TO_CONFIRM : undefined },
     { label: "Lead Time", value: "Standard: approx. 7 days · Custom schedule", status: TO_CONFIRM },
   ];
 }
@@ -138,6 +144,20 @@ export function getProductStandardTerms(product: Product) {
 }
 
 export function getProductCustomTerms(product: Product) {
+  if (product.customizationStatus === TO_CONFIRM) {
+    return product.category === "makeup"
+      ? [
+        { label: "Private Label", value: TO_CONFIRM },
+        { label: "Custom Logo", value: TO_CONFIRM },
+        { label: "Custom Packaging", value: TO_CONFIRM },
+        { label: "Custom Shades", value: TO_CONFIRM },
+      ]
+      : [
+        { label: "Custom Logo", value: TO_CONFIRM },
+        { label: "Custom Packaging", value: TO_CONFIRM },
+        { label: "Product Scope", value: TO_CONFIRM },
+      ];
+  }
   if (product.category === "skincare") {
     return [
       { label: "Custom Logo", value: "From 100 pcs" },
@@ -146,6 +166,14 @@ export function getProductCustomTerms(product: Product) {
     ];
   }
   return commercialTerms.custom;
+}
+
+export function getProductInquiryCustomizationNote(product: Product) {
+  return product.customizationStatus === TO_CONFIRM
+    ? "Private label, custom logo, custom packaging, custom shades and all customization MOQ require confirmation."
+    : product.category === "skincare"
+      ? "Custom logo and packaging: from 100 pcs. Formula, claims and testing scope require confirmation."
+      : "Custom logo, packaging and fragrance: from 100 pcs. Product-specific scope and final terms require confirmation.";
 }
 
 export function getDevelopmentScope(category: ProductCategory) {

@@ -176,3 +176,12 @@
 - [x] 将 Additional Notes 保留为 `[TO CONFIRM]`；不得自行增加额外香调、功效或未确认产品资料。
 - [x] 仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘；不复制 Amazon rating、Review count、Amazon Store information、原 Amazon 标题或 UI。
 - [x] 已完成 TypeScript、生产构建及 Fragrance Collection / Product Detail 的桌面与移动端核验；确认 US$2.00 / pc、MOQ 2 pcs、约 7 天交期与免费样品会传递至产品上下文询盘。
+
+### Product 11 — Vegan Hydrating Lip Oil Gloss
+
+- [x] 将用户提供的四支粉色、玫瑰色与蜜桃色挤压式唇油管图作为独立 Makeup / Lip Care SKU 裁切并上传；不得覆盖既有 Product 10 Fragrance SKU 或其他前序产品。
+- [x] 接入确认资料：SKU `MU-LIP-OIL-001`、Lip Oil / Lip Gloss、Mirror Shine / Glossy、Watery / Smooth、Moisturizing / Hydrating、Vegan（按用户提供信息）、多色可选、建议 B2B 价格 US$2.00 / pc、MOQ 12 pcs 与约 7 天交期。
+- [x] 使用通用公开名称 `Vegan Hydrating Lip Oil Gloss`；不将图片上的 Rejiu / Rejiu LIP GLOSS 作为公开品牌或产品名称。
+- [x] 将 Net Weight / Volume、Ingredients、Shade Codes、认证文件、Private Label、Custom Logo、Custom Packaging、Custom Shades 与所有定制 MOQ 均保留为 `[TO CONFIRM]`；色彩仅描述为 Deep Berry Pink、Rose Pink、Peach Nude、Soft Pink 等可见选项。
+- [x] 仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘；不得增加未确认配方、净含量、色号、认证或定制能力。
+- [x] 已完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；确认产品上下文传递至 Sample、Quote 与 WhatsApp，且询盘摘要会保留该 SKU 的定制范围待确认边界。

@@ -34,6 +34,13 @@ export type Product = {
   dermatologistTested?: string;
   fragrance?: string;
   spf?: string;
+  finish?: string;
+  vegan?: string;
+  veganCertification?: string;
+  shadeOptions?: string;
+  shadeCodes?: string;
+  ingredients?: string;
+  customizationStatus?: string;
   standardMoq?: string;
   leadTime?: string;
   sampleAvailability?: string;
@@ -49,6 +56,7 @@ const realVisual = {
   olayDarkSpotLotion: "/manus-storage/product-07-olay-dark-spot-body-lotion_8520dc7b.png",
   jergensUltraHealingLotion: "/manus-storage/product-08-jergens-ultra-healing-body-lotion_bd2450c3.png",
   bareVanillaBodyMist: "/manus-storage/product-10-bare-vanilla-body-mist_bf37ea81.png",
+  veganHydratingLipOilGloss: "/manus-storage/product-11-vegan-hydrating-lip-oil-gloss_f92e8c52.png",
   fragranceRose: "/manus-storage/fragrance-jam-spill_f3448635.jpg",
   fragranceViolet: "/manus-storage/fragrance-my-soul_c875037f.jpg",
   fragranceAmber: "/manus-storage/fragrance-vanilla-amber_ac1dc3b6.jpg",
@@ -85,6 +93,7 @@ export const products: Product[] = [
   { slug: "body-lotion-production", name: "Body Lotion Format", nameStatus: nameToConfirm, category: "skincare", format: "473 ml body lotion", descriptor: "Moisture body care", image: realVisual.skincareProduction, realImage: true, tags: ["Body Care", "Pump", "Product visual"], briefing: "Product image used as a reference for a pump-bottle body-lotion format and production-scale visual. Product name and claims require confirmation." },
   { slug: "deodorant-stick-line", name: "Deodorant Stick Line", nameStatus: nameToConfirm, category: "skincare", format: "75 g deodorant stick", descriptor: "Personal care", image: realVisual.skincareDeodorant, realImage: true, tags: ["Personal Care", "Stick", "Product visual"], briefing: "Product image used as a reference for a deodorant-stick assortment with multiple colour directions. Product name and specifications require confirmation." },
   { slug: "body-cream-line", name: "Body Cream Line", nameStatus: nameToConfirm, category: "skincare", format: "444 ml pump body cream", descriptor: "Targeted body care", image: realVisual.skincareCream, realImage: true, tags: ["Body Care", "Pump", "Product visual"], briefing: "Product image used as a reference for a colour-coded body-cream assortment. Product name, formula and claims require confirmation." },
+  { slug: "vegan-hydrating-lip-oil-gloss", name: "Vegan Hydrating Lip Oil Gloss", category: "makeup", format: "[TO CONFIRM]", descriptor: "Mirror Shine · Moisturizing · Watery Finish", image: realVisual.veganHydratingLipOilGloss, realImage: true, tags: ["Lip Makeup", "Lip Oil / Lip Gloss", "Product visual"], briefing: "High-shine hydration with a smooth, juicy-looking lip finish. This moisturizing lip oil combines lip-care positioning with a glossy makeup finish. Its lightweight watery texture is designed to create a smooth, mirror-like shine and a fresh, hydrated, fuller-looking appearance. Visible pink, berry and peach-inspired options make it suitable for trend-driven makeup collections, beauty retailers and social-commerce sellers.", sku: "MU-LIP-OIL-001", b2bPrice: "US$2.00 / pc", productType: "Hydrating Lip Oil / Lip Gloss", primaryBenefit: "Moisturizing · Hydrating", finish: "Mirror Shine / Glossy", texture: "Watery / Smooth", vegan: "Yes — according to supplied product information", veganCertification: "[TO CONFIRM]", shadeOptions: "Deep Berry Pink · Rose Pink · Peach Nude · Soft Pink", shadeCodes: "[TO CONFIRM]", ingredients: "[TO CONFIRM]", standardMoq: "12 pcs", leadTime: "Approx. 7 days", sampleAvailability: "Available", packaging: "Squeezable glossy lip-oil tubes in bright pink, rose and peach variations with decorative transparent jewel-style applicator bases.", customizationStatus: "[TO CONFIRM]", dataStatus: "confirmed" },
   { slug: "compact-powder", name: "Compact Powder", nameStatus: nameToConfirm, category: "makeup", format: "Pressed powder compact", descriptor: "Face colour", image: realVisual.makeupCompact, realImage: true, tags: ["Complexion", "Compact", "Product visual"], briefing: "Product image used as a reference for a premium compact format, refill area and tactile pouch presentation. Product name and shade details require confirmation." },
   { slug: "lip-color-collection", name: "Lip Color Collection", nameStatus: nameToConfirm, category: "makeup", format: "Lipstick and lip product assortment", descriptor: "Colour makeup", image: realVisual.makeupLip, realImage: true, tags: ["Lip", "Collection", "Product visual"], briefing: "Product image used as a reference for a multi-format colour-makeup collection. Product name, shades and components require confirmation." },
   { slug: "beauty-gift-set", name: "Beauty Gift Set", nameStatus: nameToConfirm, category: "makeup", format: "Multi-product gift set", descriptor: "Giftable beauty", image: realVisual.makeupGift, realImage: true, tags: ["Gift Set", "Packaging", "Product visual"], briefing: "Product image used as a reference for a premium multi-product beauty gift set. Product name, assortment and packaging scope require confirmation." },
