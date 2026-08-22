@@ -553,3 +553,40 @@
 | Product Image | `/manus-storage/product-19-multi-use-complexion-palette_1a4ca030.png` — cropped user-supplied real product visual retaining the carton and the two compact palette views while excluding the right-side promotional complexion examples and source control. |
 | Claims Boundary | Before / After, complexion examples, blush-style and eyeshadow-style example uses are not proof of guaranteed performance or of compatibility with the exact formula. Do not infer finish, coverage, texture, ingredients, weight, shade codes, certification, packaging customization, shade-combination customization or customization MOQ. No treatment claims about pigmentation, blemishes or skin conditions. |
 | Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title, “Wholesale,” “No Brand,” or unconfirmed “Foundation” wording as public website copy. The user-confirmed public name is 16-Color Multi-Use Complexion Palette. |
+
+## Product 20
+
+> **Sequence note:** The user supplied this as “Product 19 — Makeup / Face,” but Product 19 is already the independently integrated 16-Color Multi-Use Complexion Palette. Under the agreed accumulation rule, this distinct visual is recorded as Product 20 and does not replace any previous SKU.
+
+| Field | Status |
+|---|---|
+| Intake ID | `MUP-20` |
+| Public Product Name | 2-in-1 Blush Duo Palette |
+| Suggested Website Title | 2-in-1 Blush Duo Palette \| Buildable Cheek Color |
+| Public Brand Display | Not supplied; do not invent or display a brand. |
+| SKU | `MU-FACE-BLUSH-002` |
+| Category | Makeup / Face Makeup / Blush |
+| Product Type | Blush Duo / Cheek Color Palette |
+| Shades per Compact | 2 coordinated cheek colors. |
+| Visible Colorways | 5. |
+| Visible Color Directions | 01 Soft Rose Nude, 02 Baby Pink, 03 Mocha Rose, 04 Berry Pink and 05 Coral Red. Exact shade names / codes `[TO CONFIRM]`. |
+| Positioning | 2-in-1 / Buildable Cheek Color / Soft Glow positioning / Multi-Shade. |
+| Finish | `[TO CONFIRM]` |
+| Formula Format | `[TO CONFIRM]` — supplied material does not confirm whether the two pans are Cream + Powder. |
+| Net Weight | `[TO CONFIRM]` |
+| Individual Pan Weight | `[TO CONFIRM]` |
+| Ingredients | `[TO CONFIRM]` |
+| Shade Codes | `[TO CONFIRM]` |
+| Standard MOQ | 12 pcs |
+| Custom MOQ | `[TO CONFIRM]` — no customization threshold is inferred for this Makeup SKU. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free-sample availability is the confirmed general commercial rule. |
+| Suggested B2B Price | US$2.99 / pc |
+| Private Label | `[TO CONFIRM]` |
+| Logo Customization | Available according to supplied product information. |
+| Custom Outer Packaging | `[TO CONFIRM]` |
+| Custom Color Combination | `[TO CONFIRM]` |
+| Packaging Details | Soft pink square compact containing two rectangular cheek-color pans; supplied visual shows five colour variations. |
+| Product Image | `/manus-storage/product-20-blush-duo-palette_8af7b46f.png` — cropped user-supplied real product visual retaining the five compact palette variations while excluding portrait-effect examples, Before text, shade-number captions and source control; mounted on a neutral portrait catalogue plate to retain the complete horizontal product row in the PDP. |
+| Claims Boundary | Before / After and illustrated cheek applications are color-effect references only, not proof of guaranteed results. Do not infer finish, exact formula format, ingredients, weights, exact shade names / codes, certification, private-label availability, packaging customization, colour-combination customization or customization MOQ. Use cosmetic positioning only; no treatment or performance guarantee claims. |
+| Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title as public website copy. The user-confirmed public name is 2-in-1 Blush Duo Palette. |
