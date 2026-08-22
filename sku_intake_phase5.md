@@ -626,3 +626,42 @@
 | Visual QA | Makeup Collection and PDP confirmed on desktop and mobile after the updated portrait catalogue plate was applied; all five real sticks and matching color smears remain visible without source UI. |
 | Claims Boundary | Complexion-model images are color-direction references only; do not imply fit or performance for any person. Do not infer finish, coverage, net weight, ingredients, shade codes, certification, customization scope or customization MOQ. Use cosmetic positioning only; no medical claims or performance guarantees. |
 | Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title or “Black Makeup Stick” as public website copy. The user-confirmed public name is Creamy Contour & Foundation Stick. |
+
+## Product 22
+
+> **Sequence note:** This distinct user-supplied visual follows Product 21 and is accumulated as Product 22. It does not replace any earlier Face or Makeup SKU.
+
+| Field | Status |
+|---|---|
+| Intake ID | `MUP-22` |
+| Public Product Name | 12-Color Face Contour & Correcting Palette |
+| Suggested Website Title | 12-Color Face Contour & Correcting Palette \| Vegan Private Label Sculpting Makeup |
+| Public Brand Display | Not supplied; do not invent or display a brand. |
+| SKU | `MU-FACE-CONTOUR-012` |
+| Category | Makeup / Face Makeup / Contour Palette |
+| Product Type | Contour Palette / Multi-Use Face Palette |
+| Visible Palette Format | 12 colors. |
+| Positioning | Sculpting / Contouring / Correcting / Multi-Tone / Private Label. |
+| Visible Contour Directions | Light Beige, Soft Sand, Warm Beige, Honey Beige, Golden Tan, Taupe Brown, Medium Brown, Deep Brown and Rich Chocolate Brown. Exact shade names / codes `[TO CONFIRM]`. |
+| Visible Correcting / Accent Directions | Bright Orange, Red and Deep Red / Burgundy. Exact shade names / codes `[TO CONFIRM]`. |
+| Formula Structure | `[TO CONFIRM]` — do not assume the bottom three pans share the same formula or intended use as the upper contour pans. |
+| Finish | `[TO CONFIRM]` |
+| Coverage | `[TO CONFIRM]` |
+| Net Weight | `[TO CONFIRM]` |
+| Individual Pan Weight | `[TO CONFIRM]` |
+| Ingredients | `[TO CONFIRM]` |
+| Shade Codes | `[TO CONFIRM]` |
+| Standard MOQ | 12 pcs |
+| Custom MOQ | `[TO CONFIRM]` — no customization threshold is inferred for this Makeup SKU. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free-sample availability is the confirmed general commercial rule. |
+| Suggested B2B Price | US$2.99 / pc |
+| Private Label | Available according to supplied product information. |
+| Vegan | Vegan positioning according to supplied product information. No certification claim. |
+| Custom Logo | `[TO CONFIRM]` |
+| Custom Outer Packaging | `[TO CONFIRM]` |
+| Custom Shade Combination | `[TO CONFIRM]` |
+| Packaging Details | Bold purple multi-pan compact containing 12 face shades; upper section presents light-to-deep beige, tan and brown directions, while the lower section presents orange-to-red accent directions. |
+| Product Image | `/manus-storage/product-22-face-contour-correcting-palette_ca36111f.png` — cropped user-supplied real purple palette visual, mounted on a neutral ivory portrait catalogue plate while excluding retail background, hand, and source control. |
+| Claims Boundary | Cosmetic positioning only. Do not infer exact finish, coverage, formula structure, ingredients, weights, shade codes, certification, customization scope or customization MOQ. The bottom three vivid pans may be described only as correcting or artistic accent directions depending on final confirmed formula and shade positioning; no medical, treatment, complexion-result or performance guarantee claims. |
+| Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title. The user-confirmed public name is 12-Color Face Contour & Correcting Palette. Public Vegan wording must be exactly “Vegan positioning according to supplied product information”; never use “Vegan Certified.” |

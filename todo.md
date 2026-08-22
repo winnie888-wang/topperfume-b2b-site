@@ -280,3 +280,13 @@
 - [x] 仅以 “according to supplied product information” 呈现 Private Label；Custom Logo、Custom Packaging、Custom Shade Range 与 Customization MOQ 均保持 `[TO CONFIRM]`。
 - [x] 完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘上下文，不增加未确认配方、色号、认证、妆效或定制能力。
 - [x] 完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；保存隔离检查点，不合并 main、不推送 GitHub、不发布。
+
+### Product 22 — 12-Color Face Contour & Correcting Palette
+
+- [x] 将用户提供的紫色十二色面部彩妆盘实拍图作为独立 Makeup / Face SKU 裁切并上传；不得覆盖现有 Product 21 修容粉底棒或其他前序 SKU。
+- [x] 接入确认资料：SKU `MU-FACE-CONTOUR-012`、12-Color Face Contour & Correcting Palette、12 色、Sculpting / Contouring / Correcting、US$2.99 / pc、MOQ 12 pcs 与约 7 天交期。
+- [x] 使用用户确认的公开主名称 `12-Color Face Contour & Correcting Palette`；不采用原 Alibaba 关键词堆砌标题，也不使用 Vegan Certified 表述。
+- [x] 仅呈现可见的 Light Beige、Soft Sand、Warm Beige、Honey Beige、Golden Tan、Taupe Brown、Medium Brown、Deep Brown、Rich Chocolate Brown、Bright Orange、Red、Deep Red / Burgundy 颜色方向；精确色号、妆效、净含量、重量、成分、配方结构与所有未确认表现均保持 `[TO CONFIRM]`。
+- [x] 仅按供货资料表述 Vegan positioning 与 Private Label；不得定义底部三格为统一配方，Custom Logo、Outer Packaging、Shade Combination 与 Customization MOQ 均保持 `[TO CONFIRM]`。
+- [x] 完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘上下文，不增加未确认配方、色号、认证、妆效或定制能力。
+- [x] 完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；保存隔离检查点，不合并 main、不推送 GitHub、不发布。
