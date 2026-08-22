@@ -478,3 +478,40 @@
 | Product Image | `/manus-storage/product-17-lightweight-hydrating-liquid-concealer_231c2117.png` — cropped user-supplied real product visual retaining the complete six-tube shade arrangement and visible “YOUR LOGO” demonstration while removing outer source margins. |
 | Claims Boundary | Do not infer coverage, finish, ingredients, exact shade names / codes, certification, custom packaging, custom shade range or customization MOQ. Use cosmetic positioning only; no repair, treatment or medical claims. |
 | Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title, “Isolation Repair,” or “Wholesale” as public website copy. The user-confirmed public name is 8ml Lightweight Hydrating Liquid Concealer. |
+
+## Product 18
+
+> **Sequence note:** The user supplied this as “Product 17 — Makeup / Brows,” but Product 17 is already the independently integrated 8ml Lightweight Hydrating Liquid Concealer. Under the agreed accumulation rule, this distinct visual is recorded as Product 18 and does not replace any previous SKU.
+
+| Field | Status |
+|---|---|
+| Intake ID | `MUP-18` |
+| Public Product Name | 3-in-1 Deluxe Brow Definition Set |
+| Suggested Website Title | 3-in-1 Deluxe Brow Definition Set \| Brow Definer, Precision Pencil & Clear Brow Gel |
+| Public Brand Display | Not supplied; do not invent or display a brand. |
+| SKU | `MU-BROW-SET-003` |
+| Category | Makeup / Brow Makeup / Eyebrow Set |
+| Product Type | 3-in-1 Eyebrow Makeup Kit |
+| Set Includes | Brow Definer, Precision Brow Pencil and Clear Brow Gel. |
+| Brow Definer | Angled brow pencil format; visible net weight 0.2 g / 0.007 oz. |
+| Precision Brow Pencil | Slim precision tip with built-in spoolie brush; visible net weight 0.085 g / 0.003 oz. |
+| Clear Brow Gel | Clear setting gel with spoolie applicator; visible volume 6 ml. |
+| Number of Products | 3 |
+| Clear Brow Gel Appearance | Transparent. |
+| Positioning | Natural Definition / Shape / Fill / Set / 3-Step Brow Routine. |
+| Brow Pencil Shades | `[TO CONFIRM]` |
+| Ingredients | `[TO CONFIRM]` |
+| Finish | Natural / Polished positioning. |
+| Standard MOQ | 12 sets |
+| Custom MOQ | `[TO CONFIRM]` — no customization threshold is inferred for this Makeup SKU. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free-sample availability is the confirmed general commercial rule. |
+| Suggested B2B Price | US$2.99 / set |
+| Private Label | `[TO CONFIRM]` |
+| Logo Customization | `[TO CONFIRM]` |
+| Custom Retail Box | `[TO CONFIRM]` |
+| Custom Brow Shades | `[TO CONFIRM]` |
+| Packaging Details | Coordinated black brow pencils with soft pink metallic accents, matching pink clear-brow-gel tube and retail presentation box. |
+| Product Image | `/manus-storage/product-18-deluxe-brow-definition-set_d8c18541.png` — cropped user-supplied real product visual retaining the presentation box, Brow Definer, Precision Brow Pencil and Clear Brow Gel while removing outer source margins and the right-side UI control. |
+| Claims Boundary | Do not infer brow shades, ingredients, certification, private-label availability, custom-logo availability, retail-box customization, custom brow shades or customization MOQ. Use cosmetic positioning only; do not claim treatment, repair or unverified wear duration. |
+| Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title as public copy. The user-confirmed public name is 3-in-1 Deluxe Brow Definition Set. |

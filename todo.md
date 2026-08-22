@@ -241,3 +241,12 @@
 - [x] 以 “YOUR LOGO” 仅呈现确认的 Custom Logo 与 Private Label 可用性（according to supplied product information）；Custom Packaging、Custom Shade Range、Customization MOQ、Coverage Level、Finish、Ingredients、Exact Shade Names / Codes 均保持 `[TO CONFIRM]`。
 - [x] 完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘上下文，不增加未确认配方、遮盖力、妆效、色号、认证或定制 MOQ。
 - [x] 完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；保存隔离检查点，不合并 main、不推送 GitHub、不发布。
+
+### Product 18 — 3-in-1 Deluxe Brow Definition Set
+
+- [x] 将用户提供的眉笔、眉胶及礼盒实拍图作为独立 Makeup / Brow SKU 裁切并上传；不得覆盖现有 Product 17 液体遮瑕或其他前序 SKU。
+- [x] 接入确认资料：SKU `MU-BROW-SET-003`、3-in-1 Eyebrow Makeup Kit、Brow Definer 0.2 g / 0.007 oz、Precision Brow Pencil 0.085 g / 0.003 oz、Clear Brow Gel 6 ml、3 件套、US$2.99 / set、MOQ 12 sets 与约 7 天交期。
+- [x] 使用用户确认的公开主名称 `3-in-1 Deluxe Brow Definition Set`；不使用原 Alibaba 式关键词堆砌标题或夸大修复/持久性表达。
+- [x] 突出 Shape + Define + Set 与 Brow Definer + Precision Brow Pencil + Clear Brow Gel；眉笔色号、Ingredients、Private Label、Custom Logo、Custom Retail Box、Custom Brow Shades 与 Customization MOQ 均保持 `[TO CONFIRM]`。
+- [x] 完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘上下文，不增加未确认配方、色号、认证、定制能力或定制 MOQ。
+- [x] 完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；保存隔离检查点，不合并 main、不推送 GitHub、不发布。
