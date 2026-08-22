@@ -13,6 +13,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { buildInquirySummary, businessProfile, getInquiryWhatsAppUrl } from "@/data/business";
 import { trpc } from "@/lib/trpc";
+import { getInquiryDisplayState } from "@shared/inquiryUi";
 
 const nav = [
   { label: "Fragrance", href: "/collections/fragrance" },
@@ -39,6 +40,7 @@ export function InquiryDrawer({ triggerLabel = "Start Your Project", intent = "p
   const [submitted, setSubmitted] = useState<{ requestId: string; summary: string } | null>(() => qaSuccessPreview ? { requestId: "TP-QA-PREVIEW", summary: buildInquirySummary({ intent, context }) } : null);
   const [formStartedAt, setFormStartedAt] = useState(() => Date.now());
   const copy = inquiryCopy[intent];
+  const displayState = getInquiryDisplayState(Boolean(submitted));
   const submitInquiry = trpc.inquiry.submit.useMutation({
     onError: (error) => {
       toast("Submission unavailable", { description: error.message || "Please try again or use WhatsApp." });
@@ -90,8 +92,8 @@ export function InquiryDrawer({ triggerLabel = "Start Your Project", intent = "p
     <Button className={`button-primary ${triggerClassName}`} onClick={() => openDrawer(true)}>{triggerLabel} <ArrowRight size={16} strokeWidth={1.8} /></Button>
     <SheetContent side="right" className="inquiry-sheet">
       <SheetHeader><p className="eyebrow">{copy.eyebrow}</p><SheetTitle className="sheet-title">{copy.title}</SheetTitle><SheetDescription className="sheet-description">{copy.intro}</SheetDescription><p className="form-disclaimer">Your completed inquiry is sent directly to {businessProfile.companyName}. WhatsApp remains available as a separate quick-contact option.</p></SheetHeader>
-      {submitted ? <div className="submission-note" role="status" aria-live="polite"><span className="mini-index">01</span><h3>Thank you. Your inquiry has been received.</h3><p>Our team will contact you shortly. Reference: {submitted.requestId}</p><div className="inquiry-route-status"><span>Company</span><strong>{businessProfile.companyName}</strong><span>Sales email</span><strong>{businessProfile.email}</strong><span>WhatsApp</span><strong>{businessProfile.whatsappDisplay}</strong></div><div className="inquiry-route-actions"><a className="button-secondary button-whatsapp" href={getInquiryWhatsAppUrl(submitted.summary)} target="_blank" rel="noreferrer">Continue on WhatsApp</a></div><Button variant="outline" className="button-secondary" onClick={() => { setSubmitted(null); setFormStartedAt(Date.now()); }}>Submit another inquiry</Button></div> :
-        <form className="inquiry-form" onSubmit={handleSubmit}>
+      <div className="submission-note" role="status" aria-live="polite" hidden={!displayState.showSuccess}><span className="mini-index">01</span><h3>Thank you. Your inquiry has been received.</h3><p>Our team will contact you shortly. Reference: {submitted?.requestId}</p><div className="inquiry-route-status"><span>Company</span><strong>{businessProfile.companyName}</strong><span>Sales email</span><strong>{businessProfile.email}</strong><span>WhatsApp</span><strong>{businessProfile.whatsappDisplay}</strong></div><div className="inquiry-route-actions"><a className="button-secondary button-whatsapp" href={getInquiryWhatsAppUrl(submitted?.summary || buildInquirySummary({ intent, context }))} target="_blank" rel="noreferrer">Continue on WhatsApp</a></div><Button variant="outline" className="button-secondary" onClick={() => { setSubmitted(null); setFormStartedAt(Date.now()); }}>Submit another inquiry</Button></div>
+      <form className="inquiry-form" onSubmit={handleSubmit} hidden={!displayState.showForm}>
           {context?.productName && <div className="inquiry-context"><span>Product context attached</span><strong>{context.productName}</strong><p>{context.sku ? `${context.sku} · ` : ""}{context.category} · {context.productUrl}</p></div>}
           <div className="inquiry-two-up"><label>Name<Input required name="name" placeholder="Your name" /></label><label>Country<Input required name="country" placeholder="Country / market" /></label></div>
           <div className="inquiry-two-up"><label>Email<Input required name="email" type="email" placeholder="name@company.com" /></label><label>WhatsApp<Input name="whatsapp" placeholder="Country code + number" /></label></div>
@@ -101,7 +103,7 @@ export function InquiryDrawer({ triggerLabel = "Start Your Project", intent = "p
           <Button type="submit" className="button-primary button-wide" disabled={submitInquiry.isPending}>{submitInquiry.isPending ? "Submitting inquiry…" : <>{copy.submit} <ArrowRight size={16} /></>}</Button>
           {submitInquiry.error && <p className="form-submission-error" role="alert">{submitInquiry.error.message || "We could not send your inquiry right now. Please try again or use WhatsApp."}</p>}
           <p className="form-disclaimer">Required fields are validated before secure submission. WhatsApp remains an optional quick-contact channel.</p>
-        </form>}
+        </form>
     </SheetContent>
   </Sheet>;
 }

@@ -367,3 +367,14 @@
 - [x] 仅为当前 Vite React + Express + tRPC 结构添加最小、安全的 Vercel 构建、函数入口与路由重写配置；不改变现有业务逻辑。
 - [ ] 验证 Vercel Preview 的 `/`、`/collections/fragrance`、有效 Product Detail、`/api/trpc` 和真实 Inquiry Submission，不以 Dashboard Ready 代替 HTTP 验证。
 - [ ] 保存隔离检查点并仅同步 GitHub `v2-prototype`；交付新的 SHA、Preview URL、构建日志摘要、根路由/API 状态与询盘测试结果，不修改 main、不发布、不开始 SEO。
+
+### Phase 9B — Production Image Asset Migration（仅 v2-prototype）
+
+- [ ] 在已配置 Vercel 环境变量的最新 `v2-prototype` Preview 中重新验证 Homepage、`/api/trpc`、Request Sample、Get Quote、Start Your Project 与 Resend 真实投递。
+- [ ] 将所有已批准且客户可见的 Homepage、Collection 与 Product Detail 图片迁移为生产安全、Vercel 支持的外部静态资产路径；不得重生成、重设计、替换产品图片或修改产品数据。
+- [ ] 移除客户可见代码中所有 `/manus-storage/...` 生产依赖，并在真实 Vercel Preview 逐页验证无破图。
+- [ ] 仅保存检查点并同步 GitHub `v2-prototype`，复核 main 未变；不发布 Production，不开始 SEO，交付迁移数量、破图数量与验证结果。
+
+### Phase 9A Follow-up — Preview Inquiry Client Stability
+
+- [ ] 诊断并修复真实 Vercel Preview 中提交 Request Sample 后出现的 `removeChild` 客户端 DOM 异常，确保成功或失败状态均可安全渲染且不影响邮件提交。
