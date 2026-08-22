@@ -11,8 +11,8 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Collection from "./pages/Collection";
 import ProductDetail from "./pages/ProductDetail";
-
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return <Switch><Route path="/" component={Home} /><Route path="/collections/:category" component={Collection} /><Route path="/products/:slug" component={ProductDetail} /><Route component={Home} /></Switch>;
 }
 

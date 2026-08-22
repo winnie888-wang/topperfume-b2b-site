@@ -11,7 +11,8 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { buildInquirySummary, businessProfile, getInquiryMailto, getInquiryWhatsAppUrl, inquiryRouting } from "@/data/business";
+import { buildInquirySummary, businessProfile, getInquiryWhatsAppUrl } from "@/data/business";
+import { trpc } from "@/lib/trpc";
 
 const nav = [
   { label: "Fragrance", href: "/collections/fragrance" },
@@ -20,12 +21,12 @@ const nav = [
 ];
 
 export type InquiryIntent = "sample" | "quote" | "project";
-export type InquiryContext = { productName?: string; productUrl?: string; category?: string; standardMoq?: string; leadTime?: string; sampleAvailability?: string; customizationNote?: string };
+export type InquiryContext = { productName?: string; sku?: string; productUrl?: string; category?: string; standardMoq?: string; leadTime?: string; sampleAvailability?: string; customizationNote?: string };
 
 const inquiryCopy: Record<InquiryIntent, { eyebrow: string; title: string; intro: string; submit: string }> = {
-  sample: { eyebrow: "SAMPLE REQUEST", title: "Request a product sample.", intro: "Share the product reference, market and estimated quantity. Your product context is attached automatically for your inquiry.", submit: "Prepare sample request" },
-  quote: { eyebrow: "QUOTE REQUEST", title: "Get a focused quote.", intro: "Share the product reference, market and estimated quantity. Your structured request is prepared as an email or WhatsApp draft in this prototype.", submit: "Prepare quote request" },
-  project: { eyebrow: "PROJECT INTAKE", title: "Start your next beauty project.", intro: "Share category, market and customization direction. The request keeps product context and SKU-level order terms in view.", submit: "Prepare project request" },
+  sample: { eyebrow: "SAMPLE REQUEST", title: "Request a product sample.", intro: "Share the product reference, market and estimated quantity. Your product context is attached automatically for your inquiry.", submit: "Submit sample request" },
+  quote: { eyebrow: "QUOTE REQUEST", title: "Get a focused quote.", intro: "Share the product reference, market and estimated quantity. Your completed request is submitted directly to our team.", submit: "Submit quote request" },
+  project: { eyebrow: "PROJECT INTAKE", title: "Start your next beauty project.", intro: "Share category, market and customization direction. Your completed request is submitted directly to our team.", submit: "Submit project inquiry" },
 };
 
 export function Wordmark() {
@@ -33,33 +34,73 @@ export function Wordmark() {
 }
 
 export function InquiryDrawer({ triggerLabel = "Start Your Project", intent = "project", context, triggerClassName = "" }: { triggerLabel?: string; intent?: InquiryIntent; context?: InquiryContext; triggerClassName?: string }) {
-  const [open, setOpen] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [summary, setSummary] = useState("");
+  const qaSuccessPreview = import.meta.env.DEV && new URLSearchParams(window.location.search).get("inquirySuccessPreview") === triggerLabel;
+  const [open, setOpen] = useState(qaSuccessPreview);
+  const [submitted, setSubmitted] = useState<{ requestId: string; summary: string } | null>(() => qaSuccessPreview ? { requestId: "TP-QA-PREVIEW", summary: buildInquirySummary({ intent, context }) } : null);
+  const [formStartedAt, setFormStartedAt] = useState(() => Date.now());
   const copy = inquiryCopy[intent];
-  async function copySummary() {
-    try { await navigator.clipboard.writeText(summary); toast("Inquiry summary copied", { description: "Open the ready-to-send email or WhatsApp draft, or paste this request into your preferred channel." }); }
-    catch { toast("Copy unavailable", { description: "Select the inquiry summary below and copy it manually." }); }
+  const submitInquiry = trpc.inquiry.submit.useMutation({
+    onError: (error) => {
+      toast("Submission unavailable", { description: error.message || "Please try again or use WhatsApp." });
+    },
+  });
+  function openDrawer(nextOpen: boolean) {
+    setOpen(nextOpen);
+    if (nextOpen) {
+      setSubmitted(null);
+      setFormStartedAt(Date.now());
+    }
   }
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    setSummary(buildInquirySummary({ intent, context, name: String(data.get("name") || ""), country: String(data.get("country") || ""), email: String(data.get("email") || ""), whatsapp: String(data.get("whatsapp") || ""), quantity: String(data.get("quantity") || ""), customization: String(data.get("customization") || ""), notes: String(data.get("notes") || "") }));
-    setSubmitted(true);
-    toast("Inquiry request prepared", { description: "Use the email or WhatsApp draft below to send your request to Guiqi Technology Co., Ltd." });
+    const formValues = {
+      name: String(data.get("name") || ""),
+      country: String(data.get("country") || ""),
+      email: String(data.get("email") || ""),
+      whatsapp: String(data.get("whatsapp") || ""),
+      quantity: String(data.get("quantity") || ""),
+      customization: String(data.get("customization") || ""),
+      notes: String(data.get("notes") || ""),
+    };
+    const summary = buildInquirySummary({ intent, context, ...formValues });
+    submitInquiry.mutate({
+      intent,
+      productName: context?.productName,
+      sku: context?.sku,
+      productUrl: context?.productUrl ? new URL(context.productUrl, window.location.origin).toString() : undefined,
+      category: context?.category,
+      customerName: formValues.name,
+      countryMarket: formValues.country,
+      customerEmail: formValues.email,
+      customerWhatsApp: formValues.whatsapp,
+      quantity: formValues.quantity,
+      customizationRequirement: formValues.customization,
+      notes: formValues.notes,
+      website: String(data.get("website") || ""),
+      formStartedAt,
+    }, {
+      onSuccess: (result) => {
+        setSubmitted({ requestId: result.requestId, summary });
+        toast("Inquiry received", { description: "Your inquiry has been submitted to our team." });
+      },
+    });
   }
-  return <Sheet open={open} onOpenChange={setOpen}>
-    <Button className={`button-primary ${triggerClassName}`} onClick={() => setOpen(true)}>{triggerLabel} <ArrowRight size={16} strokeWidth={1.8} /></Button>
+  return <Sheet open={open} onOpenChange={openDrawer}>
+    <Button className={`button-primary ${triggerClassName}`} onClick={() => openDrawer(true)}>{triggerLabel} <ArrowRight size={16} strokeWidth={1.8} /></Button>
     <SheetContent side="right" className="inquiry-sheet">
-      <SheetHeader><p className="eyebrow">{copy.eyebrow}</p><SheetTitle className="sheet-title">{copy.title}</SheetTitle><SheetDescription className="sheet-description">{copy.intro}</SheetDescription><p className="form-disclaimer"><strong>MUST FIX BEFORE LAUNCH:</strong> This prototype prepares a draft only. Direct form submission to {businessProfile.email} must be implemented before launch.</p></SheetHeader>
-      {submitted ? <div className="submission-note"><span className="mini-index">01</span><h3>Your inquiry is ready.</h3><p>Your product context and form details have been assembled into a shareable B2B request. No details are stored by this site; open a draft below to send the request directly.</p><div className="inquiry-route-status"><span>Company</span><strong>{businessProfile.companyName}</strong><span>Sales email</span><strong>{inquiryRouting.email}</strong><span>WhatsApp</span><strong>{businessProfile.whatsappDisplay}</strong></div><Textarea className="inquiry-summary" value={summary} readOnly rows={13} aria-label="Prepared inquiry summary" /><div className="inquiry-route-actions"><Button type="button" className="button-primary" onClick={copySummary}>Copy inquiry summary</Button><a className="button-secondary button-mailto" href={getInquiryMailto(summary)}>Open email draft</a><a className="button-secondary button-whatsapp" href={getInquiryWhatsAppUrl(summary)} target="_blank" rel="noreferrer">Open WhatsApp draft</a></div><p className="form-disclaimer">Email and WhatsApp open a draft with your completed request; no form data is stored by this site.</p><Button variant="outline" className="button-secondary" onClick={() => setSubmitted(false)}>Edit request</Button></div> :
+      <SheetHeader><p className="eyebrow">{copy.eyebrow}</p><SheetTitle className="sheet-title">{copy.title}</SheetTitle><SheetDescription className="sheet-description">{copy.intro}</SheetDescription><p className="form-disclaimer">Your completed inquiry is sent directly to {businessProfile.companyName}. WhatsApp remains available as a separate quick-contact option.</p></SheetHeader>
+      {submitted ? <div className="submission-note" role="status" aria-live="polite"><span className="mini-index">01</span><h3>Thank you. Your inquiry has been received.</h3><p>Our team will contact you shortly. Reference: {submitted.requestId}</p><div className="inquiry-route-status"><span>Company</span><strong>{businessProfile.companyName}</strong><span>Sales email</span><strong>{businessProfile.email}</strong><span>WhatsApp</span><strong>{businessProfile.whatsappDisplay}</strong></div><div className="inquiry-route-actions"><a className="button-secondary button-whatsapp" href={getInquiryWhatsAppUrl(submitted.summary)} target="_blank" rel="noreferrer">Continue on WhatsApp</a></div><Button variant="outline" className="button-secondary" onClick={() => { setSubmitted(null); setFormStartedAt(Date.now()); }}>Submit another inquiry</Button></div> :
         <form className="inquiry-form" onSubmit={handleSubmit}>
-          {context?.productName && <div className="inquiry-context"><span>Product context attached</span><strong>{context.productName}</strong><p>{context.category} · {context.productUrl}</p></div>}
+          {context?.productName && <div className="inquiry-context"><span>Product context attached</span><strong>{context.productName}</strong><p>{context.sku ? `${context.sku} · ` : ""}{context.category} · {context.productUrl}</p></div>}
           <div className="inquiry-two-up"><label>Name<Input required name="name" placeholder="Your name" /></label><label>Country<Input required name="country" placeholder="Country / market" /></label></div>
           <div className="inquiry-two-up"><label>Email<Input required name="email" type="email" placeholder="name@company.com" /></label><label>WhatsApp<Input name="whatsapp" placeholder="Country code + number" /></label></div>
-          <div className="inquiry-two-up"><label>Quantity<Input required name="quantity" type="number" min="1" placeholder="Estimated units" /></label><label>Commercial path<select name="customization" defaultValue="to-confirm" aria-label="Commercial path"><option value="to-confirm">Select a path</option><option value="branded-wholesale">Branded Wholesale</option><option value="private-label">Private Label</option><option value="oem">OEM</option><option value="odm">ODM</option></select></label></div>
+          <div className="inquiry-two-up"><label>Quantity<Input required name="quantity" type="number" min="1" placeholder="Estimated units" /></label><label>Customization requirement<select name="customization" defaultValue="Not specified" aria-label="Customization requirement"><option value="Not specified">Not specified</option><option value="Branded Wholesale">Branded Wholesale</option><option value="Private Label">Private Label</option><option value="OEM">OEM</option><option value="ODM">ODM</option></select></label></div>
           <label>Notes <span className="label-optional">optional</span><Textarea name="notes" placeholder="Market, format, packaging or sample notes…" rows={4} /></label>
-          <Button type="submit" className="button-primary button-wide">{copy.submit} <ArrowRight size={16} /></Button><p className="form-disclaimer">No information is stored. After preparation, a ready-to-send draft opens for {businessProfile.companyName}.</p>
+          <label className="sr-only" aria-hidden="true">Website<Input name="website" tabIndex={-1} autoComplete="off" /></label>
+          <Button type="submit" className="button-primary button-wide" disabled={submitInquiry.isPending}>{submitInquiry.isPending ? "Submitting inquiry…" : <>{copy.submit} <ArrowRight size={16} /></>}</Button>
+          {submitInquiry.error && <p className="form-submission-error" role="alert">{submitInquiry.error.message || "We could not send your inquiry right now. Please try again or use WhatsApp."}</p>}
+          <p className="form-disclaimer">Required fields are validated before secure submission. WhatsApp remains an optional quick-contact channel.</p>
         </form>}
     </SheetContent>
   </Sheet>;

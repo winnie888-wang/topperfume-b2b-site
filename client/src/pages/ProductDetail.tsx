@@ -15,7 +15,7 @@ export default function ProductDetail() {
   if (!product) return <SiteShell><section className="not-found-page"><p className="eyebrow">PRODUCT NOT FOUND</p><h1>Let’s return to the collection.</h1><Link className="text-link" href="/collections/fragrance">Browse products <ArrowRight size={16} /></Link></section></SiteShell>;
 
   const related = products.filter((item) => item.category === product.category && item.slug !== product.slug).slice(0, 3);
-  const context = { productName: product.name, productUrl: `/products/${product.slug}`, category: product.category, standardMoq: product.standardMoq, leadTime: product.leadTime, sampleAvailability: product.sampleAvailability, customizationNote: getProductInquiryCustomizationNote(product) };
+  const context = { productName: product.name, sku: product.sku, productUrl: `/products/${product.slug}`, category: product.category, standardMoq: product.standardMoq, leadTime: product.leadTime, sampleAvailability: product.sampleAvailability, customizationNote: getProductInquiryCustomizationNote(product) };
   const decisionRows = getProductDecisionRows(product);
   const standardTerms = getProductStandardTerms(product);
   const customTerms = getProductCustomTerms(product);
