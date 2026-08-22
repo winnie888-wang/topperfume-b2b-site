@@ -213,3 +213,12 @@
 - [x] 仅呈现确认的色彩方向：Clear / Milky White、Ice Blue、Peach Nude、Soft Pink、Bright Red、Rose Pink、Warm Nude Brown、Deep Berry；Net Weight、Ingredients、Shade Codes、Private Label、Custom Logo、Custom Packaging、Custom Shades 与所有定制 MOQ 均保持 `[TO CONFIRM]`。
 - [x] 已完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘；未增加未确认净含量、成分、色号、认证或定制能力。
 - [x] 已完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；确认产品上下文传递至 Sample、Quote 与 WhatsApp，且询盘摘要会保留该 SKU 的定制范围待确认边界。
+
+### Product 15 — 2-in-1 Bracelet Lip Gloss Palette with Mirror
+
+- [x] 将用户提供的银色手链式双格唇彩盘产品图作为独立 Makeup / Lip SKU 裁切并上传；不得覆盖既有 Product 14 唇彩 SKU 或其他前序产品。
+- [x] 接入确认资料：SKU `MU-LIP-BRACELET-004`、2-in-1 Lip Gloss Palette / Bracelet Makeup、双唇色、内置镜子、手链式链条、Glossy / Water-Gloss、4 个可见色彩组合、US$2.99 / pc、MOQ 12 pcs 与约 7 天交期。
+- [x] 使用用户确认的公开主名称 `2-in-1 Bracelet Lip Gloss Palette with Mirror`；未采用原 Alibaba 关键词堆砌标题。
+- [x] 仅呈现确认的可见色彩组合：Mauve / Rose Pink、Brick Red / Coral Pink、Berry / Rose、Warm Nude / Coral Red；Net Weight、Ingredients、Shade Codes、Private Label、Custom Logo、Custom Outer Packaging、Custom Shade Combination 与所有定制 MOQ 均保持 `[TO CONFIRM]`。
+- [x] 已完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘，突出 Bracelet + Mirror + Dual Lip Color + Portable Beauty；未增加未确认净含量、配方、色号、认证或定制能力。
+- [x] 已完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；确认产品上下文传递至 Sample、Quote 与 WhatsApp，且询盘摘要会保留该 SKU 的定制范围待确认边界。

@@ -372,3 +372,36 @@
 | Product Image | `/manus-storage/product-14-radiant-glow-lip-gloss_e7660ba0.png` — cropped user-supplied real product visual, retaining the product tubes while excluding the source heading and source-site navigation panel. |
 | Claims Boundary | Do not infer net weight, ingredients, shade names/codes, certification, private-label availability, customization capability or customization MOQ. Use cosmetic positioning only; no medical claims. |
 | Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title or “Chemical Gel” wording as public website copy. The user-confirmed public name is Radiant Glow Moisturizing Lip Gloss. |
+
+## Product 15
+
+> **Sequence note:** The user supplied this as “Product 14 — Makeup / Lip,” but Product 14 is already the independently integrated Radiant Glow Moisturizing Lip Gloss SKU. Under the agreed accumulation rule, this distinct visual is recorded as Product 15 and does not replace any previous SKU.
+
+| Field | Status |
+|---|---|
+| Intake ID | `MUP-15` |
+| Public Product Name | 2-in-1 Bracelet Lip Gloss Palette with Mirror |
+| Suggested Website Title | 2-in-1 Bracelet Lip Gloss Palette with Mirror \| Wearable Dual-Shade Lip Color |
+| Public Brand Display | Not supplied; do not invent or display a brand. |
+| SKU | `MU-LIP-BRACELET-004` |
+| Category | Makeup / Lip Makeup / Lip Palette |
+| Product Type | 2-in-1 Lip Gloss Palette / Bracelet Makeup |
+| Core Product Details | Two coordinated lip shades, built-in mirror, bracelet-style chain and portable compact format. |
+| Finish | Glossy / Water-Gloss |
+| Visible Colorways | Four combinations: Mauve / Rose Pink; Brick Red / Coral Pink; Berry / Rose; Warm Nude / Coral Red. Exact shade names and codes `[TO CONFIRM]`. |
+| Net Weight | `[TO CONFIRM]` |
+| Ingredients | `[TO CONFIRM]` |
+| Shade Codes | `[TO CONFIRM]` |
+| Standard MOQ | 12 pcs |
+| Custom MOQ | `[TO CONFIRM]` — no customization threshold is inferred for this Makeup SKU. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free-sample availability is the confirmed general commercial rule. |
+| Suggested B2B Price | US$2.99 / pc |
+| Private Label | `[TO CONFIRM]` |
+| Logo Customization | `[TO CONFIRM]` |
+| Custom Outer Packaging | `[TO CONFIRM]` |
+| Custom Shade Combination | `[TO CONFIRM]` |
+| Packaging Details | Polished silver-tone compact with a hinged mirror, two lip-color pans and attached bracelet-style chain. |
+| Product Image | `/manus-storage/product-15-bracelet-lip-gloss-palette_84ef5aef.png` — cropped user-supplied real product visual, retaining the compact, retail box and bracelet chain while excluding the source image’s upper marketing text and swatch collage. |
+| Claims Boundary | Do not infer net weight, ingredients, shade names/codes, certification, private-label availability, customization capability or customization MOQ. Use cosmetic positioning only; no medical claims. |
+| Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title as public website copy. The user-confirmed public name is 2-in-1 Bracelet Lip Gloss Palette with Mirror. |
