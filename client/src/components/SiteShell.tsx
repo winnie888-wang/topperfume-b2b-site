@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { buildInquirySummary, businessProfile, getInquiryWhatsAppUrl } from "@/data/business";
+import { publicAssetUrl } from "@/data/publicAssets";
 import { trpc } from "@/lib/trpc";
 import { getInquiryDisplayState } from "@shared/inquiryUi";
 
@@ -31,7 +32,7 @@ const inquiryCopy: Record<InquiryIntent, { eyebrow: string; title: string; intro
 };
 
 export function Wordmark() {
-  return <Link href="/" className="brand-lockup" aria-label="TopPerfume home"><img src="/manus-storage/topperfume-mark_8166258c.png" alt="" className="brand-mark" /><span className="brand-word">TOPPERFUME</span><span className="brand-subword">BEAUTY PARTNERS</span></Link>;
+  return <Link href="/" className="brand-lockup" aria-label="TopPerfume home"><img src={publicAssetUrl("topperfume-mark_8166258c.png")} alt="" className="brand-mark" /><span className="brand-word">TOPPERFUME</span><span className="brand-subword">BEAUTY PARTNERS</span></Link>;
 }
 
 export function InquiryDrawer({ triggerLabel = "Start Your Project", intent = "project", context, triggerClassName = "" }: { triggerLabel?: string; intent?: InquiryIntent; context?: InquiryContext; triggerClassName?: string }) {

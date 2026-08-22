@@ -1,5 +1,7 @@
 export type ProductCategory = "fragrance" | "skincare" | "makeup";
 
+import { publicAssetUrl } from "@/data/publicAssets";
+
 export type Product = {
   slug: string;
   name: string;
@@ -62,32 +64,32 @@ export type Product = {
 };
 
 const realVisual = {
-  diorSauvage: "/manus-storage/product-01-dior-sauvage-bottle-box_51b02500.png",
-  goodGirlBlushTweedTalk: "/manus-storage/product-02-good-girl-blush-tweed-talk_1ae0d387.png",
-  veryGoodGirlGlam: "/manus-storage/product-03-very-good-girl-glam-bottle-box_9405022e.png",
-  monParis: "/manus-storage/product-04-mon-paris-bottle_3357056d.png",
-  medixVitaminCLotion: "/manus-storage/product-05-medix-vitamin-c-body-lotion_9c412e12.png",
-  medixRetinolLotion: "/manus-storage/product-06-medix-retinol-body-lotion_82595db9.png",
-  olayDarkSpotLotion: "/manus-storage/product-07-olay-dark-spot-body-lotion_8520dc7b.png",
-  jergensUltraHealingLotion: "/manus-storage/product-08-jergens-ultra-healing-body-lotion_bd2450c3.png",
-  bareVanillaBodyMist: "/manus-storage/product-10-bare-vanilla-body-mist_bf37ea81.png",
-  veganHydratingLipOilGloss: "/manus-storage/product-11-vegan-hydrating-lip-oil-gloss_f92e8c52.png",
-  hydratingMirrorShineLipGlaze: "/manus-storage/product-12-hydrating-mirror-shine-lip-glaze_d0866c8c.png",
-  mochaChocolateEyeshadowPalette: "/manus-storage/product-13-mocha-chocolate-eyeshadow-palette_ca2216bd.png",
-  radiantGlowMoisturizingLipGloss: "/manus-storage/product-14-radiant-glow-lip-gloss_e7660ba0.png",
-  braceletLipGlossPalette: "/manus-storage/product-15-bracelet-lip-gloss-palette_84ef5aef.png",
-  ultimatePressedPowderEyeshadowPalette: "/manus-storage/product-16-vegan-pressed-powder-eyeshadow-palette_faef4ea4.png",
-  lightweightHydratingLiquidConcealer: "/manus-storage/product-17-lightweight-hydrating-liquid-concealer_231c2117.png",
-  deluxeBrowDefinitionSet: "/manus-storage/product-18-deluxe-brow-definition-set_d8c18541.png",
-  multiUseComplexionPalette: "/manus-storage/product-19-multi-use-complexion-palette_1a4ca030.png",
-  blushDuoPalette: "/manus-storage/product-20-blush-duo-palette_8af7b46f.png",
-  creamyContourFoundationStick: "/manus-storage/product-21-creamy-contour-foundation-stick_5b359b7c.png",
-  faceContourCorrectingPalette: "/manus-storage/product-22-face-contour-correcting-palette-saturated_62a460a7.png",
-  pureSeductionMistLotionSet: "/manus-storage/product-23-pure-seduction-mist-lotion-set_c74ce5a3.png",
-  fragranceRose: "/manus-storage/fragrance-jam-spill_f3448635.jpg",
-  fragranceViolet: "/manus-storage/fragrance-my-soul_c875037f.jpg",
-  fragranceAmber: "/manus-storage/fragrance-vanilla-amber_ac1dc3b6.jpg",
-  fragranceBlue: "/manus-storage/fragrance-santal-berry_0dac099c.jpg",
+  diorSauvage: publicAssetUrl("product-01-dior-sauvage-bottle-box_51b02500.png"),
+  goodGirlBlushTweedTalk: publicAssetUrl("product-02-good-girl-blush-tweed-talk_1ae0d387.png"),
+  veryGoodGirlGlam: publicAssetUrl("product-03-very-good-girl-glam-bottle-box_9405022e.png"),
+  monParis: publicAssetUrl("product-04-mon-paris-bottle_3357056d.png"),
+  medixVitaminCLotion: publicAssetUrl("product-05-medix-vitamin-c-body-lotion_9c412e12.png"),
+  medixRetinolLotion: publicAssetUrl("product-06-medix-retinol-body-lotion_82595db9.png"),
+  olayDarkSpotLotion: publicAssetUrl("product-07-olay-dark-spot-body-lotion_8520dc7b.png"),
+  jergensUltraHealingLotion: publicAssetUrl("product-08-jergens-ultra-healing-body-lotion_bd2450c3.png"),
+  bareVanillaBodyMist: publicAssetUrl("product-10-bare-vanilla-body-mist_bf37ea81.png"),
+  veganHydratingLipOilGloss: publicAssetUrl("product-11-vegan-hydrating-lip-oil-gloss_f92e8c52.png"),
+  hydratingMirrorShineLipGlaze: publicAssetUrl("product-12-hydrating-mirror-shine-lip-glaze_d0866c8c.png"),
+  mochaChocolateEyeshadowPalette: publicAssetUrl("product-13-mocha-chocolate-eyeshadow-palette_ca2216bd.png"),
+  radiantGlowMoisturizingLipGloss: publicAssetUrl("product-14-radiant-glow-lip-gloss_e7660ba0.png"),
+  braceletLipGlossPalette: publicAssetUrl("product-15-bracelet-lip-gloss-palette_84ef5aef.png"),
+  ultimatePressedPowderEyeshadowPalette: publicAssetUrl("product-16-vegan-pressed-powder-eyeshadow-palette_faef4ea4.png"),
+  lightweightHydratingLiquidConcealer: publicAssetUrl("product-17-lightweight-hydrating-liquid-concealer_231c2117.png"),
+  deluxeBrowDefinitionSet: publicAssetUrl("product-18-deluxe-brow-definition-set_d8c18541.png"),
+  multiUseComplexionPalette: publicAssetUrl("product-19-multi-use-complexion-palette_1a4ca030.png"),
+  blushDuoPalette: publicAssetUrl("product-20-blush-duo-palette_8af7b46f.png"),
+  creamyContourFoundationStick: publicAssetUrl("product-21-creamy-contour-foundation-stick_5b359b7c.png"),
+  faceContourCorrectingPalette: publicAssetUrl("product-22-face-contour-correcting-palette-saturated_62a460a7.png"),
+  pureSeductionMistLotionSet: publicAssetUrl("product-23-pure-seduction-mist-lotion-set_c74ce5a3.png"),
+  fragranceRose: publicAssetUrl("fragrance-jam-spill_f3448635.jpg"),
+  fragranceViolet: publicAssetUrl("fragrance-my-soul_c875037f.jpg"),
+  fragranceAmber: publicAssetUrl("fragrance-vanilla-amber_ac1dc3b6.jpg"),
+  fragranceBlue: publicAssetUrl("fragrance-santal-berry_0dac099c.jpg"),
 };
 
 export const products: Product[] = [
