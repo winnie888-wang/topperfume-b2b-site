@@ -378,3 +378,17 @@
 ### Phase 9A Follow-up — Preview Inquiry Client Stability
 
 - [ ] 诊断并修复真实 Vercel Preview 中提交 Request Sample 后出现的 `removeChild` 客户端 DOM 异常，确保成功或失败状态均可安全渲染且不影响邮件提交。
+
+### Phase 9B Follow-up — Repository-hosted Asset Feasibility
+
+- [x] 精确统计 28 张已批准客户可见图片的总文件大小、单文件大小与类型，并评估 GitHub + Vercel 使用 `client/public/assets/` 托管的部署可行性。
+- [x] 如仓库托管适合，则优先保持图片内容不变地迁移至 `client/public/assets/`；如不适合，则仅报告技术原因与预估 Vercel Blob 成本，等待用户批准后再行动。
+
+### Phase 9B — Approved Public Vercel Blob Migration（仅 v2-prototype）
+
+- [ ] 创建仅供本项目使用的 Public Vercel Blob Store，并将 `BLOB_READ_WRITE_TOKEN` 仅配置在服务器端部署环境；不得写入前端、GitHub 或浏览器。
+- [ ] 仅通过已连接 `v2-prototype` Preview 的服务器端 `process.env.BLOB_READ_WRITE_TOKEN` 执行 Blob 上传；不得请求、读取、导出、记录或输出令牌明文。
+- [ ] 仅迁移经确认的 32 张客户可见网站图片，保持图片内容、尺寸比例与文件质量不变；不得上传证书、内部文件、私人资料或其他敏感文件。
+- [ ] 将所有客户可见 `/manus-storage/...` 依赖替换为 Public Vercel Blob URL；不得修改产品数据、重新生成图片或改变视觉系统。
+- [ ] 在真实 Vercel Preview 验证 Homepage、3 个 Collection、所有 Product Detail 的图片，确认 Broken image count = 0、客户可见 `/manus-storage/` remaining count = 0、路由和询盘无回归。
+- [ ] 保存隔离检查点并仅同步 GitHub `v2-prototype`，验证 main 不变；不发布 Production、不开始 SEO，交付 SHA、Preview URL、迁移数量、Blob 用量与验证结果。
