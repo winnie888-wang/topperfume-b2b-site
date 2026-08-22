@@ -17,7 +17,7 @@ const categoryEntries: { category: ProductCategory; title: string; intro: string
 ];
 const categoryProducts = categoryEntries.map((entry) => ({ ...entry, product: products.find((product) => product.category === entry.category)! }));
 const buyerEvidence = [
-  ["Product Development", "Product-reference and development intake route for buyer review."],
+  ["Product Development", "Product selection and development intake route for buyer review."],
   ["Packaging Development", "Custom logo and packaging requests begin from 100 pcs; final scope is confirmed with the brief."],
   ["Quality Control", "Quality-process documentation is reviewed with the confirmed product programme."],
   ["R&D", "Formula, fragrance or shade brief is assessed product by product."],
@@ -36,7 +36,7 @@ export default function Home() {
 
     <section className="business-statement"><div className="section-index">01 / WHAT WE DO</div><h2>Develop the product.<br />Build the brand experience.</h2><div className="manifesto-body"><p>Start with a product reference, select your level of customization, then move to sample, quotation and project planning. The experience is deliberately designed for international beauty buyers—not for price-first browsing.</p><Link href="#products" className="circle-arrow"><ArrowRight size={24} /></Link></div></section>
 
-    <section id="products" className="category-rail category-rail-refined"><div className="rail-heading"><div><p className="eyebrow">BROWSE BY CATEGORY</p><h2>Three equal ways to start.</h2></div><p className="category-rail-note">Each category opens to a fast product grid with sample and quotation paths.</p></div><div className="category-grid">{categoryProducts.map(({ category, title, intro, href, product }, index) => <Link href={href} className={`category-panel category-panel-refined ${category}-panel`} key={category}><img src={product.image} className="category-visual" alt={`${title} product visual`} /><div className="category-panel-body"><span>0{index + 1} / {title}</span><h3>{title}</h3><p>{intro}</p><small>Product visual · title [NAME TO CONFIRM]</small></div><ArrowRight size={18} /></Link>)}</div></section>
+    <section id="products" className="category-rail category-rail-refined"><div className="rail-heading"><div><p className="eyebrow">BROWSE BY CATEGORY</p><h2>Three equal ways to start.</h2></div><p className="category-rail-note">Each category opens to a fast product grid with sample and quotation paths.</p></div><div className="category-grid">{categoryProducts.map(({ category, title, intro, href, product }, index) => <Link href={href} className={`category-panel category-panel-refined ${category}-panel`} key={category}><img src={product.image} className="category-visual" alt={`${title} product visual`} /><div className="category-panel-body"><span>0{index + 1} / {title}</span><h3>{title}</h3><p>{intro}</p><small>Confirmed product visual · SKU data</small></div><ArrowRight size={18} /></Link>)}</div></section>
 
     <section className="featured-section balanced-products"><div className="section-head"><div><p className="eyebrow">PRODUCTS AT A GLANCE</p><h2>One product from every category.</h2></div><Link href="/collections/fragrance" className="text-link">View all products <ArrowRight size={16} /></Link></div><div className="product-grid balanced-grid">{categoryProducts.map(({ product }, index) => <ProductCard product={product} index={index} key={product.slug} />)}</div></section>
 

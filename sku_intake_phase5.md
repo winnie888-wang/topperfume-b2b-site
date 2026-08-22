@@ -662,7 +662,7 @@
 | Custom Outer Packaging | `[TO CONFIRM]` |
 | Custom Shade Combination | `[TO CONFIRM]` |
 | Packaging Details | Bold purple multi-pan compact containing 12 face shades; upper section presents light-to-deep beige, tan and brown directions, while the lower section presents orange-to-red accent directions. |
-| Product Image | `/manus-storage/product-22-face-contour-correcting-palette_ca36111f.png` — cropped user-supplied real purple palette visual, mounted on a neutral ivory portrait catalogue plate while excluding retail background, hand, and source control. |
+| Product Image | `/manus-storage/product-22-face-contour-correcting-palette-saturated_62a460a7.png` — a tighter portrait ivory catalogue mount created only from the already-cropped real palette asset by locating its saturated product-color extent. The complete palette is retained; no product shape, label or materials are altered, and no retail background, hand or source control is present. |
 | Claims Boundary | Cosmetic positioning only. Do not infer exact finish, coverage, formula structure, ingredients, weights, shade codes, certification, customization scope or customization MOQ. The bottom three vivid pans may be described only as correcting or artistic accent directions depending on final confirmed formula and shade positioning; no medical, treatment, complexion-result or performance guarantee claims. |
 | Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title. The user-confirmed public name is 12-Color Face Contour & Correcting Palette. Public Vegan wording must be exactly “Vegan positioning according to supplied product information”; never use “Vegan Certified.” |
 

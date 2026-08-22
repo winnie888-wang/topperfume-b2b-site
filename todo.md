@@ -299,3 +299,11 @@
 - [x] 仅呈现确认的 Body Mist + Lotion、Fragrance Layering、Gift Ready、协调粉色包装和两件套礼赠方向；Fragrance Notes / Scent Profile、Ingredients、Private Label、Custom Logo、Custom Packaging、Custom Fragrance 与 Customization MOQ 均保持 `[TO CONFIRM]`。
 - [x] 完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘上下文，不增加未确认产品资料。
 - [x] 完成 TypeScript、生产构建及 Fragrance Collection / Product Detail 的桌面与移动端核验；保存隔离检查点，不合并 main、不推送 GitHub、不发布。
+
+### Latest Catalog Sync & Review Build
+
+- [x] 盘点当前已确认的正式 Fragrance、Skincare / Body Care 与 Makeup SKU，并识别所有旧 Prototype、Reference 与 `[NAME TO CONFIRM]` 占位产品。
+- [x] 仅在 `v2-prototype` 清理或隐藏旧测试/占位产品，保留全部用户确认正式 SKU、产品图、商业资料与产品上下文询盘路径。
+- [x] 运行类型检查与生产构建；复核 Homepage 桌面/移动端、三类正式 Collection，以及 Fragrance、Skincare / Body Care、Makeup 各一个正式 PDP。
+- [ ] 保存隔离审核检查点并同步至 GitHub `v2-prototype` 分支；不修改、合并或推送 `main`，不正式发布，也不开始 SEO。
+- [ ] 汇总 Preview URL、GitHub Commit SHA、SKU 总量和按类数量，以及剩余 `[TO CONFIRM]` 清单后停止等待最终审核。

@@ -102,3 +102,6 @@ Logo 使用无文字图形标记：两个相交的细线拱门围合一个抽象
 - **Catalogue plate scale（2026-08-22）：** 每个 SKU 的目录版画必须以受控的瓶身尺度、象牙载台、细线内框、编号与单一低调产品色彩锚点呈现；不让原始截图留白使产品在 PDP 首屏像孤立缩略图。
 - **Skincare editorial rhythm（2026-08-22）：** Skincare 页面在 Buyer Readiness 后用单一编号的 Product Catalogue 分段引入网格，再以 Buying Note 收束采购路径；它必须形成买手目录节奏，而非连续数据卡片。
 - **Visual truth hierarchy（2026-08-22）：** 在所有真实产品视觉不被伪装为重新拍摄的前提下，以裁切、载台、边框与目录标签建立一致性；`[TO CONFIRM]` 继续作为低对比度的采购注释，不与产品叙事竞争。
+- **Catalogue plate refinement（2026-08-22）：** Catalogue Plate 采用细线边框、小型序号、象牙载台与克制的 Mineral Rose 或产品色彩切片；重复的厚深色栏不承担产品卡的主要层级，真实产品视觉与采购字段才是焦点。
+- **Source-image neutralization（2026-08-22）：** 带有原始社交化背景、手持元素、零售布景或过多空白的真实产品图，必须通过已获准的受控裁切、象牙载台、尺度和简洁目录标题得到中性化处理，绝不生成或改写产品本身。
+- **Brand hierarchy（2026-08-22）：** TopPerfume 是导航、Hero、CTA 与编辑文案中的唯一主品牌；Guiqi Technology Co., Ltd. 仅作为业务联系方式或验证证据出现，不与 TopPerfume 争夺全局品牌层级。
