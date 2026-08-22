@@ -330,6 +330,6 @@
 
 ### Phase 7 Follow-up — GitHub Verification Before Mail Diagnostics
 
-- [ ] 验证已重新授权的 `winnie888-wang/topperfume-b2b-site` 可读取，且仅可安全写入 GitHub `v2-prototype` 分支；不得修改、合并或推送 main，不开始 SEO。
-- [ ] 仅同步已保存的 Phase 7 询盘提交审核版本至 GitHub `v2-prototype`，记录最终 Commit SHA 与远端 main 不变的核验结果。
-- [ ] GitHub 验证通过后诊断 Resend 邮件实际收件路径；如有失败，仅报告状态码与错误信息，不修改其他页面。
+- [x] 验证已重新授权的 `winnie888-wang/topperfume-b2b-site` 可读取，且仅可安全写入 GitHub `v2-prototype` 分支；不得修改、合并或推送 main，不开始 SEO。
+- [x] 仅同步已保存的 Phase 7 询盘提交审核版本至 GitHub `v2-prototype`，记录最终 Commit SHA 与远端 main 不变的核验结果。
+- [x] GitHub 验证通过后诊断 Resend 邮件实际收件路径；如有失败，仅报告状态码与错误信息，不修改其他页面。
