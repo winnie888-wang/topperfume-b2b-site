@@ -356,28 +356,28 @@
 
 - [x] 审计并移除所有客户可见的 Prototype、V2 Prototype 与 Visual Prototype 文案；更新正式页面 Title 与 Meta Description。
 - [x] 将未知 URL 从 Homepage SPA fallback 调整为真实 NotFound 页面，不影响已确认的 Product、Collection 与 `/api/trpc` 路由。
-- [ ] 在不修改 main 的前提下连接并验证 `v2-prototype` 的 Vercel Preview；确认 Homepage、Collection、Product Detail、`/api/trpc` 与全部询盘路径可用。
-- [ ] 确认 Vercel Preview / Production 的服务器端 `RESEND_API_KEY` 与 `INQUIRY_FROM_EMAIL=inquiry@mail.topperfume.cn` 安全配置，且不暴露到前端。
-- [ ] 在 Vercel Preview 进行一次真实询盘 QA，验证 HTTP 成功、Resend accepted、邮件实际收到、成功状态和桌面/移动端流程。
-- [ ] 保存隔离检查点并仅同步 GitHub `v2-prototype`；不修改、合并 main，不开始 SEO，不正式发布，交付部署就绪结果。
+- [x] 在不修改 main 的前提下连接并验证 `v2-prototype` 的 Vercel Preview；确认 Homepage、Collection、Product Detail、`/api/trpc` 与全部询盘路径可用。
+- [x] 确认 Vercel Preview / Production 的服务器端 `RESEND_API_KEY` 与 `INQUIRY_FROM_EMAIL=inquiry@mail.topperfume.cn` 安全配置，且不暴露到前端。
+- [x] 在 Vercel Preview 进行一次真实询盘 QA，验证 HTTP 成功、Resend accepted、邮件实际收到、成功状态和桌面/移动端流程。
+- [x] 保存隔离检查点并仅同步 GitHub `v2-prototype`；不修改、合并 main，不开始 SEO，不正式发布，交付部署就绪结果。
 
 ### Phase 9A — Vercel Preview Platform 404 Recovery
 
 - [x] 审计 Vercel Framework Preset、Root Directory、Build Command、Output Directory、现有部署日志与 `v2-prototype` 分支产物，定位平台级 `404: NOT_FOUND` 原因。
 - [x] 仅为当前 Vite React + Express + tRPC 结构添加最小、安全的 Vercel 构建、函数入口与路由重写配置；不改变现有业务逻辑。
-- [ ] 验证 Vercel Preview 的 `/`、`/collections/fragrance`、有效 Product Detail、`/api/trpc` 和真实 Inquiry Submission，不以 Dashboard Ready 代替 HTTP 验证。
-- [ ] 保存隔离检查点并仅同步 GitHub `v2-prototype`；交付新的 SHA、Preview URL、构建日志摘要、根路由/API 状态与询盘测试结果，不修改 main、不发布、不开始 SEO。
+- [x] 验证 Vercel Preview 的 `/`、`/collections/fragrance`、有效 Product Detail、`/api/trpc` 和真实 Inquiry Submission，不以 Dashboard Ready 代替 HTTP 验证。
+- [x] 保存隔离检查点并仅同步 GitHub `v2-prototype`；交付新的 SHA、Preview URL、构建日志摘要、根路由/API 状态与询盘测试结果，不修改 main、不发布、不开始 SEO。
 
 ### Phase 9B — Production Image Asset Migration（仅 v2-prototype）
 
-- [ ] 在已配置 Vercel 环境变量的最新 `v2-prototype` Preview 中重新验证 Homepage、`/api/trpc`、Request Sample、Get Quote、Start Your Project 与 Resend 真实投递。
-- [ ] 将所有已批准且客户可见的 Homepage、Collection 与 Product Detail 图片迁移为生产安全、Vercel 支持的外部静态资产路径；不得重生成、重设计、替换产品图片或修改产品数据。
-- [ ] 移除客户可见代码中所有 `/manus-storage/...` 生产依赖，并在真实 Vercel Preview 逐页验证无破图。
-- [ ] 仅保存检查点并同步 GitHub `v2-prototype`，复核 main 未变；不发布 Production，不开始 SEO，交付迁移数量、破图数量与验证结果。
+- [x] 在已配置 Vercel 环境变量的最新 `v2-prototype` Preview 中重新验证 Homepage、`/api/trpc`、Request Sample、Get Quote、Start Your Project 与 Resend 真实投递。
+- [x] 将所有已批准且客户可见的 Homepage、Collection 与 Product Detail 图片迁移为生产安全、Vercel 支持的外部静态资产路径；不得重生成、重设计、替换产品图片或修改产品数据。
+- [x] 移除客户可见代码中所有 `/manus-storage/...` 生产依赖，并在真实 Vercel Preview 逐页验证无破图。
+- [x] 仅保存检查点并同步 GitHub `v2-prototype`，复核 main 未变；不发布 Production，不开始 SEO，交付迁移数量、破图数量与验证结果。
 
 ### Phase 9A Follow-up — Preview Inquiry Client Stability
 
-- [ ] 诊断并修复真实 Vercel Preview 中提交 Request Sample 后出现的 `removeChild` 客户端 DOM 异常，确保成功或失败状态均可安全渲染且不影响邮件提交。
+- [x] 诊断并修复真实 Vercel Preview 中提交 Request Sample 后出现的 `removeChild` 客户端 DOM 异常，确保成功或失败状态均可安全渲染且不影响邮件提交。
 
 ### Phase 9B Follow-up — Repository-hosted Asset Feasibility
 
@@ -386,9 +386,9 @@
 
 ### Phase 9B — Approved Public Vercel Blob Migration（仅 v2-prototype）
 
-- [ ] 创建仅供本项目使用的 Public Vercel Blob Store，并将 `BLOB_READ_WRITE_TOKEN` 仅配置在服务器端部署环境；不得写入前端、GitHub 或浏览器。
-- [ ] 仅通过已连接 `v2-prototype` Preview 的服务器端 `process.env.BLOB_READ_WRITE_TOKEN` 执行 Blob 上传；不得请求、读取、导出、记录或输出令牌明文。
-- [ ] 仅迁移经确认的 32 张客户可见网站图片，保持图片内容、尺寸比例与文件质量不变；不得上传证书、内部文件、私人资料或其他敏感文件。
-- [ ] 将所有客户可见 `/manus-storage/...` 依赖替换为 Public Vercel Blob URL；不得修改产品数据、重新生成图片或改变视觉系统。
-- [ ] 在真实 Vercel Preview 验证 Homepage、3 个 Collection、所有 Product Detail 的图片，确认 Broken image count = 0、客户可见 `/manus-storage/` remaining count = 0、路由和询盘无回归。
-- [ ] 保存隔离检查点并仅同步 GitHub `v2-prototype`，验证 main 不变；不发布 Production、不开始 SEO，交付 SHA、Preview URL、迁移数量、Blob 用量与验证结果。
+- [x] 创建仅供本项目使用的 Public Vercel Blob Store，并将 `BLOB_READ_WRITE_TOKEN` 仅配置在服务器端部署环境；不得写入前端、GitHub 或浏览器。
+- [x] 仅通过已连接 `v2-prototype` Preview 的服务器端 `process.env.BLOB_READ_WRITE_TOKEN` 执行 Blob 上传；不得请求、读取、导出、记录或输出令牌明文。
+- [x] 仅迁移经确认的 32 张客户可见网站图片，保持图片内容、尺寸比例与文件质量不变；不得上传证书、内部文件、私人资料或其他敏感文件。
+- [x] 将所有客户可见 `/manus-storage/...` 依赖替换为 Public Vercel Blob URL；不得修改产品数据、重新生成图片或改变视觉系统。
+- [x] 在真实 Vercel Preview 验证 Homepage、3 个 Collection、所有 Product Detail 的图片，确认 Broken image count = 0、客户可见 `/manus-storage/` remaining count = 0、路由和询盘无回归。
+- [x] 保存隔离检查点并仅同步 GitHub `v2-prototype`，验证 main 不变；不发布 Production、不开始 SEO，交付 SHA、Preview URL、迁移数量、Blob 用量与验证结果。
