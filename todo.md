@@ -347,3 +347,23 @@
 - [x] 仅修复阻断上线的 RED 问题，并复验类型检查、单元测试、生产构建与核心路由。（本轮未发现需修复的 RED 阻断问题。）
 - [x] 生成 Homepage Desktop / Mobile、三类 Collection、一个 PDP 与 Inquiry success-state 截图，归类 RED / YELLOW / GREEN 审核结论。
 - [x] 保存隔离检查点并仅同步 GitHub `v2-prototype`；不修改、合并 main，不发布，不开始 SEO，交付 Preview、SHA 与最终审核结果。
+
+### Final Review Materials — No Site Changes
+
+- [x] 仅整理现有 Preview、GitHub SHA、Homepage Desktop / Mobile、三类 Collection、Fragrance / Skincare / Makeup PDP，以及 Request Sample / Get Quote 成功状态截图；不修改网站页面、数据、main、SEO 或发布状态。
+
+### Phase 9 — Production Deployment Readiness Check
+
+- [x] 审计并移除所有客户可见的 Prototype、V2 Prototype 与 Visual Prototype 文案；更新正式页面 Title 与 Meta Description。
+- [x] 将未知 URL 从 Homepage SPA fallback 调整为真实 NotFound 页面，不影响已确认的 Product、Collection 与 `/api/trpc` 路由。
+- [ ] 在不修改 main 的前提下连接并验证 `v2-prototype` 的 Vercel Preview；确认 Homepage、Collection、Product Detail、`/api/trpc` 与全部询盘路径可用。
+- [ ] 确认 Vercel Preview / Production 的服务器端 `RESEND_API_KEY` 与 `INQUIRY_FROM_EMAIL=inquiry@mail.topperfume.cn` 安全配置，且不暴露到前端。
+- [ ] 在 Vercel Preview 进行一次真实询盘 QA，验证 HTTP 成功、Resend accepted、邮件实际收到、成功状态和桌面/移动端流程。
+- [ ] 保存隔离检查点并仅同步 GitHub `v2-prototype`；不修改、合并 main，不开始 SEO，不正式发布，交付部署就绪结果。
+
+### Phase 9A — Vercel Preview Platform 404 Recovery
+
+- [x] 审计 Vercel Framework Preset、Root Directory、Build Command、Output Directory、现有部署日志与 `v2-prototype` 分支产物，定位平台级 `404: NOT_FOUND` 原因。
+- [x] 仅为当前 Vite React + Express + tRPC 结构添加最小、安全的 Vercel 构建、函数入口与路由重写配置；不改变现有业务逻辑。
+- [ ] 验证 Vercel Preview 的 `/`、`/collections/fragrance`、有效 Product Detail、`/api/trpc` 和真实 Inquiry Submission，不以 Dashboard Ready 代替 HTTP 验证。
+- [ ] 保存隔离检查点并仅同步 GitHub `v2-prototype`；交付新的 SHA、Preview URL、构建日志摘要、根路由/API 状态与询盘测试结果，不修改 main、不发布、不开始 SEO。

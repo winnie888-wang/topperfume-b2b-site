@@ -1,0 +1,32 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "dist/public",
+  "functions": {
+    "api/index.ts": {
+      "maxDuration": 15
+    }
+  },
+  "routes": [
+    {
+      "src": "^/api$",
+      "dest": "/api/index?__path=/api"
+    },
+    {
+      "src": "^/api/(.*)$",
+      "dest": "/api/index?__path=/api/$1"
+    },
+    {
+      "src": "^/manus-storage/(.*)$",
+      "dest": "/api/index?__path=/manus-storage/$1"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "^/(.*)$",
+      "dest": "/index.html"
+    }
+  ]
+}
