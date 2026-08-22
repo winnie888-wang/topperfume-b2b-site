@@ -250,3 +250,13 @@
 - [x] 突出 Shape + Define + Set 与 Brow Definer + Precision Brow Pencil + Clear Brow Gel；眉笔色号、Ingredients、Private Label、Custom Logo、Custom Retail Box、Custom Brow Shades 与 Customization MOQ 均保持 `[TO CONFIRM]`。
 - [x] 完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘上下文，不增加未确认配方、色号、认证、定制能力或定制 MOQ。
 - [x] 完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；保存隔离检查点，不合并 main、不推送 GitHub、不发布。
+
+### Product 19 — 16-Color Multi-Use Complexion Palette
+
+- [x] 将用户提供的十六色肤色盘与包装实拍图作为独立 Makeup / Face SKU 裁切并上传；不得覆盖现有 Product 18 眉部三件套或其他前序 SKU。
+- [x] 接入确认资料：SKU `MU-FACE-PAL-016`、16-Color Multi-Use Complexion Palette、16 色、Conceal / Correct / Contour / Highlight、US$2.99 / pc、MOQ 12 pcs 与约 7 天交期。
+- [x] 使用用户确认的公开主名称 `16-Color Multi-Use Complexion Palette`；不采用原 Alibaba 关键词堆砌标题，也不使用 Wholesale、No Brand 或未确认的 Foundation 表述作为公开产品命名。
+- [x] 仅呈现确认的 Light-to-Deep complexion range、橙/绿/薰衣草校正方向及紧凑多格结构；Before / After 及示例妆容不得作为确定功效保证，且不得加入治疗色素、痘印或其他皮肤问题的描述。
+- [x] 仅以 “according to supplied product information” 呈现 Private Label / Own Brand 与 Custom Logo；Finish、Coverage、Texture、Net Weight、Individual Pan Weight、Ingredients、Shade Codes、Custom Outer Packaging、Custom Shade Combination 与 Customization MOQ 均保持 `[TO CONFIRM]`。
+- [x] 完成 B2B 产品卡、产品详情及 Sample / Quote / WhatsApp 询盘上下文，不增加未确认配方、色号、认证、妆效或定制能力。
+- [x] 完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；保存隔离检查点，不合并 main、不推送 GitHub、不发布。

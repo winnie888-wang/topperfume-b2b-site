@@ -515,3 +515,41 @@
 | Product Image | `/manus-storage/product-18-deluxe-brow-definition-set_d8c18541.png` — cropped user-supplied real product visual retaining the presentation box, Brow Definer, Precision Brow Pencil and Clear Brow Gel while removing outer source margins and the right-side UI control. |
 | Claims Boundary | Do not infer brow shades, ingredients, certification, private-label availability, custom-logo availability, retail-box customization, custom brow shades or customization MOQ. Use cosmetic positioning only; do not claim treatment, repair or unverified wear duration. |
 | Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title as public copy. The user-confirmed public name is 3-in-1 Deluxe Brow Definition Set. |
+
+## Product 19
+
+> **Sequence note:** The user supplied this as “Product 18 — Makeup / Face,” but Product 18 is already the independently integrated 3-in-1 Deluxe Brow Definition Set. Under the agreed accumulation rule, this distinct visual is recorded as Product 19 and does not replace any previous SKU.
+
+| Field | Status |
+|---|---|
+| Intake ID | `MUP-19` |
+| Public Product Name | 16-Color Multi-Use Complexion Palette |
+| Suggested Website Title | 16-Color Multi-Use Complexion Palette \| Concealer, Contour & Highlight Makeup |
+| Public Brand Display | Not supplied; do not invent or display a brand. |
+| SKU | `MU-FACE-PAL-016` |
+| Category | Makeup / Face Makeup / Complexion Palette |
+| Product Type | Multi-Use Concealer / Contour / Highlight Palette |
+| Number of Colors | 16 |
+| Primary Functions | Conceal / Correct / Contour / Highlight. |
+| Color Range | Light Beige, Natural Beige, Warm Beige, Tan, Caramel, Deep Brown, light highlighting shades, warm orange corrector, lavender corrector and green corrector directions. Exact names / codes `[TO CONFIRM]`. |
+| Palette Format | Compact black multi-pan palette. |
+| Finish | `[TO CONFIRM]` |
+| Coverage | `[TO CONFIRM]` |
+| Texture | Cream / Pressed Formula `[TO CONFIRM]` |
+| Net Weight | `[TO CONFIRM]` |
+| Individual Pan Weight | `[TO CONFIRM]` |
+| Ingredients | `[TO CONFIRM]` |
+| Shade Codes | `[TO CONFIRM]` |
+| Standard MOQ | 12 pcs |
+| Custom MOQ | `[TO CONFIRM]` — no customization threshold is inferred for this Makeup SKU. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free-sample availability is the confirmed general commercial rule. |
+| Suggested B2B Price | US$2.99 / pc |
+| Private Label / Own Brand | Available according to supplied product information. |
+| Logo Customization | Available according to supplied product information. |
+| Custom Outer Packaging | `[TO CONFIRM]` |
+| Custom Shade Combination | `[TO CONFIRM]` |
+| Packaging Details | Compact black palette with 16 complexion and corrective shades; supplied visual also contains a carton and illustrative complexion-use panels. |
+| Product Image | `/manus-storage/product-19-multi-use-complexion-palette_1a4ca030.png` — cropped user-supplied real product visual retaining the carton and the two compact palette views while excluding the right-side promotional complexion examples and source control. |
+| Claims Boundary | Before / After, complexion examples, blush-style and eyeshadow-style example uses are not proof of guaranteed performance or of compatibility with the exact formula. Do not infer finish, coverage, texture, ingredients, weight, shade codes, certification, packaging customization, shade-combination customization or customization MOQ. No treatment claims about pigmentation, blemishes or skin conditions. |
+| Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title, “Wholesale,” “No Brand,” or unconfirmed “Foundation” wording as public website copy. The user-confirmed public name is 16-Color Multi-Use Complexion Palette. |
