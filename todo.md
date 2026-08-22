@@ -185,3 +185,12 @@
 - [x] 将 Net Weight / Volume、Ingredients、Shade Codes、认证文件、Private Label、Custom Logo、Custom Packaging、Custom Shades 与所有定制 MOQ 均保留为 `[TO CONFIRM]`；色彩仅描述为 Deep Berry Pink、Rose Pink、Peach Nude、Soft Pink 等可见选项。
 - [x] 仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘；不得增加未确认配方、净含量、色号、认证或定制能力。
 - [x] 已完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；确认产品上下文传递至 Sample、Quote 与 WhatsApp，且询盘摘要会保留该 SKU 的定制范围待确认边界。
+
+### Product 12 — Hydrating Mirror-Shine Lip Glaze
+
+- [x] 将用户提供的透明唇釉管与银色反光瓶盖组合图作为独立 Makeup / Lip SKU 裁切并上传；不得覆盖既有 Product 11 唇油 SKU 或其他前序产品。
+- [x] 接入确认资料：SKU `MU-LG-002`、Lip Glaze / Lip Jelly / High-Shine Lip Color、Mirror Shine / High Gloss、Smooth Jelly、Moisturizing / Long-Lasting、多色可选、US$2.99 / pc、MOQ 12 pcs 与约 7 天交期。
+- [x] 使用用户确认的公开主名称 `Hydrating Mirror-Shine Lip Glaze`；不得采用原 Alibaba 关键词堆砌标题作为正式网站产品名。
+- [x] 仅将可见色彩方向描述为 Rose Pink、Berry Red、Deep Wine、Warm Brown、Coral Red、Bright Pink；Net Weight、Ingredients、Shade Codes、Private Label、Custom Logo、Custom Packaging、Custom Shades 与所有定制 MOQ 均保持 `[TO CONFIRM]`。
+- [x] 仅展示 B2B 产品卡、产品详情和 Sample / Quote / WhatsApp 询盘；不得增加未确认净含量、成分、色号、认证或定制能力。
+- [x] 已完成 TypeScript、生产构建及 Makeup Collection / Product Detail 的桌面与移动端核验；确认产品上下文传递至 Sample、Quote 与 WhatsApp，且询盘摘要会保留该 SKU 的定制范围待确认边界。

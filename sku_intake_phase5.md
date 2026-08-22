@@ -267,3 +267,37 @@
 | Product Image | `/manus-storage/product-11-vegan-hydrating-lip-oil-gloss_f92e8c52.png` — cropped user-supplied product image mounted as the real catalogue visual; public copy does not use Rejiu / Rejiu LIP GLOSS as brand or product name. |
 | Claims Boundary | Do not infer ingredients, net weight, shade codes, certification, vegan certification documents, customisation capability or customisation MOQ. Use visual/cosmetic framing only; no medical claims. |
 | IP / Naming Boundary | Rejiu / Rejiu LIP GLOSS is not approved for public display. Public copy uses only the generic user-confirmed name Vegan Hydrating Lip Oil Gloss. |
+
+## Product 12
+
+> **Sequence note:** The user supplied this as “Product 11 — Makeup / Lip,” but Product 11 is already the independently integrated Vegan Hydrating Lip Oil Gloss SKU. Under the agreed accumulation rule, this distinct visual is recorded as Product 12 and does not replace any previous SKU.
+
+| Field | Status |
+|---|---|
+| Intake ID | `MUP-12` |
+| Public Product Name | Hydrating Mirror-Shine Lip Glaze |
+| Suggested Website Title | Hydrating Mirror-Shine Lip Glaze \| High-Gloss Long-Lasting Lip Jelly |
+| Public Brand Display | Not supplied; do not invent or display a brand. |
+| SKU | `MU-LG-002` |
+| Category | Makeup / Lip Makeup / Lip Glaze |
+| Product Type | Lip Glaze / Lip Jelly / High-Shine Lip Color |
+| Finish | Mirror Shine / High Gloss |
+| Texture | Smooth Jelly |
+| Product Positioning | High Shine / Mirror Gloss / Moisturizing / Jelly Texture / Long-Lasting Color |
+| Visible Shade Direction | Rose Pink / Berry Red / Deep Wine / Warm Brown / Coral Red / Bright Pink — exact shade names and numbers `[TO CONFIRM]`. |
+| Net Weight | `[TO CONFIRM]` |
+| Ingredients | `[TO CONFIRM]` |
+| Shade Codes | `[TO CONFIRM]` |
+| Standard MOQ | 12 pcs |
+| Custom MOQ | `[TO CONFIRM]` — no customization threshold is inferred for this Makeup SKU. |
+| Standard Lead Time | Approx. 7 days |
+| Sample Availability | Free-sample availability is the confirmed general commercial rule. |
+| Suggested B2B Price | US$2.99 / pc |
+| Private Label | `[TO CONFIRM]` |
+| Logo Customization | `[TO CONFIRM]` |
+| Custom Packaging | `[TO CONFIRM]` |
+| Custom Shades | `[TO CONFIRM]` |
+| Packaging Details | Compact transparent lip-glaze tubes showing product shade inside, with reflective silver-tone caps and decorative metallic detailing. |
+| Product Image | `/manus-storage/product-12-hydrating-mirror-shine-lip-glaze_d0866c8c.png` — cropped user-supplied real product arrangement; the non-product heading strip is excluded. |
+| Claims Boundary | Do not infer net weight, ingredients, shade names or codes, certification, private-label availability, customization capability or customization MOQ. Retain cosmetic positioning only; do not add medical claims. |
+| Retail UI / Title Boundary | Do not use the supplied Alibaba keyword-stuffed title as public website copy. The user-confirmed public name is Hydrating Mirror-Shine Lip Glaze. |
