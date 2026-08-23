@@ -444,4 +444,4 @@
 - [x] 在正式 Product Detail 浏览时发送不包含价格或虚构商业数据的 view_item 事件。
 - [x] 为 Request Free Sample、Get Wholesale Quote、Customize / Private Label 及其他 WhatsApp CTA 发送 generate_lead 和 whatsapp_click，附加可用产品上下文且不改变跳转行为。
 - [x] 安全移除失效的 Umami 占位分析脚本，不启用第二套分析系统。
-- [ ] 增加自动化跟踪覆盖，完成 Production GA4 加载、页面浏览、产品浏览、WhatsApp 转化、HTTP 与图片回归验证。
+- [x] 增加自动化跟踪覆盖，完成 Production GA4 加载、页面浏览、产品浏览、WhatsApp 转化、HTTP 与图片回归验证；GA4 Web Stream 的浏览器历史记录页面更改自动衡量已由用户关闭。
