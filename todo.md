@@ -421,3 +421,8 @@
 - [x] 审计所有 WhatsApp CTA 与产品上下文 URL 生成点，确认不再将 `window.location.origin` 或 `.vercel.app` 作为买家可见 Product URL。
 - [x] 将 Request Free Sample、Get Wholesale Quote、Customize / Private Label 与通用产品 WhatsApp CTA 固定为 `https://topperfume.cn/products/{product-slug}`；保留其余行为不变。
 - [x] 增加规范 URL 自动测试，部署 main Production 并验证实际 WhatsApp 链接不含 `.vercel.app`；不得修改 DNS、SKU、MOQ、价格、图片、Blob、Resend 或产品内容。
+
+### Phase 10B.2 — WhatsApp Message Readability
+
+- [x] 审计并优化 WhatsApp 预填消息，使 Product Name、SKU、Product URL、Category、MOQ 与 Lead Time 以清晰的逐行字段格式呈现。
+- [ ] 保持 WhatsApp 号码、规范公开 URL、产品数据、CTA 行为、DNS 与其他功能不变；更新自动测试并部署 main Production 验证。

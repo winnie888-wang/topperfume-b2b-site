@@ -14,6 +14,7 @@ describe("WhatsApp-first CTA messages", () => {
   it("builds the required free-sample intent with full product context", () => {
     const message = buildWhatsAppCtaSummary({ intent: "sample", context });
     expect(message).toContain("Hi, I'm interested in requesting a free sample of this product.");
+    expect(message).toContain("Product details:\n\nProduct Name: Production QA Product\n\nSKU: QA-001");
     expect(message).toContain("Product Name: Production QA Product");
     expect(message).toContain("SKU: QA-001");
     expect(message).toContain("Product URL: https://topperfume.cn/products/production-qa-product");

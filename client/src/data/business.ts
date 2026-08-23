@@ -142,11 +142,18 @@ export function buildWhatsAppCtaSummary(input: { intent: WhatsAppCtaIntent; cont
   return [
     whatsAppCtaIntro[input.intent],
     "",
+    "Product details:",
+    "",
     `Product Name: ${context?.productName || "General website inquiry"}`,
+    "",
     `SKU: ${context?.sku || "Not specified"}`,
+    "",
     `Product URL: ${productUrl || "Not specified"}`,
+    "",
     `Category: ${context?.category || "Not specified"}`,
+    "",
     `MOQ: ${customerValue(context?.standardMoq)}`,
+    "",
     `Lead Time: ${context?.leadTime || CUSTOMER_DETAILS}`,
   ].join("\n");
 }
