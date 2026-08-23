@@ -39,6 +39,18 @@ export const businessProfile = {
   whatsappDisplay: "+86 190 6678 2710",
 } as const;
 
+export const canonicalPublicWebsiteUrl = "https://topperfume.cn";
+
+export function getCanonicalProductUrl(productUrl?: string) {
+  if (!productUrl) return undefined;
+  try {
+    const pathname = new URL(productUrl, canonicalPublicWebsiteUrl).pathname;
+    return pathname.startsWith("/products/") ? `${canonicalPublicWebsiteUrl}${pathname}` : productUrl;
+  } catch {
+    return productUrl;
+  }
+}
+
 export const commercialTerms = {
   standard: [
     { label: "MOQ guidance", value: "MOQ varies by SKU" },
@@ -126,12 +138,13 @@ const whatsAppCtaIntro: Record<WhatsAppCtaIntent, string> = {
 
 export function buildWhatsAppCtaSummary(input: { intent: WhatsAppCtaIntent; context?: InquirySummaryInput["context"] }) {
   const context = input.context;
+  const productUrl = getCanonicalProductUrl(context?.productUrl);
   return [
     whatsAppCtaIntro[input.intent],
     "",
     `Product Name: ${context?.productName || "General website inquiry"}`,
     `SKU: ${context?.sku || "Not specified"}`,
-    `Product URL: ${context?.productUrl || "Not specified"}`,
+    `Product URL: ${productUrl || "Not specified"}`,
     `Category: ${context?.category || "Not specified"}`,
     `MOQ: ${customerValue(context?.standardMoq)}`,
     `Lead Time: ${context?.leadTime || CUSTOMER_DETAILS}`,

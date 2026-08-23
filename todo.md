@@ -414,4 +414,10 @@
 - [x] 将 Request Sample、Get Quote、Start Your Project 分别改为 Request Free Sample、Get Wholesale Quote、Customize / Private Label，并让所有主要销售 CTA 直接打开 WhatsApp，不再弹出 InquiryDrawer。
 - [x] 为产品 CTA 自动拼接 Product Name、SKU、Product URL、Category、MOQ、Lead Time 与对应意图文本；不要求买家手动复制产品资料。
 - [x] 保留 Resend、tRPC 与 InquiryDrawer 后端及代码，但从当前客户主要转化路径隐藏；不得修改 SKU、价格、MOQ、图片、Product Detail 内容、Blob、DNS、域名或 Resend 配置。
-- [ ] 完成桌面/移动端 CTA、WhatsApp 预填内容、零 InquiryDrawer 主路径、Production 图片无破图、Production 部署与 main 同步验证；交付 Production URL、GitHub SHA 和 CTA 验证结果。
+- [x] 完成桌面/移动端 CTA、WhatsApp 预填内容、零 InquiryDrawer 主路径、Production 图片无破图、Production 部署与 main 同步验证；交付 Production URL、GitHub SHA 和 CTA 验证结果。
+
+### Phase 10B.1 — Canonical Product URL in WhatsApp
+
+- [x] 审计所有 WhatsApp CTA 与产品上下文 URL 生成点，确认不再将 `window.location.origin` 或 `.vercel.app` 作为买家可见 Product URL。
+- [x] 将 Request Free Sample、Get Wholesale Quote、Customize / Private Label 与通用产品 WhatsApp CTA 固定为 `https://topperfume.cn/products/{product-slug}`；保留其余行为不变。
+- [ ] 增加规范 URL 自动测试，部署 main Production 并验证实际 WhatsApp 链接不含 `.vercel.app`；不得修改 DNS、SKU、MOQ、价格、图片、Blob、Resend 或产品内容。

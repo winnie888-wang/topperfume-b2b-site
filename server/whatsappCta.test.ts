@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildWhatsAppCtaSummary, getWhatsAppCtaUrl } from "@/data/business";
+import { buildWhatsAppCtaSummary, getCanonicalProductUrl, getWhatsAppCtaUrl } from "@/data/business";
 
 describe("WhatsApp-first CTA messages", () => {
   const context = {
@@ -16,7 +16,8 @@ describe("WhatsApp-first CTA messages", () => {
     expect(message).toContain("Hi, I'm interested in requesting a free sample of this product.");
     expect(message).toContain("Product Name: Production QA Product");
     expect(message).toContain("SKU: QA-001");
-    expect(message).toContain("Product URL: https://topperfume-b2b-site.vercel.app/products/production-qa-product");
+    expect(message).toContain("Product URL: https://topperfume.cn/products/production-qa-product");
+    expect(message).not.toContain(".vercel.app");
     expect(message).toContain("Category: fragrance");
     expect(message).toContain("MOQ: 2 pcs");
     expect(message).toContain("Lead Time: Approx. 7 days");
@@ -31,5 +32,13 @@ describe("WhatsApp-first CTA messages", () => {
     const url = getWhatsAppCtaUrl({ intent: "quote", context });
     expect(url).toMatch(/^https:\/\/wa\.me\/8619066782710\?text=/);
     expect(decodeURIComponent(url)).toContain("SKU: QA-001");
+    expect(decodeURIComponent(url)).toContain("https://topperfume.cn/products/production-qa-product");
+    expect(decodeURIComponent(url)).not.toContain(".vercel.app");
+  });
+
+  it("normalizes product paths to the canonical public website without changing generic links", () => {
+    expect(getCanonicalProductUrl("/products/production-qa-product")).toBe("https://topperfume.cn/products/production-qa-product");
+    expect(getCanonicalProductUrl("https://topperfume-b2b-site.vercel.app/products/production-qa-product?preview=1")).toBe("https://topperfume.cn/products/production-qa-product");
+    expect(getCanonicalProductUrl("https://topperfume.cn/collections/fragrance")).toBe("https://topperfume.cn/collections/fragrance");
   });
 });

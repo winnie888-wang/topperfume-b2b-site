@@ -11,7 +11,7 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { buildInquirySummary, businessProfile, getInquiryWhatsAppUrl, getWhatsAppCtaUrl, type WhatsAppCtaIntent } from "@/data/business";
+import { buildInquirySummary, businessProfile, getCanonicalProductUrl, getInquiryWhatsAppUrl, getWhatsAppCtaUrl, type WhatsAppCtaIntent } from "@/data/business";
 import { publicAssetUrl } from "@/data/publicAssets";
 import { trpc } from "@/lib/trpc";
 import { getInquiryDisplayState } from "@shared/inquiryUi";
@@ -111,14 +111,14 @@ export function InquiryDrawer({ triggerLabel = "Start Your Project", intent = "p
 
 export function WhatsAppAction({ context, className = "" }: { context?: InquiryContext; className?: string }) {
   function openWhatsApp() {
-    const summary = buildInquirySummary({ intent: "whatsapp", context });
+    const summary = buildInquirySummary({ intent: "whatsapp", context: { ...context, productUrl: getCanonicalProductUrl(context?.productUrl) } });
     window.open(getInquiryWhatsAppUrl(summary), "_blank", "noopener,noreferrer");
   }
   return <button type="button" className={`whatsapp-action ${className}`} onClick={openWhatsApp}><MessageCircle size={16} /> WhatsApp</button>;
 }
 
 export function WhatsAppCta({ label, intent = "project", context, className = "" }: { label: string; intent?: WhatsAppCtaIntent; context?: InquiryContext; className?: string }) {
-  const productUrl = context?.productUrl ? new URL(context.productUrl, window.location.origin).toString() : undefined;
+  const productUrl = getCanonicalProductUrl(context?.productUrl);
   const href = getWhatsAppCtaUrl({ intent, context: { ...context, productUrl } });
   return <a className={`button-primary ${className}`} href={href} target="_blank" rel="noreferrer">{label} <ArrowRight size={16} strokeWidth={1.8} /></a>;
 }
