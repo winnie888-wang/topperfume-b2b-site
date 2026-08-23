@@ -23,11 +23,13 @@ describe("Production SEO foundation", () => {
     const sitemap = buildSitemapXml(products);
     const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
 
-    expect(urls).toHaveLength(products.length + 4);
+    expect(urls).toHaveLength(products.length + 5);
     expect(urls[0]).toBe("https://topperfume.cn/");
     expect(urls).toContain("https://topperfume.cn/collections/fragrance");
     expect(urls).toContain("https://topperfume.cn/collections/skincare");
     expect(urls).toContain("https://topperfume.cn/collections/makeup");
+    expect(urls).toContain("https://topperfume.cn/low-moq-perfume-manufacturer");
+    expect(sitemap).toContain("<loc>https://topperfume.cn/low-moq-perfume-manufacturer</loc><changefreq>weekly</changefreq><priority>0.9</priority>");
     expect(urls).toContain("https://topperfume.cn/products/dior-sauvage-parfum-spray-men");
     expect(urls.every(url => url.startsWith(canonicalPublicWebsiteUrl))).toBe(true);
     expect(sitemap).not.toContain(".vercel.app");

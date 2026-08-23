@@ -88,7 +88,7 @@ const lowMoqPerfumeProducts = [
 ] as const;
 
 export const lowMoqPerfumeSeo: SeoPage = {
-  title: "Low MOQ Perfume Manufacturer - From 2 Pcs | TopPerfume",
+  title: "Low MOQ Perfume Manufacturing Partner - From 2 Pcs | TopPerfume",
   description: "Selected standard perfume orders from 2 pcs. Free samples are available. Logo, packaging and custom fragrance options start from 100 pcs, subject to project confirmation.",
   path: "/low-moq-perfume-manufacturer",
   type: "website",
@@ -203,6 +203,7 @@ export function buildSitemapXml(products: Product[]) {
     { path: "/collections/fragrance", priority: "0.8" },
     { path: "/collections/skincare", priority: "0.8" },
     { path: "/collections/makeup", priority: "0.8" },
+    { path: "/low-moq-perfume-manufacturer", priority: "0.9" },
     ...products.map(product => ({ path: `/products/${product.slug}`, priority: "0.6" })),
   ];
 

@@ -4,10 +4,14 @@ import { ProductCard } from "@/components/ProductCard";
 import { SiteShell, WhatsAppCta } from "@/components/SiteShell";
 import { Seo } from "@/components/Seo";
 import { products } from "@/data/products";
+import { publicAssetUrl } from "@/data/publicAssets";
 import { lowMoqPerfumeSeo } from "@shared/seo";
 
 const fragranceProducts = products.filter((product) => product.category === "fragrance");
-const heroProduct = fragranceProducts.find((product) => product.slug === "victorias-secret-bare-vanilla-body-fragrance-mist") || fragranceProducts[0];
+const heroVisual = {
+  image: publicAssetUrl("topperfume-packaging-study_f7ac65c2.jpg"),
+  alt: "Illustrative concept visual of unbranded perfume packaging development materials",
+};
 
 type RouteCard = {
   index: string;
@@ -122,11 +126,11 @@ export default function LowMoqPerfume() {
         </div>
         <div className="low-moq-hero-index"><span>01</span><span>Standard product → branded direction → project review</span></div>
       </div>
-      {heroProduct && <figure className="low-moq-hero-visual">
-        <span className="low-moq-visual-index">CONFIRMED FRAGRANCE REFERENCE</span>
-        <img src={heroProduct.image} alt={`${heroProduct.name} product visual`} />
-        <figcaption><span>Selected standard reference</span><strong>{heroProduct.name}</strong><small>SKU-level terms · product context preserved</small></figcaption>
-      </figure>}
+      <figure className="low-moq-hero-visual">
+        <span className="low-moq-visual-index">UNBRANDED PACKAGING CONCEPT</span>
+        <img src={heroVisual.image} alt={heroVisual.alt} />
+        <figcaption><span>Illustrative / Concept Visual</span><strong>Packaging direction for a branded fragrance brief</strong><small>Not a facility, laboratory or production-line photograph</small></figcaption>
+      </figure>
     </section>
 
     <section id="routes" className="low-moq-routes">
