@@ -49,12 +49,12 @@ const lowMoqPerfumeFaqs = [
   {
     "@type": "Question",
     name: "Are free samples available?",
-    acceptedAnswer: { "@type": "Answer", text: "Free samples are available. Sample availability, quantity and shipping are confirmed by SKU and destination. Free international shipping is not claimed here." },
+    acceptedAnswer: { "@type": "Answer", text: "Free samples are available. Availability and quantity are confirmed by SKU. Shipping terms are confirmed by destination." },
   },
   {
     "@type": "Question",
     name: "How long does an eligible standard order take?",
-    acceptedAnswer: { "@type": "Answer", text: "Lead time starts from approximately 7 days for eligible standard orders. Custom projects vary." },
+    acceptedAnswer: { "@type": "Answer", text: "Lead time starts from approximately 7 days for eligible standard orders. Custom projects follow project-specific lead times." },
   },
   {
     "@type": "Question",
@@ -69,7 +69,7 @@ const lowMoqPerfumeFaqs = [
   {
     "@type": "Question",
     name: "Can I request a custom fragrance from 100 pcs?",
-    acceptedAnswer: { "@type": "Answer", text: "Custom fragrance options from 100 pcs, subject to scent brief and project confirmation. A 100-pc starting point does not imply unrestricted new-formula development." },
+    acceptedAnswer: { "@type": "Answer", text: "Custom fragrance options from 100 pcs, subject to a scent brief and project confirmation. Final scope follows the confirmed project brief." },
   },
   {
     "@type": "Question",
