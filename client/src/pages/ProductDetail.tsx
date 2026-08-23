@@ -3,6 +3,7 @@
  * The product visual remains dominant; visible specifications, confirmed order terms and direct commercial actions make the next step clear.
  */
 import { Link, useParams } from "wouter";
+import { useEffect } from "react";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { SiteShell, WhatsAppAction, WhatsAppCta } from "@/components/SiteShell";
 import { customerValue, getDevelopmentScope, getProductCommercialType, getProductCustomTerms, getProductDecisionRows, getProductInquiryCustomizationNote, getProductStandardTerms } from "@/data/business";
@@ -10,6 +11,7 @@ import { getProduct, products } from "@/data/products";
 import { ProductCard } from "@/components/ProductCard";
 import { Seo } from "@/components/Seo";
 import { getProductSeo } from "@shared/seo";
+import { trackProductView } from "@/lib/analytics";
 
 export default function ProductDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -24,6 +26,10 @@ export default function ProductDetail() {
   const customDisclaimer = getProductInquiryCustomizationNote(product);
   const detailValue = (value: string) => customerValue(value);
   const commercialType = getProductCommercialType(product);
+
+  useEffect(() => {
+    trackProductView({ productName: product.name, sku: product.sku || product.slug, category: product.category }, `/products/${product.slug}`);
+  }, [product.category, product.name, product.sku, product.slug]);
 
   return <><Seo page={getProductSeo(product)} /><SiteShell>
     <section className="breadcrumb"><Link href={`/collections/${product.category}`}><ArrowLeft size={15} /> Back to {product.category}</Link><span>/</span><span>{product.name}</span></section>

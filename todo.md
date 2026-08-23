@@ -436,3 +436,12 @@
 - [x] 添加不包含虚构资质、评价、价格或证书的 B2B Beauty / Private Label / OEM ODM 结构化数据。
 - [x] 审核并必要时修正 H1/H2 层级、图片 alt 文本与内部链接结构。
 - [x] 补充自动化 SEO 覆盖，完成本地验证、部署 Production 并审计 robots、sitemap、canonical 与 .vercel.app 引用。
+
+## Phase 12 — GA4 Analytics + WhatsApp Conversion Tracking
+
+- [x] 审计现有 Umami 占位脚本、分析初始化、SPA 路由与 WhatsApp CTA 行为，避免双重采集。
+- [x] 使用 G-4BX79STS9F 部署单一官方 GA4 标签，并为 React SPA 路由变化发送一次且仅一次 page_view。
+- [x] 在正式 Product Detail 浏览时发送不包含价格或虚构商业数据的 view_item 事件。
+- [x] 为 Request Free Sample、Get Wholesale Quote、Customize / Private Label 及其他 WhatsApp CTA 发送 generate_lead 和 whatsapp_click，附加可用产品上下文且不改变跳转行为。
+- [x] 安全移除失效的 Umami 占位分析脚本，不启用第二套分析系统。
+- [ ] 增加自动化跟踪覆盖，完成 Production GA4 加载、页面浏览、产品浏览、WhatsApp 转化、HTTP 与图片回归验证。

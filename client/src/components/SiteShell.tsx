@@ -15,6 +15,7 @@ import { buildInquirySummary, businessProfile, getCanonicalProductUrl, getInquir
 import { publicAssetUrl } from "@/data/publicAssets";
 import { trpc } from "@/lib/trpc";
 import { getInquiryDisplayState } from "@shared/inquiryUi";
+import { trackWhatsAppCta } from "@/lib/analytics";
 
 const nav = [
   { label: "Fragrance", href: "/collections/fragrance" },
@@ -93,7 +94,7 @@ export function InquiryDrawer({ triggerLabel = "Start Your Project", intent = "p
     <Button className={`button-primary ${triggerClassName}`} onClick={() => openDrawer(true)}>{triggerLabel} <ArrowRight size={16} strokeWidth={1.8} /></Button>
     <SheetContent side="right" className="inquiry-sheet">
       <SheetHeader><p className="eyebrow">{copy.eyebrow}</p><SheetTitle className="sheet-title">{copy.title}</SheetTitle><SheetDescription className="sheet-description">{copy.intro}</SheetDescription><p className="form-disclaimer">Your completed inquiry is sent directly to {businessProfile.companyName}. WhatsApp remains available as a separate quick-contact option.</p></SheetHeader>
-      <div className="submission-note" role="status" aria-live="polite" hidden={!displayState.showSuccess}><span className="mini-index">01</span><h3>Thank you. Your inquiry has been received.</h3><p>Our team will contact you shortly. Reference: {submitted?.requestId}</p><div className="inquiry-route-status"><span>Company</span><strong>{businessProfile.companyName}</strong><span>Sales email</span><strong>{businessProfile.email}</strong><span>WhatsApp</span><strong>{businessProfile.whatsappDisplay}</strong></div><div className="inquiry-route-actions"><a className="button-secondary button-whatsapp" href={getInquiryWhatsAppUrl(submitted?.summary || buildInquirySummary({ intent, context }))} target="_blank" rel="noreferrer">Continue on WhatsApp</a></div><Button variant="outline" className="button-secondary" onClick={() => { setSubmitted(null); setFormStartedAt(Date.now()); }}>Submit another inquiry</Button></div>
+      <div className="submission-note" role="status" aria-live="polite" hidden={!displayState.showSuccess}><span className="mini-index">01</span><h3>Thank you. Your inquiry has been received.</h3><p>Our team will contact you shortly. Reference: {submitted?.requestId}</p><div className="inquiry-route-status"><span>Company</span><strong>{businessProfile.companyName}</strong><span>Sales email</span><strong>{businessProfile.email}</strong><span>WhatsApp</span><strong>{businessProfile.whatsappDisplay}</strong></div><div className="inquiry-route-actions"><a className="button-secondary button-whatsapp" href={getInquiryWhatsAppUrl(submitted?.summary || buildInquirySummary({ intent, context }))} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppCta("whatsapp", "Continue on WhatsApp", context)}>Continue on WhatsApp</a></div><Button variant="outline" className="button-secondary" onClick={() => { setSubmitted(null); setFormStartedAt(Date.now()); }}>Submit another inquiry</Button></div>
       <form className="inquiry-form" onSubmit={handleSubmit} hidden={!displayState.showForm}>
           {context?.productName && <div className="inquiry-context"><span>Product context attached</span><strong>{context.productName}</strong><p>{context.sku ? `${context.sku} · ` : ""}{context.category} · {context.productUrl}</p></div>}
           <div className="inquiry-two-up"><label>Name<Input required name="name" placeholder="Your name" /></label><label>Country<Input required name="country" placeholder="Country / market" /></label></div>
@@ -111,6 +112,7 @@ export function InquiryDrawer({ triggerLabel = "Start Your Project", intent = "p
 
 export function WhatsAppAction({ context, className = "" }: { context?: InquiryContext; className?: string }) {
   function openWhatsApp() {
+    trackWhatsAppCta("whatsapp", "WhatsApp", context);
     const summary = buildInquirySummary({ intent: "whatsapp", context: { ...context, productUrl: getCanonicalProductUrl(context?.productUrl) } });
     window.open(getInquiryWhatsAppUrl(summary), "_blank", "noopener,noreferrer");
   }
@@ -120,7 +122,7 @@ export function WhatsAppAction({ context, className = "" }: { context?: InquiryC
 export function WhatsAppCta({ label, intent = "project", context, className = "" }: { label: string; intent?: WhatsAppCtaIntent; context?: InquiryContext; className?: string }) {
   const productUrl = getCanonicalProductUrl(context?.productUrl);
   const href = getWhatsAppCtaUrl({ intent, context: { ...context, productUrl } });
-  return <a className={`button-primary ${className}`} href={href} target="_blank" rel="noreferrer">{label} <ArrowRight size={16} strokeWidth={1.8} /></a>;
+  return <a className={`button-primary ${className}`} href={href} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppCta(intent, label, context)}>{label} <ArrowRight size={16} strokeWidth={1.8} /></a>;
 }
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
@@ -131,6 +133,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     <header className="site-header"><Wordmark /><nav className="desktop-nav" aria-label="Main navigation">{nav.map((item) => <Link className={location === item.href ? "nav-link active" : "nav-link"} key={item.href} href={item.href}>{item.label}</Link>)}<a className="nav-link" href="/#capabilities">Capabilities</a></nav><div className="header-actions"><span className="desktop-only"><WhatsAppCta label="Customize / Private Label" /></span><button className="menu-button" onClick={() => setMobileOpen(true)} aria-label="Open menu"><Menu size={22} /></button></div></header>
     <Sheet open={mobileOpen} onOpenChange={setMobileOpen}><SheetContent side="left" className="mobile-nav-sheet"><SheetHeader><div className="mobile-close"><Wordmark /><button onClick={() => setMobileOpen(false)} aria-label="Close menu"><X size={20} /></button></div><SheetTitle className="sr-only">Navigation</SheetTitle></SheetHeader><nav className="mobile-nav" aria-label="Mobile navigation">{nav.map((item, index) => <Link onClick={() => setMobileOpen(false)} key={item.href} href={item.href}><span>0{index + 1}</span>{item.label}</Link>)}<a onClick={() => setMobileOpen(false)} href="/#capabilities"><span>04</span>Capabilities</a></nav><WhatsAppCta label="Customize / Private Label" /></SheetContent></Sheet>
     <main>{children}</main>
-    <footer className="site-footer"><div><Wordmark /><p>Beauty product development and manufacturing for brands building a distinct next collection.</p></div><div className="footer-index"><span>01 / Product browse</span><span>02 / Custom development</span><span>03 / Buyer decision tools</span></div><div className="footer-cta"><p>Choose a product. Request a sample. Start your project.</p><a className="footer-contact-link" href={`mailto:${businessProfile.email}`}>{businessProfile.email}</a><a className="footer-contact-link" href={`https://wa.me/${businessProfile.whatsappNumber}`} target="_blank" rel="noreferrer">WhatsApp {businessProfile.whatsappDisplay}</a><WhatsAppCta label="Customize / Private Label" /></div></footer>
+    <footer className="site-footer"><div><Wordmark /><p>Beauty product development and manufacturing for brands building a distinct next collection.</p></div><div className="footer-index"><span>01 / Product browse</span><span>02 / Custom development</span><span>03 / Buyer decision tools</span></div><div className="footer-cta"><p>Choose a product. Request a sample. Start your project.</p><a className="footer-contact-link" href={`mailto:${businessProfile.email}`}>{businessProfile.email}</a><a className="footer-contact-link" href={`https://wa.me/${businessProfile.whatsappNumber}`} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppCta("whatsapp", "Footer WhatsApp")}>WhatsApp {businessProfile.whatsappDisplay}</a><WhatsAppCta label="Customize / Private Label" /></div></footer>
   </div>;
 }
