@@ -96,11 +96,11 @@ const faqs = [
   },
   {
     question: "Are free samples available?",
-    answer: "Free samples are available. Sample availability, quantity and shipping are confirmed by SKU and destination. Free international shipping is not claimed here.",
+    answer: "Free samples are available. Availability and quantity are confirmed by SKU. Shipping terms are confirmed by destination.",
   },
   {
     question: "How long does an eligible standard order take?",
-    answer: "Lead time starts from approximately 7 days for eligible standard orders. Custom projects vary.",
+    answer: "Lead time starts from approximately 7 days for eligible standard orders. Custom projects follow project-specific lead times.",
   },
   {
     question: "Can I add my logo from 100 pcs?",
@@ -112,7 +112,7 @@ const faqs = [
   },
   {
     question: "Can I request a custom fragrance from 100 pcs?",
-    answer: "Custom fragrance options from 100 pcs, subject to scent brief and project confirmation. A 100-pc starting point does not imply unrestricted new-formula development.",
+    answer: "Custom fragrance options from 100 pcs, subject to a scent brief and project confirmation. Final scope follows the confirmed project brief.",
   },
   {
     question: "Can I discuss OEM or ODM through this page?",
@@ -128,7 +128,7 @@ export default function LowMoqPerfume() {
         <h1>Low MOQ Perfume Manufacturing for <em>New &amp; Growing Brands</em></h1>
         <p className="low-moq-hero-intro">Start with selected standard perfume orders from <strong>2 pcs</strong>, or explore logo, packaging and custom fragrance options from <strong>100 pcs</strong>.</p>
         <p className="low-moq-hero-positioning">TopPerfume supports B2B buyers as a sourcing, private-label, manufacturing and OEM/ODM project partner. Choose a confirmed fragrance product, request a free sample, or send your project brief for a quote.</p>
-        <p className="low-moq-lead-time"><Clock3 size={16} /> Lead time starts from approximately 7 days for eligible standard orders. Custom projects vary.</p>
+        <p className="low-moq-lead-time"><Clock3 size={16} /> Lead time starts from approximately 7 days for eligible standard orders. Custom projects follow project-specific lead times.</p>
         <div className="hero-actions low-moq-hero-actions">
           <WhatsAppCta label="Request Free Sample" intent="sample" context={{ category: "fragrance" }} />
           <WhatsAppCta label="Get a Low MOQ Quote" intent="quote" context={{ category: "fragrance" }} className="button-rose" />
@@ -168,18 +168,18 @@ export default function LowMoqPerfume() {
 
     <section className="low-moq-products">
       <div className="section-head"><div><p className="eyebrow">03 / REAL PRODUCT EVIDENCE</p><h2>Three references. One clearer starting point.</h2></div><Link href="/collections/fragrance" className="text-link">Browse Full Fragrance Collection <ArrowRight size={15} /></Link></div>
-      <p className="low-moq-section-lead">These are current fragrance product references, not authorization claims. Product cards show the commercial type available in the current catalogue; confirm route, availability and terms by SKU.</p>
+      <p className="low-moq-section-lead">Third-party branded products are presented as wholesale product references only. Product cards show the commercial type available in the current catalogue; confirm route, availability and terms by SKU.</p>
       <div className="product-grid low-moq-product-grid">{evidenceProducts.map((product, index) => <ProductCard product={product} index={index} showSampleCta={false} key={product.slug} />)}</div>
     </section>
 
     <section className="low-moq-sample-panel">
-      <div className="low-moq-sample-copy"><p className="eyebrow">04 / SAMPLE-FIRST BUYING PATH</p><h2>Review the product before the project.</h2><p>Free samples are available. Sample availability, quantity and shipping are confirmed by SKU and destination. Free international shipping is not claimed.</p><div className="low-moq-sample-action"><WhatsAppCta label="Request Free Sample" intent="sample" context={{ category: "fragrance" }} /></div></div>
-      <div className="low-moq-sample-ledger"><div><span>01</span><strong>Choose a product</strong><p>Send the product name, SKU or PDP URL instead of a generic request.</p></div><div><span>02</span><strong>Confirm sample terms</strong><p>Availability, quantity, fee and shipping are confirmed by SKU and destination.</p></div><div><span>03</span><strong>Move to quote</strong><p>Share the estimated quantity, target market and any project direction.</p></div><div className="low-moq-sample-checklist"><strong>What to send us</strong><p><Check size={15} /> Product / SKU</p><p><Check size={15} /> Target market</p><p><Check size={15} /> Estimated quantity</p><p><Check size={15} /> Sample request</p><p><Check size={15} /> Logo, packaging or scent direction if relevant</p></div></div>
+      <div className="low-moq-sample-copy"><p className="eyebrow">04 / SAMPLE-FIRST BUYING PATH</p><h2>Review the product before the project.</h2><p>Free samples are available. Availability, quantity and shipping terms are confirmed by SKU and destination.</p><div className="low-moq-sample-action"><WhatsAppCta label="Request Free Sample" intent="sample" context={{ category: "fragrance" }} /></div></div>
+      <div className="low-moq-sample-ledger"><div><span>01</span><strong>Choose a product</strong><p>Send the product name, SKU or PDP URL instead of a generic request.</p></div><div><span>02</span><strong>Confirm sample terms</strong><p>Availability, quantity and shipping terms are confirmed by SKU and destination.</p></div><div><span>03</span><strong>Move to quote</strong><p>Share the estimated quantity, target market and any project direction.</p></div><div className="low-moq-sample-checklist"><strong>What to send us</strong><p><Check size={15} /> Product / SKU</p><p><Check size={15} /> Target market</p><p><Check size={15} /> Estimated quantity</p><p><Check size={15} /> Sample request</p><p><Check size={15} /> Logo, packaging or scent direction if relevant</p></div></div>
     </section>
 
     <section id="customization" className="low-moq-customization">
-      <div className="low-moq-section-intro"><p className="eyebrow">05 / PROJECT OPTIONS</p><h2>Make the brief as specific as it needs to be.</h2><p>Logo, packaging and fragrance are separate questions. A 100-pc starting point does not automatically mean every component or formula scope is included.</p></div>
-      <div className="low-moq-customization-grid"><article><span>01 / LOGO</span><h3>Private Label / Logo</h3><p>Logo customization from 100 pcs. Label route and product scope are confirmed before quotation.</p><small>Ask about the selected SKU.</small></article><article><span>02 / PACKAGING</span><h3>Packaging Options</h3><p>Packaging options from 100 pcs. Bottle, cap, carton, label and artwork scope is confirmed per project.</p><small>Components may have separate requirements.</small></article><article><span>03 / FRAGRANCE</span><h3>Custom Fragrance</h3><p>Fragrance customization from 100 pcs, subject to a scent brief and project confirmation.</p><small>Custom scope is reviewed before commitment.</small></article></div>
+      <div className="low-moq-section-intro"><p className="eyebrow">05 / PROJECT OPTIONS</p><h2>Make the brief as specific as it needs to be.</h2><p>Logo, packaging and fragrance are separate questions. Final component and formula scope follows the confirmed project brief.</p></div>
+      <div className="low-moq-customization-grid"><article><span>01 / LOGO</span><h3>Private Label / Logo</h3><p>Logo customization from 100 pcs. Label route and product scope are confirmed before quotation.</p><small>Ask about the selected SKU.</small></article><article><span>02 / PACKAGING</span><h3>Packaging Options</h3><p>Packaging options from 100 pcs. Bottle, cap, carton, label and artwork scope is confirmed per project.</p><small>Each component is reviewed with the project brief.</small></article><article><span>03 / FRAGRANCE</span><h3>Custom Fragrance</h3><p>Fragrance customization from 100 pcs, subject to a scent brief and project confirmation.</p><small>Custom scope is reviewed before commitment.</small></article></div>
     </section>
 
     <section className="low-moq-forward">
@@ -188,7 +188,7 @@ export default function LowMoqPerfume() {
     </section>
 
     <section className="low-moq-proof">
-      <div className="low-moq-proof-intro"><p className="eyebrow">07 / VERIFIED BUYER PROOF</p><h2>Why buyers start with TopPerfume.</h2><p>No factory-size claims. No invented certification wall. Just the buying facts currently supported by the live product catalogue and approved commercial baseline.</p></div>
+      <div className="low-moq-proof-intro"><p className="eyebrow">07 / VERIFIED BUYER PROOF</p><h2>Why buyers start with TopPerfume.</h2><p>Clear starting points, current product references and project-specific terms help buyers understand the next step before requesting a sample or quote.</p></div>
       <div className="low-moq-proof-grid"><div><strong>From 2 pcs</strong><span>Selected standard perfume orders</span></div><div><strong>From 100 pcs</strong><span>Logo, packaging and fragrance options</span></div><div><strong>Available</strong><span>Free samples, confirmed by SKU</span></div><div><strong>WhatsApp-first</strong><span>Direct project communication</span></div><div><strong>Approx. 7 days</strong><span>Eligible standard-order starting point</span></div><div><strong>Live references</strong><span>Current fragrance SKUs and PDPs</span></div></div>
     </section>
 
