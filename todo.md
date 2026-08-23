@@ -435,4 +435,4 @@
 - [x] 为主页、Collection 与全部正式 Product Detail 设置独立 SEO title、description、canonical 与 Open Graph 元数据。
 - [x] 添加不包含虚构资质、评价、价格或证书的 B2B Beauty / Private Label / OEM ODM 结构化数据。
 - [x] 审核并必要时修正 H1/H2 层级、图片 alt 文本与内部链接结构。
-- [ ] 补充自动化 SEO 覆盖，完成本地验证、部署 Production 并审计 robots、sitemap、canonical 与 .vercel.app 引用。
+- [x] 补充自动化 SEO 覆盖，完成本地验证、部署 Production 并审计 robots、sitemap、canonical 与 .vercel.app 引用。
