@@ -425,4 +425,4 @@
 ### Phase 10B.2 — WhatsApp Message Readability
 
 - [x] 审计并优化 WhatsApp 预填消息，使 Product Name、SKU、Product URL、Category、MOQ 与 Lead Time 以清晰的逐行字段格式呈现。
-- [ ] 保持 WhatsApp 号码、规范公开 URL、产品数据、CTA 行为、DNS 与其他功能不变；更新自动测试并部署 main Production 验证。
+- [x] 保持 WhatsApp 号码、规范公开 URL、产品数据、CTA 行为、DNS 与其他功能不变；更新自动测试并部署 main Production 验证。
