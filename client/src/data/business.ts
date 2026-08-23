@@ -3,6 +3,7 @@
  * Verified commercial terms are stated exactly; internal pending source fields never render raw on buyer-facing pages.
  */
 import type { Product, ProductCategory } from "@/data/products";
+import { canonicalPublicWebsiteUrl } from "@shared/seo";
 
 export const TO_CONFIRM = "[TO CONFIRM]";
 export const CUSTOMER_DETAILS = "Contact us for details";
@@ -39,7 +40,7 @@ export const businessProfile = {
   whatsappDisplay: "+86 190 6678 2710",
 } as const;
 
-export const canonicalPublicWebsiteUrl = "https://topperfume.cn";
+export { canonicalPublicWebsiteUrl };
 
 export function getCanonicalProductUrl(productUrl?: string) {
   if (!productUrl) return undefined;

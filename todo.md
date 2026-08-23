@@ -426,3 +426,13 @@
 
 - [x] 审计并优化 WhatsApp 预填消息，使 Product Name、SKU、Product URL、Category、MOQ 与 Lead Time 以清晰的逐行字段格式呈现。
 - [x] 保持 WhatsApp 号码、规范公开 URL、产品数据、CTA 行为、DNS 与其他功能不变；更新自动测试并部署 main Production 验证。
+
+## Phase 11 — Production SEO Foundation
+
+- [x] 审计 Production 现有 canonical、meta、Open Graph、robots、sitemap、H1/H2、图片 alt 与内部链接输出。
+- [x] 统一全站 canonical 与客户可见 SEO URL 为 https://topperfume.cn，并消除 .vercel.app SEO 引用。
+- [x] 创建并验证 Production robots.txt 与包含主页、三个 Collection、全部正式 Product Detail URL 的 sitemap.xml。
+- [x] 为主页、Collection 与全部正式 Product Detail 设置独立 SEO title、description、canonical 与 Open Graph 元数据。
+- [x] 添加不包含虚构资质、评价、价格或证书的 B2B Beauty / Private Label / OEM ODM 结构化数据。
+- [x] 审核并必要时修正 H1/H2 层级、图片 alt 文本与内部链接结构。
+- [ ] 补充自动化 SEO 覆盖，完成本地验证、部署 Production 并审计 robots、sitemap、canonical 与 .vercel.app 引用。

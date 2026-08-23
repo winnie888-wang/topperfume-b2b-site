@@ -8,6 +8,8 @@ import { SiteShell, WhatsAppAction, WhatsAppCta } from "@/components/SiteShell";
 import { customerValue, getDevelopmentScope, getProductCommercialType, getProductCustomTerms, getProductDecisionRows, getProductInquiryCustomizationNote, getProductStandardTerms } from "@/data/business";
 import { getProduct, products } from "@/data/products";
 import { ProductCard } from "@/components/ProductCard";
+import { Seo } from "@/components/Seo";
+import { getProductSeo } from "@shared/seo";
 
 export default function ProductDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -23,7 +25,7 @@ export default function ProductDetail() {
   const detailValue = (value: string) => customerValue(value);
   const commercialType = getProductCommercialType(product);
 
-  return <SiteShell>
+  return <><Seo page={getProductSeo(product)} /><SiteShell>
     <section className="breadcrumb"><Link href={`/collections/${product.category}`}><ArrowLeft size={15} /> Back to {product.category}</Link><span>/</span><span>{product.name}</span></section>
     <section className={`pdp-hero pdp-${product.category}`}>
       <div className={`pdp-image-stage pdp-product-${product.slug}`}><span className="pdp-index">01 / {product.dataStatus === "confirmed" ? "PRODUCT" : "PRODUCT REFERENCE"}</span><img src={product.image} alt={`${product.name} product visual`} /><span className="pdp-visual-tag">{product.dataStatus === "confirmed" ? "Catalogue plate / product visual" : "Product visual / reference plate"}</span></div>
@@ -45,5 +47,5 @@ export default function ProductDetail() {
     <section className="development-board"><div className="development-board-copy"><p className="eyebrow">COMMERCIAL PATHWAY</p><h2>{commercialType === "Branded Wholesale" ? "Wholesale terms, clearly routed." : "Develop when the brief is ready."}</h2><p>{commercialType === "Branded Wholesale" ? "This finished product is presented through a branded wholesale pathway. Contact us for product-specific wholesale options." : "Move into the appropriate Private Label, OEM or ODM conversation. Contact us for product-specific scope before committing to a custom order."}</p></div><div className="development-list"><p><Check size={19} /><span><strong>Commercial type</strong>{commercialType}</span></p><p><Check size={19} /><span><strong>Product expression</strong>{getDevelopmentScope(product.category)} Contact us for details.</span></p><p><Check size={19} /><span><strong>Packaging &amp; logo</strong>{getProductInquiryCustomizationNote(product)}</span></p><p><Check size={19} /><span><strong>Sample to quote</strong>Free samples are available; use the actions above with this exact product name, URL and category already attached.</span></p></div></section>
     <section className="related-section"><div className="section-head"><div><p className="eyebrow">RELATED PRODUCTS</p><h2>Keep browsing.</h2></div><Link className="text-link" href={`/collections/${product.category}`}>See all {product.category} <ArrowRight size={16} /></Link></div><div className="product-grid related-grid">{related.map((item, index) => <ProductCard product={item} index={index} key={item.slug} />)}</div></section>
     <section className="closing-banner"><Check size={20} /><p>Choose the next action: sample, quote or project.</p><WhatsAppCta label="Customize / Private Label" intent="project" context={context} /></section>
-  </SiteShell>;
+  </SiteShell></>;
 }

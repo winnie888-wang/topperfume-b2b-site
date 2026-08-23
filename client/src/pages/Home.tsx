@@ -10,6 +10,8 @@ import { businessProfile, catalogueMoqGuidance } from "@/data/business";
 import { products, type ProductCategory } from "@/data/products";
 import { homepageHeroVisual } from "@/data/hero";
 import { publicAssetUrl } from "@/data/publicAssets";
+import { Seo } from "@/components/Seo";
+import { homeSeo } from "@shared/seo";
 
 const categoryEntries: { category: ProductCategory; title: string; intro: string; href: string }[] = [
   { category: "fragrance", title: "Fragrance", intro: "Mists, scent profiles and wholesale options.", href: "/collections/fragrance" },
@@ -32,7 +34,7 @@ const trustVisuals = [
 ] as const;
 
 export default function Home() {
-  return <SiteShell>
+  return <><Seo page={homeSeo} /><SiteShell>
     <section className="hero-section hero-refined hero-luxe"><div className="hero-copy"><p className="eyebrow">BEAUTY PRODUCT DEVELOPMENT &amp; MANUFACTURING</p><h1>Beauty products<br /><em>built for your brand.</em></h1><p className="hero-intro">We are a B2B partner for beauty brands developing and manufacturing <strong>Fragrance, Skincare and Makeup</strong>—through <strong>Private Label, OEM and ODM</strong>.</p><p className="hero-editorial-note">Make the product the reason to begin.</p><p className="hero-category-line">Fragrance <span>·</span> Skincare <span>·</span> Makeup</p><div className="hero-actions"><Link href="#products" className="text-link">Browse Products <ArrowRight size={16} /></Link><WhatsAppCta label="Customize / Private Label" /></div></div><figure className="hero-product-stage hero-single-stage"><img className="hero-single-image" src={homepageHeroVisual.src} alt={homepageHeroVisual.alt} /><figcaption className="hero-visual-disclosure">Illustrative / Concept Visual</figcaption></figure></section>
 
     <section className="business-statement"><div className="section-index">01 / WHAT WE DO</div><h2>Develop the product.<br />Build the brand experience.</h2><div className="manifesto-body"><p>Start with a product reference, select your level of customization, then move to sample, quotation and project planning. The experience is deliberately designed for international beauty buyers—not for price-first browsing.</p><Link href="#products" className="circle-arrow"><ArrowRight size={24} /></Link></div></section>
@@ -47,5 +49,5 @@ export default function Home() {
 
     <section className="process-section"><div><p className="eyebrow">A CLEAR BUYER PATH</p><h2>Browse products.<br />Make decisions.</h2></div><div className="process-grid"><article><span>01</span><h3>Browse</h3><p>Choose a category and compare product formats with the key B2B fields in view.</p></article><article><span>02</span><h3>Request</h3><p>Request a sample or quote from the specific product you are considering.</p></article><article><span>03</span><h3>Develop</h3><p>Confirm customization, MOQ and lead time with the right project context.</p></article></div></section>
     <section className="closing-banner"><Sparkles size={20} /><p>Choose a product, then move to sample, quote or customization.</p><WhatsAppCta label="Customize / Private Label" /></section>
-  </SiteShell>;
+  </SiteShell></>;
 }
