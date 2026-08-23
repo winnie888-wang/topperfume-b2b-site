@@ -307,3 +307,19 @@
   .low-moq-proof-grid > div:nth-child(odd) { border-left: 0; }
   .low-moq-sample-checklist p { font-size: 10px; }
 }
+
+.low-moq-reference-disclosure { border-left: 2px solid var(--rose); color: rgba(41,27,46,.68); font-size: 10px; line-height: 1.5; margin: 0 0 34px; max-width: 520px; padding-left: 13px; }
+.low-moq-reference-item { min-width: 0; }
+.low-moq-reference-bridge { border-top: 1px solid var(--line); padding: 17px 0 0; }
+.low-moq-reference-bridge .eyebrow { margin-bottom: 10px; }
+.low-moq-reference-bridge .low-moq-reference-kind { color: var(--rose); }
+.low-moq-reference-bridge .low-moq-reference-opportunity { color: rgba(41,27,46,.48); margin-top: 9px; }
+.low-moq-reference-bridge h3 { color: var(--plum); font-family: var(--font-display); font-size: clamp(25px, 2.3vw, 32px); font-weight: 600; letter-spacing: -.045em; line-height: .98; margin: 14px 0 9px; }
+.low-moq-reference-profile { color: var(--rose); font-size: 9px; font-weight: 700; letter-spacing: .08em; line-height: 1.35; margin: 0; text-transform: uppercase; }
+.low-moq-reference-prompt { color: rgba(41,27,46,.7); font-size: 11px; line-height: 1.45; margin: 15px 0 0; max-width: 255px; }
+.low-moq-reference-bridge .button-primary { font-size: 8px; margin-top: 20px; min-height: 37px; }
+@media (max-width: 610px) {
+  .low-moq-reference-disclosure { margin-bottom: 28px; }
+  .low-moq-reference-bridge h3 { font-size: 29px; }
+  .low-moq-reference-prompt { max-width: 300px; }
+}

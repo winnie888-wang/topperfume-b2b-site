@@ -5,7 +5,7 @@ import { SiteShell, WhatsAppCta } from "@/components/SiteShell";
 import { Seo } from "@/components/Seo";
 import { products } from "@/data/products";
 import { publicAssetUrl } from "@/data/publicAssets";
-import { lowMoqPerfumeSeo } from "@shared/seo";
+import { canonicalUrl, lowMoqPerfumeSeo } from "@shared/seo";
 
 const fragranceProducts = products.filter((product) => product.category === "fragrance");
 const evidenceSlugs = [
@@ -14,6 +14,29 @@ const evidenceSlugs = [
   "pure-seduction-fragrance-mist-lotion-set",
 ];
 const evidenceProducts = fragranceProducts.filter((product) => evidenceSlugs.includes(product.slug));
+const referenceDirections = {
+  "dior-sauvage-parfum-spray-men": {
+    kind: "Branded Wholesale Reference",
+    title: "Sauvage-Inspired Scent Direction",
+    profile: "Aromatic · Woody · Fresh Spicy",
+    prompt: "Looking for a similar fragrance profile for your own brand?",
+    inquiryProduct: "Sauvage-Inspired Scent Direction · Reference fragrance: Dior Sauvage Parfum Spray for Men",
+  },
+  "yves-saint-laurent-mon-paris-parfum-women": {
+    kind: "Branded Wholesale Reference",
+    title: "Mon Paris-Inspired Scent Direction",
+    profile: "Fruity · Floral · Sweet",
+    prompt: "Looking for a similar fragrance profile for your own brand?",
+    inquiryProduct: "Mon Paris-Inspired Scent Direction · Reference fragrance: Yves Saint Laurent Mon Paris Parfum for Women",
+  },
+  "pure-seduction-fragrance-mist-lotion-set": {
+    kind: "Private Label / OEM Reference",
+    title: "Fragrance Mist & Lotion Direction",
+    profile: "Body mist · lotion · gift-ready",
+    prompt: "A current private-label / OEM reference for a coordinated fragrance set.",
+    inquiryProduct: null,
+  },
+} as const;
 
 const heroVisual = {
   image: publicAssetUrl("topperfume-packaging-study_f7ac65c2.jpg"),
@@ -167,9 +190,23 @@ export default function LowMoqPerfume() {
     </section>
 
     <section className="low-moq-products">
-      <div className="section-head"><div><p className="eyebrow">03 / REAL PRODUCT EVIDENCE</p><h2>Three references. One clearer starting point.</h2></div><Link href="/collections/fragrance" className="text-link">Browse Full Fragrance Collection <ArrowRight size={15} /></Link></div>
-      <p className="low-moq-section-lead">Third-party branded products are presented as wholesale product references only. Product cards show the commercial type available in the current catalogue; confirm route, availability and terms by SKU.</p>
-      <div className="product-grid low-moq-product-grid">{evidenceProducts.map((product, index) => <ProductCard product={product} index={index} showSampleCta={false} key={product.slug} />)}</div>
+      <div className="section-head"><div><p className="eyebrow">03 / POPULAR SCENT REFERENCES</p><h2>Start with the scent reference. Move toward your own brand.</h2></div><Link href="/collections/fragrance" className="text-link">Browse Full Fragrance Collection <ArrowRight size={15} /></Link></div>
+      <p className="low-moq-section-lead">Branded product cards are shown as wholesale references. For private-label projects, TopPerfume discusses similar scent profiles with original brand identity and packaging directions.</p>
+      <p className="low-moq-reference-disclosure">Third-party brand names are used only as fragrance references. TopPerfume is not affiliated with or endorsed by the referenced brands.</p>
+      <div className="product-grid low-moq-product-grid">{evidenceProducts.map((product, index) => {
+        const reference = referenceDirections[product.slug as keyof typeof referenceDirections];
+        return <div className="low-moq-reference-item" key={product.slug}>
+          <ProductCard product={product} index={index} showSampleCta={false} />
+          <div className="low-moq-reference-bridge">
+            <p className="eyebrow low-moq-reference-kind">{reference.kind}</p>
+            <p className="eyebrow low-moq-reference-opportunity">SIMILAR SCENT / PRIVATE LABEL OPPORTUNITY</p>
+            <h3>{reference.title}</h3>
+            <p className="low-moq-reference-profile">{reference.profile}</p>
+            <p className="low-moq-reference-prompt">{reference.prompt}</p>
+            {reference.inquiryProduct && <WhatsAppCta label="Ask About Similar Scent" intent="project" context={{ productName: reference.inquiryProduct, sku: product.sku, productUrl: `/products/${product.slug}`, pageUrl: canonicalUrl(lowMoqPerfumeSeo.path), category: "fragrance", inquiryIntent: "private_label" }} />}
+          </div>
+        </div>;
+      })}</div>
     </section>
 
     <section className="low-moq-sample-panel">

@@ -78,7 +78,7 @@ export type InquiryIntentKey = "sample" | "quote" | "project" | "whatsapp";
 export type WhatsAppCtaIntent = "sample" | "quote" | "project";
 export type InquirySummaryInput = {
   intent: InquiryIntentKey;
-  context?: { productName?: string; sku?: string; productUrl?: string; category?: string; standardMoq?: string; leadTime?: string; sampleAvailability?: string; customizationNote?: string };
+  context?: { productName?: string; sku?: string; productUrl?: string; pageUrl?: string; inquiryIntent?: string; category?: string; standardMoq?: string; leadTime?: string; sampleAvailability?: string; customizationNote?: string };
   name?: string;
   country?: string;
   email?: string;
@@ -150,6 +150,8 @@ export function buildWhatsAppCtaSummary(input: { intent: WhatsAppCtaIntent; cont
     `SKU: ${context?.sku || "Not specified"}`,
     "",
     `Product URL: ${productUrl || "Not specified"}`,
+    ...(context?.pageUrl ? [`Page URL: ${context.pageUrl}`] : []),
+    ...(context?.inquiryIntent ? [`Intent: ${context.inquiryIntent}`] : []),
     "",
     `Category: ${context?.category || "Not specified"}`,
     "",
