@@ -12,10 +12,11 @@ import Home from "./pages/Home";
 import Collection from "./pages/Collection";
 import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
+import LowMoqPerfume from "./pages/LowMoqPerfume";
 import { AnalyticsRouteTracker } from "./components/AnalyticsRouteTracker";
 function Router() {
   // make sure to consider if you need authentication for certain routes
-  return <><AnalyticsRouteTracker /><Switch><Route path="/" component={Home} /><Route path="/collections/:category" component={Collection} /><Route path="/products/:slug" component={ProductDetail} /><Route component={NotFound} /></Switch></>;
+  return <><AnalyticsRouteTracker /><Switch><Route path="/" component={Home} /><Route path="/low-moq-perfume-manufacturer" component={LowMoqPerfume} /><Route path="/collections/:category" component={Collection} /><Route path="/products/:slug" component={ProductDetail} /><Route component={NotFound} /></Switch></>;
 }
 
 export default function App() {

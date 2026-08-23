@@ -1,4 +1,4 @@
-import type { Product, ProductCategory } from "../client/src/data/products";
+import type { Product, ProductCategory } from "@/data/products";
 
 export const canonicalPublicWebsiteUrl = "https://topperfume.cn";
 
@@ -38,6 +38,98 @@ export const homeSeo: SeoPage = {
   path: "/",
   type: "website",
   structuredData: [organizationSchema, websiteSchema],
+};
+
+const lowMoqPerfumeFaqs = [
+  {
+    "@type": "Question",
+    name: "What is the lowest MOQ for perfume orders?",
+    acceptedAnswer: { "@type": "Answer", text: "Selected standard perfume orders from 2 pcs. Product eligibility, quantity and commercial route are confirmed by SKU." },
+  },
+  {
+    "@type": "Question",
+    name: "Are free samples available?",
+    acceptedAnswer: { "@type": "Answer", text: "Free samples are available. Sample availability, quantity and shipping are confirmed by SKU and destination. Free international shipping is not claimed here." },
+  },
+  {
+    "@type": "Question",
+    name: "How long does an eligible standard order take?",
+    acceptedAnswer: { "@type": "Answer", text: "Lead time starts from approximately 7 days for eligible standard orders. Custom projects vary." },
+  },
+  {
+    "@type": "Question",
+    name: "Can I add my logo from 100 pcs?",
+    acceptedAnswer: { "@type": "Answer", text: "Logo customization from 100 pcs. The selected product, label route and project scope are confirmed before quotation." },
+  },
+  {
+    "@type": "Question",
+    name: "Can I customize the packaging from 100 pcs?",
+    acceptedAnswer: { "@type": "Answer", text: "Custom packaging from 100 pcs. Individual bottle, cap, carton, label and artwork scope is confirmed per project." },
+  },
+  {
+    "@type": "Question",
+    name: "Can I request a custom fragrance from 100 pcs?",
+    acceptedAnswer: { "@type": "Answer", text: "Custom fragrance options from 100 pcs, subject to scent brief and project confirmation. A 100-pc starting point does not imply unrestricted new-formula development." },
+  },
+  {
+    "@type": "Question",
+    name: "Can I discuss OEM or ODM through this page?",
+    acceptedAnswer: { "@type": "Answer", text: "Yes. TopPerfume supports B2B sourcing, private-label, manufacturing and OEM/ODM project conversations. Exact scope is confirmed by product and project." },
+  },
+] as const;
+
+const lowMoqPerfumeProducts = [
+  { name: "Dior Sauvage Parfum Spray for Men", sku: "FR-DI-SAU-100", slug: "dior-sauvage-parfum-spray-men" },
+  { name: "Carolina Herrera Good Girl Blush Tweed Talk Eau de Parfum for Women", sku: "FR-CH-GGBT-080", slug: "carolina-herrera-good-girl-blush-tweed-talk-edp-women" },
+  { name: "Carolina Herrera Very Good Girl Glam Eau de Parfum for Women", sku: "FR-CH-VGGG-080", slug: "carolina-herrera-very-good-girl-glam-edp-women" },
+  { name: "Yves Saint Laurent Mon Paris Parfum for Women", sku: "FR-YSL-MP-001", slug: "yves-saint-laurent-mon-paris-parfum-women" },
+  { name: "Victoria’s Secret Bare Vanilla Body Fragrance Mist", sku: "FR-VS-BV-250", slug: "victorias-secret-bare-vanilla-body-fragrance-mist" },
+  { name: "Pure Seduction Fragrance Mist & Lotion Set", sku: "FR-SET-PS-250236", slug: "pure-seduction-fragrance-mist-lotion-set" },
+] as const;
+
+export const lowMoqPerfumeSeo: SeoPage = {
+  title: "Low MOQ Perfume Manufacturer - From 2 Pcs | TopPerfume",
+  description: "Selected standard perfume orders from 2 pcs. Free samples are available. Logo, packaging and custom fragrance options start from 100 pcs, subject to project confirmation.",
+  path: "/low-moq-perfume-manufacturer",
+  type: "website",
+  structuredData: [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Low MOQ Perfume Options for New and Growing Brands",
+      description: "Selected standard perfume orders from 2 pcs, with free samples available and logo, packaging and custom fragrance options from 100 pcs subject to project confirmation.",
+      url: canonicalUrl("/low-moq-perfume-manufacturer"),
+      isPartOf: { "@type": "WebSite", name: "TopPerfume", url: canonicalPublicWebsiteUrl },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "Low MOQ perfume sourcing and private-label project support",
+      serviceType: "B2B perfume sourcing, private-label, manufacturing and OEM/ODM project support",
+      provider: { "@type": "Organization", name: "TopPerfume", url: canonicalPublicWebsiteUrl },
+      url: canonicalUrl("/low-moq-perfume-manufacturer"),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Confirmed fragrance product references",
+      itemListElement: lowMoqPerfumeProducts.map((product, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Product",
+          name: product.name,
+          sku: product.sku,
+          url: canonicalUrl(`/products/${product.slug}`),
+        },
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: lowMoqPerfumeFaqs,
+    },
+  ],
 };
 
 const collectionSeoCopy: Record<ProductCategory, Pick<SeoPage, "title" | "description">> = {
