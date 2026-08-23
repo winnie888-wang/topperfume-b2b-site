@@ -62,9 +62,10 @@ export const inquiryRouting = {
 };
 
 export type InquiryIntentKey = "sample" | "quote" | "project" | "whatsapp";
+export type WhatsAppCtaIntent = "sample" | "quote" | "project";
 export type InquirySummaryInput = {
   intent: InquiryIntentKey;
-  context?: { productName?: string; productUrl?: string; category?: string; standardMoq?: string; leadTime?: string; sampleAvailability?: string; customizationNote?: string };
+  context?: { productName?: string; sku?: string; productUrl?: string; category?: string; standardMoq?: string; leadTime?: string; sampleAvailability?: string; customizationNote?: string };
   name?: string;
   country?: string;
   email?: string;
@@ -115,6 +116,30 @@ export function getInquiryMailto(summary: string) {
 
 export function getInquiryWhatsAppUrl(summary: string) {
   return `https://wa.me/${inquiryRouting.whatsappNumber}?text=${encodeURIComponent(summary)}`;
+}
+
+const whatsAppCtaIntro: Record<WhatsAppCtaIntent, string> = {
+  sample: "Hi, I'm interested in requesting a free sample of this product.",
+  quote: "Hi, I'd like to get a wholesale quote for this product.",
+  project: "Hi, I'm interested in private label / OEM / ODM customization for this product.",
+};
+
+export function buildWhatsAppCtaSummary(input: { intent: WhatsAppCtaIntent; context?: InquirySummaryInput["context"] }) {
+  const context = input.context;
+  return [
+    whatsAppCtaIntro[input.intent],
+    "",
+    `Product Name: ${context?.productName || "General website inquiry"}`,
+    `SKU: ${context?.sku || "Not specified"}`,
+    `Product URL: ${context?.productUrl || "Not specified"}`,
+    `Category: ${context?.category || "Not specified"}`,
+    `MOQ: ${customerValue(context?.standardMoq)}`,
+    `Lead Time: ${context?.leadTime || CUSTOMER_DETAILS}`,
+  ].join("\n");
+}
+
+export function getWhatsAppCtaUrl(input: { intent: WhatsAppCtaIntent; context?: InquirySummaryInput["context"] }) {
+  return getInquiryWhatsAppUrl(buildWhatsAppCtaSummary(input));
 }
 
 export type DecisionField = { label: string; value: string; status?: string };

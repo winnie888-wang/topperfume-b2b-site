@@ -392,3 +392,26 @@
 - [x] 将所有客户可见 `/manus-storage/...` 依赖替换为 Public Vercel Blob URL；不得修改产品数据、重新生成图片或改变视觉系统。
 - [x] 在真实 Vercel Preview 验证 Homepage、3 个 Collection、所有 Product Detail 的图片，确认 Broken image count = 0、客户可见 `/manus-storage/` remaining count = 0、路由和询盘无回归。
 - [x] 保存隔离检查点并仅同步 GitHub `v2-prototype`，验证 main 不变；不发布 Production、不开始 SEO，交付 SHA、Preview URL、迁移数量、Blob 用量与验证结果。
+
+### Phase 10A — Final Production Launch (Approved)
+
+ - [x] 核对 `v2-prototype` 指定提交 `07455785c43a26cfc987742d9fafb8d5f55c9196`、main 基线、Production 服务器端邮件与 Blob 环境变量名称，以及不修改 `topperfume.cn` / `mail.topperfume.cn` DNS 的限制。
+ - [x] 不引入任何设计、SKU、文案或功能变更，将已验证的 `v2-prototype` 合并至 main，并由 Git 连接的 Vercel 触发 Production 部署。
+ - [x] 在实际 Vercel Production 验证 Homepage、三类 Collection、代表性 PDP、图片、Request Sample、Get Quote、Start Your Project、WhatsApp 与移动端；确认公开 `/manus-storage/` 和原始 `[TO CONFIRM]` 均为 0。
+ - [x] 执行一次受控真实 Production 询盘，核对 HTTP 成功、Resend 接受和实际邮件送达；不得泄露任何密钥。
+ - [x] 交付 Production URL、main SHA、根页面 HTTP 状态、图片与询盘验证结果；不改 DNS、不开始 SEO，并等待后续批准。
+
+### Phase 10A — Approved Unrelated-History Release Procedure
+
+ - [x] 将现有 main 提交 `30dee6671c518ddfb6c08021acaee2f7ea231ba4` 创建为远端备份分支 `backup-main-pre-v2-launch-20260823` 并核验 SHA。
+ - [x] 不使用普通 merge，将 main 精确更新为已验收提交 `07455785c43a26cfc987742d9fafb8d5f55c9196`；不得引入任何额外代码、设计、SKU、SEO、DNS 或邮件 DNS 改动。
+ - [x] 等待 Git 连接的 Vercel Production 自动部署并执行 Homepage、三类 Collection、Product Detail、图片、移动端、Request Sample、Get Quote、Start Your Project、WhatsApp 与真实 Resend 投递烟雾测试。
+ - [x] 返回备份分支 SHA、最终 main SHA、Production URL、Production 状态、询盘测试与邮件送达结果；不连接 `topperfume.cn`，不修改 `mail.topperfume.cn` DNS，不开始 SEO。
+
+### Phase 10B — WhatsApp-first Conversion Correction
+
+- [x] 审计 Header、Mobile navigation、Product Detail、Order Pathways、Closing banner 与 Footer 中的主要销售 CTA 和 InquiryDrawer 调用点。
+- [x] 将 Request Sample、Get Quote、Start Your Project 分别改为 Request Free Sample、Get Wholesale Quote、Customize / Private Label，并让所有主要销售 CTA 直接打开 WhatsApp，不再弹出 InquiryDrawer。
+- [x] 为产品 CTA 自动拼接 Product Name、SKU、Product URL、Category、MOQ、Lead Time 与对应意图文本；不要求买家手动复制产品资料。
+- [x] 保留 Resend、tRPC 与 InquiryDrawer 后端及代码，但从当前客户主要转化路径隐藏；不得修改 SKU、价格、MOQ、图片、Product Detail 内容、Blob、DNS、域名或 Resend 配置。
+- [ ] 完成桌面/移动端 CTA、WhatsApp 预填内容、零 InquiryDrawer 主路径、Production 图片无破图、Production 部署与 main 同步验证；交付 Production URL、GitHub SHA 和 CTA 验证结果。

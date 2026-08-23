@@ -11,7 +11,7 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { buildInquirySummary, businessProfile, getInquiryWhatsAppUrl } from "@/data/business";
+import { buildInquirySummary, businessProfile, getInquiryWhatsAppUrl, getWhatsAppCtaUrl, type WhatsAppCtaIntent } from "@/data/business";
 import { publicAssetUrl } from "@/data/publicAssets";
 import { trpc } from "@/lib/trpc";
 import { getInquiryDisplayState } from "@shared/inquiryUi";
@@ -117,14 +117,20 @@ export function WhatsAppAction({ context, className = "" }: { context?: InquiryC
   return <button type="button" className={`whatsapp-action ${className}`} onClick={openWhatsApp}><MessageCircle size={16} /> WhatsApp</button>;
 }
 
+export function WhatsAppCta({ label, intent = "project", context, className = "" }: { label: string; intent?: WhatsAppCtaIntent; context?: InquiryContext; className?: string }) {
+  const productUrl = context?.productUrl ? new URL(context.productUrl, window.location.origin).toString() : undefined;
+  const href = getWhatsAppCtaUrl({ intent, context: { ...context, productUrl } });
+  return <a className={`button-primary ${className}`} href={href} target="_blank" rel="noreferrer">{label} <ArrowRight size={16} strokeWidth={1.8} /></a>;
+}
+
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   return <div className="site-shell">
     <div className="utility-strip"><span>FRAGRANCE · SKINCARE · MAKEUP / BRANDED WHOLESALE · PRIVATE LABEL / OEM ODM</span><span>CURATED SKU PORTFOLIO · SAMPLE · QUOTE · PROJECT</span></div>
-    <header className="site-header"><Wordmark /><nav className="desktop-nav" aria-label="Main navigation">{nav.map((item) => <Link className={location === item.href ? "nav-link active" : "nav-link"} key={item.href} href={item.href}>{item.label}</Link>)}<a className="nav-link" href="#capabilities">Capabilities</a></nav><div className="header-actions"><span className="desktop-only"><InquiryDrawer triggerLabel="Start Your Project" /></span><button className="menu-button" onClick={() => setMobileOpen(true)} aria-label="Open menu"><Menu size={22} /></button></div></header>
-    <Sheet open={mobileOpen} onOpenChange={setMobileOpen}><SheetContent side="left" className="mobile-nav-sheet"><SheetHeader><div className="mobile-close"><Wordmark /><button onClick={() => setMobileOpen(false)} aria-label="Close menu"><X size={20} /></button></div><SheetTitle className="sr-only">Navigation</SheetTitle></SheetHeader><nav className="mobile-nav" aria-label="Mobile navigation">{nav.map((item, index) => <Link onClick={() => setMobileOpen(false)} key={item.href} href={item.href}><span>0{index + 1}</span>{item.label}</Link>)}<a onClick={() => setMobileOpen(false)} href="#capabilities"><span>04</span>Capabilities</a></nav><InquiryDrawer triggerLabel="Start Your Project" /></SheetContent></Sheet>
+    <header className="site-header"><Wordmark /><nav className="desktop-nav" aria-label="Main navigation">{nav.map((item) => <Link className={location === item.href ? "nav-link active" : "nav-link"} key={item.href} href={item.href}>{item.label}</Link>)}<a className="nav-link" href="#capabilities">Capabilities</a></nav><div className="header-actions"><span className="desktop-only"><WhatsAppCta label="Customize / Private Label" /></span><button className="menu-button" onClick={() => setMobileOpen(true)} aria-label="Open menu"><Menu size={22} /></button></div></header>
+    <Sheet open={mobileOpen} onOpenChange={setMobileOpen}><SheetContent side="left" className="mobile-nav-sheet"><SheetHeader><div className="mobile-close"><Wordmark /><button onClick={() => setMobileOpen(false)} aria-label="Close menu"><X size={20} /></button></div><SheetTitle className="sr-only">Navigation</SheetTitle></SheetHeader><nav className="mobile-nav" aria-label="Mobile navigation">{nav.map((item, index) => <Link onClick={() => setMobileOpen(false)} key={item.href} href={item.href}><span>0{index + 1}</span>{item.label}</Link>)}<a onClick={() => setMobileOpen(false)} href="#capabilities"><span>04</span>Capabilities</a></nav><WhatsAppCta label="Customize / Private Label" /></SheetContent></Sheet>
     <main>{children}</main>
-    <footer className="site-footer"><div><Wordmark /><p>Beauty product development and manufacturing for brands building a distinct next collection.</p></div><div className="footer-index"><span>01 / Product browse</span><span>02 / Custom development</span><span>03 / Buyer decision tools</span></div><div className="footer-cta"><p>Choose a product. Request a sample. Start your project.</p><a className="footer-contact-link" href={`mailto:${businessProfile.email}`}>{businessProfile.email}</a><a className="footer-contact-link" href={`https://wa.me/${businessProfile.whatsappNumber}`} target="_blank" rel="noreferrer">WhatsApp {businessProfile.whatsappDisplay}</a><InquiryDrawer triggerLabel="Start Your Project" /></div></footer>
+    <footer className="site-footer"><div><Wordmark /><p>Beauty product development and manufacturing for brands building a distinct next collection.</p></div><div className="footer-index"><span>01 / Product browse</span><span>02 / Custom development</span><span>03 / Buyer decision tools</span></div><div className="footer-cta"><p>Choose a product. Request a sample. Start your project.</p><a className="footer-contact-link" href={`mailto:${businessProfile.email}`}>{businessProfile.email}</a><a className="footer-contact-link" href={`https://wa.me/${businessProfile.whatsappNumber}`} target="_blank" rel="noreferrer">WhatsApp {businessProfile.whatsappDisplay}</a><WhatsAppCta label="Customize / Private Label" /></div></footer>
   </div>;
 }
