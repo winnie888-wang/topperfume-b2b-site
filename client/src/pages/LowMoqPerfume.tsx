@@ -24,16 +24,37 @@ const catalogueBrands: Record<string, string> = {
   "yves-saint-laurent-mon-paris-parfum-women": "Yves Saint Laurent",
   "victorias-secret-bare-vanilla-body-fragrance-mist": "Victoria’s Secret",
 };
-const referenceOnlyItems = [
-  { image: "/assets/phase14d/good-girl-pink-reference.jpg", brand: "Carolina Herrera", name: "Good Girl Pink Stiletto Reference" },
-  { image: "/assets/phase14d/amber-romance-reference.jpg", brand: "Victoria’s Secret", name: "Amber Romance Shimmer Body Mist Reference" },
-  { image: "/assets/phase14d/love-spell-reference.jpg", brand: "Victoria’s Secret", name: "Love Spell Shimmer Body Mist Reference" },
-  { image: "/assets/phase14d/velvet-petals-reference.jpg", brand: "Victoria’s Secret", name: "Velvet Petals Shimmer Body Mist Reference" },
-  { image: "/assets/phase14d/odyssey-spectra-rainbow-reference.jpg", brand: "Odyssey Spectra", name: "Rainbow Edition Body Mist Reference" },
-  { image: "/assets/phase14d/coconut-passion-reference.jpg", brand: "Victoria’s Secret", name: "Coconut Passion Shimmer Body Mist Reference" },
-  { image: "/assets/phase14d/odyssey-spectra-blue-reference.jpg", brand: "Odyssey Spectra", name: "Blu Edition Body Mist Reference" },
-  { image: "/assets/phase14d/go-mango-reference.jpg", brand: "Go Mango", name: "Tropical Collection Body Mist Reference" },
-  { image: "/assets/phase14d/toffee-coffee-reference.jpg", brand: "Toffee Coffee", name: "Cafe Edmon Body Mist Reference" },
+const referenceOnlyGroups = [
+  {
+    eyebrow: "WARM / GOURMAND",
+    title: "Soft warmth and sweet layering",
+    direction: "Warm amber · vanilla · creamy gourmand",
+    items: [
+      { index: "07", image: "/assets/phase14d/amber-romance-reference.jpg", brand: "Victoria’s Secret", name: "Amber Romance Shimmer Body Mist Reference" },
+      { index: "08", image: "/assets/phase14d/coconut-passion-reference.jpg", brand: "Victoria’s Secret", name: "Coconut Passion Shimmer Body Mist Reference" },
+      { index: "09", image: "/assets/phase14d/toffee-coffee-reference.jpg", brand: "Toffee Coffee", name: "Cafe Edmon Body Mist Reference" },
+    ],
+  },
+  {
+    eyebrow: "FLORAL / FEMININE",
+    title: "Petal-led directions with a polished finish",
+    direction: "Pink floral · fruity floral · soft powder",
+    items: [
+      { index: "10", image: "/assets/phase14d/good-girl-pink-reference.jpg", brand: "Carolina Herrera", name: "Good Girl Pink Stiletto Reference" },
+      { index: "11", image: "/assets/phase14d/love-spell-reference.jpg", brand: "Victoria’s Secret", name: "Love Spell Shimmer Body Mist Reference" },
+      { index: "12", image: "/assets/phase14d/velvet-petals-reference.jpg", brand: "Victoria’s Secret", name: "Velvet Petals Shimmer Body Mist Reference" },
+    ],
+  },
+  {
+    eyebrow: "BRIGHT / EXPRESSIVE",
+    title: "Color, fruit and fresh visual energy",
+    direction: "Tropical fruit · fresh blue · colorful statement",
+    items: [
+      { index: "13", image: "/assets/phase14d/odyssey-spectra-rainbow-reference.jpg", brand: "Odyssey Spectra", name: "Rainbow Edition Body Mist Reference" },
+      { index: "14", image: "/assets/phase14d/odyssey-spectra-blue-reference.jpg", brand: "Odyssey Spectra", name: "Blu Edition Body Mist Reference" },
+      { index: "15", image: "/assets/phase14d/go-mango-reference.jpg", brand: "Go Mango", name: "Tropical Collection Body Mist Reference" },
+    ],
+  },
 ] as const;
 const referenceDirections = {
   "dior-sauvage-parfum-spray-men": {
@@ -80,9 +101,15 @@ const referenceDirections = {
   },
 } as const;
 
-const heroVisual = {
+  const heroVisual = {
   image: publicAssetUrl("topperfume-packaging-study_f7ac65c2.jpg"),
   alt: "Illustrative concept visual of unbranded perfume packaging development materials",
+};
+
+const fragranceVideo = {
+  src: "/assets/phase14d/fragrance-reference-loop.mp4",
+  poster: "/assets/phase14d/fragrance-reference-poster.jpg",
+  alt: "Fragrance bottles and packaging references arranged on illuminated shelves",
 };
 
 const commercialFacts = [
@@ -208,6 +235,11 @@ export default function LowMoqPerfume() {
       </figure>
     </section>
 
+    <section className="low-moq-video-block" aria-labelledby="low-moq-video-title">
+      <div className="low-moq-video-copy"><p className="eyebrow">01A / FRAGRANCE PRESENTATION</p><h2 id="low-moq-video-title">A visual starting point for your next fragrance line.</h2><p>Explore bottle, label and packaging references before moving into a private-label conversation. The supplied footage is shown as a product-reference visual, not as a factory, laboratory or production-line claim.</p><div className="low-moq-video-note"><span>Muted loop · 11.5 sec edit</span><span>Poster fallback on mobile</span></div></div>
+      <figure className="low-moq-video-media"><img className="low-moq-video-poster" src={fragranceVideo.poster} alt="" aria-hidden="true" /><video autoPlay muted loop playsInline poster={fragranceVideo.poster} preload="metadata" aria-label={fragranceVideo.alt}><source src={fragranceVideo.src} type="video/mp4" /></video><figcaption><span>Customer-facing visual reference</span><strong>Fragrance bottles, packaging and shelf-ready directions</strong></figcaption></figure>
+    </section>
+
     <section className="low-moq-facts" aria-label="Commercial buying facts">
       <div className="low-moq-facts-intro"><p className="eyebrow">BUYING FACTS</p><h2>Start with the route you need.</h2><p>Starting points are route-specific. Current eligibility and terms are confirmed against the selected SKU and project.</p></div>
       <div className="low-moq-facts-grid">{commercialFacts.map((fact) => <div key={fact.label}><strong>{fact.value}</strong><span>{fact.label}</span></div>)}</div>
@@ -254,10 +286,13 @@ export default function LowMoqPerfume() {
       })}</div>
 
       <div className="low-moq-reference-subhead low-moq-reference-subhead-secondary"><p className="eyebrow">SUPPLIED SCENT REFERENCES</p><h3>Additional fragrance directions</h3><span>Visual reference only · no invented SKU, price, MOQ or PDP</span></div>
-      <div className="product-grid low-moq-product-grid low-moq-reference-grid low-moq-reference-only-grid">{referenceOnlyItems.map((item, index) => <article className="low-moq-reference-only-item" key={item.image}>
-        <div className="low-moq-reference-only-image-wrap"><span className="low-moq-reference-only-index">{String(evidenceProducts.length + index + 1).padStart(2, "0")}</span><img src={item.image} alt={`${item.brand} ${item.name} scent reference`} className="low-moq-reference-only-image" loading="lazy" decoding="async" /><span className="low-moq-reference-only-label">Scent Reference</span></div>
-        <div className="low-moq-reference-only-copy"><p className="low-moq-reference-only-brand">{item.brand}</p><h3>{item.name}</h3><p className="low-moq-reference-only-prompt">Like this fragrance direction? Ask about a similar scent for your own brand.</p><WhatsAppCta label="Ask About Similar Scent" intent="project" context={{ productName: `Reference fragrance: ${item.brand} ${item.name}`, pageUrl: canonicalUrl(lowMoqPerfumeSeo.path), category: "fragrance", inquiryIntent: "private_label" }} /></div>
-      </article>)}</div>
+      <div className="low-moq-reference-only-groups">{referenceOnlyGroups.map((group) => <section className="low-moq-reference-group" key={group.eyebrow}>
+        <div className="low-moq-reference-group-head"><p className="eyebrow">{group.eyebrow}</p><h4>{group.title}</h4><span>{group.direction}</span></div>
+        <div className="product-grid low-moq-product-grid low-moq-reference-grid low-moq-reference-only-grid">{group.items.map((item) => <article className="low-moq-reference-only-item" key={item.image}>
+          <div className="low-moq-reference-only-image-wrap"><span className="low-moq-reference-only-index">{item.index}</span><img src={item.image} alt={`${item.brand} ${item.name} scent reference`} className="low-moq-reference-only-image" loading="lazy" decoding="async" /><span className="low-moq-reference-only-label">Scent Reference</span></div>
+          <div className="low-moq-reference-only-copy"><p className="low-moq-reference-only-brand">{item.brand}</p><h3>{item.name}</h3><p className="low-moq-reference-only-direction">{group.direction}</p><p className="low-moq-reference-only-prompt">Like this fragrance direction? Ask about a similar scent for your own brand.</p><WhatsAppCta label="Ask About Similar Scent" intent="project" context={{ productName: `Reference fragrance: ${item.brand} ${item.name}`, pageUrl: canonicalUrl(lowMoqPerfumeSeo.path), category: "fragrance", inquiryIntent: "private_label" }} /></div>
+        </article>)}</div>
+      </section>)}</div>
     </section>
 
     <section className="low-moq-sample-panel">

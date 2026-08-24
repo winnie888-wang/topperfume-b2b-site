@@ -370,3 +370,48 @@
   .low-moq-reference-only-label { bottom: 7px; left: 7px; font-size: 5.5px; }
   .low-moq-reference-only-copy > .button-primary, .low-moq-reference-bridge > .button-primary { font-size: 8px; padding-left: 6px; padding-right: 6px; }
 }
+
+/* Phase 14D final enhancement — premium customer-facing fragrance presentation visual. */
+.low-moq-video-block { align-items: center; background: var(--plum); color: var(--paper); display: grid; gap: 7vw; grid-template-columns: .78fr 1.22fr; padding: 76px 7vw; }
+.low-moq-video-copy .eyebrow { color: #deb2ad; }
+.low-moq-video-copy h2 { color: var(--paper); font-size: clamp(36px, 4.2vw, 64px); letter-spacing: -.055em; line-height: .91; margin: 0; max-width: 500px; }
+.low-moq-video-copy > p:not(.eyebrow) { color: rgba(248,244,237,.72); font-size: 12px; line-height: 1.6; margin: 23px 0 0; max-width: 390px; }
+.low-moq-video-note { border-left: 2px solid var(--rose); display: grid; gap: 7px; margin-top: 28px; padding-left: 13px; }
+.low-moq-video-note span { color: #deb2ad; font-size: 8px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.low-moq-video-media { aspect-ratio: 16 / 9; background: #221523; border: 1px solid rgba(248,244,237,.28); margin: 0; min-height: 0; overflow: hidden; position: relative; }
+.low-moq-video-poster, .low-moq-video-media video { height: 100%; inset: 0; object-fit: cover; position: absolute; width: 100%; }
+.low-moq-video-poster { filter: saturate(.88); }
+.low-moq-video-media video { z-index: 1; }
+.low-moq-video-media figcaption { background: linear-gradient(transparent, rgba(33,19,34,.93)); bottom: 0; display: grid; gap: 4px; left: 0; padding: 62px 22px 20px; position: absolute; right: 0; z-index: 2; }
+.low-moq-video-media figcaption span { color: #e8b8b1; font-size: 7px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.low-moq-video-media figcaption strong { color: var(--paper); font-family: var(--font-display); font-size: clamp(21px, 2.4vw, 34px); font-weight: 500; letter-spacing: -.035em; line-height: .95; max-width: 460px; }
+@media (max-width: 900px) {
+  .low-moq-video-block { grid-template-columns: 1fr; gap: 34px; }
+  .low-moq-video-copy > p:not(.eyebrow) { max-width: 560px; }
+  .low-moq-video-media { margin: 0 auto; max-width: 720px; width: 100%; }
+}
+@media (max-width: 610px) {
+  .low-moq-video-block { gap: 27px; padding: 70px 5vw; }
+  .low-moq-video-copy h2 { font-size: clamp(38px, 12vw, 54px); }
+  .low-moq-video-copy > p:not(.eyebrow) { font-size: 11px; }
+  .low-moq-video-media { aspect-ratio: 9 / 14; }
+  .low-moq-video-media video { display: none; }
+  .low-moq-video-poster { object-position: center center; }
+  .low-moq-video-media figcaption { padding: 75px 15px 15px; }
+  .low-moq-video-media figcaption strong { font-size: 24px; }
+}
+
+/* Phase 14D final enhancement — grouped scent-direction captions for supplied references. */
+.low-moq-reference-only-groups { display: grid; gap: 64px; }
+.low-moq-reference-group { min-width: 0; }
+.low-moq-reference-group-head { align-items: end; border-bottom: 1px solid var(--line); display: grid; gap: 8px 20px; grid-template-columns: 1fr auto; margin-bottom: 22px; padding-bottom: 11px; }
+.low-moq-reference-group-head .eyebrow { color: var(--rose); grid-column: 1 / -1; margin: 0; }
+.low-moq-reference-group-head h4 { color: var(--plum); font-family: var(--font-display); font-size: clamp(26px, 2.8vw, 40px); letter-spacing: -.045em; line-height: .95; margin: 0; }
+.low-moq-reference-group-head > span { color: rgba(41,27,46,.6); font-size: 8px; font-weight: 800; letter-spacing: .08em; text-align: right; text-transform: uppercase; }
+.low-moq-reference-only-direction { color: var(--rose); font-size: 8px; font-weight: 800; letter-spacing: .08em; line-height: 1.35; margin: 0 0 8px; text-transform: uppercase; }
+@media (max-width: 610px) {
+  .low-moq-reference-only-groups { gap: 46px; }
+  .low-moq-reference-group-head { align-items: start; display: block; }
+  .low-moq-reference-group-head h4 { font-size: 27px; margin-top: 6px; }
+  .low-moq-reference-group-head > span { display: block; font-size: 7px; margin-top: 9px; text-align: left; }
+}
