@@ -475,3 +475,13 @@
   .low-moq-custom-visual { grid-column: 1; grid-row: auto; }
   .low-moq-customization-grid { grid-column: 1; }
 }
+
+/* Phase 14E.1 — the approved Hero scene is a single wide bottle/box plate, so the frame follows the supplied artwork instead of a tall collage ratio. */
+.low-moq-hero-visual-supplied { aspect-ratio: 806 / 468; height: auto; }
+.low-moq-hero-visual-supplied .low-moq-hero-supplied-image { object-fit: contain; }
+@media (max-width: 900px) {
+  .low-moq-hero-visual-supplied { height: auto; width: 100%; }
+}
+@media (max-width: 610px) {
+  .low-moq-hero-visual-supplied { width: calc(100% + 10vw); }
+}

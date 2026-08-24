@@ -101,12 +101,12 @@ const referenceDirections = {
 } as const;
 
   const heroVisual = {
-  image: "/assets/phase14e/01-hero-private-label-visual.png",
+  image: "/assets/phase14e1/01-hero-private-label-single-scene.png",
   alt: "Premium private-label fragrance bottle and packaging visual reference",
 };
 
 const customizationVisual = {
-  image: "/assets/phase14e/02-midpage-custom-bottle-range.png",
+  image: "/assets/phase14e1/02-midpage-custom-bottle-array.png",
   alt: "Custom bottle and packaging range visual reference for a private-label brief",
 };
 
