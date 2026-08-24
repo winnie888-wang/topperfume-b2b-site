@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { products } from "../client/src/data/products";
-import { buildRobotsTxt, buildSitemapXml, collectionSeo, getProductSeo, homeSeo, type SeoPage } from "../shared/seo";
+import { buildRobotsTxt, buildSitemapXml, collectionSeo, getProductSeo, homeSeo, lowMoqPerfumeSeo, type SeoPage } from "../shared/seo";
 
 const outputDirectory = path.resolve(import.meta.dirname, "..", "dist", "public");
 
@@ -31,6 +31,7 @@ async function writePage(relativeDirectory: string, html: string) {
 
 const template = await readFile(path.join(outputDirectory, "index.html"), "utf8");
 await writeFile(path.join(outputDirectory, "index.html"), renderPageHtml(template, homeSeo), "utf8");
+await writePage("low-moq-perfume-manufacturer", renderPageHtml(template, lowMoqPerfumeSeo));
 
 for (const [category, seo] of Object.entries(collectionSeo)) {
   await writePage(path.join("collections", category), renderPageHtml(template, seo));
