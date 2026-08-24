@@ -4,7 +4,6 @@ import { ProductCard } from "@/components/ProductCard";
 import { SiteShell, WhatsAppCta } from "@/components/SiteShell";
 import { Seo } from "@/components/Seo";
 import { products } from "@/data/products";
-import { publicAssetUrl } from "@/data/publicAssets";
 import { canonicalUrl, lowMoqPerfumeSeo } from "@shared/seo";
 
 const fragranceProducts = products.filter((product) => product.category === "fragrance");
@@ -102,8 +101,13 @@ const referenceDirections = {
 } as const;
 
   const heroVisual = {
-  image: publicAssetUrl("topperfume-packaging-study_f7ac65c2.jpg"),
-  alt: "Illustrative concept visual of unbranded perfume packaging development materials",
+  image: "/assets/phase14e/01-hero-private-label-visual.png",
+  alt: "Premium private-label fragrance bottle and packaging visual reference",
+};
+
+const customizationVisual = {
+  image: "/assets/phase14e/02-midpage-custom-bottle-range.png",
+  alt: "Custom bottle and packaging range visual reference for a private-label brief",
 };
 
 const fragranceVideo = {
@@ -228,10 +232,10 @@ export default function LowMoqPerfume() {
         </div>
         <div className="low-moq-hero-index"><span>01</span><span>Standard product → branded direction → project review</span></div>
       </div>
-      <figure className="low-moq-hero-visual">
-        <span className="low-moq-visual-index">UNBRANDED PACKAGING CONCEPT</span>
-        <img src={heroVisual.image} alt={heroVisual.alt} />
-        <figcaption><span>Illustrative / Concept Visual</span><strong>Packaging direction for a branded fragrance brief</strong><small>Not a facility, laboratory or production-line photograph</small></figcaption>
+      <figure className="low-moq-hero-visual low-moq-hero-visual-supplied">
+        <span className="low-moq-visual-index">PRIVATE LABEL / PACKAGING VISUAL</span>
+        <img className="low-moq-hero-supplied-image" src={heroVisual.image} alt={heroVisual.alt} />
+        <figcaption><span>Illustrative / Supplied Visual</span><strong>Packaging direction for a branded fragrance brief</strong><small>Visual reference only · not a facility, laboratory or production-line photograph</small></figcaption>
       </figure>
     </section>
 
@@ -302,6 +306,7 @@ export default function LowMoqPerfume() {
 
     <section id="customization" className="low-moq-customization">
       <div className="low-moq-section-intro"><p className="eyebrow">05 / PROJECT OPTIONS</p><h2>Make the brief as specific as it needs to be.</h2><p>Logo, packaging and fragrance are separate questions. Final component and formula scope follows the confirmed project brief.</p></div>
+      <figure className="low-moq-custom-visual"><img src={customizationVisual.image} alt={customizationVisual.alt} loading="lazy" decoding="async" /><figcaption><span>ILLUSTRATIVE CUSTOMIZATION VISUAL</span><strong>Bottle and packaging directions for your brief.</strong><small>Visual reference only · scope confirmed per project</small></figcaption></figure>
       <div className="low-moq-customization-grid"><article><span>01 / LOGO</span><h3>Private Label / Logo</h3><p>Logo customization from 100 pcs. Label route and product scope are confirmed before quotation.</p><small>Ask about the selected SKU.</small></article><article><span>02 / PACKAGING</span><h3>Packaging Options</h3><p>Packaging options from 100 pcs. Bottle, cap, carton, label and artwork scope is confirmed per project.</p><small>Each component is reviewed with the project brief.</small></article><article><span>03 / FRAGRANCE</span><h3>Custom Fragrance</h3><p>Fragrance customization from 100 pcs, subject to a scent brief and project confirmation.</p><small>Custom scope is reviewed before commitment.</small></article></div>
     </section>
 

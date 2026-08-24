@@ -444,3 +444,34 @@
 @media (prefers-reduced-motion: reduce) {
   .low-moq-video-media video { display: none; }
 }
+
+/* Phase 14E — final supplied visual mounts: preserve the complete processed artwork without creating product or commercial data. */
+.low-moq-hero-visual-supplied { background: linear-gradient(145deg, #e9dfd8, #fbf8f2 58%, #e4d4d4); box-shadow: inset 0 0 0 1px rgba(41,27,46,.16), 0 18px 42px rgba(41,27,46,.11); isolation: isolate; }
+.low-moq-hero-visual-supplied::after { border: 1px solid rgba(41,27,46,.16); content: ""; inset: 14px; pointer-events: none; position: absolute; z-index: 2; }
+.low-moq-hero-visual-supplied .low-moq-hero-supplied-image { background: transparent; object-fit: contain; padding: 0; position: relative; z-index: 1; }
+.low-moq-hero-visual-supplied figcaption { z-index: 4; }
+.low-moq-custom-visual { background: linear-gradient(145deg, #f1e8e2, #fbf8f2 62%, #e8d9d9); border: 1px solid rgba(41,27,46,.14); box-shadow: inset 0 0 0 10px rgba(252,250,246,.7), 0 18px 38px rgba(41,27,46,.08); grid-column: 1 / -1; margin: 0; max-height: 520px; overflow: hidden; position: relative; }
+.low-moq-custom-visual img { display: block; height: min(520px, 58vw); max-height: 520px; object-fit: contain; padding: 10px; width: 100%; }
+.low-moq-custom-visual::after { border: 1px solid rgba(41,27,46,.12); content: ""; inset: 20px; pointer-events: none; position: absolute; }
+.low-moq-custom-visual figcaption { background: linear-gradient(180deg, transparent, rgba(41,27,46,.82)); bottom: 0; color: #fff; display: flex; flex-direction: column; left: 0; padding: 72px 28px 20px; position: absolute; right: 0; z-index: 2; }
+.low-moq-custom-visual figcaption span, .low-moq-custom-visual figcaption small { color: rgba(255,255,255,.78); font-size: 7px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.low-moq-custom-visual figcaption strong { font-family: var(--font-display); font-size: clamp(24px, 2.5vw, 36px); font-weight: 600; letter-spacing: -.045em; line-height: .98; margin: 7px 0 8px; max-width: 430px; }
+@media (max-width: 900px) {
+  .low-moq-custom-visual img { height: min(480px, 62vw); }
+}
+@media (max-width: 610px) {
+  .low-moq-hero-visual-supplied::after { inset: 10px; }
+  .low-moq-custom-visual { max-height: 330px; }
+  .low-moq-custom-visual img { height: 330px; padding: 6px; }
+  .low-moq-custom-visual::after { inset: 12px; }
+  .low-moq-custom-visual figcaption { padding: 58px 17px 15px; }
+  .low-moq-custom-visual figcaption strong { font-size: 25px; }
+}
+
+/* Phase 14E layout guard: the supplied customization visual sits beside the brief on desktop and stacks safely on smaller screens. */
+.low-moq-custom-visual { align-self: start; grid-column: 2; grid-row: 1 / span 2; }
+.low-moq-customization-grid { grid-column: 1 / -1; }
+@media (max-width: 900px) {
+  .low-moq-custom-visual { grid-column: 1; grid-row: auto; }
+  .low-moq-customization-grid { grid-column: 1; }
+}
