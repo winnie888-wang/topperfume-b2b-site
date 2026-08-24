@@ -415,3 +415,8 @@
   .low-moq-reference-group-head h4 { font-size: 27px; margin-top: 6px; }
   .low-moq-reference-group-head > span { display: block; font-size: 7px; margin-top: 9px; text-align: left; }
 }
+
+/* Mobile grid guard: keep both reference sections at two columns despite the legacy one-column product rule. */
+@media (max-width: 610px) {
+  .low-moq-products .low-moq-reference-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
