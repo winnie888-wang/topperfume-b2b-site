@@ -1,4 +1,4 @@
-import type { Product, ProductCategory } from "@/data/products";
+import { getProduct, type Product, type ProductCategory } from "@/data/products";
 
 export const canonicalPublicWebsiteUrl = "https://topperfume.cn";
 
@@ -116,12 +116,17 @@ export const lowMoqPerfumeSeo: SeoPage = {
       itemListElement: lowMoqPerfumeProducts.map((product, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        item: {
-          "@type": "Product",
-          name: product.name,
-          sku: product.sku,
-          url: canonicalUrl(`/products/${product.slug}`),
-        },
+        item: (() => {
+          const sourceProduct = getProduct(product.slug);
+          const offers = sourceProduct ? getProductOffer(sourceProduct) : undefined;
+          return {
+            "@type": "Product",
+            name: product.name,
+            sku: product.sku,
+            url: canonicalUrl(`/products/${product.slug}`),
+            ...(offers ? { offers } : {}),
+          };
+        })(),
       })),
     },
     {
@@ -170,26 +175,54 @@ function cleanDescriptor(value: string) {
   return value.split("·").map(part => part.trim()).filter(Boolean).join(", ");
 }
 
+function parseB2bPrice(value?: string) {
+  const match = value?.match(/(?:US\$|\$)\s*(\d+(?:\.\d+)?)/);
+  return match ? Number(match[1]) : undefined;
+}
+
+export function getProductOffer(product: Product) {
+  const price = parseB2bPrice(product.b2bPrice);
+  if (price === undefined) return undefined;
+
+  // The catalogue has no verified inventory field. Do not infer availability from sampleAvailability or dataStatus.
+  return {
+    "@type": "Offer",
+    price,
+    priceCurrency: "USD",
+    url: canonicalUrl(`/products/${product.slug}`),
+  };
+}
+
 export function getProductSeo(product: Product): SeoPage {
   const path = `/products/${product.slug}`;
   const categoryLabel = product.category === "skincare" ? "Skincare & Body Care" : product.category[0].toUpperCase() + product.category.slice(1);
   const description = `${product.name} is a ${cleanDescriptor(product.descriptor)} ${categoryLabel.toLowerCase()} format for B2B buyers. Request a sample or wholesale quote from TopPerfume.`;
+  const offer = getProductOffer(product);
+  const structuredData = offer ? {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description,
+    sku: product.sku,
+    category: categoryLabel,
+    url: canonicalUrl(path),
+    image: product.image,
+    offers: offer,
+  } : {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: product.name,
+    description,
+    url: canonicalUrl(path),
+    about: { "@type": "Thing", name: product.name, identifier: product.sku },
+  };
 
   return {
     title: `${product.name} | ${categoryLabel} Wholesale | TopPerfume`,
     description,
     path,
     type: "product",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      name: product.name,
-      description,
-      sku: product.sku,
-      category: categoryLabel,
-      url: canonicalUrl(path),
-      image: product.image,
-    },
+    structuredData,
   };
 }
 

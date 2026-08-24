@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { products } from "../client/src/data/products";
-import { buildRobotsTxt, buildSitemapXml, canonicalPublicWebsiteUrl, canonicalUrl, collectionSeo, getProductSeo, homeSeo } from "../shared/seo";
+import { buildRobotsTxt, buildSitemapXml, canonicalPublicWebsiteUrl, canonicalUrl, collectionSeo, getProductOffer, getProductSeo, homeSeo, lowMoqPerfumeSeo } from "../shared/seo";
 
 describe("Production SEO foundation", () => {
   it("uses one https canonical domain for the site, collections and products", () => {
@@ -44,20 +44,49 @@ describe("Production SEO foundation", () => {
     expect(robots).not.toContain(".vercel.app");
   });
 
-  it("creates product metadata and schema without invented ratings, offers, prices or certifications", () => {
-    for (const product of products) {
+  it("publishes real offers for products with confirmed prices without inventing ratings or inventory", () => {
+    const pricedProducts = products.filter(product => getProductOffer(product));
+    expect(pricedProducts).toHaveLength(21);
+
+    for (const product of pricedProducts) {
+      const offer = getProductOffer(product);
       const seo = getProductSeo(product);
-      const schema = JSON.stringify(seo.structuredData);
-      expect(seo.title).toContain(product.name);
-      expect(seo.title).toContain("TopPerfume");
-      expect(seo.description).not.toContain("[TO CONFIRM]");
-      expect(schema).toContain('"@type":"Product"');
-      expect(schema).toContain(`"sku":"${product.sku}"`);
-      expect(schema).toContain(`"url":"https://topperfume.cn/products/${product.slug}"`);
-      expect(schema).not.toContain("aggregateRating");
-      expect(schema).not.toContain("offers");
-      expect(schema).not.toContain("price");
-      expect(schema).not.toContain("certification");
+      const schema = seo.structuredData as Record<string, unknown>;
+      expect(offer).toMatchObject({
+        "@type": "Offer",
+        priceCurrency: "USD",
+        url: `https://topperfume.cn/products/${product.slug}`,
+      });
+      expect(typeof offer?.price).toBe("number");
+      expect(schema).toMatchObject({ "@type": "Product", offers: offer });
+      expect(JSON.stringify(schema)).not.toContain("aggregateRating");
+      expect(JSON.stringify(schema)).not.toContain("review");
+      expect(JSON.stringify(schema)).not.toContain("availability");
+      expect(JSON.stringify(schema)).not.toContain("itemCondition");
     }
+
+    const productWithoutConfirmedPrice = products.find(product => product.slug === "jergens-ultra-healing-body-lotion");
+    expect(productWithoutConfirmedPrice).toBeDefined();
+    expect(getProductOffer(productWithoutConfirmedPrice!)).toBeUndefined();
+    expect((getProductSeo(productWithoutConfirmedPrice!).structuredData as Record<string, unknown>)["@type"]).toBe("WebPage");
+  });
+
+  it("adds offers to all six real products in the low-MOQ ItemList", () => {
+    const itemList = (lowMoqPerfumeSeo.structuredData as Array<Record<string, unknown>>).find(schema => schema["@type"] === "ItemList");
+    const items = itemList?.itemListElement as Array<Record<string, unknown>>;
+    expect(items).toHaveLength(6);
+    expect(items.every(item => Boolean((item.item as Record<string, unknown>).offers))).toBe(true);
+    for (const item of items) {
+      const product = item.item as Record<string, unknown>;
+      const offer = product.offers as Record<string, unknown>;
+      expect(offer).toMatchObject({ "@type": "Offer", priceCurrency: "USD" });
+      expect(typeof offer.price).toBe("number");
+      expect(offer.url).toMatch(/^https:\/\/topperfume\.cn\/products\//);
+      expect(offer).not.toHaveProperty("availability");
+      expect(offer).not.toHaveProperty("itemCondition");
+    }
+    const serialized = JSON.stringify(itemList);
+    expect(serialized).not.toContain("aggregateRating");
+    expect(serialized).not.toContain("review");
   });
 });
