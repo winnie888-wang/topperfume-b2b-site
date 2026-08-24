@@ -485,3 +485,13 @@
 @media (max-width: 610px) {
   .low-moq-hero-visual-supplied { width: calc(100% + 10vw); }
 }
+
+/* Phase 14E.2 — display-ratio-only pass: enlarge the two approved visual references without changing content or behavior. */
+.low-moq-hero-visual-supplied .low-moq-hero-supplied-image { transform: scale(1.075); transform-origin: center 55%; }
+.low-moq-custom-visual { max-height: none; }
+.low-moq-custom-visual img { height: auto; max-height: none; padding: 4px; }
+@media (max-width: 610px) {
+  .low-moq-hero-visual-supplied .low-moq-hero-supplied-image { transform: scale(1.05); transform-origin: center 54%; }
+  .low-moq-custom-visual { max-height: none; }
+  .low-moq-custom-visual img { height: auto; padding: 3px; }
+}
