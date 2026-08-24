@@ -323,3 +323,50 @@
   .low-moq-reference-bridge h3 { font-size: 29px; }
   .low-moq-reference-prompt { max-width: 300px; }
 }
+
+/* Phase 14D — supplied fragrance references: a restrained editorial gallery alongside the verified catalogue grid. */
+.low-moq-reference-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: 48px; }
+.low-moq-reference-subhead { align-items: end; border-bottom: 1px solid var(--ink); display: grid; gap: 12px 24px; grid-template-columns: 1fr auto; margin: 54px 0 24px; padding-bottom: 12px; position: relative; }
+.low-moq-reference-subhead::before { background: var(--rose); content: ""; height: 3px; left: 0; position: absolute; top: -2px; width: 44px; }
+.low-moq-reference-subhead .eyebrow { grid-column: 1 / -1; margin-bottom: 0; }
+.low-moq-reference-subhead h3 { color: var(--plum); font-family: var(--font-display); font-size: clamp(30px, 3vw, 46px); letter-spacing: -.045em; line-height: .94; margin: 0; }
+.low-moq-reference-subhead > span { color: rgba(41,27,46,.6); font-size: 8px; font-weight: 800; letter-spacing: .09em; text-align: right; text-transform: uppercase; }
+.low-moq-reference-subhead-secondary { margin-top: 76px; }
+.low-moq-reference-item { min-width: 0; }
+.low-moq-reference-bridge { border-top: 1px solid var(--line); margin-top: 15px; min-height: 212px; padding-top: 13px; }
+.low-moq-reference-brand { color: var(--plum); font-family: var(--font-display); font-size: 18px; line-height: 1; margin: 0 0 11px; }
+.low-moq-reference-bridge .low-moq-reference-kind { margin-bottom: 10px; }
+.low-moq-reference-bridge .low-moq-reference-opportunity { font-size: 7px; margin-bottom: 10px; }
+.low-moq-reference-bridge h3 { color: var(--plum); font-size: 26px; letter-spacing: -.04em; line-height: .98; margin: 0 0 9px; }
+.low-moq-reference-profile { color: var(--rose); font-family: var(--font-display); font-size: 18px; line-height: 1.05; margin: 0 0 9px; }
+.low-moq-reference-prompt { color: rgba(41,27,46,.7); font-size: 10px; line-height: 1.45; margin: 0; }
+.low-moq-reference-bridge > .button-primary { justify-content: center; margin-top: 16px; width: 100%; }
+.low-moq-reference-only-item { min-width: 0; }
+.low-moq-reference-only-image-wrap { aspect-ratio: .86; background: linear-gradient(145deg, #f3eee7, #fcfaf6 62%, #eee3dc); border: 1px solid rgba(41,27,46,.16); overflow: hidden; padding: 12px; position: relative; }
+.low-moq-reference-only-image-wrap::after { border: 1px solid rgba(41,27,46,.1); content: ""; inset: 14px; pointer-events: none; position: absolute; }
+.low-moq-reference-only-image { background: var(--paper); height: 100%; object-fit: contain; padding: 7px; width: 100%; }
+.low-moq-reference-only-index { background: var(--plum); color: var(--paper); font-size: 7px; font-weight: 800; left: 10px; letter-spacing: .1em; padding: 6px 7px; position: absolute; top: 10px; z-index: 2; }
+.low-moq-reference-only-label { background: rgba(252,250,246,.94); border-left: 2px solid var(--rose); bottom: 10px; color: var(--rose); font-size: 6px; font-weight: 800; left: 10px; letter-spacing: .09em; padding: 6px 7px; position: absolute; text-transform: uppercase; z-index: 2; }
+.low-moq-reference-only-copy { border-top: 1px solid var(--line); padding-top: 13px; }
+.low-moq-reference-only-brand { color: var(--plum); font-family: var(--font-display); font-size: 18px; line-height: 1; margin: 0 0 8px; }
+.low-moq-reference-only-copy h3 { color: var(--plum); font-size: 25px; letter-spacing: -.04em; line-height: .98; margin: 0 0 10px; }
+.low-moq-reference-only-prompt { color: rgba(41,27,46,.68); font-size: 10px; line-height: 1.45; margin: 0; }
+.low-moq-reference-only-copy > .button-primary { justify-content: center; margin-top: 16px; width: 100%; }
+@media (max-width: 900px) {
+  .low-moq-reference-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 610px) {
+  .low-moq-reference-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 34px; }
+  .low-moq-reference-subhead { align-items: start; display: block; margin-top: 52px; }
+  .low-moq-reference-subhead h3 { font-size: 30px; margin-top: 7px; }
+  .low-moq-reference-subhead > span { display: block; font-size: 7px; margin-top: 10px; text-align: left; }
+  .low-moq-reference-brand, .low-moq-reference-only-brand { font-size: 16px; }
+  .low-moq-reference-bridge { min-height: 0; }
+  .low-moq-reference-bridge h3, .low-moq-reference-only-copy h3 { font-size: 21px; }
+  .low-moq-reference-profile { font-size: 16px; }
+  .low-moq-reference-only-image-wrap { padding: 8px; }
+  .low-moq-reference-only-image-wrap::after { inset: 10px; }
+  .low-moq-reference-only-index { left: 7px; top: 7px; }
+  .low-moq-reference-only-label { bottom: 7px; left: 7px; font-size: 5.5px; }
+  .low-moq-reference-only-copy > .button-primary, .low-moq-reference-bridge > .button-primary { font-size: 8px; padding-left: 6px; padding-right: 6px; }
+}
