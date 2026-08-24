@@ -30,9 +30,9 @@ const referenceOnlyGroups = [
     title: "Soft warmth and sweet layering",
     direction: "Warm amber · vanilla · creamy gourmand",
     items: [
-      { index: "07", image: "/assets/phase14d/amber-romance-reference.jpg", brand: "Victoria’s Secret", name: "Amber Romance Shimmer Body Mist Reference" },
-      { index: "08", image: "/assets/phase14d/coconut-passion-reference.jpg", brand: "Victoria’s Secret", name: "Coconut Passion Shimmer Body Mist Reference" },
-      { index: "09", image: "/assets/phase14d/toffee-coffee-reference.jpg", brand: "Toffee Coffee", name: "Cafe Edmon Body Mist Reference" },
+      { index: "07", image: "/assets/phase14d/amber-romance-reference.jpg", brand: "Victoria’s Secret", name: "Amber Romance Shimmer" },
+      { index: "08", image: "/assets/phase14d/coconut-passion-reference.jpg", brand: "Victoria’s Secret", name: "Coconut Passion Shimmer" },
+      { index: "09", image: "/assets/phase14d/toffee-coffee-reference.jpg", brand: "Toffee Coffee", name: "Toffee Coffee Body Mist" },
     ],
   },
   {
@@ -40,9 +40,9 @@ const referenceOnlyGroups = [
     title: "Petal-led directions with a polished finish",
     direction: "Pink floral · fruity floral · soft powder",
     items: [
-      { index: "10", image: "/assets/phase14d/good-girl-pink-reference.jpg", brand: "Carolina Herrera", name: "Good Girl Pink Stiletto Reference" },
-      { index: "11", image: "/assets/phase14d/love-spell-reference.jpg", brand: "Victoria’s Secret", name: "Love Spell Shimmer Body Mist Reference" },
-      { index: "12", image: "/assets/phase14d/velvet-petals-reference.jpg", brand: "Victoria’s Secret", name: "Velvet Petals Shimmer Body Mist Reference" },
+      { index: "10", image: "/assets/phase14d/good-girl-pink-reference.jpg", brand: "Carolina Herrera", name: "Good Girl Pink Stiletto" },
+      { index: "11", image: "/assets/phase14d/love-spell-reference.jpg", brand: "Victoria’s Secret", name: "Love Spell Shimmer" },
+      { index: "12", image: "/assets/phase14d/velvet-petals-reference.jpg", brand: "Victoria’s Secret", name: "Velvet Petals Shimmer" },
     ],
   },
   {
@@ -50,9 +50,9 @@ const referenceOnlyGroups = [
     title: "Color, fruit and fresh visual energy",
     direction: "Tropical fruit · fresh blue · colorful statement",
     items: [
-      { index: "13", image: "/assets/phase14d/odyssey-spectra-rainbow-reference.jpg", brand: "Odyssey Spectra", name: "Rainbow Edition Body Mist Reference" },
-      { index: "14", image: "/assets/phase14d/odyssey-spectra-blue-reference.jpg", brand: "Odyssey Spectra", name: "Blu Edition Body Mist Reference" },
-      { index: "15", image: "/assets/phase14d/go-mango-reference.jpg", brand: "Go Mango", name: "Tropical Collection Body Mist Reference" },
+      { index: "13", image: "/assets/phase14d/odyssey-spectra-rainbow-reference.jpg", brand: "Odyssey Spectra", name: "Rainbow Edition" },
+      { index: "14", image: "/assets/phase14d/odyssey-spectra-blue-reference.jpg", brand: "Odyssey Spectra", name: "Blu Edition" },
+      { index: "15", image: "/assets/phase14d/go-mango-reference.jpg", brand: "Go Mango", name: "Tropical Collection" },
     ],
   },
 ] as const;
@@ -237,7 +237,7 @@ export default function LowMoqPerfume() {
 
     <section className="low-moq-video-block" aria-labelledby="low-moq-video-title">
       <div className="low-moq-video-copy"><p className="eyebrow">01A / FRAGRANCE PRESENTATION</p><h2 id="low-moq-video-title">A visual starting point for your next fragrance line.</h2><p>Explore bottle, label and packaging references before moving into a private-label conversation. The supplied footage is shown as a product-reference visual, not as a factory, laboratory or production-line claim.</p><div className="low-moq-video-note"><span>Muted loop · 11.5 sec edit</span><span>Poster fallback on mobile</span></div></div>
-      <figure className="low-moq-video-media"><img className="low-moq-video-poster" src={fragranceVideo.poster} alt="" aria-hidden="true" /><video autoPlay muted loop playsInline poster={fragranceVideo.poster} preload="metadata" aria-label={fragranceVideo.alt}><source src={fragranceVideo.src} type="video/mp4" /></video><figcaption><span>Customer-facing visual reference</span><strong>Fragrance bottles, packaging and shelf-ready directions</strong></figcaption></figure>
+      <figure className="low-moq-video-media"><img className="low-moq-video-poster" src={fragranceVideo.poster} alt="" aria-hidden="true" /><video autoPlay muted loop playsInline poster={fragranceVideo.poster} preload="metadata" aria-label={fragranceVideo.alt}><source src={fragranceVideo.src} type="video/mp4" /></video><figcaption><span>Customer-facing visual reference</span><strong>A considered direction for your next scent line</strong></figcaption></figure>
     </section>
 
     <section className="low-moq-facts" aria-label="Commercial buying facts">
