@@ -76,17 +76,43 @@ describe("Production SEO foundation", () => {
     const items = itemList?.itemListElement as Array<Record<string, unknown>>;
     expect(items).toHaveLength(6);
     expect(items.every(item => Boolean((item.item as Record<string, unknown>).offers))).toBe(true);
+    const expectedBrands: Record<string, string | undefined> = {
+      "FR-DI-SAU-100": "Dior",
+      "FR-CH-GGBT-080": "Carolina Herrera",
+      "FR-CH-VGGG-080": "Carolina Herrera",
+      "FR-YSL-MP-001": "Yves Saint Laurent",
+      "FR-VS-BV-250": "Victoria’s Secret",
+      "FR-SET-PS-250236": undefined,
+    };
+
     for (const item of items) {
       const product = item.item as Record<string, unknown>;
+      const sourceProduct = products.find(candidate => candidate.sku === product.sku);
       const offer = product.offers as Record<string, unknown>;
+      expect(sourceProduct).toBeDefined();
       expect(offer).toMatchObject({ "@type": "Offer", priceCurrency: "USD" });
       expect(typeof offer.price).toBe("number");
       expect(offer.url).toMatch(/^https:\/\/topperfume\.cn\/products\//);
+      expect(product.image).toBe(sourceProduct?.image);
+      expect(product.image).toMatch(/^https:\/\/mqy8jl9r1rvvbx0e\.public\.blob\.vercel-storage\.com\//);
+      expect(product.description).toBe(sourceProduct?.briefing);
+      if (expectedBrands[product.sku as string]) {
+        expect(product.brand).toEqual({ "@type": "Brand", name: expectedBrands[product.sku as string] });
+      } else {
+        expect(product).not.toHaveProperty("brand");
+      }
       expect(offer).not.toHaveProperty("availability");
       expect(offer).not.toHaveProperty("itemCondition");
+      expect(product).not.toHaveProperty("review");
+      expect(product).not.toHaveProperty("aggregateRating");
+      expect(product).not.toHaveProperty("availability");
+      expect(product).not.toHaveProperty("shippingDetails");
+      expect(product).not.toHaveProperty("hasMerchantReturnPolicy");
     }
     const serialized = JSON.stringify(itemList);
     expect(serialized).not.toContain("aggregateRating");
     expect(serialized).not.toContain("review");
+    expect(serialized).not.toContain("shippingDetails");
+    expect(serialized).not.toContain("hasMerchantReturnPolicy");
   });
 });

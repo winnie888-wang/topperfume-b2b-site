@@ -87,6 +87,25 @@ const lowMoqPerfumeProducts = [
   { name: "Pure Seduction Fragrance Mist & Lotion Set", sku: "FR-SET-PS-250236", slug: "pure-seduction-fragrance-mist-lotion-set" },
 ] as const;
 
+const verifiedProductBrands: Record<string, string> = {
+  "dior-sauvage-parfum-spray-men": "Dior",
+  "carolina-herrera-good-girl-blush-tweed-talk-edp-women": "Carolina Herrera",
+  "carolina-herrera-very-good-girl-glam-edp-women": "Carolina Herrera",
+  "yves-saint-laurent-mon-paris-parfum-women": "Yves Saint Laurent",
+  "victorias-secret-bare-vanilla-body-fragrance-mist": "Victoria’s Secret",
+};
+
+function getProductStructuredFields(product: Product) {
+  const productDescription = product.briefing?.trim();
+  const brandName = verifiedProductBrands[product.slug];
+
+  return {
+    ...(product.image ? { image: product.image } : {}),
+    ...(productDescription ? { description: productDescription } : {}),
+    ...(brandName ? { brand: { "@type": "Brand", name: brandName } } : {}),
+  };
+}
+
 export const lowMoqPerfumeSeo: SeoPage = {
   title: "Low MOQ Perfume Manufacturing Partner - From 2 Pcs | TopPerfume",
   description: "Selected standard perfume orders from 2 pcs. Free samples are available. Logo, packaging and custom fragrance options start from 100 pcs, subject to project confirmation.",
@@ -122,6 +141,7 @@ export const lowMoqPerfumeSeo: SeoPage = {
           return {
             "@type": "Product",
             name: product.name,
+            ...(sourceProduct ? getProductStructuredFields(sourceProduct) : {}),
             sku: product.sku,
             url: canonicalUrl(`/products/${product.slug}`),
             ...(offers ? { offers } : {}),
@@ -202,11 +222,10 @@ export function getProductSeo(product: Product): SeoPage {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
-    description,
+    ...getProductStructuredFields(product),
     sku: product.sku,
     category: categoryLabel,
     url: canonicalUrl(path),
-    image: product.image,
     offers: offer,
   } : {
     "@context": "https://schema.org",
