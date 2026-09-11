@@ -1,5 +1,28 @@
 # Cloud Preview handoff — 2026-09-11
 
+## Current follow-up: confirmed contacts and order terms (2026-09-12)
+
+- Public contacts stay WhatsApp +86 190 6678 2710 and melody888666@yeah.net. They are confirmed and no longer requested in the remaining-information form.
+- Estimated dispatch is usually around 7 days, with the start date and arrangements agreed per order; this is neither a delivery estimate nor an unconditional guarantee. Payment, freight, taxes, returns and other transaction conditions are agreed per order in writing. An inquiry does not create an order.
+- Contact page, product terms, inquiry drafts, footer link and corresponding SEO now use this guidance. Product prices, MOQ, capacities and separate fragrance records are unchanged in this follow-up.
+- TypeScript passed; 21 affected tests passed in four suites; production-mode build passed (existing chunk-size warning only). Prior product, image and responsive checks are retained rather than repeated.
+- Vercel has existing protected RESEND_API_KEY and INQUIRY_FROM_EMAIL values for Preview and Production. Their presence is verified, their validity and domain status are not. Official Preview environment pull returned protected placeholders; the temporary file was deleted. The Resend browser session requires login. Public email visibility is not delivery verification.
+- GitHub connector write still returns 403 Resource not accessible by integration. Official Git Credential Manager device authentication was opened but GitHub requires account login. No authenticated push occurred. Source remains on the optimization branch; Preview can be uploaded through the already authorized Vercel CLI.
+- Real mail remains disabled and untested. After explicit authorization, plan one clearly marked TEST to the confirmed sales mailbox, then verify provider status, inbox/spam and reply handling. Configure credentials only in the relevant platforms.
+
+## Previous Preview: business answers applied
+
+- Current Preview: https://topperfume-b2b-site-k15nzgohh-winnie9.vercel.app/
+- Current review and materials: https://topperfume-b2b-site-k15nzgohh-winnie9.vercel.app/previews/final-acceptance.html
+- Current remaining-information form: https://topperfume-b2b-site-k15nzgohh-winnie9.vercel.app/previews/business-information-form.html
+- Deployment `dpl_6RLt8cbzsngvP4Xz1DzSt6cvp87n`, Preview / Ready, source commit `9384d3f` on the same optimization branch.
+- Applied 27 nonempty answers and the explicit follow-up corrections: 20 existing product pages updated, 10 individually repriced, 12 capacity gaps resolved. No new or merged product pages.
+- GlutaGlow now offers only 725 mL, USD 3, MOQ 6. Original 400/600 mL options survive only in history; existing page URLs stay stable, and retired variant requests are rejected.
+- Five series/fragrance mappings remain unresolved. Eight capacity-material groups require replacement photos. Blank business answers do not override existing information.
+- See `business-answer-validation.json` for type checking, 31 passing affected tests, builds, SEO, cloud inquiry-draft and narrow-screen checks. Noindex, email-off and existing login protection remain enabled. Production remains `dpl_7KZmhScqdBDfLezr43kqLCHjdvjk` on main.
+
+## Earlier Preview (retained for history)
+
 - Preview: https://topperfume-b2b-site-68rtb8ls1-winnie9.vercel.app/
 - Business form: https://topperfume-b2b-site-68rtb8ls1-winnie9.vercel.app/previews/business-information-form.html
 - Dashboard: https://vercel.com/winnie9/topperfume-b2b-site/F8yx4hRMAa2oDxvpWgjf31x4oqCU

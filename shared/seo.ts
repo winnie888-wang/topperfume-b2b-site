@@ -1,3 +1,4 @@
+import { dispatchGuidance } from "./businessPolicy";
 import { getProduct, type Product, type ProductCategory } from "@/data/products";
 import { withOrderTerms } from "./productTerms";
 
@@ -63,7 +64,7 @@ const lowMoqPerfumeFaqs = [
   {
     "@type": "Question",
     name: "How long does an eligible standard order take?",
-    acceptedAnswer: { "@type": "Answer", text: "Lead time starts from approximately 7 days for eligible standard orders. Custom projects follow project-specific lead times." },
+    acceptedAnswer: { "@type": "Answer", text: dispatchGuidance },
   },
   {
     "@type": "Question",

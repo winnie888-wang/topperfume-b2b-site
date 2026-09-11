@@ -206,6 +206,10 @@ var systemRouter = router({
 import { TRPCError as TRPCError3 } from "@trpc/server";
 import { z as z2 } from "zod";
 
+// shared/businessPolicy.ts
+var dispatchGuidance = "Estimated dispatch is usually around 7 days. The start date and order arrangements are agreed when you contact us. This is not a delivery estimate or a guarantee for every order.";
+var transactionGuidance = "This website is for product display and inquiries. Payment methods, shipping costs, taxes, the dispatch timeline start date, returns, exchanges and other transaction terms are negotiated for each order and confirmed in writing. Submitting an inquiry does not create an order.";
+
 // server/inquiry.ts
 import { randomUUID } from "node:crypto";
 var displayValue = (value) => value?.trim() || "Not provided";
@@ -229,6 +233,8 @@ function buildInquiryEmail(input) {
     `Unit price: ${displayValue(input.unitPrice)}`,
     `Product subtotal: ${displayValue(input.subtotal)} (excludes shipping and taxes)`,
     "Final delivered quotation requires destination, availability and shipping confirmation. This is an inquiry, not an order.",
+    dispatchGuidance,
+    transactionGuidance,
     "",
     "BUYER DETAILS",
     `Customer Name: ${displayValue(input.customerName)}`,

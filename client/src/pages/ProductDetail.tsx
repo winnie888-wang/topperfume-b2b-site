@@ -15,6 +15,7 @@ import { ProductCard } from "@/components/ProductCard";
 import { Seo } from "@/components/Seo";
 import { getProductSeo } from "@shared/seo";
 import { trackProductView } from "@/lib/analytics";
+import { dispatchGuidance } from "@shared/businessPolicy";
 import { withOrderTerms } from "@shared/productTerms";
 
 export default function ProductDetail() {

@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-11",
+  "sourceCommit": "9384d3f",
+  "branch": "feat/website-optimization-body-lotion",
+  "previewUrl": "https://topperfume-b2b-site-k15nzgohh-winnie9.vercel.app",
+  "deploymentId": "dpl_6RLt8cbzsngvP4Xz1DzSt6cvp87n",
+  "environment": "preview",
+  "status": "READY",
+  "sourceAnswers": 27,
+  "updatedProductPages": 20,
+  "explicitPriceChanges": 10,
+  "capacityGapsRemainingInPack": 0,
+  "pendingFragranceMappings": 5,
+  "replacementMaterialGroups": 8,
+  "checks": {
+    "typescript": "passed",
+    "affectedTests": {"files": 6, "passed": 31, "realEmailSent": false},
+    "localBuild": "passed",
+    "cloudBuild": "passed",
+    "updatedPrerenderedPagesAndSeoPrices": {"checked": 20, "passed": 20},
+    "sourceImages": "All 35 source images retain their mappings; all product and candidate galleries equal the previous snapshot",
+    "glutaGlowRetiredOptions": "No size selector remains; server rejects B04-01-400 and B04-01-600 variant requests; historical values retained in docs/history",
+    "cloudGlutaGlow": {"format": "725 mL", "price": 3, "moq": 6, "initialSubtotal": 18, "quantity5Disabled": true, "quantity12Subtotal": 36, "whatsappDraftVerified": true, "noInquirySent": true},
+    "cloudMobileGlutaGlow": {"width": 375, "horizontalOverflow": false, "variantSelectors": 0},
+    "cloudRemainingForm": {"rows": 61, "capacityRows": 0, "fragranceRows": 5, "materialRows": 8, "observedWidth": 373, "horizontalOverflow": false},
+    "previewIndexing": "noindex,nofollow verified in cloud DOM; local robots Disallow /; build SITE_INDEXABLE=false",
+    "previewEmail": "INQUIRY_ENABLED=false runtime override and VERCEL_ENV=preview server guard retained",
+    "access": "Existing Vercel Authentication all_except_custom_domains unchanged; sign in with project access",
+    "production": {"unchanged": true, "branch": "main", "deploymentId": "dpl_7KZmhScqdBDfLezr43kqLCHjdvjk"}
+  },
+  "limits": ["No real email or WhatsApp inquiry sent", "Fragrance names and image/SKU mapping are still unconfirmed", "Reference photos with previous capacity labels remain unchanged pending replacement", "Existing JS bundle-size warning remains non-blocking", "GitHub branch was not pushed; deployment used the current local branch through the official Vercel CLI"]
+}

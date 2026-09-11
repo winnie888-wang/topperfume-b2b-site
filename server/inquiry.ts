@@ -1,3 +1,4 @@
+import { dispatchGuidance, transactionGuidance } from "../shared/businessPolicy";
 import { randomUUID } from "node:crypto";
 
 export type InquiryEmailInput = {
@@ -47,6 +48,8 @@ export function buildInquiryEmail(input: InquiryEmailInput) {
     `Unit price: ${displayValue(input.unitPrice)}`,
     `Product subtotal: ${displayValue(input.subtotal)} (excludes shipping and taxes)`,
     "Final delivered quotation requires destination, availability and shipping confirmation. This is an inquiry, not an order.",
+    dispatchGuidance,
+    transactionGuidance,
     "",
     "BUYER DETAILS",
     `Customer Name: ${displayValue(input.customerName)}`,

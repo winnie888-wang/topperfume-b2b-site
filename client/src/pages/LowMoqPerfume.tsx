@@ -1,3 +1,4 @@
+import { dispatchGuidance } from "@shared/businessPolicy";
 import { ArrowRight, Check, Clock3, MessageCircle, PackageCheck, Sparkles } from "lucide-react";
 import { Link } from "wouter";
 import { ProductCard } from "@/components/ProductCard";
@@ -196,7 +197,7 @@ const faqs = [
   },
   {
     question: "How long does an eligible standard order take?",
-    answer: "Lead time starts from approximately 7 days for eligible standard orders. Custom projects follow project-specific lead times.",
+    answer: dispatchGuidance,
   },
   {
     question: "Can I add my logo from 100 pcs?",
@@ -224,7 +225,7 @@ export default function LowMoqPerfume() {
         <h1>Low MOQ Perfume Wholesale Sourcing for <em>New &amp; Growing Brands</em></h1>
         <p className="low-moq-hero-intro">Start with selected standard perfume orders from <strong>2 pcs</strong>, or explore logo, packaging and custom fragrance options from <strong>100 pcs</strong>.</p>
         <p className="low-moq-hero-positioning">TopPerfume supports B2B buyers as a sourcing, supplier coordination and OEM/ODM project partner. Choose a confirmed fragrance product, request a free sample, or send your project brief for a quote.</p>
-        <p className="low-moq-lead-time"><Clock3 size={16} /> Lead time starts from approximately 7 days for eligible standard orders. Custom projects follow project-specific lead times.</p>
+        <p className="low-moq-lead-time"><Clock3 size={16} /> {dispatchGuidance}</p>
         <div className="hero-actions low-moq-hero-actions">
           <WhatsAppCta label="Request Free Sample" intent="sample" context={{ category: "fragrance" }} />
           <WhatsAppCta label="Get a Low MOQ Quote" intent="quote" context={{ category: "fragrance" }} className="button-rose" />
@@ -317,7 +318,7 @@ export default function LowMoqPerfume() {
 
     <section className="low-moq-proof">
       <div className="low-moq-proof-intro"><p className="eyebrow">07 / VERIFIED BUYER PROOF</p><h2>Why buyers start with TopPerfume.</h2><p>Clear starting points, current product references and project-specific terms help buyers understand the next step before requesting a sample or quote.</p></div>
-      <div className="low-moq-proof-grid"><div><strong>From 2 pcs</strong><span>Selected standard perfume orders</span></div><div><strong>From 100 pcs</strong><span>Logo, packaging and fragrance options</span></div><div><strong>Available</strong><span>Free samples, confirmed by SKU</span></div><div><strong>WhatsApp-first</strong><span>Direct project communication</span></div><div><strong>Approx. 7 days</strong><span>Eligible standard-order starting point</span></div><div><strong>Live references</strong><span>Current fragrance SKUs and PDPs</span></div></div>
+      <div className="low-moq-proof-grid"><div><strong>From 2 pcs</strong><span>Selected standard perfume orders</span></div><div><strong>From 100 pcs</strong><span>Logo, packaging and fragrance options</span></div><div><strong>Available</strong><span>Free samples, confirmed by SKU</span></div><div><strong>WhatsApp-first</strong><span>Direct project communication</span></div><div><strong>Estimated dispatch: around 7 days</strong><span>Start date agreed per order; not guaranteed delivery</span></div><div><strong>Live references</strong><span>Current fragrance SKUs and PDPs</span></div></div>
     </section>
 
     <section id="faq" className="low-moq-faq"><div className="section-head"><div><p className="eyebrow">08 / BUYER FAQ</p><h2>Questions worth answering before you ask.</h2></div><MessageCircle size={21} /></div><div className="low-moq-faq-list">{faqs.map((faq, index) => <details key={faq.question} open={index === 0}><summary><span>{String(index + 1).padStart(2, "0")}</span>{faq.question}<ArrowRight size={15} /></summary><p>{faq.answer}</p></details>)}</div></section>

@@ -21,7 +21,10 @@ describe("WhatsApp-first CTA messages", () => {
     expect(message).not.toContain(".vercel.app");
     expect(message).toContain("Category: fragrance");
     expect(message).toContain("MOQ: 2 pcs");
-    expect(message).toContain("Lead Time: Approx. 7 days");
+    expect(message).toContain("Estimated dispatch is usually around 7 days");
+    expect(message).toContain("not a delivery estimate or a guarantee for every order");
+    expect(message).toContain("confirmed in writing");
+    expect(message).toContain("Submitting an inquiry does not create an order");
   });
 
   it("uses the requested wholesale-quote and customization intent copy", () => {

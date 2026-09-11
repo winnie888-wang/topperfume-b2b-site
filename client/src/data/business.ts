@@ -2,6 +2,7 @@
  * Phase 3 business-content reminder: these labels organise a buyer conversation only.
  * Verified commercial terms are stated exactly; internal pending source fields never render raw on buyer-facing pages.
  */
+import { dispatchGuidance, transactionGuidance } from "@shared/businessPolicy";
 import type { Product, ProductCategory } from "@/data/products";
 import { canonicalPublicWebsiteUrl } from "@shared/seo";
 
@@ -64,10 +65,14 @@ export function getCanonicalProductUrl(productUrl?: string) {
   }
 }
 
+export function dispatchValue(value?: string) {
+  return isPendingValue(value) || /approx\.?\s*7 days/i.test(value!) ? dispatchGuidance : value!;
+}
+
 export const commercialTerms = {
   standard: [
     { label: "MOQ guidance", value: "MOQ varies by SKU" },
-    { label: "Lead Time", value: "Approx. 7 days for selected SKUs" },
+    { label: "Estimated dispatch", value: dispatchGuidance },
     { label: "Free Samples", value: "Available" },
   ],
   custom: [
@@ -109,7 +114,7 @@ const inquiryTitle: Record<InquiryIntentKey, string> = {
 
 export function buildInquirySummary(input: InquirySummaryInput) {
   const standardMoq = customerValue(input.context?.standardMoq);
-  const leadTime = customerValue(input.context?.leadTime);
+  const leadTime = dispatchValue(input.context?.leadTime);
   const sampleAvailability = customerValue(input.context?.sampleAvailability);
   const customTerms = input.context?.customizationNote
     ? input.context.customizationNote
@@ -134,6 +139,7 @@ export function buildInquirySummary(input: InquirySummaryInput) {
     "",
     `Standard order: MOQ ${standardMoq}; ${leadTime}; Free samples: ${sampleAvailability}.`,
     customTerms,
+    transactionGuidance,
   ];
   return lines.join("\n");
 }
@@ -173,10 +179,11 @@ export function buildWhatsAppCtaSummary(input: { intent: WhatsAppCtaIntent; cont
     "",
     `MOQ: ${customerValue(context?.standardMoq)}`,
     "",
-    ...(context?.leadTime ? [`Lead Time: ${customerValue(context.leadTime)}`] : []),
+    `Dispatch guidance: ${dispatchValue(context?.leadTime)}`,
     ...(!isPendingValue(context?.unitPrice) ? [`Unit Price: ${context!.unitPrice}`] : []),
     ...(context?.quantity ? [`Quantity: ${context.quantity}`] : []),
     ...(context?.subtotal ? [`Product subtotal: ${context.subtotal}`, "Subtotal excludes shipping and taxes. Final delivered quote to be confirmed."] : []),
+    transactionGuidance,
   ].join("\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
@@ -221,7 +228,7 @@ export function getProductDecisionRows(product: Product): DecisionField[] {
     { label: "Packaging", value: customerValue(product.packaging) },
     { label: "Commercial Type", value: commercialType },
     { label: "MOQ", value: customerValue(product.standardMoq) },
-    { label: "Lead Time", value: customerValue(product.leadTime) },
+    { label: "Estimated dispatch", value: dispatchValue(product.leadTime) },
   ];
   return commercialType !== "Private Label / OEM ODM"
     ? [...sharedRows.slice(0, 4), { label: "Wholesale Terms", value: CUSTOMER_DETAILS }, ...sharedRows.slice(4)]
@@ -231,7 +238,7 @@ export function getProductDecisionRows(product: Product): DecisionField[] {
 export function getProductStandardTerms(product: Product) {
   return [
     { label: "MOQ", value: customerValue(product.standardMoq) },
-    { label: "Lead Time", value: customerValue(product.leadTime) },
+    { label: "Estimated dispatch", value: dispatchValue(product.leadTime) },
     { label: "Free Samples", value: customerValue(product.sampleAvailability) },
   ];
 }
