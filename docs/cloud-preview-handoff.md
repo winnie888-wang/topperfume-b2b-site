@@ -2,6 +2,11 @@
 
 ## Current follow-up: confirmed contacts and order terms (2026-09-12)
 
+- Final Preview: https://topperfume-b2b-site-78m25b2ya-winnie9.vercel.app/ (Vercel account with project access required).
+- Updated form: https://topperfume-b2b-site-78m25b2ya-winnie9.vercel.app/previews/business-information-form.html
+- Deployment `dpl_8pRU7fjbBUDmSD9ooSosWvdYtR9Z` is Ready / Preview; source `8f98de24a004bb4567a6326ac297164c7c6a5749`. Cloud build passed. Explicit noindex and email-off runtime settings retained, confirmed recipient pinned to melody888666@yeah.net.
+- Final authenticated cloud Contact check: correct email/WhatsApp, dispatch and written terms, decoded wholesale-quote draft, noindex,nofollow, no horizontal overflow at 373 px. Generic Contact actions use quote intent, not customization. Type checking and five WhatsApp tests were rerun after that small correction and passed.
+- Final project API check: Production remains `dpl_7KZmhScqdBDfLezr43kqLCHjdvjk`, production branch main, Preview authentication protection unchanged. No real mail/WhatsApp inquiry sent; no merge or production deployment.
 - Public contacts stay WhatsApp +86 190 6678 2710 and melody888666@yeah.net. They are confirmed and no longer requested in the remaining-information form.
 - Estimated dispatch is usually around 7 days, with the start date and arrangements agreed per order; this is neither a delivery estimate nor an unconditional guarantee. Payment, freight, taxes, returns and other transaction conditions are agreed per order in writing. An inquiry does not create an order.
 - Contact page, product terms, inquiry drafts, footer link and corresponding SEO now use this guidance. Product prices, MOQ, capacities and separate fragrance records are unchanged in this follow-up.
