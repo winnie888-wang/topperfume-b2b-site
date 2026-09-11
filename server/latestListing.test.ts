@@ -22,26 +22,28 @@ describe("Batch 04–05 identity and scoped quotes", () => {
     expect(new Set([...allSourceIds, ...pending.map((p: any) => p.intakeId)]).size).toBe(41);
   });
 
-  it("adds six distinct product/series pages with seven size records at USD 2.99 / MOQ 6", () => {
+  it("keeps six existing pages and source provenance while applying the individually confirmed new quotes", () => {
     expect(latestListingProducts).toHaveLength(6);
     expect(latestListingProducts.flatMap(p => p.intakeIds!)).toEqual(["B04-01-400", "B04-01-600", "B04-02", "B05-02", "B05-03", "B05-06", "B05-07"]);
     for (const product of latestListingProducts) {
-      expect(product).toMatchObject({ unitPrice: 2.99, b2bPrice: "US$2.99 / piece", minimumOrderQuantity: 6, orderUnit: "piece" });
+      const price = product.slug === "cocoa-radiant-body-gel-oil" ? 2 : 3;
+      expect(product).toMatchObject({ unitPrice: price, b2bPrice: `US$${price.toFixed(2)} / piece`, minimumOrderQuantity: 6, orderUnit: "piece" });
       const html = prerenderBody(`/products/${product.slug}`);
-      expect(html).toContain("US$17.94");
+      expect(html).toContain(`US$${(price * 6).toFixed(2)}`);
       for (const field of ["sku", "ingredients", "fragrance", "notes", "spf", "leadTime", "sampleAvailability"]) expect(product).not.toHaveProperty(field);
     }
-    expect(getProduct("cocoa-radiant-body-gel-oil")?.format).toBe("Capacity to be confirmed");
-    expect(getProduct("calm-healing-body-lotion")?.format).toBe("Capacity to be confirmed");
+    expect(getProduct("cocoa-radiant-body-gel-oil")?.format).toBe("237 mL");
+    expect(getProduct("calm-healing-body-lotion")?.format).toBe("500 mL");
   });
 
-  it("keeps 400 / 600 mL selectable with accurate schema without overwriting 500 / 502 / 444 mL", () => {
+  it("replaces both GlutaGlow sizes with a single 725 mL offer and preserves other lotions", () => {
     const product = getProduct("glutaglow-body-lotion-400ml-600ml")!;
-    expect(product.variants?.map(v => v.format)).toEqual(["400 mL", "600 mL"]);
+    expect(product.variants).toBeUndefined();
+    expect(product.format).toBe("725 mL");
     const schema = getProductSeo(product).structuredData as Record<string, any>;
-    expect(schema.variesBy).toBe("https://schema.org/size");
-    expect(schema.hasVariant.map((v: any) => v.size)).toEqual(["400 mL", "600 mL"]);
-    for (const variant of schema.hasVariant) expect(variant.offers).toMatchObject({ price: 2.99, eligibleQuantity: { minValue: 6 } });
+    expect(schema["@type"]).toBe("Product");
+    expect(schema.hasVariant).toBeUndefined();
+    expect(schema.offers).toMatchObject({ price: 3, eligibleQuantity: { minValue: 6 } });
     expect(getProduct("gluta-glow-body-lotion-500ml")?.minimumOrderQuantity).toBe(6);
     expect(getProduct("vitamin-c-body-lotion-502ml")?.minimumOrderQuantity).toBe(2);
     expect(getProduct("vitamin-c-niacinamide-brightening-body-lotion")?.format).toBe("444 ml / 15 fl oz");
@@ -53,7 +55,7 @@ describe("Batch 04–05 identity and scoped quotes", () => {
     ]);
     for (const match of pending) {
       expect(allSourceIds).not.toContain(match.intakeId);
-      expect(match).toMatchObject({ priceUSD: 2.99, moq: 6, status: "identity-unconfirmed" });
+      expect(match).toMatchObject({ priceUSD: 2.99, moq: 6, status: "fragrance-mapping-unconfirmed" });
       for (const image of match.gallery) {
         expect(fs.existsSync(path.resolve(import.meta.dirname, "../client/public", `.${image.src}`))).toBe(true);
       }

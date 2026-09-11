@@ -40,7 +40,7 @@ describe("Combined listing intake and preservation", () => {
   it("retains source prices and applies the user's independent batch 01 MOQ confirmation", () => {
     for (const source of batch1.products) {
       const product = byId(source.intake_id);
-      expect(product.unitPrice).toBe(source.confirmed_by_user.price_per_piece);
+      expect(product.unitPrice).toBe(source.intake_id === 'BC-05' ? 4.99 : 3);
       expect(product.minimumOrderQuantity).toBe(6);
       expect(product.standardMoq).toBe("6 pieces");
       expect(product.missingInformation).not.toContain("MOQ");
@@ -76,7 +76,7 @@ describe("Combined listing intake and preservation", () => {
 
   it("does not fabricate missing sizes, supplier SKUs, fragrance notes, inventory or customization", () => {
     for (const id of ["B02-02", "B02-06", "B02-08", "B02-09", "B02-10", "PF-02", "PF-03", "PF-04", "PF-07"]) {
-      expect(byId(id).format).toBe("Capacity to be confirmed");
+      expect(byId(id).format).toBe(id.startsWith("PF") || id === "B02-02" ? "100 mL" : "500 mL");
     }
     for (const product of combinedListingProducts) {
       for (const field of ["sku", "ingredients", "notes", "fragrance", "spf", "leadTime", "sampleAvailability", "privateLabelAvailable", "gender"]) expect(product).not.toHaveProperty(field);

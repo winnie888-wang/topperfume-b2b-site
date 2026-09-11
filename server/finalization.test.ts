@@ -16,32 +16,32 @@ function caller() { return appRouter.createCaller({ user: null, req: { ip: `qa-$
 
 describe("Final release preparation, with no real delivery", () => {
   it("applies all five confirmed BC facts, preserving price differences", () => {
-    const expected = [["BC-01", "500 mL", 2.99], ["BC-02", "500 mL", 2.99], ["BC-03", "500 mL", 2.99], ["BC-04", "10 OZ / 283 g", 4.99], ["BC-05", "16 FL OZ / 473 mL", 4.99]];
+    const expected = [["BC-01", "500 mL", 3], ["BC-02", "500 mL", 3], ["BC-03", "500 mL", 3], ["BC-04", "283 g", 3], ["BC-05", "16 FL OZ / 473 mL", 4.99]];
     for (const [id, format, price] of expected) {
       const product = products.find(p => p.intakeIds?.includes(id as string))!;
       expect(product).toMatchObject({ format, unitPrice: price, minimumOrderQuantity: 6 });
       expect(product.missingInformation?.join(" ")).not.toMatch(/Capacity|MOQ/);
     }
     const pending = JSON.parse(readFileSync(new URL("../docs/pending-listing-matches.json", import.meta.url), "utf8"));
-    expect(products.filter(p => p.sourceBatch && /Capacity to be confirmed/.test(p.format)).length + pending.filter((p: any) => !p.format).length).toBe(12);
+    expect(products.filter(p => p.sourceBatch && /Capacity to be confirmed/.test(p.format)).length + pending.filter((p: any) => !p.format).length).toBe(0);
   });
   it("rejects fractional, insufficient and unselected-variant requests", () => {
     for (const quantity of ["0", "5", "6.5", "garbage"]) expect(() => resolveInquiryProduct({ ...input, quantity })).toThrow();
-    expect(() => resolveInquiryProduct({ ...input, productUrl: "https://topperfume.cn/products/glutaglow-body-lotion-400ml-600ml" })).toThrow(/variant/);
+    expect(() => resolveInquiryProduct({ ...input, productUrl: "https://topperfume.cn/products/glutaglow-body-lotion-400ml-600ml?variant=B04-01-400" })).toThrow(/variant/);
   });
   it("derives exact product, specification, price and subtotal server-side", () => {
     const result = resolveInquiryProduct({ ...input, productName: "Tampered name", unitPrice: "US$0.01", subtotal: "US$0.01" });
-    expect(result).toMatchObject({ productName: "Daily Niacinamide Body Lotion", format: "500 mL", unitPrice: "US$2.99 / piece", subtotal: "US$17.94", standardMoq: "6 pieces" });
+    expect(result).toMatchObject({ productName: "Daily Niacinamide Body Lotion — 500 mL", format: "500 mL", unitPrice: "US$3.00 / piece", subtotal: "US$18.00", standardMoq: "6 pieces" });
     const body = buildInquiryEmail(result).text;
     expect(body).toContain("Size / format: 500 mL");
-    expect(body).toContain("US$17.94 (excludes shipping and taxes)");
-    const variant = resolveInquiryProduct({ ...input, quantity: "12", productUrl: "https://topperfume.cn/products/glutaglow-body-lotion-400ml-600ml?variant=B04-01-600" });
-    expect(variant).toMatchObject({ format: "600 mL", subtotal: "US$35.88" });
+    expect(body).toContain("US$18.00 (excludes shipping and taxes)");
+    const variant = resolveInquiryProduct({ ...input, quantity: "12", productUrl: "https://topperfume.cn/products/glutaglow-body-lotion-400ml-600ml" });
+    expect(variant).toMatchObject({ format: "725 mL", subtotal: "US$36.00" });
     const unknown = resolveInquiryProduct({ ...input, quantity: "2", productUrl: "https://topperfume.cn/products/lattafa-khamrah-qahwa" });
-    expect(unknown.format).toBe("Capacity to be confirmed");
+    expect(unknown.format).toBe("100 mL");
     expect(unknown.subtotal).toBe("US$10.00");
     const text = new URL(getWhatsAppCtaUrl({ intent: "quote", context: { ...result, quantity: "6 pieces" } })).searchParams.get("text");
-    for (const value of ["500 mL", "US$2.99", "6 pieces", "US$17.94", "excludes shipping and taxes"]) expect(text).toContain(value);
+    for (const value of ["500 mL", "US$3.00", "6 pieces", "US$18.00", "excludes shipping and taxes"]) expect(text).toContain(value);
   });
   it("keeps preview delivery disabled even if credentials exist", async () => {
     const fetchMock = vi.fn(); vi.stubGlobal("fetch", fetchMock);
@@ -65,7 +65,7 @@ describe("Final release preparation, with no real delivery", () => {
     const response = await caller().inquiry.submit(input);
     expect(response).toMatchObject({ success: true, requestId: expect.stringMatching(/^TP-/) });
     const payload = JSON.parse(fetchMock.mock.calls[0][1].body);
-    expect(payload.text).toContain("US$17.94");
+    expect(payload.text).toContain("US$18.00");
     expect(payload.reply_to).toBe("qa@example.invalid");
   });
   it("blocks preview indexing and analytics; separates form acceptance from clicks and qualified leads", () => {

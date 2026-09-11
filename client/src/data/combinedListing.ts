@@ -4,7 +4,7 @@ import type { Product } from "./products";
 export const combinedListingProducts: Product[] = [
   {
     "slug": "daily-niacinamide-body-lotion",
-    "name": "Daily Niacinamide Body Lotion",
+    "name": "Daily Niacinamide Body Lotion — 500 mL",
     "category": "skincare",
     "productType": "Body Lotion",
     "format": "500 mL",
@@ -24,21 +24,21 @@ export const combinedListingProducts: Product[] = [
     ],
     "commercialType": "Wholesale",
     "orderUnit": "piece",
-    "unitPrice": 2.99,
-    "b2bPrice": "US$2.99 / piece",
+    "unitPrice": 3.0,
+    "b2bPrice": "US$3.00 / piece",
     "standardMoq": "6 pieces",
     "minimumOrderQuantity": 6,
     "tags": [
       "Body Lotion"
     ],
-    "briefing": "A body lotion presented in a white bottle with a blue pump. Unit price: US$2.99. Confirmed net contents: 500 mL. Minimum order: 6 pieces. Contact us for delivery details.",
+    "briefing": "Daily Niacinamide Body Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "01",
     "intakeIds": [
       "BC-01"
     ],
-    "seoDescription": "A body lotion presented in a white bottle with a blue pump. Unit price: US$2.99. Confirmed net contents: 500 mL. Minimum order: 6 pieces. Contact us for delivery details.",
+    "seoDescription": "Daily Niacinamide Body Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "labelInformation": [
       "The supplied label reads Daily Brightening, Niacinamide and Serum in Lotion. Ingredient concentration and full INCI are not supplied."
     ],
@@ -47,12 +47,13 @@ export const combinedListingProducts: Product[] = [
       "Full product specifications and INCI",
       "Supplier SKU",
       "Stock, shipping and lead-time terms",
-      "Customization and sample policy"
+      "Customization and sample policy",
+      "Exact fragrance name and SKU / image mapping relative to the separately held Daily Niacinamide series record"
     ]
   },
   {
     "slug": "luminous-glow-body-wash",
-    "name": "Luminous Glow Body Wash",
+    "name": "Luminous Glow Body Wash — 500 mL",
     "category": "skincare",
     "productType": "Body Wash",
     "format": "500 mL",
@@ -72,21 +73,21 @@ export const combinedListingProducts: Product[] = [
     ],
     "commercialType": "Wholesale",
     "orderUnit": "piece",
-    "unitPrice": 2.99,
-    "b2bPrice": "US$2.99 / piece",
+    "unitPrice": 3.0,
+    "b2bPrice": "US$3.00 / piece",
     "standardMoq": "6 pieces",
     "minimumOrderQuantity": 6,
     "tags": [
       "Body Wash"
     ],
-    "briefing": "Luminous Glow body wash in a pink pump bottle. Unit price: US$2.99. Confirmed net contents: 500 mL. Minimum order: 6 pieces. Contact us for delivery details.",
+    "briefing": "Luminous Glow Body Wash. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "01",
     "intakeIds": [
       "BC-02"
     ],
-    "seoDescription": "Luminous Glow body wash in a pink pump bottle. Unit price: US$2.99. Confirmed net contents: 500 mL. Minimum order: 6 pieces. Contact us for delivery details.",
+    "seoDescription": "Luminous Glow Body Wash. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "labelInformation": [],
     "imageDisclosure": "Supplier-provided artwork. Benefit statements in the image have not been independently verified. A clean product photograph is requested.",
     "missingInformation": [
@@ -118,21 +119,21 @@ export const combinedListingProducts: Product[] = [
     ],
     "commercialType": "Wholesale",
     "orderUnit": "piece",
-    "unitPrice": 2.99,
-    "b2bPrice": "US$2.99 / piece",
+    "unitPrice": 3.0,
+    "b2bPrice": "US$3.00 / piece",
     "standardMoq": "6 pieces",
     "minimumOrderQuantity": 6,
     "tags": [
       "Body Lotion"
     ],
-    "briefing": "Gluta Glow body lotion in a 500 mL pump bottle, as labeled in the supplied image. Unit price: US$2.99. Contact us for order details.",
+    "briefing": "Gluta Glow Body Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "01",
     "intakeIds": [
       "BC-03"
     ],
-    "seoDescription": "Gluta Glow body lotion in a 500 mL pump bottle, as labeled in the supplied image. Unit price: US$2.99. Contact us for order details.",
+    "seoDescription": "Gluta Glow Body Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "labelInformation": [
       "Net contents shown on the supplied label: 500 mL."
     ],
@@ -150,7 +151,7 @@ export const combinedListingProducts: Product[] = [
     "name": "Vanilla Cashmere Whipped Oil Body Butter — 283 g",
     "category": "skincare",
     "productType": "Body Butter",
-    "format": "10 OZ / 283 g",
+    "format": "283 g",
     "descriptor": "Body Butter",
     "image": "/assets/products/vanilla-cashmere-whipped-oil-body-butter-283g/supplied-800.webp",
     "gallery": [
@@ -167,21 +168,21 @@ export const combinedListingProducts: Product[] = [
     ],
     "commercialType": "Wholesale",
     "orderUnit": "piece",
-    "unitPrice": 4.99,
-    "b2bPrice": "US$4.99 / piece",
+    "unitPrice": 3.0,
+    "b2bPrice": "US$3.00 / piece",
     "standardMoq": "6 pieces",
     "minimumOrderQuantity": 6,
     "tags": [
       "Body Butter"
     ],
-    "briefing": "Vanilla Cashmere whipped oil body butter in a 283 g tub, as labeled in the supplied image. Unit price: US$4.99. Contact us for order details.",
+    "briefing": "Vanilla Cashmere Whipped Oil Body Butter. Confirmed net contents: 283 g. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "01",
     "intakeIds": [
       "BC-04"
     ],
-    "seoDescription": "Vanilla Cashmere whipped oil body butter in a 283 g tub, as labeled in the supplied image. Unit price: US$4.99. Contact us for order details.",
+    "seoDescription": "Vanilla Cashmere Whipped Oil Body Butter. Confirmed net contents: 283 g. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "labelInformation": [
       "Brand shown on the supplied packaging: eos.",
       "Net contents shown on the supplied label: 10 OZ / 283 g."
@@ -244,10 +245,10 @@ export const combinedListingProducts: Product[] = [
   },
   {
     "slug": "vaseline-body-care-series-200ml",
-    "name": "Vaseline Body Care Series — 200 mL",
+    "name": "Vaseline Body Care Series — 200 mL / 237 mL",
     "category": "skincare",
     "productType": "Body Oil",
-    "format": "200 mL",
+    "format": "200 mL / 237 mL, by selected variant",
     "descriptor": "Body Oil",
     "image": "/assets/products/vaseline-body-care-series-200ml/supplied-800.webp",
     "gallery": [
@@ -269,7 +270,7 @@ export const combinedListingProducts: Product[] = [
     "tags": [
       "Body Oil"
     ],
-    "briefing": "Choose a pictured 200 mL label variant from the Vaseline body care series. US$3.00 per piece; minimum order 6 pieces of the selected variant. Contact us for specifications and delivery details.",
+    "briefing": "Vaseline body care series, priced individually at US$3.00 per piece, MOQ 6 pieces per selected variant. Vitamin B3, Cocoa Radiant Body Oil, Sunlit Glow and Gluta Ceramide are 237 mL. Golden Glow and Cera Glow remain 200 mL. Select the product label for its confirmed size.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "02",
@@ -281,14 +282,13 @@ export const combinedListingProducts: Product[] = [
       "B02-01-05",
       "B02-01-06"
     ],
-    "seoDescription": "Choose a pictured 200 mL label variant from the Vaseline body care series. US$3.00 per piece; minimum order 6 pieces of the selected variant. Contact us for specifications and delivery details.",
+    "seoDescription": "Vaseline body care series, priced individually at US$3.00 per piece, MOQ 6 pieces per selected variant. Vitamin B3, Cocoa Radiant Body Oil, Sunlit Glow and Gluta Ceramide are 237 mL. Golden Glow and Cera Glow remain 200 mL. Select the product label for its confirmed size.",
     "minimumOrderQuantity": 6,
     "standardMoq": "6 pieces per selected variant",
     "labelInformation": [
-      "Brand shown on the supplied packaging: Vaseline.",
-      "Net contents shown on the supplied label: 200 mL."
+      "The reference group photo shows previous 200 mL labels. Confirmed sizes vary by selected product; see the current specification above."
     ],
-    "imageDisclosure": "Group photo showing separate variants. The quoted price is per piece of the selected variant; this is not a set. Select a label to identify its position in the photo.",
+    "imageDisclosure": "Reference group photo, not a set. Vitamin B3, Cocoa Radiant Body Oil, Sunlit Glow and Gluta Ceramide are now confirmed as 237 mL; their pictured 200 mL labels are outdated and replacement photos are pending. Golden Glow and Cera Glow remain 200 mL. Fragrance names and the mapping to separate series photos still need confirmation.",
     "missingInformation": [
       "Full specifications and INCI",
       "Supplier SKU",
@@ -296,60 +296,71 @@ export const combinedListingProducts: Product[] = [
       "Sample and customization policy",
       "Individual product photographs for each variant",
       "Exact product type of the Gluta Ceramide variant",
-      "Full label details and evidence for any UV or quantified artwork claims"
+      "Full label details and evidence for any UV or quantified artwork claims",
+      "Replacement 237 mL photographs for Vitamin B3, Cocoa Radiant Body Oil, Sunlit Glow and Gluta Ceramide",
+      "Fragrance names and their exact SKU / image mapping for the four related series products"
     ],
     "variants": [
       {
         "id": "B02-01-01",
-        "name": "Vaseline Vitamin B3 Body Oil",
+        "name": "Vaseline Vitamin B3 Body Oil — 237 mL",
         "imagePosition": "leftmost",
         "unitPrice": 3.0,
-        "minimumOrderQuantity": 6
+        "minimumOrderQuantity": 6,
+        "format": "237 mL",
+        "note": "Confirmed net contents: 237 mL. The reference image shows the previous 200 mL label; updated packaging photography is pending."
       },
       {
         "id": "B02-01-02",
-        "name": "Vaseline Cocoa Radiant Body Oil",
+        "name": "Vaseline Cocoa Radiant Body Oil — 237 mL",
         "imagePosition": "second from left",
         "unitPrice": 3.0,
-        "minimumOrderQuantity": 6
+        "minimumOrderQuantity": 6,
+        "format": "237 mL",
+        "note": "Confirmed net contents: 237 mL. The reference image shows the previous 200 mL label; updated packaging photography is pending."
       },
       {
         "id": "B02-01-03",
-        "name": "Vaseline Sunlit Glow Body Oil",
+        "name": "Vaseline Sunlit Glow Body Oil — 237 mL",
         "imagePosition": "third from left",
         "unitPrice": 3.0,
-        "minimumOrderQuantity": 6
+        "minimumOrderQuantity": 6,
+        "format": "237 mL",
+        "note": "Confirmed net contents: 237 mL. The reference image shows the previous 200 mL label; updated packaging photography is pending."
       },
       {
         "id": "B02-01-04",
-        "name": "Vaseline Golden Glow Body Oil",
+        "name": "Vaseline Golden Glow Body Oil — 200 mL",
         "imagePosition": "fourth from left",
         "unitPrice": 3.0,
-        "minimumOrderQuantity": 6
+        "minimumOrderQuantity": 6,
+        "format": "200 mL"
       },
       {
         "id": "B02-01-05",
-        "name": "Vaseline UV Extra Brightening Gluta Ceramide",
+        "name": "Vaseline UV Extra Brightening Gluta Ceramide — 237 mL",
         "imagePosition": "fifth from left",
         "unitPrice": 3.0,
         "minimumOrderQuantity": 6,
-        "note": "The precise product format of Gluta Ceramide is to be confirmed."
+        "note": "The precise product format of Gluta Ceramide is to be confirmed. Confirmed net contents: 237 mL. The reference image shows the previous 200 mL label; updated packaging photography is pending.",
+        "format": "237 mL"
       },
       {
         "id": "B02-01-06",
-        "name": "Vaseline Cera Glow Body Gel Oil",
+        "name": "Vaseline Cera Glow Body Gel Oil — 200 mL",
         "imagePosition": "rightmost",
         "unitPrice": 3.0,
-        "minimumOrderQuantity": 6
+        "minimumOrderQuantity": 6,
+        "format": "200 mL"
       }
     ]
   },
   {
     "slug": "khadlaj-hareem-al-sultan",
-    "name": "Khadlaj Hareem Al Sultan",
+    "name": "Khadlaj Hareem Al Sultan — 100 mL",
     "category": "fragrance",
     "productType": "Fragrance",
-    "format": "Capacity to be confirmed",
+    "format": "100 mL",
     "descriptor": "Fragrance",
     "image": "/assets/products/khadlaj-hareem-al-sultan/supplied-800.webp",
     "gallery": [
@@ -371,14 +382,14 @@ export const combinedListingProducts: Product[] = [
     "tags": [
       "Fragrance"
     ],
-    "briefing": "Khadlaj Hareem Al Sultan. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+    "briefing": "Khadlaj Hareem Al Sultan. Confirmed net contents: 100 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "02",
     "intakeIds": [
       "B02-02"
     ],
-    "seoDescription": "Khadlaj Hareem Al Sultan. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+    "seoDescription": "Khadlaj Hareem Al Sultan. Confirmed net contents: 100 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "minimumOrderQuantity": 6,
     "standardMoq": "6 pieces",
     "labelInformation": [
@@ -386,7 +397,6 @@ export const combinedListingProducts: Product[] = [
     ],
     "imageDisclosure": "The ornate gold main bottle is the quoted product. The red item marked SAMPLE NOT FOR SALE is a photo prop and is not included. Background stock is not included.",
     "missingInformation": [
-      "Capacity / net contents",
       "Full specifications and INCI",
       "Supplier SKU",
       "Stock, shipping and dispatch terms",
@@ -565,10 +575,10 @@ export const combinedListingProducts: Product[] = [
   },
   {
     "slug": "hobby-pure-orchid-shower-gel",
-    "name": "HOBBY Fresh Care Pure Orchid Shower Gel",
+    "name": "HOBBY Fresh Care Pure Orchid Shower Gel — 500 mL",
     "category": "skincare",
     "productType": "Body Wash",
-    "format": "Capacity to be confirmed",
+    "format": "500 mL",
     "descriptor": "Body Wash",
     "image": "/assets/products/hobby-pure-orchid-shower-gel/supplied-800.webp",
     "gallery": [
@@ -590,14 +600,14 @@ export const combinedListingProducts: Product[] = [
     "tags": [
       "Body Wash"
     ],
-    "briefing": "HOBBY Fresh Care Pure Orchid Shower Gel. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+    "briefing": "HOBBY Fresh Care Pure Orchid Shower Gel. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "02",
     "intakeIds": [
       "B02-06"
     ],
-    "seoDescription": "HOBBY Fresh Care Pure Orchid Shower Gel. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+    "seoDescription": "HOBBY Fresh Care Pure Orchid Shower Gel. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "minimumOrderQuantity": 6,
     "standardMoq": "6 pieces",
     "labelInformation": [
@@ -605,7 +615,6 @@ export const combinedListingProducts: Product[] = [
     ],
     "imageDisclosure": "Supplied product photo. Repeated bottles and background stock are not a bundle. Price is per piece.",
     "missingInformation": [
-      "Capacity / net contents",
       "Full specifications and INCI",
       "Supplier SKU",
       "Stock, shipping and dispatch terms",
@@ -663,10 +672,10 @@ export const combinedListingProducts: Product[] = [
   },
   {
     "slug": "st-ives-oatmeal-shea-body-lotion",
-    "name": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion",
+    "name": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion — 500 mL",
     "category": "skincare",
     "productType": "Body Lotion",
-    "format": "Capacity to be confirmed",
+    "format": "500 mL",
     "descriptor": "Body Lotion",
     "image": "/assets/products/st-ives-oatmeal-shea-body-lotion/supplied-800.webp",
     "gallery": [
@@ -688,14 +697,14 @@ export const combinedListingProducts: Product[] = [
     "tags": [
       "Body Lotion"
     ],
-    "briefing": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+    "briefing": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "02",
     "intakeIds": [
       "B02-08"
     ],
-    "seoDescription": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+    "seoDescription": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "minimumOrderQuantity": 6,
     "standardMoq": "6 pieces",
     "labelInformation": [
@@ -703,7 +712,6 @@ export const combinedListingProducts: Product[] = [
     ],
     "imageDisclosure": "Supplied product photo. Repeated bottles and background stock are not a bundle. Price is per piece.",
     "missingInformation": [
-      "Clear net-contents label photograph (capacity remains unconfirmed)",
       "Full specifications and INCI",
       "Supplier SKU",
       "Stock, shipping and dispatch terms",
@@ -712,10 +720,10 @@ export const combinedListingProducts: Product[] = [
   },
   {
     "slug": "st-ives-coconut-orchid-body-lotion",
-    "name": "St. Ives Softening Coconut & Orchid Body Lotion",
+    "name": "St. Ives Softening Coconut & Orchid Body Lotion — 500 mL",
     "category": "skincare",
     "productType": "Body Lotion",
-    "format": "Capacity to be confirmed",
+    "format": "500 mL",
     "descriptor": "Body Lotion",
     "image": "/assets/products/st-ives-coconut-orchid-body-lotion/supplied-800.webp",
     "gallery": [
@@ -737,14 +745,14 @@ export const combinedListingProducts: Product[] = [
     "tags": [
       "Body Lotion"
     ],
-    "briefing": "St. Ives Softening Coconut & Orchid Body Lotion. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+    "briefing": "St. Ives Softening Coconut & Orchid Body Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "02",
     "intakeIds": [
       "B02-09"
     ],
-    "seoDescription": "St. Ives Softening Coconut & Orchid Body Lotion. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+    "seoDescription": "St. Ives Softening Coconut & Orchid Body Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "minimumOrderQuantity": 6,
     "standardMoq": "6 pieces",
     "labelInformation": [
@@ -752,7 +760,6 @@ export const combinedListingProducts: Product[] = [
     ],
     "imageDisclosure": "Supplied product photo. Repeated bottles and background stock are not a bundle. Price is per piece.",
     "missingInformation": [
-      "Clear net-contents label photograph (capacity remains unconfirmed)",
       "Full specifications and INCI",
       "Supplier SKU",
       "Stock, shipping and dispatch terms",
@@ -761,10 +768,10 @@ export const combinedListingProducts: Product[] = [
   },
   {
     "slug": "garnier-vitamin-c-body-serum-lotion",
-    "name": "Garnier Bright Complete Vitamin C Body Serum Lotion",
+    "name": "Garnier Bright Complete Vitamin C Body Serum Lotion — 500 mL",
     "category": "skincare",
     "productType": "Body Lotion",
-    "format": "Capacity to be confirmed",
+    "format": "500 mL",
     "descriptor": "Body Lotion",
     "image": "/assets/products/garnier-vitamin-c-body-serum-lotion/supplied-800.webp",
     "gallery": [
@@ -786,14 +793,14 @@ export const combinedListingProducts: Product[] = [
     "tags": [
       "Body Lotion"
     ],
-    "briefing": "Garnier Bright Complete Vitamin C Body Serum Lotion. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+    "briefing": "Garnier Bright Complete Vitamin C Body Serum Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "02",
     "intakeIds": [
       "B02-10"
     ],
-    "seoDescription": "Garnier Bright Complete Vitamin C Body Serum Lotion. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+    "seoDescription": "Garnier Bright Complete Vitamin C Body Serum Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "minimumOrderQuantity": 6,
     "standardMoq": "6 pieces",
     "labelInformation": [
@@ -801,7 +808,6 @@ export const combinedListingProducts: Product[] = [
     ],
     "imageDisclosure": "Supplied product photo. Repeated bottles and background stock are not a bundle. Price is per piece.",
     "missingInformation": [
-      "Capacity / net contents",
       "Full specifications and INCI",
       "Supplier SKU",
       "Stock, shipping and dispatch terms",
@@ -912,10 +918,10 @@ export const combinedListingProducts: Product[] = [
   },
   {
     "slug": "lattafa-badee-al-oud-sublime",
-    "name": "Lattafa Bade’e Al Oud Sublime",
+    "name": "Lattafa Bade’e Al Oud Sublime — 100 mL",
     "category": "fragrance",
     "productType": "Fragrance",
-    "format": "Capacity to be confirmed",
+    "format": "100 mL",
     "descriptor": "Fragrance",
     "image": "/assets/products/lattafa-badee-al-oud-sublime/supplied-800.webp",
     "gallery": [
@@ -937,14 +943,14 @@ export const combinedListingProducts: Product[] = [
     "tags": [
       "Fragrance"
     ],
-    "briefing": "Lattafa Bade’e Al Oud Sublime. US$5.00 per piece with a minimum order of 2 pieces. Contact us for product specifications and order details.",
+    "briefing": "Lattafa Bade’e Al Oud Sublime. Confirmed net contents: 100 mL. US$5.00 per piece. Minimum order: 2 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "03",
     "intakeIds": [
       "PF-02"
     ],
-    "seoDescription": "Lattafa Bade’e Al Oud Sublime. US$5.00 per piece with a minimum order of 2 pieces. Contact us for product specifications and order details.",
+    "seoDescription": "Lattafa Bade’e Al Oud Sublime. Confirmed net contents: 100 mL. US$5.00 per piece. Minimum order: 2 pieces. Contact us for product specifications and delivery terms.",
     "minimumOrderQuantity": 2,
     "standardMoq": "2 pieces",
     "labelInformation": [
@@ -953,7 +959,6 @@ export const combinedListingProducts: Product[] = [
     "imageDisclosure": "Supplied photo showing the named bottle and its pictured box. Background products are not included. Price is per piece.",
     "packaging": "Red rectangular bottle with gold-patterned label and matching red box.",
     "missingInformation": [
-      "Capacity",
       "Concentration / formulation",
       "Verified fragrance notes",
       "Supplier SKU",
@@ -964,10 +969,10 @@ export const combinedListingProducts: Product[] = [
   },
   {
     "slug": "lattafa-khamrah-qahwa",
-    "name": "Lattafa Khamrah Qahwa",
+    "name": "Lattafa Khamrah Qahwa — 100 mL",
     "category": "fragrance",
     "productType": "Fragrance",
-    "format": "Capacity to be confirmed",
+    "format": "100 mL",
     "descriptor": "Fragrance",
     "image": "/assets/products/lattafa-khamrah-qahwa/supplied-800.webp",
     "gallery": [
@@ -989,14 +994,14 @@ export const combinedListingProducts: Product[] = [
     "tags": [
       "Fragrance"
     ],
-    "briefing": "Lattafa Khamrah Qahwa. US$5.00 per piece with a minimum order of 2 pieces. Contact us for product specifications and order details.",
+    "briefing": "Lattafa Khamrah Qahwa. Confirmed net contents: 100 mL. US$5.00 per piece. Minimum order: 2 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "03",
     "intakeIds": [
       "PF-03"
     ],
-    "seoDescription": "Lattafa Khamrah Qahwa. US$5.00 per piece with a minimum order of 2 pieces. Contact us for product specifications and order details.",
+    "seoDescription": "Lattafa Khamrah Qahwa. Confirmed net contents: 100 mL. US$5.00 per piece. Minimum order: 2 pieces. Contact us for product specifications and delivery terms.",
     "minimumOrderQuantity": 2,
     "standardMoq": "2 pieces",
     "labelInformation": [
@@ -1005,7 +1010,6 @@ export const combinedListingProducts: Product[] = [
     "imageDisclosure": "Supplied photo showing the named bottle and its pictured box. Background products are not included. Price is per piece.",
     "packaging": "Faceted clear bottle with amber liquid and a brown Qahwa box.",
     "missingInformation": [
-      "Capacity",
       "Concentration / formulation",
       "Verified fragrance notes",
       "Supplier SKU",
@@ -1016,10 +1020,10 @@ export const combinedListingProducts: Product[] = [
   },
   {
     "slug": "lattafa-khamrah",
-    "name": "Lattafa Khamrah",
+    "name": "Lattafa Khamrah — 100 mL",
     "category": "fragrance",
     "productType": "Fragrance",
-    "format": "Capacity to be confirmed",
+    "format": "100 mL",
     "descriptor": "Fragrance",
     "image": "/assets/products/lattafa-khamrah/supplied-800.webp",
     "gallery": [
@@ -1041,14 +1045,14 @@ export const combinedListingProducts: Product[] = [
     "tags": [
       "Fragrance"
     ],
-    "briefing": "Lattafa Khamrah. US$5.00 per piece with a minimum order of 2 pieces. Contact us for product specifications and order details.",
+    "briefing": "Lattafa Khamrah. Confirmed net contents: 100 mL. US$5.00 per piece. Minimum order: 2 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "03",
     "intakeIds": [
       "PF-04"
     ],
-    "seoDescription": "Lattafa Khamrah. US$5.00 per piece with a minimum order of 2 pieces. Contact us for product specifications and order details.",
+    "seoDescription": "Lattafa Khamrah. Confirmed net contents: 100 mL. US$5.00 per piece. Minimum order: 2 pieces. Contact us for product specifications and delivery terms.",
     "minimumOrderQuantity": 2,
     "standardMoq": "2 pieces",
     "labelInformation": [
@@ -1057,7 +1061,6 @@ export const combinedListingProducts: Product[] = [
     "imageDisclosure": "Supplied photo showing the named bottle and its pictured box. Background products are not included. Price is per piece.",
     "packaging": "Faceted clear bottle with amber liquid and a dark Khamrah box.",
     "missingInformation": [
-      "Capacity",
       "Concentration / formulation",
       "Verified fragrance notes",
       "Supplier SKU",
@@ -1172,10 +1175,10 @@ export const combinedListingProducts: Product[] = [
   },
   {
     "slug": "french-avenue-liquid-brun",
-    "name": "French Avenue Liquid Brun",
+    "name": "French Avenue Liquid Brun — 100 mL",
     "category": "fragrance",
     "productType": "Fragrance",
-    "format": "Capacity to be confirmed",
+    "format": "100 mL",
     "descriptor": "Fragrance",
     "image": "/assets/products/french-avenue-liquid-brun/supplied-800.webp",
     "gallery": [
@@ -1197,14 +1200,14 @@ export const combinedListingProducts: Product[] = [
     "tags": [
       "Fragrance"
     ],
-    "briefing": "French Avenue Liquid Brun. US$5.00 per piece with a minimum order of 2 pieces. Contact us for product specifications and order details.",
+    "briefing": "French Avenue Liquid Brun. Confirmed net contents: 100 mL. US$5.00 per piece. Minimum order: 2 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "03",
     "intakeIds": [
       "PF-07"
     ],
-    "seoDescription": "French Avenue Liquid Brun. US$5.00 per piece with a minimum order of 2 pieces. Contact us for product specifications and order details.",
+    "seoDescription": "French Avenue Liquid Brun. Confirmed net contents: 100 mL. US$5.00 per piece. Minimum order: 2 pieces. Contact us for product specifications and delivery terms.",
     "minimumOrderQuantity": 2,
     "standardMoq": "2 pieces",
     "labelInformation": [
@@ -1213,7 +1216,6 @@ export const combinedListingProducts: Product[] = [
     "imageDisclosure": "Supplied photo showing the named bottle and its pictured box. Background products are not included. Price is per piece.",
     "packaging": "Tall copper-toned bottle with a brown Liquid Brun box.",
     "missingInformation": [
-      "Capacity",
       "Concentration / formulation",
       "Verified fragrance notes",
       "Supplier SKU",

@@ -13,7 +13,7 @@ export function resolveInquiryProduct(input: InquiryEmailInput): InquiryEmailInp
   if (!source) throw new Error("Please select a product from the catalogue.");
   const product = withOrderTerms(source);
   const variant = product.variants?.find(item => item.id === url.searchParams.get("variant"));
-  if (product.variants && !variant) throw new Error("Please select a product variant.");
+  if ((product.variants || url.searchParams.has("variant")) && !variant) throw new Error("Please select a currently available product variant.");
   const minimum = variant?.minimumOrderQuantity ?? product.minimumOrderQuantity;
   if (minimum !== undefined && quantity < minimum) throw new Error(`Minimum order: ${minimum} pieces for the selected product.`);
   const price = variant?.unitPrice ?? product.unitPrice;

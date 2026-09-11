@@ -4,10 +4,10 @@ import type { Product } from "./products";
 export const latestListingProducts: Product[] = [
   {
     "slug": "glutaglow-body-lotion-400ml-600ml",
-    "name": "GlutaGlow Body Lotion — 400 mL / 600 mL",
+    "name": "GlutaGlow Body Lotion — 725 mL",
     "category": "skincare",
     "productType": "Body Lotion",
-    "format": "400 mL / 600 mL",
+    "format": "725 mL",
     "descriptor": "Body Lotion",
     "image": "/assets/products/glutaglow-body-lotion-400ml-600ml/supplied-1-800.webp",
     "gallery": [
@@ -24,15 +24,15 @@ export const latestListingProducts: Product[] = [
     ],
     "commercialType": "Wholesale",
     "orderUnit": "piece",
-    "unitPrice": 2.99,
-    "b2bPrice": "US$2.99 / piece",
+    "unitPrice": 3.0,
+    "b2bPrice": "US$3.00 / piece",
     "minimumOrderQuantity": 6,
-    "standardMoq": "6 pieces per selected size",
+    "standardMoq": "6 pieces",
     "tags": [
       "Body Lotion"
     ],
-    "briefing": "GlutaGlow Body Lotion in two labeled sizes: 400 mL and 600 mL. Each size is US$2.99 per piece, with a minimum order of 6 pieces of the selected size. Contact us for specifications and delivery details.",
-    "seoDescription": "GlutaGlow Body Lotion in two labeled sizes: 400 mL and 600 mL. Each size is US$2.99 per piece, with a minimum order of 6 pieces of the selected size. Contact us for specifications and delivery details.",
+    "briefing": "GlutaGlow Body Lotion. Confirmed net contents: 725 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
+    "seoDescription": "GlutaGlow Body Lotion. Confirmed net contents: 725 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "04",
@@ -41,7 +41,7 @@ export const latestListingProducts: Product[] = [
       "B04-01-600"
     ],
     "labelInformation": [
-      "The left bottle is labeled 400 mL; the right bottle is labeled 600 mL."
+      "The supplied reference photo carries previous 400 mL / 600 mL labeling; the current confirmed net contents are 725 mL."
     ],
     "missingInformation": [
       "Supplier SKU and brand details",
@@ -49,35 +49,16 @@ export const latestListingProducts: Product[] = [
       "Stock, shipping and dispatch terms",
       "Sample and customization policy",
       "Evidence for any benefit statements in the supplied artwork",
-      "Individual product photograph for each size"
+      "Replacement product photograph showing the confirmed 725 mL packaging"
     ],
-    "imageDisclosure": "The supplied photo shows two separate sizes: 400 mL on the left and 600 mL on the right. Price is per piece of the selected size, not for the pictured pair. Artwork benefit statements have not been independently verified.",
-    "variantLabel": "size",
-    "variants": [
-      {
-        "id": "B04-01-400",
-        "name": "GlutaGlow Body Lotion — 400 mL",
-        "format": "400 mL",
-        "imagePosition": "on the left",
-        "unitPrice": 2.99,
-        "minimumOrderQuantity": 6
-      },
-      {
-        "id": "B04-01-600",
-        "name": "GlutaGlow Body Lotion — 600 mL",
-        "format": "600 mL",
-        "imagePosition": "on the right",
-        "unitPrice": 2.99,
-        "minimumOrderQuantity": 6
-      }
-    ]
+    "imageDisclosure": "Reference photo with previous 400 mL / 600 mL labeling. The current offering is 725 mL, priced per piece. Replacement packaging photography is pending; the photographed label has not been altered. The two pictured sizes are no longer offered; this is one 725 mL product, not a set."
   },
   {
     "slug": "healthy-white-body-lotion-400ml",
-    "name": "Healthy White Body Lotion — 400 mL",
+    "name": "Healthy White Body Lotion — 500 mL",
     "category": "skincare",
     "productType": "Body Lotion",
-    "format": "400 mL",
+    "format": "500 mL",
     "descriptor": "Body Lotion",
     "image": "/assets/products/healthy-white-body-lotion-400ml/supplied-1-800.webp",
     "gallery": [
@@ -94,15 +75,15 @@ export const latestListingProducts: Product[] = [
     ],
     "commercialType": "Wholesale",
     "orderUnit": "piece",
-    "unitPrice": 2.99,
-    "b2bPrice": "US$2.99 / piece",
+    "unitPrice": 3.0,
+    "b2bPrice": "US$3.00 / piece",
     "minimumOrderQuantity": 6,
     "standardMoq": "6 pieces",
     "tags": [
       "Body Lotion"
     ],
-    "briefing": "Healthy White Body Lotion, 400 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
-    "seoDescription": "Healthy White Body Lotion, 400 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+    "briefing": "Healthy White Body Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
+    "seoDescription": "Healthy White Body Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "04",
@@ -110,23 +91,24 @@ export const latestListingProducts: Product[] = [
       "B04-02"
     ],
     "labelInformation": [
-      "Net contents printed on the supplied label: 400 mL."
+      "The supplied reference photo carries previous 400 mL labeling; the current confirmed net contents are 500 mL."
     ],
     "missingInformation": [
       "Supplier SKU and brand details",
       "Full specifications, ingredients and usage instructions",
       "Stock, shipping and dispatch terms",
       "Sample and customization policy",
-      "Evidence for any benefit statements in the supplied artwork"
+      "Evidence for any benefit statements in the supplied artwork",
+      "Replacement product photograph showing the confirmed 500 mL packaging"
     ],
-    "imageDisclosure": "Supplied image. Product names and readable net contents come from the pictured label. Benefit statements in the artwork have not been independently verified."
+    "imageDisclosure": "Reference photo with previous 400 mL labeling. The current offering is 500 mL, priced per piece. Replacement packaging photography is pending; the photographed label has not been altered."
   },
   {
     "slug": "cocoa-radiant-body-gel-oil",
-    "name": "Cocoa Radiant Body Gel Oil",
+    "name": "Cocoa Radiant Body Gel Oil — 237 mL",
     "category": "skincare",
     "productType": "Body Gel Oil",
-    "format": "Capacity to be confirmed",
+    "format": "237 mL",
     "descriptor": "Body Gel Oil",
     "image": "/assets/products/cocoa-radiant-body-gel-oil/supplied-1-800.webp",
     "gallery": [
@@ -143,15 +125,15 @@ export const latestListingProducts: Product[] = [
     ],
     "commercialType": "Wholesale",
     "orderUnit": "piece",
-    "unitPrice": 2.99,
-    "b2bPrice": "US$2.99 / piece",
+    "unitPrice": 2.0,
+    "b2bPrice": "US$2.00 / piece",
     "minimumOrderQuantity": 6,
     "standardMoq": "6 pieces",
     "tags": [
       "Body Gel Oil"
     ],
-    "briefing": "Cocoa Radiant Body Gel Oil. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
-    "seoDescription": "Cocoa Radiant Body Gel Oil. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+    "briefing": "Cocoa Radiant Body Gel Oil. Confirmed net contents: 237 mL. US$2.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
+    "seoDescription": "Cocoa Radiant Body Gel Oil. Confirmed net contents: 237 mL. US$2.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "05",
@@ -160,7 +142,6 @@ export const latestListingProducts: Product[] = [
     ],
     "labelInformation": [],
     "missingInformation": [
-      "Capacity / net contents",
       "Supplier SKU and brand details",
       "Full specifications, ingredients and usage instructions",
       "Stock, shipping and dispatch terms",
@@ -172,10 +153,10 @@ export const latestListingProducts: Product[] = [
   },
   {
     "slug": "essential-healing-body-lotion-725ml",
-    "name": "Essential Healing Body Lotion — 725 mL",
+    "name": "Essential Healing Body Lotion — 500 mL",
     "category": "skincare",
     "productType": "Body Lotion",
-    "format": "725 mL",
+    "format": "500 mL",
     "descriptor": "Body Lotion",
     "image": "/assets/products/essential-healing-body-lotion-725ml/supplied-1-800.webp",
     "gallery": [
@@ -192,15 +173,15 @@ export const latestListingProducts: Product[] = [
     ],
     "commercialType": "Wholesale",
     "orderUnit": "piece",
-    "unitPrice": 2.99,
-    "b2bPrice": "US$2.99 / piece",
+    "unitPrice": 3.0,
+    "b2bPrice": "US$3.00 / piece",
     "minimumOrderQuantity": 6,
     "standardMoq": "6 pieces",
     "tags": [
       "Body Lotion"
     ],
-    "briefing": "Essential Healing Body Lotion, 725 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
-    "seoDescription": "Essential Healing Body Lotion, 725 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+    "briefing": "Essential Healing Body Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
+    "seoDescription": "Essential Healing Body Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "05",
@@ -208,23 +189,24 @@ export const latestListingProducts: Product[] = [
       "B05-03"
     ],
     "labelInformation": [
-      "Net contents printed on the supplied label: 725 mL."
+      "The supplied reference photo carries previous 725 mL labeling; the current confirmed net contents are 500 mL."
     ],
     "missingInformation": [
       "Supplier SKU and brand details",
       "Full specifications, ingredients and usage instructions",
       "Stock, shipping and dispatch terms",
       "Sample and customization policy",
-      "Evidence for any benefit statements in the supplied artwork"
+      "Evidence for any benefit statements in the supplied artwork",
+      "Replacement product photograph showing the confirmed 500 mL packaging"
     ],
-    "imageDisclosure": "Supplied image. Product names and readable net contents come from the pictured label. Benefit statements in the artwork have not been independently verified."
+    "imageDisclosure": "Reference photo with previous 725 mL labeling. The current offering is 500 mL, priced per piece. Replacement packaging photography is pending; the photographed label has not been altered."
   },
   {
     "slug": "advanced-repair-body-lotion-725ml",
-    "name": "Advanced Repair Body Lotion — 725 mL",
+    "name": "Advanced Repair Body Lotion — 500 mL",
     "category": "skincare",
     "productType": "Body Lotion",
-    "format": "725 mL",
+    "format": "500 mL",
     "descriptor": "Body Lotion",
     "image": "/assets/products/advanced-repair-body-lotion-725ml/supplied-1-800.webp",
     "gallery": [
@@ -241,15 +223,15 @@ export const latestListingProducts: Product[] = [
     ],
     "commercialType": "Wholesale",
     "orderUnit": "piece",
-    "unitPrice": 2.99,
-    "b2bPrice": "US$2.99 / piece",
+    "unitPrice": 3.0,
+    "b2bPrice": "US$3.00 / piece",
     "minimumOrderQuantity": 6,
     "standardMoq": "6 pieces",
     "tags": [
       "Body Lotion"
     ],
-    "briefing": "Advanced Repair Body Lotion, 725 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
-    "seoDescription": "Advanced Repair Body Lotion, 725 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+    "briefing": "Advanced Repair Body Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
+    "seoDescription": "Advanced Repair Body Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "05",
@@ -257,23 +239,24 @@ export const latestListingProducts: Product[] = [
       "B05-06"
     ],
     "labelInformation": [
-      "Net contents printed on the supplied label: 725 mL."
+      "The supplied reference photo carries previous 725 mL labeling; the current confirmed net contents are 500 mL."
     ],
     "missingInformation": [
       "Supplier SKU and brand details",
       "Full specifications, ingredients and usage instructions",
       "Stock, shipping and dispatch terms",
       "Sample and customization policy",
-      "Evidence for any benefit statements in the supplied artwork"
+      "Evidence for any benefit statements in the supplied artwork",
+      "Replacement product photograph showing the confirmed 500 mL packaging"
     ],
-    "imageDisclosure": "Supplied image. Product names and readable net contents come from the pictured label. Benefit statements in the artwork have not been independently verified."
+    "imageDisclosure": "Reference photo with previous 725 mL labeling. The current offering is 500 mL, priced per piece. Replacement packaging photography is pending; the photographed label has not been altered."
   },
   {
     "slug": "calm-healing-body-lotion",
-    "name": "Calm Healing Body Lotion",
+    "name": "Calm Healing Body Lotion — 500 mL",
     "category": "skincare",
     "productType": "Body Lotion",
-    "format": "Capacity to be confirmed",
+    "format": "500 mL",
     "descriptor": "Body Lotion",
     "image": "/assets/products/calm-healing-body-lotion/supplied-1-800.webp",
     "gallery": [
@@ -290,15 +273,15 @@ export const latestListingProducts: Product[] = [
     ],
     "commercialType": "Wholesale",
     "orderUnit": "piece",
-    "unitPrice": 2.99,
-    "b2bPrice": "US$2.99 / piece",
+    "unitPrice": 3.0,
+    "b2bPrice": "US$3.00 / piece",
     "minimumOrderQuantity": 6,
     "standardMoq": "6 pieces",
     "tags": [
       "Body Lotion"
     ],
-    "briefing": "Calm Healing Body Lotion. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
-    "seoDescription": "Calm Healing Body Lotion. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+    "briefing": "Calm Healing Body Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
+    "seoDescription": "Calm Healing Body Lotion. Confirmed net contents: 500 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and delivery terms.",
     "realImage": true,
     "dataStatus": "confirmed",
     "sourceBatch": "05",
@@ -307,7 +290,6 @@ export const latestListingProducts: Product[] = [
     ],
     "labelInformation": [],
     "missingInformation": [
-      "Capacity / net contents",
       "Supplier SKU and brand details",
       "Full specifications, ingredients and usage instructions",
       "Stock, shipping and dispatch terms",

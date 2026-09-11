@@ -1,143 +1,11 @@
 [
   {
-    "id": "B02-02",
-    "group": "容量",
-    "name": "Khadlaj Hareem Al Sultan",
-    "known": "USD 3.00/件；MOQ 6件。价格和MOQ已确认，不用重填。",
-    "question": "请填净含量及单位（mL/g），并注明背标或供应商资料依据。",
-    "impact": "仅此产品规格/最终报价；B05-01暂不新增页面。",
-    "images": [
-      "/assets/products/khadlaj-hareem-al-sultan/supplied-160.webp"
-    ]
-  },
-  {
-    "id": "B02-06",
-    "group": "容量",
-    "name": "HOBBY Fresh Care Pure Orchid Shower Gel",
-    "known": "USD 3.00/件；MOQ 6件。价格和MOQ已确认，不用重填。",
-    "question": "请填净含量及单位（mL/g），并注明背标或供应商资料依据。",
-    "impact": "仅此产品规格/最终报价；B05-01暂不新增页面。",
-    "images": [
-      "/assets/products/hobby-pure-orchid-shower-gel/supplied-160.webp"
-    ]
-  },
-  {
-    "id": "B02-08",
-    "group": "容量",
-    "name": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion",
-    "known": "USD 3.00/件；MOQ 6件。价格和MOQ已确认，不用重填。",
-    "question": "请填净含量及单位（mL/g），并注明背标或供应商资料依据。",
-    "impact": "仅此产品规格/最终报价；B05-01暂不新增页面。",
-    "images": [
-      "/assets/products/st-ives-oatmeal-shea-body-lotion/supplied-160.webp"
-    ]
-  },
-  {
-    "id": "B02-09",
-    "group": "容量",
-    "name": "St. Ives Softening Coconut & Orchid Body Lotion",
-    "known": "USD 3.00/件；MOQ 6件。价格和MOQ已确认，不用重填。",
-    "question": "请填净含量及单位（mL/g），并注明背标或供应商资料依据。",
-    "impact": "仅此产品规格/最终报价；B05-01暂不新增页面。",
-    "images": [
-      "/assets/products/st-ives-coconut-orchid-body-lotion/supplied-160.webp"
-    ]
-  },
-  {
-    "id": "B02-10",
-    "group": "容量",
-    "name": "Garnier Bright Complete Vitamin C Body Serum Lotion",
-    "known": "USD 3.00/件；MOQ 6件。价格和MOQ已确认，不用重填。",
-    "question": "请填净含量及单位（mL/g），并注明背标或供应商资料依据。",
-    "impact": "仅此产品规格/最终报价；B05-01暂不新增页面。",
-    "images": [
-      "/assets/products/garnier-vitamin-c-body-serum-lotion/supplied-160.webp"
-    ]
-  },
-  {
-    "id": "B05-01",
-    "group": "容量",
-    "name": "Daily Niacinamide Body Lotion",
-    "known": "USD 2.99/件；MOQ 6件。价格和MOQ已确认，不用重填。",
-    "question": "请填净含量及单位（mL/g），并注明背标或供应商资料依据。",
-    "impact": "仅此产品规格/最终报价；B05-01暂不新增页面。",
-    "images": [
-      "/assets/products/intake-b05-01/supplied-1-160.webp"
-    ]
-  },
-  {
-    "id": "B05-02",
-    "group": "容量",
-    "name": "Cocoa Radiant Body Gel Oil",
-    "known": "USD 2.99/件；MOQ 6件。价格和MOQ已确认，不用重填。",
-    "question": "请填净含量及单位（mL/g），并注明背标或供应商资料依据。",
-    "impact": "仅此产品规格/最终报价；B05-01暂不新增页面。",
-    "images": [
-      "/assets/products/cocoa-radiant-body-gel-oil/supplied-1-160.webp"
-    ]
-  },
-  {
-    "id": "B05-07",
-    "group": "容量",
-    "name": "Calm Healing Body Lotion",
-    "known": "USD 2.99/件；MOQ 6件。价格和MOQ已确认，不用重填。",
-    "question": "请填净含量及单位（mL/g），并注明背标或供应商资料依据。",
-    "impact": "仅此产品规格/最终报价；B05-01暂不新增页面。",
-    "images": [
-      "/assets/products/calm-healing-body-lotion/supplied-1-160.webp"
-    ]
-  },
-  {
-    "id": "PF-02",
-    "group": "容量",
-    "name": "Lattafa Bade’e Al Oud Sublime",
-    "known": "USD 5.00/件；MOQ 2件。价格和MOQ已确认，不用重填。",
-    "question": "请填净含量及单位（mL/g），并注明背标或供应商资料依据。",
-    "impact": "仅此产品规格/最终报价；B05-01暂不新增页面。",
-    "images": [
-      "/assets/products/lattafa-badee-al-oud-sublime/supplied-160.webp"
-    ]
-  },
-  {
-    "id": "PF-03",
-    "group": "容量",
-    "name": "Lattafa Khamrah Qahwa",
-    "known": "USD 5.00/件；MOQ 2件。价格和MOQ已确认，不用重填。",
-    "question": "请填净含量及单位（mL/g），并注明背标或供应商资料依据。",
-    "impact": "仅此产品规格/最终报价；B05-01暂不新增页面。",
-    "images": [
-      "/assets/products/lattafa-khamrah-qahwa/supplied-160.webp"
-    ]
-  },
-  {
-    "id": "PF-04",
-    "group": "容量",
-    "name": "Lattafa Khamrah",
-    "known": "USD 5.00/件；MOQ 2件。价格和MOQ已确认，不用重填。",
-    "question": "请填净含量及单位（mL/g），并注明背标或供应商资料依据。",
-    "impact": "仅此产品规格/最终报价；B05-01暂不新增页面。",
-    "images": [
-      "/assets/products/lattafa-khamrah/supplied-160.webp"
-    ]
-  },
-  {
-    "id": "PF-07",
-    "group": "容量",
-    "name": "French Avenue Liquid Brun",
-    "known": "USD 5.00/件；MOQ 2件。价格和MOQ已确认，不用重填。",
-    "question": "请填净含量及单位（mL/g），并注明背标或供应商资料依据。",
-    "impact": "仅此产品规格/最终报价；B05-01暂不新增页面。",
-    "images": [
-      "/assets/products/french-avenue-liquid-brun/supplied-160.webp"
-    ]
-  },
-  {
     "id": "MATCH-B04-03",
     "group": "同款关系",
     "name": "Gluta Ceramide Body Care：B04-03 ↔ B02-01-05",
-    "known": "新图 USD 2.99/件、MOQ 6；200 mL。原记录报价保留。",
-    "question": "请填：同款 / 不同款 / 暂无法确认；附供应商SKU或背标依据。Gluta Ceramide 名称、粉盖和 200 mL 相符，但新图品牌被遮盖，标签细节不同，确切产品类型也未确认。",
-    "impact": "仅对应候选产品；确认前不合并、不覆盖价格、不新建重复页面。",
+    "known": "本批 USD 2.99/件、MOQ 6；237 mL。对照记录：USD 3.00/件、MOQ 6；容量以对应规格为准。已确认同类型/同系列但有不同香味。",
+    "question": "请逐侧填写具体香味名称、对应SKU及图片文件名。无需再次确认容量或是否同系列。用户已说明为同类型／同系列，但存在不同香味；具体香味名称、SKU及图片对应关系未提供。不能按完全相同SKU合并。",
+    "impact": "仅对应香味产品；补齐香味/图片对应前保持独立记录，不混用图库或报价。",
     "images": [
       "/assets/products/intake-b04-03/supplied-1-160.webp",
       "/assets/products/vaseline-body-care-series-200ml/supplied-160.webp"
@@ -147,9 +15,9 @@
     "id": "MATCH-B04-04",
     "group": "同款关系",
     "name": "Sunlit Glow Body Gel Oil：B04-04 ↔ B02-01-03",
-    "known": "新图 USD 2.99/件、MOQ 6；200 mL。原记录报价保留。",
-    "question": "请填：同款 / 不同款 / 暂无法确认；附供应商SKU或背标依据。Sunlit Glow 名称和 200 mL 相符，但新图写 Gel Oil，旧图写 Body Oil，标签与包装外观不同。第四批两张新图可确认为同一候选款的两个视角。",
-    "impact": "仅对应候选产品；确认前不合并、不覆盖价格、不新建重复页面。",
+    "known": "本批 USD 2.99/件、MOQ 6；237 mL。对照记录：USD 3.00/件、MOQ 6；容量以对应规格为准。已确认同类型/同系列但有不同香味。",
+    "question": "请逐侧填写具体香味名称、对应SKU及图片文件名。无需再次确认容量或是否同系列。用户已说明为同类型／同系列，但存在不同香味；具体香味名称、SKU及图片对应关系未提供。不能按完全相同SKU合并。",
+    "impact": "仅对应香味产品；补齐香味/图片对应前保持独立记录，不混用图库或报价。",
     "images": [
       "/assets/products/intake-b04-04/supplied-1-160.webp",
       "/assets/products/vaseline-body-care-series-200ml/supplied-160.webp"
@@ -159,9 +27,9 @@
     "id": "MATCH-B05-01",
     "group": "同款关系",
     "name": "Daily Niacinamide Body Lotion：B05-01 ↔ BC-01",
-    "known": "新图 USD 2.99/件、MOQ 6；新图容量另见容量行。原记录报价保留。 BC-01独立确认为500mL、USD2.99、MOQ6。",
-    "question": "请填：同款 / 不同款 / 暂无法确认；附供应商SKU或背标依据。Daily Brightening / Niacinamide 与蓝泵相似，但瓶身颜色和标签细节不同；BC-01 已确认 500 mL，B05-01 容量仍未知，缺少 SKU 或背标证据。",
-    "impact": "仅对应候选产品；确认前不合并、不覆盖价格、不新建重复页面。",
+    "known": "本批 USD 2.99/件、MOQ 6；500 mL。对照记录：USD 3.00/件、MOQ 6；容量以对应规格为准。已确认同类型/同系列但有不同香味。 BC-01独立确认为500mL、USD3.00、MOQ6。B05-01保留USD2.99。",
+    "question": "请逐侧填写具体香味名称、对应SKU及图片文件名。无需再次确认容量或是否同系列。用户已说明为同类型／同系列，但存在不同香味；具体香味名称、SKU及图片对应关系未提供。不能按完全相同SKU合并。",
+    "impact": "仅对应香味产品；补齐香味/图片对应前保持独立记录，不混用图库或报价。",
     "images": [
       "/assets/products/intake-b05-01/supplied-1-160.webp",
       "/assets/products/daily-niacinamide-body-lotion/supplied-160.webp"
@@ -171,9 +39,9 @@
     "id": "MATCH-B05-04",
     "group": "同款关系",
     "name": "Vitamin B3 Body Oil：B05-04 ↔ B02-01-01",
-    "known": "新图 USD 2.99/件、MOQ 6；200 mL。原记录报价保留。",
-    "question": "请填：同款 / 不同款 / 暂无法确认；附供应商SKU或背标依据。Vitamin B3、粉盖、200 mL 相符，但主品牌被遮盖，未提供可核对的 SKU / 背标。",
-    "impact": "仅对应候选产品；确认前不合并、不覆盖价格、不新建重复页面。",
+    "known": "本批 USD 2.99/件、MOQ 6；237 mL。对照记录：USD 3.00/件、MOQ 6；容量以对应规格为准。已确认同类型/同系列但有不同香味。",
+    "question": "请逐侧填写具体香味名称、对应SKU及图片文件名。无需再次确认容量或是否同系列。用户已说明为同类型／同系列，但存在不同香味；具体香味名称、SKU及图片对应关系未提供。不能按完全相同SKU合并。",
+    "impact": "仅对应香味产品；补齐香味/图片对应前保持独立记录，不混用图库或报价。",
     "images": [
       "/assets/products/intake-b05-04/supplied-1-160.webp",
       "/assets/products/vaseline-body-care-series-200ml/supplied-160.webp"
@@ -183,9 +51,9 @@
     "id": "MATCH-B05-05",
     "group": "同款关系",
     "name": "Cocoa Radiant Body Oil：B05-05 ↔ B02-01-02",
-    "known": "新图 USD 2.99/件、MOQ 6；200 mL。原记录报价保留。",
-    "question": "请填：同款 / 不同款 / 暂无法确认；附供应商SKU或背标依据。Cocoa Radiant Body Oil 与 200 mL 相符，但新旧瓶型及标签差异明显，品牌被遮盖；不能凭名称自动合并。",
-    "impact": "仅对应候选产品；确认前不合并、不覆盖价格、不新建重复页面。",
+    "known": "本批 USD 2.99/件、MOQ 6；237 mL。对照记录：USD 3.00/件、MOQ 6；容量以对应规格为准。已确认同类型/同系列但有不同香味。",
+    "question": "请逐侧填写具体香味名称、对应SKU及图片文件名。无需再次确认容量或是否同系列。用户已说明为同类型／同系列，但存在不同香味；具体香味名称、SKU及图片对应关系未提供。不能按完全相同SKU合并。",
+    "impact": "仅对应香味产品；补齐香味/图片对应前保持独立记录，不混用图库或报价。",
     "images": [
       "/assets/products/intake-b05-05/supplied-1-160.webp",
       "/assets/products/vaseline-body-care-series-200ml/supplied-160.webp"
@@ -345,11 +213,104 @@
     "images": []
   },
   {
+    "id": "IMAGE-B04-01-400",
+    "group": "容量素材",
+    "name": "GlutaGlow Body Lotion — 725 mL",
+    "known": "已确认：725 mL；现有图显示旧容量 400 mL / 600 mL。",
+    "question": "请提供当前容量真实产品正面/背面及标签照片，注明各图片对应编号；不要修改旧图瓶身标签数字。",
+    "impact": "仅影响相应产品素材的正式发布；数值与订单已按确认信息更新。",
+    "images": [
+      "/assets/products/glutaglow-body-lotion-400ml-600ml/supplied-1-160.webp"
+    ]
+  },
+  {
+    "id": "IMAGE-B04-02",
+    "group": "容量素材",
+    "name": "Healthy White Body Lotion — 500 mL",
+    "known": "已确认：500 mL；现有图显示旧容量 400 mL。",
+    "question": "请提供当前容量真实产品正面/背面及标签照片，注明各图片对应编号；不要修改旧图瓶身标签数字。",
+    "impact": "仅影响相应产品素材的正式发布；数值与订单已按确认信息更新。",
+    "images": [
+      "/assets/products/healthy-white-body-lotion-400ml/supplied-1-160.webp"
+    ]
+  },
+  {
+    "id": "IMAGE-B05-03",
+    "group": "容量素材",
+    "name": "Essential Healing Body Lotion — 500 mL",
+    "known": "已确认：500 mL；现有图显示旧容量 725 mL。",
+    "question": "请提供当前容量真实产品正面/背面及标签照片，注明各图片对应编号；不要修改旧图瓶身标签数字。",
+    "impact": "仅影响相应产品素材的正式发布；数值与订单已按确认信息更新。",
+    "images": [
+      "/assets/products/essential-healing-body-lotion-725ml/supplied-1-160.webp"
+    ]
+  },
+  {
+    "id": "IMAGE-B05-06",
+    "group": "容量素材",
+    "name": "Advanced Repair Body Lotion — 500 mL",
+    "known": "已确认：500 mL；现有图显示旧容量 725 mL。",
+    "question": "请提供当前容量真实产品正面/背面及标签照片，注明各图片对应编号；不要修改旧图瓶身标签数字。",
+    "impact": "仅影响相应产品素材的正式发布；数值与订单已按确认信息更新。",
+    "images": [
+      "/assets/products/advanced-repair-body-lotion-725ml/supplied-1-160.webp"
+    ]
+  },
+  {
+    "id": "IMAGE-B04-03",
+    "group": "容量素材",
+    "name": "Gluta Ceramide Body Care",
+    "known": "已确认：237 mL；现有图显示旧容量 200 mL。",
+    "question": "请提供当前容量真实产品正面/背面及标签照片，注明各图片对应编号；不要修改旧图瓶身标签数字。",
+    "impact": "仅影响相应产品素材的正式发布；数值与订单已按确认信息更新。",
+    "images": [
+      "/assets/products/intake-b04-03/supplied-1-160.webp",
+      "/assets/products/vaseline-body-care-series-200ml/supplied-160.webp"
+    ]
+  },
+  {
+    "id": "IMAGE-B04-04",
+    "group": "容量素材",
+    "name": "Sunlit Glow Body Gel Oil",
+    "known": "已确认：237 mL；现有图显示旧容量 200 mL。",
+    "question": "请提供当前容量真实产品正面/背面及标签照片，注明各图片对应编号；不要修改旧图瓶身标签数字。",
+    "impact": "仅影响相应产品素材的正式发布；数值与订单已按确认信息更新。",
+    "images": [
+      "/assets/products/intake-b04-04/supplied-1-160.webp",
+      "/assets/products/intake-b04-04/supplied-2-160.webp",
+      "/assets/products/vaseline-body-care-series-200ml/supplied-160.webp"
+    ]
+  },
+  {
+    "id": "IMAGE-B05-04",
+    "group": "容量素材",
+    "name": "Vitamin B3 Body Oil",
+    "known": "已确认：237 mL；现有图显示旧容量 200 mL。",
+    "question": "请提供当前容量真实产品正面/背面及标签照片，注明各图片对应编号；不要修改旧图瓶身标签数字。",
+    "impact": "仅影响相应产品素材的正式发布；数值与订单已按确认信息更新。",
+    "images": [
+      "/assets/products/intake-b05-04/supplied-1-160.webp",
+      "/assets/products/vaseline-body-care-series-200ml/supplied-160.webp"
+    ]
+  },
+  {
+    "id": "IMAGE-B05-05",
+    "group": "容量素材",
+    "name": "Cocoa Radiant Body Oil",
+    "known": "已确认：237 mL；现有图显示旧容量 200 mL。",
+    "question": "请提供当前容量真实产品正面/背面及标签照片，注明各图片对应编号；不要修改旧图瓶身标签数字。",
+    "impact": "仅影响相应产品素材的正式发布；数值与订单已按确认信息更新。",
+    "images": [
+      "/assets/products/intake-b05-05/supplied-1-160.webp",
+      "/assets/products/vaseline-body-care-series-200ml/supplied-160.webp"
+    ]
+  },
+  {
     "id": "DOC-B04-01-400",
     "group": "其他产品资料",
-    "name": "GlutaGlow Body Lotion — 400 mL / 600 mL",
-    "known": "编号：B04-01-400, B04-01-600；已有容量、价格和MOQ按目录保留。",
-    "question": "仅补尚缺资料：Supplier SKU and brand details；Full specifications, ingredients and usage instructions；Stock, shipping and dispatch terms；Sample and customization policy；Evidence for any benefit statements in the supplied artwork；Individual product photograph for each size。可填写资料文件名及对应编号；未取得可填待供应商提供。",
+    "name": "GlutaGlow Body Lotion — 725 mL",
+    "known": "编号：B04-01-400, B04-01-600；当前容量：725 mL；USD 3/件；MOQ 6件。",
+    "question": "仅补尚缺资料：Supplier SKU and brand details；Full specifications, ingredients and usage instructions；Stock, shipping and dispatch terms；Sample and customization policy；Evidence for any benefit statements in the supplied artwork；Replacement product photograph showing the confirmed 725 mL packaging。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
       "/assets/products/glutaglow-body-lotion-400ml-600ml/supplied-1-160.webp"
@@ -358,9 +319,9 @@
   {
     "id": "DOC-B04-02",
     "group": "其他产品资料",
-    "name": "Healthy White Body Lotion — 400 mL",
-    "known": "编号：B04-02；已有容量、价格和MOQ按目录保留。",
-    "question": "仅补尚缺资料：Supplier SKU and brand details；Full specifications, ingredients and usage instructions；Stock, shipping and dispatch terms；Sample and customization policy；Evidence for any benefit statements in the supplied artwork。可填写资料文件名及对应编号；未取得可填待供应商提供。",
+    "name": "Healthy White Body Lotion — 500 mL",
+    "known": "编号：B04-02；当前容量：500 mL；USD 3/件；MOQ 6件。",
+    "question": "仅补尚缺资料：Supplier SKU and brand details；Full specifications, ingredients and usage instructions；Stock, shipping and dispatch terms；Sample and customization policy；Evidence for any benefit statements in the supplied artwork；Replacement product photograph showing the confirmed 500 mL packaging。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
       "/assets/products/healthy-white-body-lotion-400ml/supplied-1-160.webp"
@@ -369,8 +330,8 @@
   {
     "id": "DOC-B05-02",
     "group": "其他产品资料",
-    "name": "Cocoa Radiant Body Gel Oil",
-    "known": "编号：B05-02；已有容量、价格和MOQ按目录保留。",
+    "name": "Cocoa Radiant Body Gel Oil — 237 mL",
+    "known": "编号：B05-02；当前容量：237 mL；USD 2/件；MOQ 6件。",
     "question": "仅补尚缺资料：Supplier SKU and brand details；Full specifications, ingredients and usage instructions；Stock, shipping and dispatch terms；Sample and customization policy；Evidence for any benefit statements in the supplied artwork；Formulation and identity comparison with Cocoa Radiant Body Oil (separate product format)。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -380,9 +341,9 @@
   {
     "id": "DOC-B05-03",
     "group": "其他产品资料",
-    "name": "Essential Healing Body Lotion — 725 mL",
-    "known": "编号：B05-03；已有容量、价格和MOQ按目录保留。",
-    "question": "仅补尚缺资料：Supplier SKU and brand details；Full specifications, ingredients and usage instructions；Stock, shipping and dispatch terms；Sample and customization policy；Evidence for any benefit statements in the supplied artwork。可填写资料文件名及对应编号；未取得可填待供应商提供。",
+    "name": "Essential Healing Body Lotion — 500 mL",
+    "known": "编号：B05-03；当前容量：500 mL；USD 3/件；MOQ 6件。",
+    "question": "仅补尚缺资料：Supplier SKU and brand details；Full specifications, ingredients and usage instructions；Stock, shipping and dispatch terms；Sample and customization policy；Evidence for any benefit statements in the supplied artwork；Replacement product photograph showing the confirmed 500 mL packaging。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
       "/assets/products/essential-healing-body-lotion-725ml/supplied-1-160.webp"
@@ -391,9 +352,9 @@
   {
     "id": "DOC-B05-06",
     "group": "其他产品资料",
-    "name": "Advanced Repair Body Lotion — 725 mL",
-    "known": "编号：B05-06；已有容量、价格和MOQ按目录保留。",
-    "question": "仅补尚缺资料：Supplier SKU and brand details；Full specifications, ingredients and usage instructions；Stock, shipping and dispatch terms；Sample and customization policy；Evidence for any benefit statements in the supplied artwork。可填写资料文件名及对应编号；未取得可填待供应商提供。",
+    "name": "Advanced Repair Body Lotion — 500 mL",
+    "known": "编号：B05-06；当前容量：500 mL；USD 3/件；MOQ 6件。",
+    "question": "仅补尚缺资料：Supplier SKU and brand details；Full specifications, ingredients and usage instructions；Stock, shipping and dispatch terms；Sample and customization policy；Evidence for any benefit statements in the supplied artwork；Replacement product photograph showing the confirmed 500 mL packaging。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
       "/assets/products/advanced-repair-body-lotion-725ml/supplied-1-160.webp"
@@ -402,8 +363,8 @@
   {
     "id": "DOC-B05-07",
     "group": "其他产品资料",
-    "name": "Calm Healing Body Lotion",
-    "known": "编号：B05-07；已有容量、价格和MOQ按目录保留。",
+    "name": "Calm Healing Body Lotion — 500 mL",
+    "known": "编号：B05-07；当前容量：500 mL；USD 3/件；MOQ 6件。",
     "question": "仅补尚缺资料：Supplier SKU and brand details；Full specifications, ingredients and usage instructions；Stock, shipping and dispatch terms；Sample and customization policy；Evidence for any benefit statements in the supplied artwork。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -413,9 +374,9 @@
   {
     "id": "DOC-BC-01",
     "group": "其他产品资料",
-    "name": "Daily Niacinamide Body Lotion",
-    "known": "编号：BC-01；已有容量、价格和MOQ按目录保留。",
-    "question": "仅补尚缺资料：Full product specifications and INCI；Supplier SKU；Stock, shipping and lead-time terms；Customization and sample policy。可填写资料文件名及对应编号；未取得可填待供应商提供。",
+    "name": "Daily Niacinamide Body Lotion — 500 mL",
+    "known": "编号：BC-01；当前容量：500 mL；USD 3/件；MOQ 6件。",
+    "question": "仅补尚缺资料：Full product specifications and INCI；Supplier SKU；Stock, shipping and lead-time terms；Customization and sample policy；Exact fragrance name and SKU / image mapping relative to the separately held Daily Niacinamide series record。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
       "/assets/products/daily-niacinamide-body-lotion/supplied-160.webp"
@@ -424,8 +385,8 @@
   {
     "id": "DOC-BC-02",
     "group": "其他产品资料",
-    "name": "Luminous Glow Body Wash",
-    "known": "编号：BC-02；已有容量、价格和MOQ按目录保留。",
+    "name": "Luminous Glow Body Wash — 500 mL",
+    "known": "编号：BC-02；当前容量：500 mL；USD 3/件；MOQ 6件。",
     "question": "仅补尚缺资料：Full product specifications and INCI；Supplier SKU；Stock, shipping and lead-time terms；Customization and sample policy。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -436,7 +397,7 @@
     "id": "DOC-BC-03",
     "group": "其他产品资料",
     "name": "Gluta Glow Body Lotion — 500 mL",
-    "known": "编号：BC-03；已有容量、价格和MOQ按目录保留。",
+    "known": "编号：BC-03；当前容量：500 mL；USD 3/件；MOQ 6件。",
     "question": "仅补尚缺资料：Full product specifications and INCI；Supplier SKU；Stock, shipping and lead-time terms；Customization and sample policy；Evidence for the UV statements in the artwork, or replacement artwork。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -447,7 +408,7 @@
     "id": "DOC-BC-04",
     "group": "其他产品资料",
     "name": "Vanilla Cashmere Whipped Oil Body Butter — 283 g",
-    "known": "编号：BC-04；已有容量、价格和MOQ按目录保留。",
+    "known": "编号：BC-04；当前容量：283 g；USD 3/件；MOQ 6件。",
     "question": "仅补尚缺资料：Full product specifications and INCI；Supplier SKU；Stock, shipping and lead-time terms；Customization and sample policy。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -458,7 +419,7 @@
     "id": "DOC-BC-05",
     "group": "其他产品资料",
     "name": "Vanilla Cashmere Body Wash — 473 mL",
-    "known": "编号：BC-05；已有容量、价格和MOQ按目录保留。",
+    "known": "编号：BC-05；当前容量：16 FL OZ / 473 mL；USD 4.99/件；MOQ 6件。",
     "question": "仅补尚缺资料：Full product specifications and INCI；Supplier SKU；Stock, shipping and lead-time terms；Customization and sample policy。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -468,9 +429,9 @@
   {
     "id": "DOC-B02-01-01",
     "group": "其他产品资料",
-    "name": "Vaseline Body Care Series — 200 mL",
-    "known": "编号：B02-01-01, B02-01-02, B02-01-03, B02-01-04, B02-01-05, B02-01-06；已有容量、价格和MOQ按目录保留。",
-    "question": "仅补尚缺资料：Full specifications and INCI；Supplier SKU；Stock, shipping and dispatch terms；Sample and customization policy；Individual product photographs for each variant；Exact product type of the Gluta Ceramide variant；Full label details and evidence for any UV or quantified artwork claims。可填写资料文件名及对应编号；未取得可填待供应商提供。",
+    "name": "Vaseline Body Care Series — 200 mL / 237 mL",
+    "known": "编号：B02-01-01, B02-01-02, B02-01-03, B02-01-04, B02-01-05, B02-01-06；当前容量：200 mL / 237 mL, by selected variant；USD 3/件；MOQ 6件。",
+    "question": "仅补尚缺资料：Full specifications and INCI；Supplier SKU；Stock, shipping and dispatch terms；Sample and customization policy；Individual product photographs for each variant；Exact product type of the Gluta Ceramide variant；Full label details and evidence for any UV or quantified artwork claims；Replacement 237 mL photographs for Vitamin B3, Cocoa Radiant Body Oil, Sunlit Glow and Gluta Ceramide；Fragrance names and their exact SKU / image mapping for the four related series products。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
       "/assets/products/vaseline-body-care-series-200ml/supplied-160.webp"
@@ -479,8 +440,8 @@
   {
     "id": "DOC-B02-02",
     "group": "其他产品资料",
-    "name": "Khadlaj Hareem Al Sultan",
-    "known": "编号：B02-02；已有容量、价格和MOQ按目录保留。",
+    "name": "Khadlaj Hareem Al Sultan — 100 mL",
+    "known": "编号：B02-02；当前容量：100 mL；USD 3/件；MOQ 6件。",
     "question": "仅补尚缺资料：Full specifications and INCI；Supplier SKU；Stock, shipping and dispatch terms；Sample and customization policy；Main bottle formulation / concentration；Verified fragrance notes。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -491,7 +452,7 @@
     "id": "DOC-B02-03-01",
     "group": "其他产品资料",
     "name": "OLAY Regenerist Cream — 50 g",
-    "known": "编号：B02-03-01, B02-03-02；已有容量、价格和MOQ按目录保留。",
+    "known": "编号：B02-03-01, B02-03-02；当前容量：50 g；USD 3/件；MOQ 6件。",
     "question": "仅补尚缺资料：Full specifications and INCI；Supplier SKU；Stock, shipping and dispatch terms；Sample and customization policy；Individual product photographs for each variant。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -502,7 +463,7 @@
     "id": "DOC-B02-04",
     "group": "其他产品资料",
     "name": "NIVEA Q10 Anti-Wrinkle Power Multi Protective Day Cream",
-    "known": "编号：B02-04；已有容量、价格和MOQ按目录保留。",
+    "known": "编号：B02-04；当前容量：50 mL；USD 3/件；MOQ 6件。",
     "question": "仅补尚缺资料：Full specifications and INCI；Supplier SKU；Stock, shipping and dispatch terms；Sample and customization policy；Supporting documentation for the printed SPF statement。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -513,7 +474,7 @@
     "id": "DOC-B02-05",
     "group": "其他产品资料",
     "name": "The Ordinary Glycolic Acid 7% Exfoliating Toner",
-    "known": "编号：B02-05；已有容量、价格和MOQ按目录保留。",
+    "known": "编号：B02-05；当前容量：100 mL；USD 3/件；MOQ 6件。",
     "question": "仅补尚缺资料：Full specifications and INCI；Supplier SKU；Stock, shipping and dispatch terms；Sample and customization policy。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -523,8 +484,8 @@
   {
     "id": "DOC-B02-06",
     "group": "其他产品资料",
-    "name": "HOBBY Fresh Care Pure Orchid Shower Gel",
-    "known": "编号：B02-06；已有容量、价格和MOQ按目录保留。",
+    "name": "HOBBY Fresh Care Pure Orchid Shower Gel — 500 mL",
+    "known": "编号：B02-06；当前容量：500 mL；USD 3/件；MOQ 6件。",
     "question": "仅补尚缺资料：Full specifications and INCI；Supplier SKU；Stock, shipping and dispatch terms；Sample and customization policy。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -535,7 +496,7 @@
     "id": "DOC-B02-07",
     "group": "其他产品资料",
     "name": "Dr Teal's Lavender Body Lotion",
-    "known": "编号：B02-07；已有容量、价格和MOQ按目录保留。",
+    "known": "编号：B02-07；当前容量：18 FL OZ / 532 mL；USD 3/件；MOQ 6件。",
     "question": "仅补尚缺资料：Full specifications and INCI；Supplier SKU；Stock, shipping and dispatch terms；Sample and customization policy。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -545,8 +506,8 @@
   {
     "id": "DOC-B02-08",
     "group": "其他产品资料",
-    "name": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion",
-    "known": "编号：B02-08；已有容量、价格和MOQ按目录保留。",
+    "name": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion — 500 mL",
+    "known": "编号：B02-08；当前容量：500 mL；USD 3/件；MOQ 6件。",
     "question": "仅补尚缺资料：Full specifications and INCI；Supplier SKU；Stock, shipping and dispatch terms；Sample and customization policy。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -556,8 +517,8 @@
   {
     "id": "DOC-B02-09",
     "group": "其他产品资料",
-    "name": "St. Ives Softening Coconut & Orchid Body Lotion",
-    "known": "编号：B02-09；已有容量、价格和MOQ按目录保留。",
+    "name": "St. Ives Softening Coconut & Orchid Body Lotion — 500 mL",
+    "known": "编号：B02-09；当前容量：500 mL；USD 3/件；MOQ 6件。",
     "question": "仅补尚缺资料：Full specifications and INCI；Supplier SKU；Stock, shipping and dispatch terms；Sample and customization policy。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -567,8 +528,8 @@
   {
     "id": "DOC-B02-10",
     "group": "其他产品资料",
-    "name": "Garnier Bright Complete Vitamin C Body Serum Lotion",
-    "known": "编号：B02-10；已有容量、价格和MOQ按目录保留。",
+    "name": "Garnier Bright Complete Vitamin C Body Serum Lotion — 500 mL",
+    "known": "编号：B02-10；当前容量：500 mL；USD 3/件；MOQ 6件。",
     "question": "仅补尚缺资料：Full specifications and INCI；Supplier SKU；Stock, shipping and dispatch terms；Sample and customization policy；Full label details and evidence for any UV or quantified artwork claims。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -579,7 +540,7 @@
     "id": "DOC-B02-11",
     "group": "其他产品资料",
     "name": "Simple Moisturising Facial Wash",
-    "known": "编号：B02-11；已有容量、价格和MOQ按目录保留。",
+    "known": "编号：B02-11；当前容量：150 mL / 5.1 FL OZ；USD 3/件；MOQ 6件。",
     "question": "仅补尚缺资料：Full specifications and INCI；Supplier SKU；Stock, shipping and dispatch terms；Sample and customization policy。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -590,7 +551,7 @@
     "id": "DOC-PF-01",
     "group": "其他产品资料",
     "name": "Lattafa Al Noble Ameer",
-    "known": "编号：PF-01；已有容量、价格和MOQ按目录保留。",
+    "known": "编号：PF-01；当前容量：100 mL / 3.4 FL OZ；USD 5/件；MOQ 2件。",
     "question": "仅补尚缺资料：Verified fragrance notes；Supplier SKU；Stock and dispatch terms；Full formulation and ingredient list；Sample and customization policy。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -600,8 +561,8 @@
   {
     "id": "DOC-PF-02",
     "group": "其他产品资料",
-    "name": "Lattafa Bade’e Al Oud Sublime",
-    "known": "编号：PF-02；已有容量、价格和MOQ按目录保留。",
+    "name": "Lattafa Bade’e Al Oud Sublime — 100 mL",
+    "known": "编号：PF-02；当前容量：100 mL；USD 5/件；MOQ 2件。",
     "question": "仅补尚缺资料：Concentration / formulation；Verified fragrance notes；Supplier SKU；Stock and dispatch terms；Full formulation and ingredient list；Sample and customization policy。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -611,8 +572,8 @@
   {
     "id": "DOC-PF-03",
     "group": "其他产品资料",
-    "name": "Lattafa Khamrah Qahwa",
-    "known": "编号：PF-03；已有容量、价格和MOQ按目录保留。",
+    "name": "Lattafa Khamrah Qahwa — 100 mL",
+    "known": "编号：PF-03；当前容量：100 mL；USD 5/件；MOQ 2件。",
     "question": "仅补尚缺资料：Concentration / formulation；Verified fragrance notes；Supplier SKU；Stock and dispatch terms；Full formulation and ingredient list；Sample and customization policy。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -622,8 +583,8 @@
   {
     "id": "DOC-PF-04",
     "group": "其他产品资料",
-    "name": "Lattafa Khamrah",
-    "known": "编号：PF-04；已有容量、价格和MOQ按目录保留。",
+    "name": "Lattafa Khamrah — 100 mL",
+    "known": "编号：PF-04；当前容量：100 mL；USD 5/件；MOQ 2件。",
     "question": "仅补尚缺资料：Concentration / formulation；Verified fragrance notes；Supplier SKU；Stock and dispatch terms；Full formulation and ingredient list；Sample and customization policy。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -634,7 +595,7 @@
     "id": "DOC-PF-05",
     "group": "其他产品资料",
     "name": "Lattafa Al Noble Safeer",
-    "known": "编号：PF-05；已有容量、价格和MOQ按目录保留。",
+    "known": "编号：PF-05；当前容量：100 mL / 3.4 FL OZ；USD 5/件；MOQ 2件。",
     "question": "仅补尚缺资料：Verified fragrance notes；Supplier SKU；Stock and dispatch terms；Full formulation and ingredient list；Sample and customization policy。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -645,7 +606,7 @@
     "id": "DOC-PF-06",
     "group": "其他产品资料",
     "name": "KAYALI Oudgasm Café Oud | 19",
-    "known": "编号：PF-06；已有容量、价格和MOQ按目录保留。",
+    "known": "编号：PF-06；当前容量：100 mL / 3.4 FL OZ；USD 5/件；MOQ 2件。",
     "question": "仅补尚缺资料：Verified fragrance notes；Supplier SKU；Stock and dispatch terms；Full formulation and ingredient list；Sample and customization policy。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -655,8 +616,8 @@
   {
     "id": "DOC-PF-07",
     "group": "其他产品资料",
-    "name": "French Avenue Liquid Brun",
-    "known": "编号：PF-07；已有容量、价格和MOQ按目录保留。",
+    "name": "French Avenue Liquid Brun — 100 mL",
+    "known": "编号：PF-07；当前容量：100 mL；USD 5/件；MOQ 2件。",
     "question": "仅补尚缺资料：Concentration / formulation；Verified fragrance notes；Supplier SKU；Stock and dispatch terms；Full formulation and ingredient list；Sample and customization policy。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -667,7 +628,7 @@
     "id": "DOC-vitamin-c-body-lotion-502ml",
     "group": "其他产品资料",
     "name": "Vitamin C Body Lotion — 502 mL",
-    "known": "编号：vitamin-c-body-lotion-502ml；已有容量、价格和MOQ按目录保留。",
+    "known": "编号：vitamin-c-body-lotion-502ml；当前容量：502 mL / 17 FL OZ；USD 2.99/件；MOQ 2件。",
     "question": "仅补尚缺资料：Supplier SKU and brand details；Full INCI ingredients and vitamin C concentration；Fragrance, shelf life and usage instructions；Stock, dispatch time, shipping and tax terms；Carton quantity, dimensions and shipping weight；Certifications and evidence for benefit claims；Sample policy and private-label or customization options。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
@@ -678,7 +639,7 @@
     "id": "DOC-SK-BL-JER-UH-946",
     "group": "其他产品资料",
     "name": "Jergens Ultra Healing Body Lotion",
-    "known": "编号：SK-BL-JER-UH-946；已有容量、价格和MOQ按目录保留。",
+    "known": "编号：SK-BL-JER-UH-946；当前容量：946 ml / 32 fl oz；USD 待确认/件；MOQ 待确认件。",
     "question": "仅补尚缺资料：单价。可填写资料文件名及对应编号；未取得可填待供应商提供。",
     "impact": "对应产品的规格/宣传/最终报价，不阻塞其他产品。",
     "images": [
