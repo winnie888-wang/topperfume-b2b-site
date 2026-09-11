@@ -1,0 +1,29 @@
+{
+  "belowMoqDisabled": true,
+  "formMin": 6,
+  "formDefaultQuantity": 12,
+  "unknownCapacityHasNoVariants": true,
+  "drafts": [
+    {
+      "product": "BC-01",
+      "draft": "Hi, I'd like to get a wholesale quote for this product.\n\nProduct details:\n\nProduct Name: Daily Niacinamide Body Lotion\nSize / format: 500 mL\n\nProduct URL: https://topperfume.cn/products/daily-niacinamide-body-lotion\n\nCategory: Body Lotion\n\nMOQ: 6 pieces\n\nUnit Price: US$2.99 / piece\nQuantity: 6 pieces\nProduct subtotal: US$17.94\nSubtotal excludes shipping and taxes. Final delivered quote to be confirmed."
+    },
+    {
+      "product": "BC-01 / 12 pieces",
+      "draft": "Hi, I'd like to get a wholesale quote for this product.\n\nProduct details:\n\nProduct Name: Daily Niacinamide Body Lotion\nSize / format: 500 mL\n\nProduct URL: https://topperfume.cn/products/daily-niacinamide-body-lotion\n\nCategory: Body Lotion\n\nMOQ: 6 pieces\n\nUnit Price: US$2.99 / piece\nQuantity: 12 pieces\nProduct subtotal: US$35.88\nSubtotal excludes shipping and taxes. Final delivered quote to be confirmed."
+    },
+    {
+      "product": "PF-03",
+      "draft": "Hi, I'd like to get a wholesale quote for this product.\n\nProduct details:\n\nProduct Name: Lattafa Khamrah Qahwa\nSize / format: Capacity to be confirmed\n\nProduct URL: https://topperfume.cn/products/lattafa-khamrah-qahwa\n\nCategory: Fragrance\n\nMOQ: 2 pieces\n\nUnit Price: US$5.00 / piece\nQuantity: 2 pieces\nProduct subtotal: US$10.00\nSubtotal excludes shipping and taxes. Final delivered quote to be confirmed."
+    },
+    {
+      "product": "B04-01-600 / 12 pieces",
+      "draft": "Hi, I'd like to get a wholesale quote for this product.\n\nProduct details:\n\nProduct Name: GlutaGlow Body Lotion — 600 mL\nSize / format: 600 mL\n\nProduct URL: https://topperfume.cn/products/glutaglow-body-lotion-400ml-600ml?variant=B04-01-600\n\nCategory: Body Lotion\n\nMOQ: 6 pieces per selected size\n\nUnit Price: US$2.99 / piece\nQuantity: 12 pieces\nProduct subtotal: US$35.88\nSubtotal excludes shipping and taxes. Final delivered quote to be confirmed."
+    },
+    {
+      "product": "Vitamin C 502 mL",
+      "draft": "Hi, I'd like to get a wholesale quote for this product.\n\nProduct details:\n\nProduct Name: Vitamin C Body Lotion — 502 mL\nSize / format: 502 mL / 17 FL OZ\n\nProduct URL: https://topperfume.cn/products/vitamin-c-body-lotion-502ml\n\nCategory: Body Lotion\n\nMOQ: 2 bottles\n\nUnit Price: US$2.99 / bottle\nQuantity: 2 bottles\nProduct subtotal: US$5.98\nSubtotal excludes shipping and taxes. Final delivered quote to be confirmed."
+    }
+  ],
+  "realMessagesSent": false
+}

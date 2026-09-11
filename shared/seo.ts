@@ -1,4 +1,5 @@
 import { getProduct, type Product, type ProductCategory } from "@/data/products";
+import { withOrderTerms } from "./productTerms";
 
 export const canonicalPublicWebsiteUrl = "https://topperfume.cn";
 
@@ -7,6 +8,7 @@ export type SeoPage = {
   description: string;
   path: string;
   type?: "website" | "product";
+  image?: string;
   structuredData: Record<string, unknown> | Array<Record<string, unknown>>;
 };
 
@@ -33,11 +35,18 @@ const websiteSchema = {
 };
 
 export const homeSeo: SeoPage = {
-  title: "TopPerfume | Private Label Beauty & Fragrance Manufacturer",
+  title: "TopPerfume | Beauty & Fragrance Wholesale Sourcing",
   description: "TopPerfume helps beauty brands source and develop fragrance, skincare and makeup through branded wholesale, private label, OEM and ODM solutions.",
   path: "/",
   type: "website",
   structuredData: [organizationSchema, websiteSchema],
+};
+
+export const contactSeo: SeoPage = {
+  title: "Contact TopPerfume | Wholesale Beauty Enquiries",
+  description: "Contact Guiqi Technology Co., Ltd., a trading company supporting wholesale fragrance, skincare and makeup sourcing. Request product and delivery details.",
+  path: "/contact", type: "website",
+  structuredData: { "@context": "https://schema.org", "@type": "ContactPage", name: "Contact TopPerfume", url: canonicalUrl("/contact") },
 };
 
 const lowMoqPerfumeFaqs = [
@@ -74,7 +83,7 @@ const lowMoqPerfumeFaqs = [
   {
     "@type": "Question",
     name: "Can I discuss OEM or ODM through this page?",
-    acceptedAnswer: { "@type": "Answer", text: "Yes. TopPerfume supports B2B sourcing, private-label, manufacturing and OEM/ODM project conversations. Exact scope is confirmed by product and project." },
+    acceptedAnswer: { "@type": "Answer", text: "Yes. TopPerfume supports B2B sourcing, supplier coordination and OEM/ODM project conversations. Exact scope is confirmed by product and project." },
   },
 ] as const;
 
@@ -100,14 +109,14 @@ function getProductStructuredFields(product: Product) {
   const brandName = verifiedProductBrands[product.slug];
 
   return {
-    ...(product.image ? { image: product.image } : {}),
+    ...(product.image ? { image: product.gallery ? product.gallery.map(image => new URL(image.src, canonicalPublicWebsiteUrl).href) : new URL(product.image, canonicalPublicWebsiteUrl).href } : {}),
     ...(productDescription ? { description: productDescription } : {}),
     ...(brandName ? { brand: { "@type": "Brand", name: brandName } } : {}),
   };
 }
 
 export const lowMoqPerfumeSeo: SeoPage = {
-  title: "Low MOQ Perfume Manufacturing Partner - From 2 Pcs | TopPerfume",
+  title: "Low MOQ Perfume Wholesale Sourcing Partner - From 2 Pcs | TopPerfume",
   description: "Selected standard perfume orders from 2 pcs. Free samples are available. Logo, packaging and custom fragrance options start from 100 pcs, subject to project confirmation.",
   path: "/low-moq-perfume-manufacturer",
   type: "website",
@@ -124,7 +133,7 @@ export const lowMoqPerfumeSeo: SeoPage = {
       "@context": "https://schema.org",
       "@type": "Service",
       name: "Low MOQ perfume sourcing and private-label project support",
-      serviceType: "B2B perfume sourcing, private-label, manufacturing and OEM/ODM project support",
+      serviceType: "B2B perfume sourcing, supplier coordination and OEM/ODM project support",
       provider: { "@type": "Organization", name: "TopPerfume", url: canonicalPublicWebsiteUrl },
       url: canonicalUrl("/low-moq-perfume-manufacturer"),
     },
@@ -201,6 +210,7 @@ function parseB2bPrice(value?: string) {
 }
 
 export function getProductOffer(product: Product) {
+  product = withOrderTerms(product);
   const price = parseB2bPrice(product.b2bPrice);
   if (price === undefined) return undefined;
 
@@ -210,20 +220,47 @@ export function getProductOffer(product: Product) {
     price,
     priceCurrency: "USD",
     url: canonicalUrl(`/products/${product.slug}`),
+    ...(product.minimumOrderQuantity ? { eligibleQuantity: { "@type": "QuantitativeValue", minValue: product.minimumOrderQuantity, unitCode: "C62" } } : {}),
   };
 }
 
 export function getProductSeo(product: Product): SeoPage {
   const path = `/products/${product.slug}`;
   const categoryLabel = product.category === "skincare" ? "Skincare & Body Care" : product.category[0].toUpperCase() + product.category.slice(1);
-  const description = `${product.name} is a ${cleanDescriptor(product.descriptor)} ${categoryLabel.toLowerCase()} format for B2B buyers. Request a sample or wholesale quote from TopPerfume.`;
+  const description = product.seoDescription ?? (product.minimumOrderQuantity
+    ? `${product.name}, ${product.b2bPrice}. Minimum order: ${product.standardMoq}. View product images and request a wholesale quote from TopPerfume. Delivery terms confirmed on request.`
+    : `${product.name} is a ${cleanDescriptor(product.descriptor)} ${categoryLabel.toLowerCase()} format for B2B buyers. Request a wholesale quote from TopPerfume.`);
   const offer = getProductOffer(product);
-  const structuredData = offer ? {
+  const structuredData = product.variants ? {
+    "@context": "https://schema.org",
+    "@type": "ProductGroup",
+    name: product.name,
+    ...getProductStructuredFields(product),
+    productGroupID: product.slug,
+    variesBy: product.variantLabel === "size" ? "https://schema.org/size" : "Label variant",
+    url: canonicalUrl(path),
+    hasVariant: product.variants.map(variant => ({
+      "@type": "Product",
+      "@id": `${canonicalUrl(path)}#${variant.id}`,
+      name: variant.name,
+      image: new URL(product.image, canonicalPublicWebsiteUrl).href,
+      size: variant.format ?? product.format,
+      description: `${variant.name}. Shown ${variant.imagePosition} in the supplied group photo. Priced individually.${variant.note ? ` ${variant.note}` : ""}`,
+      url: `${canonicalUrl(path)}?variant=${variant.id}`,
+      offers: {
+        "@type": "Offer",
+        price: variant.unitPrice,
+        priceCurrency: "USD",
+        url: `${canonicalUrl(path)}?variant=${variant.id}`,
+        eligibleQuantity: { "@type": "QuantitativeValue", minValue: variant.minimumOrderQuantity, unitCode: "C62" },
+      },
+    })),
+  } : offer ? {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
     ...getProductStructuredFields(product),
-    sku: product.sku,
+    ...(product.sku ? { sku: product.sku } : {}),
     category: categoryLabel,
     url: canonicalUrl(path),
     offers: offer,
@@ -238,6 +275,7 @@ export function getProductSeo(product: Product): SeoPage {
 
   return {
     title: `${product.name} | ${categoryLabel} Wholesale | TopPerfume`,
+    image: new URL(product.image, canonicalPublicWebsiteUrl).href,
     description,
     path,
     type: "product",
@@ -245,13 +283,14 @@ export function getProductSeo(product: Product): SeoPage {
   };
 }
 
-export function buildRobotsTxt() {
-  return `User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: ${canonicalUrl("/sitemap.xml")}\n`;
+export function buildRobotsTxt(indexable = false) {
+  return indexable ? `User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /previews/\n\nSitemap: ${canonicalUrl("/sitemap.xml")}\n` : "User-agent: *\nDisallow: /\n";
 }
 
 export function buildSitemapXml(products: Product[]) {
   const urls = [
     { path: "/", priority: "1.0" },
+    { path: "/contact", priority: "0.7" },
     { path: "/collections/fragrance", priority: "0.8" },
     { path: "/collections/skincare", priority: "0.8" },
     { path: "/collections/makeup", priority: "0.8" },

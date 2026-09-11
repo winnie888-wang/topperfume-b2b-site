@@ -1,0 +1,1383 @@
+{
+  "checkedAt": "2026-09-10T14:42:42.772Z",
+  "sourceArchive": "TopPerfume_Combined_Listing_Pack (2).zip",
+  "imageCount": 35,
+  "batches": [
+    {
+      "batch": "01",
+      "images": 5,
+      "pages": 5,
+      "pending": []
+    },
+    {
+      "batch": "02",
+      "images": 11,
+      "pages": 11,
+      "pending": []
+    },
+    {
+      "batch": "03",
+      "images": 7,
+      "pages": 7,
+      "pending": []
+    },
+    {
+      "batch": "04",
+      "images": 5,
+      "pages": 2,
+      "pending": [
+        "B04-03",
+        "B04-04"
+      ]
+    },
+    {
+      "batch": "05",
+      "images": 7,
+      "pages": 4,
+      "pending": [
+        "B05-01",
+        "B05-04",
+        "B05-05"
+      ]
+    }
+  ],
+  "cataloguePages": 52,
+  "capacityMissingCount": 12,
+  "packMoqMissingCount": 0,
+  "capacity": [
+    {
+      "ids": [
+        "B05-02"
+      ],
+      "name": "Cocoa Radiant Body Gel Oil",
+      "image": "/assets/products/cocoa-radiant-body-gel-oil/supplied-1-160.webp",
+      "missing": "容量 / 净含量；以清晰背标或供应商资料确认",
+      "impact": "可保留明确标注容量待确认的询价页；确认规格后才能作最终销售报价"
+    },
+    {
+      "ids": [
+        "B05-07"
+      ],
+      "name": "Calm Healing Body Lotion",
+      "image": "/assets/products/calm-healing-body-lotion/supplied-1-160.webp",
+      "missing": "容量 / 净含量；以清晰背标或供应商资料确认",
+      "impact": "可保留明确标注容量待确认的询价页；确认规格后才能作最终销售报价"
+    },
+    {
+      "ids": [
+        "B02-02"
+      ],
+      "name": "Khadlaj Hareem Al Sultan",
+      "image": "/assets/products/khadlaj-hareem-al-sultan/supplied-160.webp",
+      "missing": "容量 / 净含量；以清晰背标或供应商资料确认",
+      "impact": "可保留明确标注容量待确认的询价页；确认规格后才能作最终销售报价"
+    },
+    {
+      "ids": [
+        "B02-06"
+      ],
+      "name": "HOBBY Fresh Care Pure Orchid Shower Gel",
+      "image": "/assets/products/hobby-pure-orchid-shower-gel/supplied-160.webp",
+      "missing": "容量 / 净含量；以清晰背标或供应商资料确认",
+      "impact": "可保留明确标注容量待确认的询价页；确认规格后才能作最终销售报价"
+    },
+    {
+      "ids": [
+        "B02-08"
+      ],
+      "name": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion",
+      "image": "/assets/products/st-ives-oatmeal-shea-body-lotion/supplied-160.webp",
+      "missing": "容量 / 净含量；以清晰背标或供应商资料确认",
+      "impact": "可保留明确标注容量待确认的询价页；确认规格后才能作最终销售报价"
+    },
+    {
+      "ids": [
+        "B02-09"
+      ],
+      "name": "St. Ives Softening Coconut & Orchid Body Lotion",
+      "image": "/assets/products/st-ives-coconut-orchid-body-lotion/supplied-160.webp",
+      "missing": "容量 / 净含量；以清晰背标或供应商资料确认",
+      "impact": "可保留明确标注容量待确认的询价页；确认规格后才能作最终销售报价"
+    },
+    {
+      "ids": [
+        "B02-10"
+      ],
+      "name": "Garnier Bright Complete Vitamin C Body Serum Lotion",
+      "image": "/assets/products/garnier-vitamin-c-body-serum-lotion/supplied-160.webp",
+      "missing": "容量 / 净含量；以清晰背标或供应商资料确认",
+      "impact": "可保留明确标注容量待确认的询价页；确认规格后才能作最终销售报价"
+    },
+    {
+      "ids": [
+        "PF-02"
+      ],
+      "name": "Lattafa Bade’e Al Oud Sublime",
+      "image": "/assets/products/lattafa-badee-al-oud-sublime/supplied-160.webp",
+      "missing": "容量 / 净含量；以清晰背标或供应商资料确认",
+      "impact": "可保留明确标注容量待确认的询价页；确认规格后才能作最终销售报价"
+    },
+    {
+      "ids": [
+        "PF-03"
+      ],
+      "name": "Lattafa Khamrah Qahwa",
+      "image": "/assets/products/lattafa-khamrah-qahwa/supplied-160.webp",
+      "missing": "容量 / 净含量；以清晰背标或供应商资料确认",
+      "impact": "可保留明确标注容量待确认的询价页；确认规格后才能作最终销售报价"
+    },
+    {
+      "ids": [
+        "PF-04"
+      ],
+      "name": "Lattafa Khamrah",
+      "image": "/assets/products/lattafa-khamrah/supplied-160.webp",
+      "missing": "容量 / 净含量；以清晰背标或供应商资料确认",
+      "impact": "可保留明确标注容量待确认的询价页；确认规格后才能作最终销售报价"
+    },
+    {
+      "ids": [
+        "PF-07"
+      ],
+      "name": "French Avenue Liquid Brun",
+      "image": "/assets/products/french-avenue-liquid-brun/supplied-160.webp",
+      "missing": "容量 / 净含量；以清晰背标或供应商资料确认",
+      "impact": "可保留明确标注容量待确认的询价页；确认规格后才能作最终销售报价"
+    },
+    {
+      "ids": [
+        "B05-01"
+      ],
+      "name": "Daily Niacinamide Body Lotion",
+      "image": "/assets/products/intake-b05-01/supplied-1-160.webp",
+      "missing": "容量 / 净含量，以及与 BC-01 的同款关系",
+      "impact": "影响：暂不新增产品页；BC-01 已确认 500 mL，独立保留"
+    }
+  ],
+  "pendingMatches": [
+    {
+      "intakeId": "B04-03",
+      "sourceBatch": "04",
+      "name": "Gluta Ceramide Body Care",
+      "possibleExistingId": "B02-01-05",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "format": "200 mL",
+      "gallery": [
+        {
+          "src": "/assets/products/intake-b04-03/supplied-1-800.webp",
+          "srcSet": "/assets/products/intake-b04-03/supplied-1-480.webp 480w, /assets/products/intake-b04-03/supplied-1-800.webp 800w, /assets/products/intake-b04-03/supplied-1-1254.webp 1254w",
+          "thumbnail": "/assets/products/intake-b04-03/supplied-1-160.webp",
+          "fullSize": "/assets/products/intake-b04-03/supplied-1-1254.webp",
+          "width": 1706,
+          "height": 1279,
+          "alt": "Transparent pink-capped Gluta Ceramide bottle labeled 200 mL",
+          "label": "Supplied view"
+        }
+      ],
+      "reason": "Gluta Ceramide 名称、粉盖和 200 mL 相符，但新图品牌被遮盖，标签细节不同，确切产品类型也未确认。",
+      "status": "identity-unconfirmed",
+      "action": "Held out of customer catalogue; original quote unchanged",
+      "sourceImageFiles": [
+        "images/B04-03-gluta-ceramide-200ml.jpg"
+      ]
+    },
+    {
+      "intakeId": "B04-04",
+      "sourceBatch": "04",
+      "name": "Sunlit Glow Body Gel Oil",
+      "possibleExistingId": "B02-01-03",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "format": "200 mL",
+      "gallery": [
+        {
+          "src": "/assets/products/intake-b04-04/supplied-1-800.webp",
+          "srcSet": "/assets/products/intake-b04-04/supplied-1-480.webp 480w, /assets/products/intake-b04-04/supplied-1-800.webp 800w, /assets/products/intake-b04-04/supplied-1-1254.webp 1254w",
+          "thumbnail": "/assets/products/intake-b04-04/supplied-1-160.webp",
+          "fullSize": "/assets/products/intake-b04-04/supplied-1-1254.webp",
+          "width": 1280,
+          "height": 1280,
+          "alt": "Sunlit Glow gel oil in a gold-toned bottle with a blue cap, labeled 200 mL",
+          "label": "Supplied view"
+        },
+        {
+          "src": "/assets/products/intake-b04-04/supplied-2-800.webp",
+          "srcSet": "/assets/products/intake-b04-04/supplied-2-480.webp 480w, /assets/products/intake-b04-04/supplied-2-800.webp 800w, /assets/products/intake-b04-04/supplied-2-1254.webp 1254w",
+          "thumbnail": "/assets/products/intake-b04-04/supplied-2-160.webp",
+          "fullSize": "/assets/products/intake-b04-04/supplied-2-1254.webp",
+          "width": 1280,
+          "height": 1280,
+          "alt": "Alternate supplied image of Sunlit Glow gel oil labeled 200 mL",
+          "label": "Alternate view"
+        }
+      ],
+      "reason": "Sunlit Glow 名称和 200 mL 相符，但新图写 Gel Oil，旧图写 Body Oil，标签与包装外观不同。第四批两张新图可确认为同一候选款的两个视角。",
+      "status": "identity-unconfirmed",
+      "action": "Held out of customer catalogue; original quote unchanged",
+      "sourceImageFiles": [
+        "images/B04-04-sunlit-glow-gel-oil-200ml-main.jpg",
+        "images/B04-04-sunlit-glow-gel-oil-200ml-alternate.jpg"
+      ]
+    },
+    {
+      "intakeId": "B05-01",
+      "sourceBatch": "05",
+      "name": "Daily Niacinamide Body Lotion",
+      "possibleExistingId": "BC-01",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "format": null,
+      "gallery": [
+        {
+          "src": "/assets/products/intake-b05-01/supplied-1-800.webp",
+          "srcSet": "/assets/products/intake-b05-01/supplied-1-480.webp 480w, /assets/products/intake-b05-01/supplied-1-800.webp 800w, /assets/products/intake-b05-01/supplied-1-1200.webp 1200w",
+          "thumbnail": "/assets/products/intake-b05-01/supplied-1-160.webp",
+          "fullSize": "/assets/products/intake-b05-01/supplied-1-1200.webp",
+          "width": 1200,
+          "height": 1200,
+          "alt": "Pink body lotion bottle with a blue pump and Daily Brightening niacinamide label",
+          "label": "Supplied view"
+        }
+      ],
+      "reason": "Daily Brightening / Niacinamide 与蓝泵相似，但瓶身颜色和标签细节不同；BC-01 已确认 500 mL，B05-01 容量仍未知，缺少 SKU 或背标证据。",
+      "status": "identity-unconfirmed",
+      "action": "Held out of customer catalogue; identity remains unconfirmed. BC-01 MOQ independently confirmed by the user as 6 pieces; price unchanged.",
+      "sourceImageFiles": [
+        "images/B05-01-daily-niacinamide-body-lotion.jpg"
+      ]
+    },
+    {
+      "intakeId": "B05-04",
+      "sourceBatch": "05",
+      "name": "Vitamin B3 Body Oil",
+      "possibleExistingId": "B02-01-01",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "format": "200 mL",
+      "gallery": [
+        {
+          "src": "/assets/products/intake-b05-04/supplied-1-800.webp",
+          "srcSet": "/assets/products/intake-b05-04/supplied-1-480.webp 480w, /assets/products/intake-b05-04/supplied-1-800.webp 800w, /assets/products/intake-b05-04/supplied-1-1200.webp 1200w",
+          "thumbnail": "/assets/products/intake-b05-04/supplied-1-160.webp",
+          "fullSize": "/assets/products/intake-b05-04/supplied-1-1200.webp",
+          "width": 1200,
+          "height": 1200,
+          "alt": "Pink-capped Vitamin B3 body oil bottle labeled 200 mL",
+          "label": "Supplied view"
+        }
+      ],
+      "reason": "Vitamin B3、粉盖、200 mL 相符，但主品牌被遮盖，未提供可核对的 SKU / 背标。",
+      "status": "identity-unconfirmed",
+      "action": "Held out of customer catalogue; original quote unchanged",
+      "sourceImageFiles": [
+        "images/B05-04-vitamin-b3-body-oil-200ml.jpg"
+      ]
+    },
+    {
+      "intakeId": "B05-05",
+      "sourceBatch": "05",
+      "name": "Cocoa Radiant Body Oil",
+      "possibleExistingId": "B02-01-02",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "format": "200 mL",
+      "gallery": [
+        {
+          "src": "/assets/products/intake-b05-05/supplied-1-800.webp",
+          "srcSet": "/assets/products/intake-b05-05/supplied-1-480.webp 480w, /assets/products/intake-b05-05/supplied-1-800.webp 800w, /assets/products/intake-b05-05/supplied-1-1200.webp 1200w",
+          "thumbnail": "/assets/products/intake-b05-05/supplied-1-160.webp",
+          "fullSize": "/assets/products/intake-b05-05/supplied-1-1200.webp",
+          "width": 1200,
+          "height": 1200,
+          "alt": "Pale Cocoa Radiant body oil bottle with a blue cap, labeled 200 mL",
+          "label": "Supplied view"
+        }
+      ],
+      "reason": "Cocoa Radiant Body Oil 与 200 mL 相符，但新旧瓶型及标签差异明显，品牌被遮盖；不能凭名称自动合并。",
+      "status": "identity-unconfirmed",
+      "action": "Held out of customer catalogue; original quote unchanged",
+      "sourceImageFiles": [
+        "images/B05-05-cocoa-radiant-body-oil-200ml.jpg"
+      ]
+    }
+  ],
+  "allProductMissingInformation": [
+    {
+      "ids": [
+        "B04-01-400",
+        "B04-01-600"
+      ],
+      "name": "GlutaGlow Body Lotion — 400 mL / 600 mL",
+      "image": "/assets/products/glutaglow-body-lotion-400ml-600ml/supplied-1-160.webp",
+      "missing": [
+        "Supplier SKU and brand details",
+        "Full specifications, ingredients and usage instructions",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Evidence for any benefit statements in the supplied artwork",
+        "Individual product photograph for each size"
+      ],
+      "impact": "宣传图片声明需证明或替换图片后再正式发布；其余缺项按实际报价确认"
+    },
+    {
+      "ids": [
+        "B04-02"
+      ],
+      "name": "Healthy White Body Lotion — 400 mL",
+      "image": "/assets/products/healthy-white-body-lotion-400ml/supplied-1-160.webp",
+      "missing": [
+        "Supplier SKU and brand details",
+        "Full specifications, ingredients and usage instructions",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Evidence for any benefit statements in the supplied artwork"
+      ],
+      "impact": "宣传图片声明需证明或替换图片后再正式发布；其余缺项按实际报价确认"
+    },
+    {
+      "ids": [
+        "B05-02"
+      ],
+      "name": "Cocoa Radiant Body Gel Oil",
+      "image": "/assets/products/cocoa-radiant-body-gel-oil/supplied-1-160.webp",
+      "missing": [
+        "Capacity / net contents",
+        "Supplier SKU and brand details",
+        "Full specifications, ingredients and usage instructions",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Evidence for any benefit statements in the supplied artwork",
+        "Formulation and identity comparison with Cocoa Radiant Body Oil (separate product format)"
+      ],
+      "impact": "宣传图片声明需证明或替换图片后再正式发布；其余缺项按实际报价确认"
+    },
+    {
+      "ids": [
+        "B05-03"
+      ],
+      "name": "Essential Healing Body Lotion — 725 mL",
+      "image": "/assets/products/essential-healing-body-lotion-725ml/supplied-1-160.webp",
+      "missing": [
+        "Supplier SKU and brand details",
+        "Full specifications, ingredients and usage instructions",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Evidence for any benefit statements in the supplied artwork"
+      ],
+      "impact": "宣传图片声明需证明或替换图片后再正式发布；其余缺项按实际报价确认"
+    },
+    {
+      "ids": [
+        "B05-06"
+      ],
+      "name": "Advanced Repair Body Lotion — 725 mL",
+      "image": "/assets/products/advanced-repair-body-lotion-725ml/supplied-1-160.webp",
+      "missing": [
+        "Supplier SKU and brand details",
+        "Full specifications, ingredients and usage instructions",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Evidence for any benefit statements in the supplied artwork"
+      ],
+      "impact": "宣传图片声明需证明或替换图片后再正式发布；其余缺项按实际报价确认"
+    },
+    {
+      "ids": [
+        "B05-07"
+      ],
+      "name": "Calm Healing Body Lotion",
+      "image": "/assets/products/calm-healing-body-lotion/supplied-1-160.webp",
+      "missing": [
+        "Capacity / net contents",
+        "Supplier SKU and brand details",
+        "Full specifications, ingredients and usage instructions",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Evidence for any benefit statements in the supplied artwork"
+      ],
+      "impact": "宣传图片声明需证明或替换图片后再正式发布；其余缺项按实际报价确认"
+    },
+    {
+      "ids": [
+        "BC-01"
+      ],
+      "name": "Daily Niacinamide Body Lotion",
+      "image": "/assets/products/daily-niacinamide-body-lotion/supplied-160.webp",
+      "missing": [
+        "Full product specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and lead-time terms",
+        "Customization and sample policy"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "BC-02"
+      ],
+      "name": "Luminous Glow Body Wash",
+      "image": "/assets/products/luminous-glow-body-wash/supplied-160.webp",
+      "missing": [
+        "Full product specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and lead-time terms",
+        "Customization and sample policy"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "BC-03"
+      ],
+      "name": "Gluta Glow Body Lotion — 500 mL",
+      "image": "/assets/products/gluta-glow-body-lotion-500ml/supplied-160.webp",
+      "missing": [
+        "Full product specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and lead-time terms",
+        "Customization and sample policy",
+        "Evidence for the UV statements in the artwork, or replacement artwork"
+      ],
+      "impact": "宣传图片声明需证明或替换图片后再正式发布；其余缺项按实际报价确认"
+    },
+    {
+      "ids": [
+        "BC-04"
+      ],
+      "name": "Vanilla Cashmere Whipped Oil Body Butter — 283 g",
+      "image": "/assets/products/vanilla-cashmere-whipped-oil-body-butter-283g/supplied-160.webp",
+      "missing": [
+        "Full product specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and lead-time terms",
+        "Customization and sample policy"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "BC-05"
+      ],
+      "name": "Vanilla Cashmere Body Wash — 473 mL",
+      "image": "/assets/products/vanilla-cashmere-body-wash-473ml/supplied-160.webp",
+      "missing": [
+        "Full product specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and lead-time terms",
+        "Customization and sample policy"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "B02-01-01",
+        "B02-01-02",
+        "B02-01-03",
+        "B02-01-04",
+        "B02-01-05",
+        "B02-01-06"
+      ],
+      "name": "Vaseline Body Care Series — 200 mL",
+      "image": "/assets/products/vaseline-body-care-series-200ml/supplied-160.webp",
+      "missing": [
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Individual product photographs for each variant",
+        "Exact product type of the Gluta Ceramide variant",
+        "Full label details and evidence for any UV or quantified artwork claims"
+      ],
+      "impact": "宣传图片声明需证明或替换图片后再正式发布；其余缺项按实际报价确认"
+    },
+    {
+      "ids": [
+        "B02-02"
+      ],
+      "name": "Khadlaj Hareem Al Sultan",
+      "image": "/assets/products/khadlaj-hareem-al-sultan/supplied-160.webp",
+      "missing": [
+        "Capacity / net contents",
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Main bottle formulation / concentration",
+        "Verified fragrance notes"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "B02-03-01",
+        "B02-03-02"
+      ],
+      "name": "OLAY Regenerist Cream — 50 g",
+      "image": "/assets/products/olay-regenerist-cream-50g/supplied-160.webp",
+      "missing": [
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Individual product photographs for each variant"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "B02-04"
+      ],
+      "name": "NIVEA Q10 Anti-Wrinkle Power Multi Protective Day Cream",
+      "image": "/assets/products/nivea-q10-day-cream/supplied-160.webp",
+      "missing": [
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Supporting documentation for the printed SPF statement"
+      ],
+      "impact": "宣传图片声明需证明或替换图片后再正式发布；其余缺项按实际报价确认"
+    },
+    {
+      "ids": [
+        "B02-05"
+      ],
+      "name": "The Ordinary Glycolic Acid 7% Exfoliating Toner",
+      "image": "/assets/products/the-ordinary-glycolic-toner/supplied-160.webp",
+      "missing": [
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "B02-06"
+      ],
+      "name": "HOBBY Fresh Care Pure Orchid Shower Gel",
+      "image": "/assets/products/hobby-pure-orchid-shower-gel/supplied-160.webp",
+      "missing": [
+        "Capacity / net contents",
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "B02-07"
+      ],
+      "name": "Dr Teal's Lavender Body Lotion",
+      "image": "/assets/products/dr-teals-lavender-body-lotion/supplied-160.webp",
+      "missing": [
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "B02-08"
+      ],
+      "name": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion",
+      "image": "/assets/products/st-ives-oatmeal-shea-body-lotion/supplied-160.webp",
+      "missing": [
+        "Clear net-contents label photograph (capacity remains unconfirmed)",
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "B02-09"
+      ],
+      "name": "St. Ives Softening Coconut & Orchid Body Lotion",
+      "image": "/assets/products/st-ives-coconut-orchid-body-lotion/supplied-160.webp",
+      "missing": [
+        "Clear net-contents label photograph (capacity remains unconfirmed)",
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "B02-10"
+      ],
+      "name": "Garnier Bright Complete Vitamin C Body Serum Lotion",
+      "image": "/assets/products/garnier-vitamin-c-body-serum-lotion/supplied-160.webp",
+      "missing": [
+        "Capacity / net contents",
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Full label details and evidence for any UV or quantified artwork claims"
+      ],
+      "impact": "宣传图片声明需证明或替换图片后再正式发布；其余缺项按实际报价确认"
+    },
+    {
+      "ids": [
+        "B02-11"
+      ],
+      "name": "Simple Moisturising Facial Wash",
+      "image": "/assets/products/simple-moisturising-facial-wash/supplied-160.webp",
+      "missing": [
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "PF-01"
+      ],
+      "name": "Lattafa Al Noble Ameer",
+      "image": "/assets/products/lattafa-al-noble-ameer/supplied-160.webp",
+      "missing": [
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms",
+        "Full formulation and ingredient list",
+        "Sample and customization policy"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "PF-02"
+      ],
+      "name": "Lattafa Bade’e Al Oud Sublime",
+      "image": "/assets/products/lattafa-badee-al-oud-sublime/supplied-160.webp",
+      "missing": [
+        "Capacity",
+        "Concentration / formulation",
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms",
+        "Full formulation and ingredient list",
+        "Sample and customization policy"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "PF-03"
+      ],
+      "name": "Lattafa Khamrah Qahwa",
+      "image": "/assets/products/lattafa-khamrah-qahwa/supplied-160.webp",
+      "missing": [
+        "Capacity",
+        "Concentration / formulation",
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms",
+        "Full formulation and ingredient list",
+        "Sample and customization policy"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "PF-04"
+      ],
+      "name": "Lattafa Khamrah",
+      "image": "/assets/products/lattafa-khamrah/supplied-160.webp",
+      "missing": [
+        "Capacity",
+        "Concentration / formulation",
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms",
+        "Full formulation and ingredient list",
+        "Sample and customization policy"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "PF-05"
+      ],
+      "name": "Lattafa Al Noble Safeer",
+      "image": "/assets/products/lattafa-al-noble-safeer/supplied-160.webp",
+      "missing": [
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms",
+        "Full formulation and ingredient list",
+        "Sample and customization policy"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "PF-06"
+      ],
+      "name": "KAYALI Oudgasm Café Oud | 19",
+      "image": "/assets/products/kayali-oudgasm-cafe-oud-19/supplied-160.webp",
+      "missing": [
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms",
+        "Full formulation and ingredient list",
+        "Sample and customization policy"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "PF-07"
+      ],
+      "name": "French Avenue Liquid Brun",
+      "image": "/assets/products/french-avenue-liquid-brun/supplied-160.webp",
+      "missing": [
+        "Capacity",
+        "Concentration / formulation",
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms",
+        "Full formulation and ingredient list",
+        "Sample and customization policy"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "vitamin-c-body-lotion-502ml"
+      ],
+      "name": "Vitamin C Body Lotion — 502 mL",
+      "image": "/assets/products/vitamin-c-body-lotion-502ml/01-vitamin-c-body-lotion-502ml-main-160.webp",
+      "missing": [
+        "Supplier SKU and brand details",
+        "Full INCI ingredients and vitamin C concentration",
+        "Fragrance, shelf life and usage instructions",
+        "Stock, dispatch time, shipping and tax terms",
+        "Carton quantity, dimensions and shipping weight",
+        "Certifications and evidence for benefit claims",
+        "Sample policy and private-label or customization options"
+      ],
+      "impact": "宣传图片声明需证明或替换图片后再正式发布；其余缺项按实际报价确认"
+    },
+    {
+      "ids": [
+        "FR-DI-SAU-100"
+      ],
+      "name": "Dior Sauvage Parfum Spray for Men",
+      "image": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-01-dior-sauvage-bottle-box_51b02500.png",
+      "missing": [
+        "MOQ"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "FR-CH-GGBT-080"
+      ],
+      "name": "Carolina Herrera Good Girl Blush Tweed Talk Eau de Parfum for Women",
+      "image": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-02-good-girl-blush-tweed-talk_1ae0d387.png",
+      "missing": [
+        "MOQ"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "FR-CH-VGGG-080"
+      ],
+      "name": "Carolina Herrera Very Good Girl Glam Eau de Parfum for Women",
+      "image": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-03-very-good-girl-glam-bottle-box_9405022e.png",
+      "missing": [
+        "MOQ"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "FR-YSL-MP-001"
+      ],
+      "name": "Yves Saint Laurent Mon Paris Parfum for Women",
+      "image": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-04-mon-paris-bottle_3357056d.png",
+      "missing": [
+        "MOQ",
+        "容量 / 净含量"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "SK-BL-OLAY-AHA-502"
+      ],
+      "name": "Olay Dark Spot Correcting Body Lotion",
+      "image": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-07-olay-dark-spot-body-lotion_8520dc7b.png",
+      "missing": [
+        "MOQ"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "SK-BL-JER-UH-946"
+      ],
+      "name": "Jergens Ultra Healing Body Lotion",
+      "image": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-08-jergens-ultra-healing-body-lotion_bd2450c3.png",
+      "missing": [
+        "单价",
+        "MOQ"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "MU-LIP-OIL-001"
+      ],
+      "name": "Vegan Hydrating Lip Oil Gloss",
+      "image": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-11-vegan-hydrating-lip-oil-gloss_f92e8c52.png",
+      "missing": [
+        "容量 / 净含量"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "MU-LG-002"
+      ],
+      "name": "Hydrating Mirror-Shine Lip Glaze",
+      "image": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-12-hydrating-mirror-shine-lip-glaze_d0866c8c.png",
+      "missing": [
+        "容量 / 净含量"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "MU-EYE-MOCHA-009"
+      ],
+      "name": "Mocha Chocolate 9-Shade Eyeshadow Palette",
+      "image": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-13-mocha-chocolate-eyeshadow-palette_ca2216bd.png",
+      "missing": [
+        "容量 / 净含量"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "MU-LIP-GLOSS-003"
+      ],
+      "name": "Radiant Glow Moisturizing Lip Gloss",
+      "image": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-14-radiant-glow-lip-gloss_e7660ba0.png",
+      "missing": [
+        "容量 / 净含量"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "MU-LIP-BRACELET-004"
+      ],
+      "name": "2-in-1 Bracelet Lip Gloss Palette with Mirror",
+      "image": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-15-bracelet-lip-gloss-palette_84ef5aef.png",
+      "missing": [
+        "容量 / 净含量"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "MU-EYE-ULT-016"
+      ],
+      "name": "16-Shade Vegan Pressed Powder Eyeshadow Palette",
+      "image": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-16-vegan-pressed-powder-eyeshadow-palette_faef4ea4.png",
+      "missing": [
+        "容量 / 净含量"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "MU-FACE-PAL-016"
+      ],
+      "name": "16-Color Multi-Use Complexion Palette",
+      "image": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-19-multi-use-complexion-palette_1a4ca030.png",
+      "missing": [
+        "容量 / 净含量"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "MU-FACE-BLUSH-002"
+      ],
+      "name": "2-in-1 Blush Duo Palette",
+      "image": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-20-blush-duo-palette_8af7b46f.png",
+      "missing": [
+        "容量 / 净含量"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "MU-FACE-STICK-005"
+      ],
+      "name": "Creamy Contour & Foundation Stick",
+      "image": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-21-creamy-contour-foundation-stick_5b359b7c.png",
+      "missing": [
+        "容量 / 净含量"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    },
+    {
+      "ids": [
+        "MU-FACE-CONTOUR-012"
+      ],
+      "name": "12-Color Face Contour & Correcting Palette",
+      "image": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-22-face-contour-correcting-palette-saturated_62a460a7.png",
+      "missing": [
+        "容量 / 净含量"
+      ],
+      "impact": "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺"
+    }
+  ],
+  "imageAudit": [
+    {
+      "batch": "01",
+      "path": "Batch01_5BodyCare/images/BC-01-daily-niacinamide-body-lotion-supplied.png",
+      "sha256": "04376e0e9463c966c819f44457ac9ffc47d6345ab4283b4b516899d96dce3226",
+      "ids": [
+        "BC-01"
+      ],
+      "product": "Daily Niacinamide Body Lotion",
+      "page": "/products/daily-niacinamide-body-lotion",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/daily-niacinamide-body-lotion/supplied-160.webp"
+    },
+    {
+      "batch": "01",
+      "path": "Batch01_5BodyCare/images/BC-02-luminous-glow-body-wash-supplied.png",
+      "sha256": "3a4b6b7433a8e68de9ac7244f79c8b6c1b2ea7fb7cca8c3392ead5313a747fe0",
+      "ids": [
+        "BC-02"
+      ],
+      "product": "Luminous Glow Body Wash",
+      "page": "/products/luminous-glow-body-wash",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/luminous-glow-body-wash/supplied-160.webp"
+    },
+    {
+      "batch": "01",
+      "path": "Batch01_5BodyCare/images/BC-03-gluta-glow-body-lotion-500ml-supplied.png",
+      "sha256": "db9427150ceacf0834a2613e19478e138f67b7e73d7409bd71018f142e59c75a",
+      "ids": [
+        "BC-03"
+      ],
+      "product": "Gluta Glow Body Lotion — 500 mL",
+      "page": "/products/gluta-glow-body-lotion-500ml",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/gluta-glow-body-lotion-500ml/supplied-160.webp"
+    },
+    {
+      "batch": "01",
+      "path": "Batch01_5BodyCare/images/BC-04-vanilla-cashmere-whipped-oil-body-butter-283g-supplied.png",
+      "sha256": "15dbcecd77cba65cc55f176a30f04f30e6f08ebe31d4600b9a170088d4a68c7a",
+      "ids": [
+        "BC-04"
+      ],
+      "product": "Vanilla Cashmere Whipped Oil Body Butter — 283 g",
+      "page": "/products/vanilla-cashmere-whipped-oil-body-butter-283g",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/vanilla-cashmere-whipped-oil-body-butter-283g/supplied-160.webp"
+    },
+    {
+      "batch": "01",
+      "path": "Batch01_5BodyCare/images/BC-05-vanilla-cashmere-body-wash-473ml-supplied.png",
+      "sha256": "28505e32bd6a35162be615eb32a1b229ca0cc2a634aadb276a707f160572db69",
+      "ids": [
+        "BC-05"
+      ],
+      "product": "Vanilla Cashmere Body Wash — 473 mL",
+      "page": "/products/vanilla-cashmere-body-wash-473ml",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/vanilla-cashmere-body-wash-473ml/supplied-160.webp"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-01-vaseline-body-oil-six-variants.png",
+      "sha256": "75ede2d5c72f3cb19cf49ff8430ef79cacb4874f89f4dd5a873ad671aa1a01b4",
+      "ids": [
+        "B02-01-01",
+        "B02-01-02",
+        "B02-01-03",
+        "B02-01-04",
+        "B02-01-05",
+        "B02-01-06"
+      ],
+      "product": "Vaseline Body Care Series — 200 mL",
+      "page": "/products/vaseline-body-care-series-200ml",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/vaseline-body-care-series-200ml/supplied-160.webp"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-02-khadlaj-hareem-al-sultan.png",
+      "sha256": "fc41dcca1350b8f36e2d4e9bdef889fa50f99673b670e7f325d1579f65f6b136",
+      "ids": [
+        "B02-02"
+      ],
+      "product": "Khadlaj Hareem Al Sultan",
+      "page": "/products/khadlaj-hareem-al-sultan",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/khadlaj-hareem-al-sultan/supplied-160.webp"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-03-olay-regenerist-day-night.png",
+      "sha256": "75020a73a2e1871a399b2743667486ff3f2b180a74bc1ae843c7387172a97dfc",
+      "ids": [
+        "B02-03-01",
+        "B02-03-02"
+      ],
+      "product": "OLAY Regenerist Cream — 50 g",
+      "page": "/products/olay-regenerist-cream-50g",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/olay-regenerist-cream-50g/supplied-160.webp"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-04-nivea-q10-day-cream.png",
+      "sha256": "f6cd8fce899420a448379bed22f11a6d443d8be4251b1276c1e55f0d2c1b0843",
+      "ids": [
+        "B02-04"
+      ],
+      "product": "NIVEA Q10 Anti-Wrinkle Power Multi Protective Day Cream",
+      "page": "/products/nivea-q10-day-cream",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/nivea-q10-day-cream/supplied-160.webp"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-05-the-ordinary-glycolic-toner.png",
+      "sha256": "bc636bb62e9cf77ad0191e0577c8aeb43705f53429ccf3cdce3e05502fb488de",
+      "ids": [
+        "B02-05"
+      ],
+      "product": "The Ordinary Glycolic Acid 7% Exfoliating Toner",
+      "page": "/products/the-ordinary-glycolic-toner",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/the-ordinary-glycolic-toner/supplied-160.webp"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-06-hobby-pure-orchid-shower-gel.png",
+      "sha256": "2319a4a8c69abb1e6fec6ce1b60a272ab9e73da18da0ea620e1bdb78910cec3e",
+      "ids": [
+        "B02-06"
+      ],
+      "product": "HOBBY Fresh Care Pure Orchid Shower Gel",
+      "page": "/products/hobby-pure-orchid-shower-gel",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/hobby-pure-orchid-shower-gel/supplied-160.webp"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-07-dr-teals-lavender-body-lotion.png",
+      "sha256": "67c183255a0f9f9b9cf0ad4897ac65a72134087ae30e7460c7c144fe833cbc06",
+      "ids": [
+        "B02-07"
+      ],
+      "product": "Dr Teal's Lavender Body Lotion",
+      "page": "/products/dr-teals-lavender-body-lotion",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/dr-teals-lavender-body-lotion/supplied-160.webp"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-08-st-ives-oatmeal-shea-body-lotion.png",
+      "sha256": "4646609620ab63518542878fabe04dee31b9c6df05b7d5423b3d606fce7ad831",
+      "ids": [
+        "B02-08"
+      ],
+      "product": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion",
+      "page": "/products/st-ives-oatmeal-shea-body-lotion",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/st-ives-oatmeal-shea-body-lotion/supplied-160.webp"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-09-st-ives-coconut-orchid-body-lotion.png",
+      "sha256": "dd1a1ccd3eca80051c57040f4b4a803122b3464a3b672cb9da69c12c1850eaee",
+      "ids": [
+        "B02-09"
+      ],
+      "product": "St. Ives Softening Coconut & Orchid Body Lotion",
+      "page": "/products/st-ives-coconut-orchid-body-lotion",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/st-ives-coconut-orchid-body-lotion/supplied-160.webp"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-10-garnier-vitamin-c-body-serum-lotion.png",
+      "sha256": "b6fc71069f7e1ee1e72dc9381e5fb30b206e21e44680b523f75297bd2cef0034",
+      "ids": [
+        "B02-10"
+      ],
+      "product": "Garnier Bright Complete Vitamin C Body Serum Lotion",
+      "page": "/products/garnier-vitamin-c-body-serum-lotion",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/garnier-vitamin-c-body-serum-lotion/supplied-160.webp"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-11-simple-moisturising-facial-wash.png",
+      "sha256": "3bbc6730ea1aad4638773b2b68fd247a48be16a36c13a008ae941cdfa248984b",
+      "ids": [
+        "B02-11"
+      ],
+      "product": "Simple Moisturising Facial Wash",
+      "page": "/products/simple-moisturising-facial-wash",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/simple-moisturising-facial-wash/supplied-160.webp"
+    },
+    {
+      "batch": "03",
+      "path": "Batch03_7Perfumes/images/PF-01-lattafa-al-noble-ameer-supplied.png",
+      "sha256": "bc65c1eec906855043976f3f5b6854cb187a7cdbfa9dbac785dba43a8c16e490",
+      "ids": [
+        "PF-01"
+      ],
+      "product": "Lattafa Al Noble Ameer",
+      "page": "/products/lattafa-al-noble-ameer",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/lattafa-al-noble-ameer/supplied-160.webp"
+    },
+    {
+      "batch": "03",
+      "path": "Batch03_7Perfumes/images/PF-02-lattafa-badee-al-oud-sublime-supplied.png",
+      "sha256": "381eb5fc7cee6d07041709b7b5528a02410b1e53d9c8a751abe3c1ba97514671",
+      "ids": [
+        "PF-02"
+      ],
+      "product": "Lattafa Bade’e Al Oud Sublime",
+      "page": "/products/lattafa-badee-al-oud-sublime",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/lattafa-badee-al-oud-sublime/supplied-160.webp"
+    },
+    {
+      "batch": "03",
+      "path": "Batch03_7Perfumes/images/PF-03-lattafa-khamrah-qahwa-supplied.png",
+      "sha256": "5bb9d5ca14bc262ecc9a3f67fc9e4216f634041a1e460b105918d64e37c5adc9",
+      "ids": [
+        "PF-03"
+      ],
+      "product": "Lattafa Khamrah Qahwa",
+      "page": "/products/lattafa-khamrah-qahwa",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/lattafa-khamrah-qahwa/supplied-160.webp"
+    },
+    {
+      "batch": "03",
+      "path": "Batch03_7Perfumes/images/PF-04-lattafa-khamrah-supplied.png",
+      "sha256": "33b77fa42f3f0ebb8fb52eca657993bdd65aae1cfd52121fff7fa5e3829f4a52",
+      "ids": [
+        "PF-04"
+      ],
+      "product": "Lattafa Khamrah",
+      "page": "/products/lattafa-khamrah",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/lattafa-khamrah/supplied-160.webp"
+    },
+    {
+      "batch": "03",
+      "path": "Batch03_7Perfumes/images/PF-05-lattafa-al-noble-safeer-supplied.png",
+      "sha256": "8216b8bc27b93640604cac328d4e72cda78d0b0672cdc2d745f3cc6fe4047105",
+      "ids": [
+        "PF-05"
+      ],
+      "product": "Lattafa Al Noble Safeer",
+      "page": "/products/lattafa-al-noble-safeer",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/lattafa-al-noble-safeer/supplied-160.webp"
+    },
+    {
+      "batch": "03",
+      "path": "Batch03_7Perfumes/images/PF-06-kayali-oudgasm-cafe-oud-19-supplied.png",
+      "sha256": "6571bd56efb378b3c99f067eaf4fb5234dd748bfabdc5ad9710ab29837417da7",
+      "ids": [
+        "PF-06"
+      ],
+      "product": "KAYALI Oudgasm Café Oud | 19",
+      "page": "/products/kayali-oudgasm-cafe-oud-19",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/kayali-oudgasm-cafe-oud-19/supplied-160.webp"
+    },
+    {
+      "batch": "03",
+      "path": "Batch03_7Perfumes/images/PF-07-french-avenue-liquid-brun-supplied.png",
+      "sha256": "0083354578581f41ebf5b3e71f8f161ec252f9685d67076418dc1dcb5a94a200",
+      "ids": [
+        "PF-07"
+      ],
+      "product": "French Avenue Liquid Brun",
+      "page": "/products/french-avenue-liquid-brun",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/french-avenue-liquid-brun/supplied-160.webp"
+    },
+    {
+      "batch": "04",
+      "path": "Batch04_Lotions_And_GelOils/images/B04-01-glutaglow-lotion-400ml-600ml.jpg",
+      "sha256": "9c7a60136ae027f50d4cc47c746b23666b706d1c75e13355db8422bdfcdfeb67",
+      "ids": [
+        "B04-01-400",
+        "B04-01-600"
+      ],
+      "product": "GlutaGlow Body Lotion — 400 mL / 600 mL",
+      "page": "/products/glutaglow-body-lotion-400ml-600ml",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/glutaglow-body-lotion-400ml-600ml/supplied-1-160.webp"
+    },
+    {
+      "batch": "04",
+      "path": "Batch04_Lotions_And_GelOils/images/B04-02-healthy-white-lotion-400ml.jpg",
+      "sha256": "7cabe1c2429d726eadc35859f785264c742ab2bcb8806f013fcb72e7822b767c",
+      "ids": [
+        "B04-02"
+      ],
+      "product": "Healthy White Body Lotion — 400 mL",
+      "page": "/products/healthy-white-body-lotion-400ml",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/healthy-white-body-lotion-400ml/supplied-1-160.webp"
+    },
+    {
+      "batch": "04",
+      "path": "Batch04_Lotions_And_GelOils/images/B04-03-gluta-ceramide-200ml.jpg",
+      "sha256": "bbe8b1c8462696daeecee3d2f7e71e97365b37b2a3957b2501f8301bd37ad9a8",
+      "ids": [
+        "B04-03"
+      ],
+      "product": "Gluta Ceramide Body Care",
+      "page": "/previews/combined-listing-review.html#matches",
+      "status": "疑似同款待确认，未新建产品页",
+      "image": "/assets/products/intake-b04-03/supplied-1-160.webp"
+    },
+    {
+      "batch": "04",
+      "path": "Batch04_Lotions_And_GelOils/images/B04-04-sunlit-glow-gel-oil-200ml-main.jpg",
+      "sha256": "ae26ac96dd137c1da9c443346372a462d2b4a6e6ae65c030b114f0ba8d585351",
+      "ids": [
+        "B04-04"
+      ],
+      "product": "Sunlit Glow Body Gel Oil",
+      "page": "/previews/combined-listing-review.html#matches",
+      "status": "疑似同款待确认，未新建产品页",
+      "image": "/assets/products/intake-b04-04/supplied-1-160.webp"
+    },
+    {
+      "batch": "04",
+      "path": "Batch04_Lotions_And_GelOils/images/B04-04-sunlit-glow-gel-oil-200ml-alternate.jpg",
+      "sha256": "dcdf3f7068f6d44457bf77c06ff710b1f5278fc937628d64e9265e6051793d3a",
+      "ids": [
+        "B04-04"
+      ],
+      "product": "Sunlit Glow Body Gel Oil",
+      "page": "/previews/combined-listing-review.html#matches",
+      "status": "疑似同款待确认，未新建产品页",
+      "image": "/assets/products/intake-b04-04/supplied-1-160.webp"
+    },
+    {
+      "batch": "05",
+      "path": "Batch05_Lotions_And_BodyOils/images/B05-01-daily-niacinamide-body-lotion.jpg",
+      "sha256": "43ae748176830aa302866f1dcea119f3926073bb94afa714aaa1d43441ded7b4",
+      "ids": [
+        "B05-01"
+      ],
+      "product": "Daily Niacinamide Body Lotion",
+      "page": "/previews/combined-listing-review.html#matches",
+      "status": "疑似同款待确认，未新建产品页",
+      "image": "/assets/products/intake-b05-01/supplied-1-160.webp"
+    },
+    {
+      "batch": "05",
+      "path": "Batch05_Lotions_And_BodyOils/images/B05-02-cocoa-radiant-body-gel-oil.jpg",
+      "sha256": "ae32e264d46bebd5a844ac7e268a46797443994c02e5abbcb68b86a38fc52d4b",
+      "ids": [
+        "B05-02"
+      ],
+      "product": "Cocoa Radiant Body Gel Oil",
+      "page": "/products/cocoa-radiant-body-gel-oil",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/cocoa-radiant-body-gel-oil/supplied-1-160.webp"
+    },
+    {
+      "batch": "05",
+      "path": "Batch05_Lotions_And_BodyOils/images/B05-03-essential-healing-body-lotion-725ml.jpg",
+      "sha256": "0f887c825cbd4073e19fc8dac6fb597c9121336ac57a21a8318a17541d1bf99a",
+      "ids": [
+        "B05-03"
+      ],
+      "product": "Essential Healing Body Lotion — 725 mL",
+      "page": "/products/essential-healing-body-lotion-725ml",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/essential-healing-body-lotion-725ml/supplied-1-160.webp"
+    },
+    {
+      "batch": "05",
+      "path": "Batch05_Lotions_And_BodyOils/images/B05-04-vitamin-b3-body-oil-200ml.jpg",
+      "sha256": "cf59850b45d4fc18e1f98d142f3b1f03fc4462d2c69fbd48aecd44c2d7395c35",
+      "ids": [
+        "B05-04"
+      ],
+      "product": "Vitamin B3 Body Oil",
+      "page": "/previews/combined-listing-review.html#matches",
+      "status": "疑似同款待确认，未新建产品页",
+      "image": "/assets/products/intake-b05-04/supplied-1-160.webp"
+    },
+    {
+      "batch": "05",
+      "path": "Batch05_Lotions_And_BodyOils/images/B05-05-cocoa-radiant-body-oil-200ml.jpg",
+      "sha256": "68424294cb27aece79e477e0ea9f4298d74b2077434672ad834104005eb8bad4",
+      "ids": [
+        "B05-05"
+      ],
+      "product": "Cocoa Radiant Body Oil",
+      "page": "/previews/combined-listing-review.html#matches",
+      "status": "疑似同款待确认，未新建产品页",
+      "image": "/assets/products/intake-b05-05/supplied-1-160.webp"
+    },
+    {
+      "batch": "05",
+      "path": "Batch05_Lotions_And_BodyOils/images/B05-06-advanced-repair-body-lotion-725ml.jpg",
+      "sha256": "8e14ef14921bcc7cffe3c9bd5420a67225d1b47d6a367d44b24cd145fa4fd3e8",
+      "ids": [
+        "B05-06"
+      ],
+      "product": "Advanced Repair Body Lotion — 725 mL",
+      "page": "/products/advanced-repair-body-lotion-725ml",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/advanced-repair-body-lotion-725ml/supplied-1-160.webp"
+    },
+    {
+      "batch": "05",
+      "path": "Batch05_Lotions_And_BodyOils/images/B05-07-calm-healing-body-lotion.jpg",
+      "sha256": "9b01eddcb4ce84a1b15b4850ed501241dbfabac87896432b820eddace25d4c3a",
+      "ids": [
+        "B05-07"
+      ],
+      "product": "Calm Healing Body Lotion",
+      "page": "/products/calm-healing-body-lotion",
+      "status": "已接入；合照按单品/容量选项展示，不按套装出售",
+      "image": "/assets/products/calm-healing-body-lotion/supplied-1-160.webp"
+    }
+  ]
+}

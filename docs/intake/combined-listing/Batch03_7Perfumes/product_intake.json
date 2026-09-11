@@ -1,0 +1,376 @@
+{
+  "batch": "03",
+  "product_count": 7,
+  "currency": "USD",
+  "price_per_piece": 5.0,
+  "moq_pieces": 2,
+  "price_scope": "Only the seven images in the latest user message; earlier batch 02 remains US$3.00 and MOQ 6.",
+  "schema_note": "Intake data, not a required application schema",
+  "products": [
+    {
+      "intake_id": "PF-01",
+      "upload_order": 1,
+      "name_from_image": "Lattafa Al Noble Ameer",
+      "brand_observed_on_image": "Lattafa",
+      "category": "Fragrance",
+      "suggested_slug_candidate": "lattafa-al-noble-ameer",
+      "supplier_sku": null,
+      "user_confirmed": {
+        "currency": "USD",
+        "price_per_piece": 5.0,
+        "moq_pieces": 2,
+        "source_text": "这7张香水 usd 5/pieces moq 2 pieces"
+      },
+      "label_observations": {
+        "size": "100 mL / 3.4 FL OZ",
+        "concentration_label": "Eau de Parfum"
+      },
+      "draft_copy_en": {
+        "display_name": "Lattafa Al Noble Ameer",
+        "short_description": "Lattafa Al Noble Ameer. US$5.00 per piece with a minimum order of 2 pieces. Packaging marked 100 mL / 3.4 FL OZ. Contact us for product specifications and order details.",
+        "visual_description": "Black bottle with a gold deer-shaped cap and matching gold-and-black box.",
+        "seo_title": "Lattafa Al Noble Ameer | TopPerfume",
+        "meta_description": "Lattafa Al Noble Ameer. US$5.00 per piece with a minimum order of 2 pieces. Packaging marked 100 mL / 3.4 FL OZ. Contact us for product specifications and order details.",
+        "price_display": "US$5.00 / piece",
+        "moq_display": "MOQ: 2 pieces",
+        "cta": "Inquire About This Perfume"
+      },
+      "image": {
+        "file": "images/PF-01-lattafa-al-noble-ameer-supplied.png",
+        "source_filename": "82027342-f4a2-464d-9cd4-cee2df4514e4.png",
+        "sha256": "bc65c1eec906855043976f3f5b6854cb187a7cdbfa9dbac785dba43a8c16e490",
+        "dimensions_px": [
+          810,
+          1080
+        ],
+        "alt": "Black bottle with a gold deer-shaped cap and matching gold-and-black box — Lattafa Al Noble Ameer",
+        "processing": "Original pixels preserved; copied and renamed"
+      },
+      "missing_information": [
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms"
+      ],
+      "notes": [
+        "Product and brand names are transcribed from visible packaging. No authenticity, official distributor status or OEM capability is inferred.",
+        "The bottle and box form one pictured product; no extra gift or bundle is promised.",
+        "Fragrance notes, gender, longevity, country of origin and ingredient percentages are not inferred."
+      ],
+      "status": "Product intake organized; website import and existing-product deduplication pending"
+    },
+    {
+      "intake_id": "PF-02",
+      "upload_order": 2,
+      "name_from_image": "Lattafa Bade’e Al Oud Sublime",
+      "brand_observed_on_image": "Lattafa",
+      "category": "Fragrance",
+      "suggested_slug_candidate": "lattafa-badee-al-oud-sublime",
+      "supplier_sku": null,
+      "user_confirmed": {
+        "currency": "USD",
+        "price_per_piece": 5.0,
+        "moq_pieces": 2,
+        "source_text": "这7张香水 usd 5/pieces moq 2 pieces"
+      },
+      "label_observations": {
+        "size": null,
+        "concentration_label": null
+      },
+      "draft_copy_en": {
+        "display_name": "Lattafa Bade’e Al Oud Sublime",
+        "short_description": "Lattafa Bade’e Al Oud Sublime. US$5.00 per piece with a minimum order of 2 pieces. Contact us for product specifications and order details.",
+        "visual_description": "Red rectangular bottle with gold-patterned label and matching red box.",
+        "seo_title": "Lattafa Bade’e Al Oud Sublime | TopPerfume",
+        "meta_description": "Lattafa Bade’e Al Oud Sublime. US$5.00 per piece with a minimum order of 2 pieces. Contact us for product specifications and order details.",
+        "price_display": "US$5.00 / piece",
+        "moq_display": "MOQ: 2 pieces",
+        "cta": "Inquire About This Perfume"
+      },
+      "image": {
+        "file": "images/PF-02-lattafa-badee-al-oud-sublime-supplied.png",
+        "source_filename": "3e094709-e643-405c-9a9d-9b2d10b2622e.png",
+        "sha256": "381eb5fc7cee6d07041709b7b5528a02410b1e53d9c8a751abe3c1ba97514671",
+        "dimensions_px": [
+          810,
+          1080
+        ],
+        "alt": "Red rectangular bottle with gold-patterned label and matching red box — Lattafa Bade’e Al Oud Sublime",
+        "processing": "Original pixels preserved; copied and renamed"
+      },
+      "missing_information": [
+        "Capacity",
+        "Concentration / formulation",
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms"
+      ],
+      "notes": [
+        "Product and brand names are transcribed from visible packaging. No authenticity, official distributor status or OEM capability is inferred.",
+        "The bottle and box form one pictured product; no extra gift or bundle is promised.",
+        "Fragrance notes, gender, longevity, country of origin and ingredient percentages are not inferred."
+      ],
+      "status": "Product intake organized; website import and existing-product deduplication pending"
+    },
+    {
+      "intake_id": "PF-03",
+      "upload_order": 3,
+      "name_from_image": "Lattafa Khamrah Qahwa",
+      "brand_observed_on_image": "Lattafa",
+      "category": "Fragrance",
+      "suggested_slug_candidate": "lattafa-khamrah-qahwa",
+      "supplier_sku": null,
+      "user_confirmed": {
+        "currency": "USD",
+        "price_per_piece": 5.0,
+        "moq_pieces": 2,
+        "source_text": "这7张香水 usd 5/pieces moq 2 pieces"
+      },
+      "label_observations": {
+        "size": null,
+        "concentration_label": null
+      },
+      "draft_copy_en": {
+        "display_name": "Lattafa Khamrah Qahwa",
+        "short_description": "Lattafa Khamrah Qahwa. US$5.00 per piece with a minimum order of 2 pieces. Contact us for product specifications and order details.",
+        "visual_description": "Faceted clear bottle with amber liquid and a brown Qahwa box.",
+        "seo_title": "Lattafa Khamrah Qahwa | TopPerfume",
+        "meta_description": "Lattafa Khamrah Qahwa. US$5.00 per piece with a minimum order of 2 pieces. Contact us for product specifications and order details.",
+        "price_display": "US$5.00 / piece",
+        "moq_display": "MOQ: 2 pieces",
+        "cta": "Inquire About This Perfume"
+      },
+      "image": {
+        "file": "images/PF-03-lattafa-khamrah-qahwa-supplied.png",
+        "source_filename": "27d864ce-ffb0-4ac2-9169-eff4cfb9fc6b.png",
+        "sha256": "5bb9d5ca14bc262ecc9a3f67fc9e4216f634041a1e460b105918d64e37c5adc9",
+        "dimensions_px": [
+          810,
+          1080
+        ],
+        "alt": "Faceted clear bottle with amber liquid and a brown Qahwa box — Lattafa Khamrah Qahwa",
+        "processing": "Original pixels preserved; copied and renamed"
+      },
+      "missing_information": [
+        "Capacity",
+        "Concentration / formulation",
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms"
+      ],
+      "notes": [
+        "Product and brand names are transcribed from visible packaging. No authenticity, official distributor status or OEM capability is inferred.",
+        "The bottle and box form one pictured product; no extra gift or bundle is promised.",
+        "Fragrance notes, gender, longevity, country of origin and ingredient percentages are not inferred."
+      ],
+      "status": "Product intake organized; website import and existing-product deduplication pending"
+    },
+    {
+      "intake_id": "PF-04",
+      "upload_order": 4,
+      "name_from_image": "Lattafa Khamrah",
+      "brand_observed_on_image": "Lattafa",
+      "category": "Fragrance",
+      "suggested_slug_candidate": "lattafa-khamrah",
+      "supplier_sku": null,
+      "user_confirmed": {
+        "currency": "USD",
+        "price_per_piece": 5.0,
+        "moq_pieces": 2,
+        "source_text": "这7张香水 usd 5/pieces moq 2 pieces"
+      },
+      "label_observations": {
+        "size": null,
+        "concentration_label": null
+      },
+      "draft_copy_en": {
+        "display_name": "Lattafa Khamrah",
+        "short_description": "Lattafa Khamrah. US$5.00 per piece with a minimum order of 2 pieces. Contact us for product specifications and order details.",
+        "visual_description": "Faceted clear bottle with amber liquid and a dark Khamrah box.",
+        "seo_title": "Lattafa Khamrah | TopPerfume",
+        "meta_description": "Lattafa Khamrah. US$5.00 per piece with a minimum order of 2 pieces. Contact us for product specifications and order details.",
+        "price_display": "US$5.00 / piece",
+        "moq_display": "MOQ: 2 pieces",
+        "cta": "Inquire About This Perfume"
+      },
+      "image": {
+        "file": "images/PF-04-lattafa-khamrah-supplied.png",
+        "source_filename": "085e8df3-cd5f-4153-a430-62185b5a6854.png",
+        "sha256": "33b77fa42f3f0ebb8fb52eca657993bdd65aae1cfd52121fff7fa5e3829f4a52",
+        "dimensions_px": [
+          810,
+          1080
+        ],
+        "alt": "Faceted clear bottle with amber liquid and a dark Khamrah box — Lattafa Khamrah",
+        "processing": "Original pixels preserved; copied and renamed"
+      },
+      "missing_information": [
+        "Capacity",
+        "Concentration / formulation",
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms"
+      ],
+      "notes": [
+        "Product and brand names are transcribed from visible packaging. No authenticity, official distributor status or OEM capability is inferred.",
+        "The bottle and box form one pictured product; no extra gift or bundle is promised.",
+        "Fragrance notes, gender, longevity, country of origin and ingredient percentages are not inferred."
+      ],
+      "status": "Product intake organized; website import and existing-product deduplication pending"
+    },
+    {
+      "intake_id": "PF-05",
+      "upload_order": 5,
+      "name_from_image": "Lattafa Al Noble Safeer",
+      "brand_observed_on_image": "Lattafa",
+      "category": "Fragrance",
+      "suggested_slug_candidate": "lattafa-al-noble-safeer",
+      "supplier_sku": null,
+      "user_confirmed": {
+        "currency": "USD",
+        "price_per_piece": 5.0,
+        "moq_pieces": 2,
+        "source_text": "这7张香水 usd 5/pieces moq 2 pieces"
+      },
+      "label_observations": {
+        "size": "100 mL / 3.4 FL OZ",
+        "concentration_label": "Eau de Parfum"
+      },
+      "draft_copy_en": {
+        "display_name": "Lattafa Al Noble Safeer",
+        "short_description": "Lattafa Al Noble Safeer. US$5.00 per piece with a minimum order of 2 pieces. Packaging marked 100 mL / 3.4 FL OZ. Contact us for product specifications and order details.",
+        "visual_description": "Green bottle with a gold deer-shaped cap and matching green-and-gold box.",
+        "seo_title": "Lattafa Al Noble Safeer | TopPerfume",
+        "meta_description": "Lattafa Al Noble Safeer. US$5.00 per piece with a minimum order of 2 pieces. Packaging marked 100 mL / 3.4 FL OZ. Contact us for product specifications and order details.",
+        "price_display": "US$5.00 / piece",
+        "moq_display": "MOQ: 2 pieces",
+        "cta": "Inquire About This Perfume"
+      },
+      "image": {
+        "file": "images/PF-05-lattafa-al-noble-safeer-supplied.png",
+        "source_filename": "e42f38e0-4298-43a4-b73e-16344ec95c41.png",
+        "sha256": "8216b8bc27b93640604cac328d4e72cda78d0b0672cdc2d745f3cc6fe4047105",
+        "dimensions_px": [
+          810,
+          1080
+        ],
+        "alt": "Green bottle with a gold deer-shaped cap and matching green-and-gold box — Lattafa Al Noble Safeer",
+        "processing": "Original pixels preserved; copied and renamed"
+      },
+      "missing_information": [
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms"
+      ],
+      "notes": [
+        "Product and brand names are transcribed from visible packaging. No authenticity, official distributor status or OEM capability is inferred.",
+        "The bottle and box form one pictured product; no extra gift or bundle is promised.",
+        "Fragrance notes, gender, longevity, country of origin and ingredient percentages are not inferred."
+      ],
+      "status": "Product intake organized; website import and existing-product deduplication pending"
+    },
+    {
+      "intake_id": "PF-06",
+      "upload_order": 6,
+      "name_from_image": "KAYALI Oudgasm Café Oud | 19",
+      "brand_observed_on_image": "KAYALI",
+      "category": "Fragrance",
+      "suggested_slug_candidate": "kayali-oudgasm-cafe-oud-19",
+      "supplier_sku": null,
+      "user_confirmed": {
+        "currency": "USD",
+        "price_per_piece": 5.0,
+        "moq_pieces": 2,
+        "source_text": "这7张香水 usd 5/pieces moq 2 pieces"
+      },
+      "label_observations": {
+        "size": "100 mL / 3.4 FL OZ",
+        "concentration_label": "Eau de Parfum Intense"
+      },
+      "draft_copy_en": {
+        "display_name": "KAYALI Oudgasm Café Oud | 19",
+        "short_description": "KAYALI Oudgasm Café Oud | 19. US$5.00 per piece with a minimum order of 2 pieces. Packaging marked 100 mL / 3.4 FL OZ. Contact us for product specifications and order details.",
+        "visual_description": "Dark faceted bottle with gold lettering and matching dark box.",
+        "seo_title": "KAYALI Oudgasm Café Oud | 19 | TopPerfume",
+        "meta_description": "KAYALI Oudgasm Café Oud | 19. US$5.00 per piece with a minimum order of 2 pieces. Packaging marked 100 mL / 3.4 FL OZ. Contact us for product specifications and order details.",
+        "price_display": "US$5.00 / piece",
+        "moq_display": "MOQ: 2 pieces",
+        "cta": "Inquire About This Perfume"
+      },
+      "image": {
+        "file": "images/PF-06-kayali-oudgasm-cafe-oud-19-supplied.png",
+        "source_filename": "77673272-08c1-41be-a73b-7d9acb334d56.png",
+        "sha256": "6571bd56efb378b3c99f067eaf4fb5234dd748bfabdc5ad9710ab29837417da7",
+        "dimensions_px": [
+          756,
+          1280
+        ],
+        "alt": "Dark faceted bottle with gold lettering and matching dark box — KAYALI Oudgasm Café Oud | 19",
+        "processing": "Original pixels preserved; copied and renamed"
+      },
+      "missing_information": [
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms"
+      ],
+      "notes": [
+        "Product and brand names are transcribed from visible packaging. No authenticity, official distributor status or OEM capability is inferred.",
+        "The bottle and box form one pictured product; no extra gift or bundle is promised.",
+        "Fragrance notes, gender, longevity, country of origin and ingredient percentages are not inferred."
+      ],
+      "status": "Product intake organized; website import and existing-product deduplication pending"
+    },
+    {
+      "intake_id": "PF-07",
+      "upload_order": 7,
+      "name_from_image": "French Avenue Liquid Brun",
+      "brand_observed_on_image": "French Avenue",
+      "category": "Fragrance",
+      "suggested_slug_candidate": "french-avenue-liquid-brun",
+      "supplier_sku": null,
+      "user_confirmed": {
+        "currency": "USD",
+        "price_per_piece": 5.0,
+        "moq_pieces": 2,
+        "source_text": "这7张香水 usd 5/pieces moq 2 pieces"
+      },
+      "label_observations": {
+        "size": null,
+        "concentration_label": null
+      },
+      "draft_copy_en": {
+        "display_name": "French Avenue Liquid Brun",
+        "short_description": "French Avenue Liquid Brun. US$5.00 per piece with a minimum order of 2 pieces. Contact us for product specifications and order details.",
+        "visual_description": "Tall copper-toned bottle with a brown Liquid Brun box.",
+        "seo_title": "French Avenue Liquid Brun | TopPerfume",
+        "meta_description": "French Avenue Liquid Brun. US$5.00 per piece with a minimum order of 2 pieces. Contact us for product specifications and order details.",
+        "price_display": "US$5.00 / piece",
+        "moq_display": "MOQ: 2 pieces",
+        "cta": "Inquire About This Perfume"
+      },
+      "image": {
+        "file": "images/PF-07-french-avenue-liquid-brun-supplied.png",
+        "source_filename": "4c382c5e-72ad-4c4f-8f06-1bd43ddda7fd.png",
+        "sha256": "0083354578581f41ebf5b3e71f8f161ec252f9685d67076418dc1dcb5a94a200",
+        "dimensions_px": [
+          960,
+          1280
+        ],
+        "alt": "Tall copper-toned bottle with a brown Liquid Brun box — French Avenue Liquid Brun",
+        "processing": "Original pixels preserved; copied and renamed"
+      },
+      "missing_information": [
+        "Capacity",
+        "Concentration / formulation",
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms"
+      ],
+      "notes": [
+        "Product and brand names are transcribed from visible packaging. No authenticity, official distributor status or OEM capability is inferred.",
+        "The bottle and box form one pictured product; no extra gift or bundle is promised.",
+        "Fragrance notes, gender, longevity, country of origin and ingredient percentages are not inferred."
+      ],
+      "status": "Product intake organized; website import and existing-product deduplication pending"
+    }
+  ]
+}

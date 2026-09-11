@@ -8,6 +8,7 @@ export const ENV = {
   forgeApiUrl: process.env.BUILT_IN_FORGE_API_URL ?? "",
   forgeApiKey: process.env.BUILT_IN_FORGE_API_KEY ?? "",
   resendApiKey: process.env.RESEND_API_KEY ?? "",
+  inquiryEnabled: process.env.VERCEL_ENV !== "preview" && process.env.INQUIRY_ENABLED === "true",
   inquiryFromEmail: process.env.INQUIRY_FROM_EMAIL ?? "",
   inquiryRecipient: process.env.INQUIRY_TO_EMAIL ?? "melody888666@yeah.net",
 };

@@ -1,0 +1,182 @@
+[
+  {
+    "sourceBatch": "04",
+    "source": "images/B04-01-glutaglow-lotion-400ml-600ml.jpg",
+    "sha256": "9c7a60136ae027f50d4cc47c746b23666b706d1c75e13355db8422bdfcdfeb67",
+    "optimized": {
+      "src": "/assets/products/glutaglow-body-lotion-400ml-600ml/supplied-1-800.webp",
+      "srcSet": "/assets/products/glutaglow-body-lotion-400ml-600ml/supplied-1-480.webp 480w, /assets/products/glutaglow-body-lotion-400ml-600ml/supplied-1-800.webp 800w, /assets/products/glutaglow-body-lotion-400ml-600ml/supplied-1-1200.webp 1200w",
+      "thumbnail": "/assets/products/glutaglow-body-lotion-400ml-600ml/supplied-1-160.webp",
+      "fullSize": "/assets/products/glutaglow-body-lotion-400ml-600ml/supplied-1-1200.webp",
+      "width": 1200,
+      "height": 1200,
+      "alt": "Two pink-pump GlutaGlow lotion bottles labeled 400 mL and 600 mL",
+      "label": "Supplied view"
+    }
+  },
+  {
+    "sourceBatch": "04",
+    "source": "images/B04-02-healthy-white-lotion-400ml.jpg",
+    "sha256": "7cabe1c2429d726eadc35859f785264c742ab2bcb8806f013fcb72e7822b767c",
+    "optimized": {
+      "src": "/assets/products/healthy-white-body-lotion-400ml/supplied-1-800.webp",
+      "srcSet": "/assets/products/healthy-white-body-lotion-400ml/supplied-1-480.webp 480w, /assets/products/healthy-white-body-lotion-400ml/supplied-1-800.webp 800w, /assets/products/healthy-white-body-lotion-400ml/supplied-1-1200.webp 1200w",
+      "thumbnail": "/assets/products/healthy-white-body-lotion-400ml/supplied-1-160.webp",
+      "fullSize": "/assets/products/healthy-white-body-lotion-400ml/supplied-1-1200.webp",
+      "width": 1200,
+      "height": 1200,
+      "alt": "Healthy White lotion in a pink-pump bottle labeled 400 mL",
+      "label": "Supplied view"
+    }
+  },
+  {
+    "sourceBatch": "04",
+    "source": "images/B04-03-gluta-ceramide-200ml.jpg",
+    "sha256": "bbe8b1c8462696daeecee3d2f7e71e97365b37b2a3957b2501f8301bd37ad9a8",
+    "optimized": {
+      "src": "/assets/products/intake-b04-03/supplied-1-800.webp",
+      "srcSet": "/assets/products/intake-b04-03/supplied-1-480.webp 480w, /assets/products/intake-b04-03/supplied-1-800.webp 800w, /assets/products/intake-b04-03/supplied-1-1254.webp 1254w",
+      "thumbnail": "/assets/products/intake-b04-03/supplied-1-160.webp",
+      "fullSize": "/assets/products/intake-b04-03/supplied-1-1254.webp",
+      "width": 1706,
+      "height": 1279,
+      "alt": "Transparent pink-capped Gluta Ceramide bottle labeled 200 mL",
+      "label": "Supplied view"
+    }
+  },
+  {
+    "sourceBatch": "04",
+    "source": "images/B04-04-sunlit-glow-gel-oil-200ml-main.jpg",
+    "sha256": "ae26ac96dd137c1da9c443346372a462d2b4a6e6ae65c030b114f0ba8d585351",
+    "optimized": {
+      "src": "/assets/products/intake-b04-04/supplied-1-800.webp",
+      "srcSet": "/assets/products/intake-b04-04/supplied-1-480.webp 480w, /assets/products/intake-b04-04/supplied-1-800.webp 800w, /assets/products/intake-b04-04/supplied-1-1254.webp 1254w",
+      "thumbnail": "/assets/products/intake-b04-04/supplied-1-160.webp",
+      "fullSize": "/assets/products/intake-b04-04/supplied-1-1254.webp",
+      "width": 1280,
+      "height": 1280,
+      "alt": "Sunlit Glow gel oil in a gold-toned bottle with a blue cap, labeled 200 mL",
+      "label": "Supplied view"
+    }
+  },
+  {
+    "sourceBatch": "04",
+    "source": "images/B04-04-sunlit-glow-gel-oil-200ml-alternate.jpg",
+    "sha256": "dcdf3f7068f6d44457bf77c06ff710b1f5278fc937628d64e9265e6051793d3a",
+    "optimized": {
+      "src": "/assets/products/intake-b04-04/supplied-2-800.webp",
+      "srcSet": "/assets/products/intake-b04-04/supplied-2-480.webp 480w, /assets/products/intake-b04-04/supplied-2-800.webp 800w, /assets/products/intake-b04-04/supplied-2-1254.webp 1254w",
+      "thumbnail": "/assets/products/intake-b04-04/supplied-2-160.webp",
+      "fullSize": "/assets/products/intake-b04-04/supplied-2-1254.webp",
+      "width": 1280,
+      "height": 1280,
+      "alt": "Alternate supplied image of Sunlit Glow gel oil labeled 200 mL",
+      "label": "Alternate view"
+    }
+  },
+  {
+    "sourceBatch": "05",
+    "source": "images/B05-01-daily-niacinamide-body-lotion.jpg",
+    "sha256": "43ae748176830aa302866f1dcea119f3926073bb94afa714aaa1d43441ded7b4",
+    "optimized": {
+      "src": "/assets/products/intake-b05-01/supplied-1-800.webp",
+      "srcSet": "/assets/products/intake-b05-01/supplied-1-480.webp 480w, /assets/products/intake-b05-01/supplied-1-800.webp 800w, /assets/products/intake-b05-01/supplied-1-1200.webp 1200w",
+      "thumbnail": "/assets/products/intake-b05-01/supplied-1-160.webp",
+      "fullSize": "/assets/products/intake-b05-01/supplied-1-1200.webp",
+      "width": 1200,
+      "height": 1200,
+      "alt": "Pink body lotion bottle with a blue pump and Daily Brightening niacinamide label",
+      "label": "Supplied view"
+    }
+  },
+  {
+    "sourceBatch": "05",
+    "source": "images/B05-02-cocoa-radiant-body-gel-oil.jpg",
+    "sha256": "ae32e264d46bebd5a844ac7e268a46797443994c02e5abbcb68b86a38fc52d4b",
+    "optimized": {
+      "src": "/assets/products/cocoa-radiant-body-gel-oil/supplied-1-800.webp",
+      "srcSet": "/assets/products/cocoa-radiant-body-gel-oil/supplied-1-480.webp 480w, /assets/products/cocoa-radiant-body-gel-oil/supplied-1-800.webp 800w, /assets/products/cocoa-radiant-body-gel-oil/supplied-1-1200.webp 1200w",
+      "thumbnail": "/assets/products/cocoa-radiant-body-gel-oil/supplied-1-160.webp",
+      "fullSize": "/assets/products/cocoa-radiant-body-gel-oil/supplied-1-1200.webp",
+      "width": 1200,
+      "height": 1200,
+      "alt": "Transparent Cocoa Radiant body gel oil bottle with a blue cap and brown label",
+      "label": "Supplied view"
+    }
+  },
+  {
+    "sourceBatch": "05",
+    "source": "images/B05-03-essential-healing-body-lotion-725ml.jpg",
+    "sha256": "0f887c825cbd4073e19fc8dac6fb597c9121336ac57a21a8318a17541d1bf99a",
+    "optimized": {
+      "src": "/assets/products/essential-healing-body-lotion-725ml/supplied-1-800.webp",
+      "srcSet": "/assets/products/essential-healing-body-lotion-725ml/supplied-1-480.webp 480w, /assets/products/essential-healing-body-lotion-725ml/supplied-1-800.webp 800w, /assets/products/essential-healing-body-lotion-725ml/supplied-1-1200.webp 1200w",
+      "thumbnail": "/assets/products/essential-healing-body-lotion-725ml/supplied-1-160.webp",
+      "fullSize": "/assets/products/essential-healing-body-lotion-725ml/supplied-1-1200.webp",
+      "width": 1200,
+      "height": 1200,
+      "alt": "Yellow Essential Healing body lotion bottle with a blue pump, labeled 725 mL",
+      "label": "Supplied view"
+    }
+  },
+  {
+    "sourceBatch": "05",
+    "source": "images/B05-04-vitamin-b3-body-oil-200ml.jpg",
+    "sha256": "cf59850b45d4fc18e1f98d142f3b1f03fc4462d2c69fbd48aecd44c2d7395c35",
+    "optimized": {
+      "src": "/assets/products/intake-b05-04/supplied-1-800.webp",
+      "srcSet": "/assets/products/intake-b05-04/supplied-1-480.webp 480w, /assets/products/intake-b05-04/supplied-1-800.webp 800w, /assets/products/intake-b05-04/supplied-1-1200.webp 1200w",
+      "thumbnail": "/assets/products/intake-b05-04/supplied-1-160.webp",
+      "fullSize": "/assets/products/intake-b05-04/supplied-1-1200.webp",
+      "width": 1200,
+      "height": 1200,
+      "alt": "Pink-capped Vitamin B3 body oil bottle labeled 200 mL",
+      "label": "Supplied view"
+    }
+  },
+  {
+    "sourceBatch": "05",
+    "source": "images/B05-05-cocoa-radiant-body-oil-200ml.jpg",
+    "sha256": "68424294cb27aece79e477e0ea9f4298d74b2077434672ad834104005eb8bad4",
+    "optimized": {
+      "src": "/assets/products/intake-b05-05/supplied-1-800.webp",
+      "srcSet": "/assets/products/intake-b05-05/supplied-1-480.webp 480w, /assets/products/intake-b05-05/supplied-1-800.webp 800w, /assets/products/intake-b05-05/supplied-1-1200.webp 1200w",
+      "thumbnail": "/assets/products/intake-b05-05/supplied-1-160.webp",
+      "fullSize": "/assets/products/intake-b05-05/supplied-1-1200.webp",
+      "width": 1200,
+      "height": 1200,
+      "alt": "Pale Cocoa Radiant body oil bottle with a blue cap, labeled 200 mL",
+      "label": "Supplied view"
+    }
+  },
+  {
+    "sourceBatch": "05",
+    "source": "images/B05-06-advanced-repair-body-lotion-725ml.jpg",
+    "sha256": "8e14ef14921bcc7cffe3c9bd5420a67225d1b47d6a367d44b24cd145fa4fd3e8",
+    "optimized": {
+      "src": "/assets/products/advanced-repair-body-lotion-725ml/supplied-1-800.webp",
+      "srcSet": "/assets/products/advanced-repair-body-lotion-725ml/supplied-1-480.webp 480w, /assets/products/advanced-repair-body-lotion-725ml/supplied-1-800.webp 800w, /assets/products/advanced-repair-body-lotion-725ml/supplied-1-1200.webp 1200w",
+      "thumbnail": "/assets/products/advanced-repair-body-lotion-725ml/supplied-1-160.webp",
+      "fullSize": "/assets/products/advanced-repair-body-lotion-725ml/supplied-1-1200.webp",
+      "width": 1200,
+      "height": 1200,
+      "alt": "White Advanced Repair body lotion bottle with a blue pump, labeled 725 mL",
+      "label": "Supplied view"
+    }
+  },
+  {
+    "sourceBatch": "05",
+    "source": "images/B05-07-calm-healing-body-lotion.jpg",
+    "sha256": "9b01eddcb4ce84a1b15b4850ed501241dbfabac87896432b820eddace25d4c3a",
+    "optimized": {
+      "src": "/assets/products/calm-healing-body-lotion/supplied-1-800.webp",
+      "srcSet": "/assets/products/calm-healing-body-lotion/supplied-1-480.webp 480w, /assets/products/calm-healing-body-lotion/supplied-1-800.webp 800w, /assets/products/calm-healing-body-lotion/supplied-1-1200.webp 1200w",
+      "thumbnail": "/assets/products/calm-healing-body-lotion/supplied-1-160.webp",
+      "fullSize": "/assets/products/calm-healing-body-lotion/supplied-1-1200.webp",
+      "width": 1200,
+      "height": 1200,
+      "alt": "Purple Calm Healing body lotion bottle with a blue pump",
+      "label": "Supplied view"
+    }
+  }
+]

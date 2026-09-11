@@ -212,7 +212,7 @@ const faqs = [
   },
   {
     question: "Can I discuss OEM or ODM through this page?",
-    answer: "Yes. TopPerfume supports B2B sourcing, private-label, manufacturing and OEM/ODM project conversations. Exact scope is confirmed by product and project.",
+    answer: "Yes. TopPerfume supports B2B sourcing, supplier coordination and OEM/ODM project conversations. Exact scope is confirmed by product and project.",
   },
 ];
 
@@ -221,9 +221,9 @@ export default function LowMoqPerfume() {
     <section className="low-moq-hero">
       <div className="low-moq-hero-copy">
         <p className="eyebrow">LOW MOQ PERFUME / B2B PARTNER</p>
-        <h1>Low MOQ Perfume Manufacturing for <em>New &amp; Growing Brands</em></h1>
+        <h1>Low MOQ Perfume Wholesale Sourcing for <em>New &amp; Growing Brands</em></h1>
         <p className="low-moq-hero-intro">Start with selected standard perfume orders from <strong>2 pcs</strong>, or explore logo, packaging and custom fragrance options from <strong>100 pcs</strong>.</p>
-        <p className="low-moq-hero-positioning">TopPerfume supports B2B buyers as a sourcing, private-label, manufacturing and OEM/ODM project partner. Choose a confirmed fragrance product, request a free sample, or send your project brief for a quote.</p>
+        <p className="low-moq-hero-positioning">TopPerfume supports B2B buyers as a sourcing, supplier coordination and OEM/ODM project partner. Choose a confirmed fragrance product, request a free sample, or send your project brief for a quote.</p>
         <p className="low-moq-lead-time"><Clock3 size={16} /> Lead time starts from approximately 7 days for eligible standard orders. Custom projects follow project-specific lead times.</p>
         <div className="hero-actions low-moq-hero-actions">
           <WhatsAppCta label="Request Free Sample" intent="sample" context={{ category: "fragrance" }} />
@@ -240,7 +240,7 @@ export default function LowMoqPerfume() {
     </section>
 
     <section className="low-moq-video-block" aria-labelledby="low-moq-video-title">
-      <div className="low-moq-video-copy"><p className="eyebrow">01A / FRAGRANCE PRESENTATION</p><h2 id="low-moq-video-title">A visual starting point for your next fragrance line.</h2><p>Explore bottle, label and packaging references before moving into a private-label conversation. The supplied footage is shown as a product-reference visual, not as a factory, laboratory or production-line claim.</p><div className="low-moq-video-note"><span>Muted loop · 11.5 sec edit</span><span>Poster fallback on mobile</span></div></div>
+      <div className="low-moq-video-copy"><p className="eyebrow">01A / FRAGRANCE PRESENTATION</p><h2 id="low-moq-video-title">A visual starting point for your next fragrance line.</h2><p>Explore bottle, label and packaging references before moving into a private-label conversation. The supplied footage is shown as a product-reference visual, not as a factory, laboratory or production-line claim.</p><div className="low-moq-video-note"><span>Packaging showcase · 11.5 sec edit</span><span>Fragrance presentation</span></div></div>
       <figure className="low-moq-video-media"><img className="low-moq-video-poster" src={fragranceVideo.poster} alt="" aria-hidden="true" /><video autoPlay muted loop playsInline poster={fragranceVideo.poster} preload="metadata" aria-label={fragranceVideo.alt}><source src={fragranceVideo.src} type="video/mp4" /></video><figcaption><span>Customer-facing visual reference</span><strong>A considered direction for your next scent line</strong></figcaption></figure>
     </section>
 
@@ -272,7 +272,7 @@ export default function LowMoqPerfume() {
       <p className="low-moq-section-lead">Confirmed catalogue cards show real product data. Supplied visuals that do not match a verified catalogue SKU stay as scent references only, so buyers can explore a direction without invented commercial details.</p>
       <p className="low-moq-reference-disclosure">Third-party brand names are used only as fragrance references. TopPerfume is not affiliated with or endorsed by the referenced brands.</p>
 
-      <div className="low-moq-reference-subhead"><p className="eyebrow">CONFIRMED CATALOGUE REFERENCES</p><h3>Branded Fragrance References</h3><span>Real SKU · price · PDP · Product structured data</span></div>
+      <div className="low-moq-reference-subhead"><p className="eyebrow">CONFIRMED CATALOGUE REFERENCES</p><h3>Branded Fragrance References</h3><span>Product names · sizes · prices · order details</span></div>
       <div className="product-grid low-moq-product-grid low-moq-reference-grid">{evidenceProducts.map((product, index) => {
         const reference = referenceDirections[product.slug as keyof typeof referenceDirections];
         return <div className="low-moq-reference-item" key={product.slug}>
@@ -289,7 +289,7 @@ export default function LowMoqPerfume() {
         </div>;
       })}</div>
 
-      <div className="low-moq-reference-subhead low-moq-reference-subhead-secondary"><p className="eyebrow">SUPPLIED SCENT REFERENCES</p><h3>Additional fragrance directions</h3><span>Visual reference only · no invented SKU, price, MOQ or PDP</span></div>
+      <div className="low-moq-reference-subhead low-moq-reference-subhead-secondary"><p className="eyebrow">SUPPLIED SCENT REFERENCES</p><h3>Additional fragrance directions</h3><span>Scent and packaging inspiration; ask about available options</span></div>
       <div className="low-moq-reference-only-groups">{referenceOnlyGroups.map((group) => <section className="low-moq-reference-group" key={group.eyebrow}>
         <div className="low-moq-reference-group-head"><p className="eyebrow">{group.eyebrow}</p><h4>{group.title}</h4><span>{group.direction}</span></div>
         <div className="product-grid low-moq-product-grid low-moq-reference-grid low-moq-reference-only-grid">{group.items.map((item) => <article className="low-moq-reference-only-item" key={item.image}>
@@ -301,7 +301,7 @@ export default function LowMoqPerfume() {
 
     <section className="low-moq-sample-panel">
       <div className="low-moq-sample-copy"><p className="eyebrow">04 / SAMPLE-FIRST BUYING PATH</p><h2>Review the product before the project.</h2><p>Free samples are available. Availability, quantity and shipping terms are confirmed by SKU and destination.</p><div className="low-moq-sample-action"><WhatsAppCta label="Request Free Sample" intent="sample" context={{ category: "fragrance" }} /></div></div>
-      <div className="low-moq-sample-ledger"><div><span>01</span><strong>Choose a product</strong><p>Send the product name, SKU or PDP URL instead of a generic request.</p></div><div><span>02</span><strong>Confirm sample terms</strong><p>Availability, quantity and shipping terms are confirmed by SKU and destination.</p></div><div><span>03</span><strong>Move to quote</strong><p>Share the estimated quantity, target market and any project direction.</p></div><div className="low-moq-sample-checklist"><strong>What to send us</strong><p><Check size={15} /> Product / SKU</p><p><Check size={15} /> Target market</p><p><Check size={15} /> Estimated quantity</p><p><Check size={15} /> Sample request</p><p><Check size={15} /> Logo, packaging or scent direction if relevant</p></div></div>
+      <div className="low-moq-sample-ledger"><div><span>01</span><strong>Choose a product</strong><p>Send the product name, SKU or product link instead of a generic request.</p></div><div><span>02</span><strong>Confirm sample terms</strong><p>Availability, quantity and shipping terms are confirmed by SKU and destination.</p></div><div><span>03</span><strong>Move to quote</strong><p>Share the estimated quantity, target market and any project direction.</p></div><div className="low-moq-sample-checklist"><strong>What to send us</strong><p><Check size={15} /> Product / SKU</p><p><Check size={15} /> Target market</p><p><Check size={15} /> Estimated quantity</p><p><Check size={15} /> Sample request</p><p><Check size={15} /> Logo, packaging or scent direction if relevant</p></div></div>
     </section>
 
     <section id="customization" className="low-moq-customization">
@@ -311,7 +311,7 @@ export default function LowMoqPerfume() {
     </section>
 
     <section className="low-moq-forward">
-      <div><p className="eyebrow">06 / HOW THE PROJECT MOVES FORWARD</p><h2>From product reference to the right conversation.</h2><p>TopPerfume acts as a B2B sourcing, private-label, manufacturing and OEM/ODM project partner. The next step depends on the selected product and brief.</p></div>
+      <div><p className="eyebrow">06 / HOW THE PROJECT MOVES FORWARD</p><h2>From product reference to the right conversation.</h2><p>TopPerfume acts as a B2B sourcing, supplier coordination and OEM/ODM project partner. The next step depends on the selected product and brief.</p></div>
       <div className="low-moq-forward-steps"><div><span>01</span><strong>Choose</strong><p>Start from a current fragrance reference.</p></div><div><span>02</span><strong>Clarify</strong><p>Confirm quantity, market and buying route.</p></div><div><span>03</span><strong>Review</strong><p>Discuss sample, logo, packaging or scent direction.</p></div><div><span>04</span><strong>Quote</strong><p>Move forward with the scope that is confirmed.</p></div></div>
     </section>
 

@@ -1,0 +1,46 @@
+{
+  "status": "local preview only",
+  "results": [
+    {
+      "id": "BC-01",
+      "price": "US$2.99 / piece",
+      "moq": 6,
+      "subtotal": "17.94",
+      "status": 200
+    },
+    {
+      "id": "BC-02",
+      "price": "US$2.99 / piece",
+      "moq": 6,
+      "subtotal": "17.94",
+      "status": 200
+    },
+    {
+      "id": "BC-03",
+      "price": "US$2.99 / piece",
+      "moq": 6,
+      "subtotal": "17.94",
+      "status": 200
+    },
+    {
+      "id": "BC-04",
+      "price": "US$4.99 / piece",
+      "moq": 6,
+      "subtotal": "29.94",
+      "status": 200
+    },
+    {
+      "id": "BC-05",
+      "price": "US$4.99 / piece",
+      "moq": 6,
+      "subtotal": "29.94",
+      "status": 200
+    }
+  ],
+  "unchangedPricesAndOtherProductFields": true,
+  "pendingMatches": 5,
+  "remainingCapacityRecords": 14,
+  "typecheck": "pass",
+  "regressionTests": "10 passed",
+  "build": "pass"
+}

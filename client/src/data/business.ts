@@ -7,7 +7,7 @@ import { canonicalPublicWebsiteUrl } from "@shared/seo";
 
 export const TO_CONFIRM = "[TO CONFIRM]";
 export const CUSTOMER_DETAILS = "Contact us for details";
-export const catalogueMoqGuidance = "Low MOQ available — MOQ varies by SKU. Selected fragrance products from 2 pcs. Many skincare and makeup products from 12 pcs.";
+export const catalogueMoqGuidance = "Low MOQ available — MOQ varies by SKU. Selected fragrance products and the 502 mL Vitamin C Body Lotion from 2 pieces. Other product terms vary by SKU.";
 
 const brandedWholesaleSlugs = new Set([
   "dior-sauvage-parfum-spray-men",
@@ -22,15 +22,26 @@ const brandedWholesaleSlugs = new Set([
 ]);
 
 export function isPendingValue(value?: string) {
-  return !value || value === TO_CONFIRM;
+  return !value?.trim() || value.includes(TO_CONFIRM);
 }
 
 export function customerValue(value?: string) {
   return isPendingValue(value) ? CUSTOMER_DETAILS : value ?? CUSTOMER_DETAILS;
 }
 
+export function isValidOrderQuantity(value: string, minimum: number) {
+  const quantity = Number(value);
+  return value.trim() !== "" && Number.isSafeInteger(quantity) && quantity >= minimum;
+}
+
+export function canCustomizeProduct(product: Product) {
+  return product.privateLabelAvailable === true || [product.privateLabelStatus, product.customLogoStatus, product.customPackagingStatus, product.customShadesStatus, product.customFragranceStatus].some(value => value?.startsWith("Available"));
+}
+
 export function getProductCommercialType(product: Product) {
-  return brandedWholesaleSlugs.has(product.slug) ? "Branded Wholesale" : "Private Label / OEM ODM";
+  if (product.commercialType) return product.commercialType;
+  if (brandedWholesaleSlugs.has(product.slug)) return "Branded Wholesale";
+  return canCustomizeProduct(product) ? "Private Label / OEM ODM" : "Wholesale";
 }
 
 export const businessProfile = {
@@ -45,8 +56,9 @@ export { canonicalPublicWebsiteUrl };
 export function getCanonicalProductUrl(productUrl?: string) {
   if (!productUrl) return undefined;
   try {
-    const pathname = new URL(productUrl, canonicalPublicWebsiteUrl).pathname;
-    return pathname.startsWith("/products/") ? `${canonicalPublicWebsiteUrl}${pathname}` : productUrl;
+    const parsed = new URL(productUrl, canonicalPublicWebsiteUrl);
+    const variant = parsed.searchParams.get("variant");
+    return parsed.pathname.startsWith("/products/") ? `${canonicalPublicWebsiteUrl}${parsed.pathname}${variant ? `?variant=${encodeURIComponent(variant)}` : ""}` : productUrl;
   } catch {
     return productUrl;
   }
@@ -70,15 +82,15 @@ export const commercialTerms = {
  * optional overrides for a future staging or production configuration.
  */
 export const inquiryRouting = {
-  email: (import.meta.env.VITE_INQUIRY_EMAIL || businessProfile.email).trim(),
-  whatsappNumber: (import.meta.env.VITE_WHATSAPP_NUMBER || businessProfile.whatsappNumber).replace(/\D/g, ""),
+  email: (import.meta.env?.VITE_INQUIRY_EMAIL || businessProfile.email).trim(),
+  whatsappNumber: (import.meta.env?.VITE_WHATSAPP_NUMBER || businessProfile.whatsappNumber).replace(/\D/g, ""),
 };
 
 export type InquiryIntentKey = "sample" | "quote" | "project" | "whatsapp";
 export type WhatsAppCtaIntent = "sample" | "quote" | "project";
 export type InquirySummaryInput = {
   intent: InquiryIntentKey;
-  context?: { productName?: string; sku?: string; productUrl?: string; pageUrl?: string; inquiryIntent?: string; category?: string; standardMoq?: string; leadTime?: string; sampleAvailability?: string; customizationNote?: string };
+  context?: { productName?: string; sku?: string; productUrl?: string; pageUrl?: string; inquiryIntent?: string; category?: string; standardMoq?: string; leadTime?: string; sampleAvailability?: string; customizationNote?: string; quantity?: string; unitPrice?: string; format?: string; subtotal?: string };
   name?: string;
   country?: string;
   email?: string;
@@ -97,8 +109,8 @@ const inquiryTitle: Record<InquiryIntentKey, string> = {
 
 export function buildInquirySummary(input: InquirySummaryInput) {
   const standardMoq = customerValue(input.context?.standardMoq);
-  const leadTime = input.context?.leadTime || commercialTerms.standard[1].value;
-  const sampleAvailability = input.context?.sampleAvailability || commercialTerms.standard[2].value;
+  const leadTime = customerValue(input.context?.leadTime);
+  const sampleAvailability = customerValue(input.context?.sampleAvailability);
   const customTerms = input.context?.customizationNote
     ? input.context.customizationNote
     : "Contact us for product-specific customization scope and commercial terms.";
@@ -107,6 +119,9 @@ export function buildInquirySummary(input: InquirySummaryInput) {
     `For: ${businessProfile.companyName}`,
     "",
     `Product: ${input.context?.productName || "Not specified"}`,
+    ...(!isPendingValue(input.context?.format) ? [`Size / format: ${input.context!.format}`] : []),
+    ...(!isPendingValue(input.context?.unitPrice) ? [`Unit Price: ${input.context!.unitPrice}`] : []),
+    ...(input.context?.subtotal ? [`Product subtotal: ${input.context.subtotal} (excludes shipping and taxes; final delivered quote to be confirmed).`] : []),
     `Product URL: ${input.context?.productUrl || "Not specified"}`,
     `Category: ${input.context?.category || "Not specified"}`,
     `Name: ${input.name || "Not provided"}`,
@@ -146,19 +161,23 @@ export function buildWhatsAppCtaSummary(input: { intent: WhatsAppCtaIntent; cont
     "Product details:",
     "",
     `Product Name: ${context?.productName || "General website inquiry"}`,
+    ...(!isPendingValue(context?.format) ? [`Size / format: ${context!.format}`] : []),
     "",
-    `SKU: ${context?.sku || "Not specified"}`,
+    ...(context?.sku ? [`SKU: ${context.sku}`] : []),
     "",
-    `Product URL: ${productUrl || "Not specified"}`,
+    ...(productUrl ? [`Product URL: ${productUrl}`] : []),
     ...(context?.pageUrl ? [`Page URL: ${context.pageUrl}`] : []),
     ...(context?.inquiryIntent ? [`Intent: ${context.inquiryIntent}`] : []),
     "",
-    `Category: ${context?.category || "Not specified"}`,
+    ...(context?.category ? [`Category: ${context.category}`] : []),
     "",
     `MOQ: ${customerValue(context?.standardMoq)}`,
     "",
-    `Lead Time: ${context?.leadTime || CUSTOMER_DETAILS}`,
-  ].join("\n");
+    ...(context?.leadTime ? [`Lead Time: ${customerValue(context.leadTime)}`] : []),
+    ...(!isPendingValue(context?.unitPrice) ? [`Unit Price: ${context!.unitPrice}`] : []),
+    ...(context?.quantity ? [`Quantity: ${context.quantity}`] : []),
+    ...(context?.subtotal ? [`Product subtotal: ${context.subtotal}`, "Subtotal excludes shipping and taxes. Final delivered quote to be confirmed."] : []),
+  ].join("\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
 export function getWhatsAppCtaUrl(input: { intent: WhatsAppCtaIntent; context?: InquirySummaryInput["context"] }) {
@@ -176,7 +195,7 @@ const variableByCategory: Record<ProductCategory, { label: string; value: string
 
 export const collectionBuyerGuide: Record<ProductCategory, { reference: BuyerGuideField; variable: BuyerGuideField; packaging: BuyerGuideField; commercial: BuyerGuideField }> = {
   fragrance: { reference: { value: "Confirmed fragrance formats" }, variable: { value: "Fragrance brief — contact us for details" }, packaging: { value: "Bottle, cap and carton — contact us for details" }, commercial: { value: "MOQ varies by SKU · selected fragrance products from 2 pcs" } },
-  skincare: { reference: { value: "Confirmed body-care formats" }, variable: { value: "Formula + claims — contact us for details" }, packaging: { value: "Pump, component and carton — contact us for details" }, commercial: { value: "MOQ varies by SKU · many skincare products from 12 pcs" } },
+  skincare: { reference: { value: "Confirmed body-care formats" }, variable: { value: "Formula + claims — contact us for details" }, packaging: { value: "Pump, component and carton — contact us for details" }, commercial: { value: "502 mL Vitamin C Body Lotion from 2 bottles · other MOQ varies by product" } },
   makeup: { reference: { value: "Confirmed colour-makeup formats" }, variable: { value: "Shade + finish — contact us for details" }, packaging: { value: "Component, artwork and carton — contact us for details" }, commercial: { value: "MOQ varies by SKU · many makeup products from 12 pcs" } },
 };
 
@@ -204,7 +223,7 @@ export function getProductDecisionRows(product: Product): DecisionField[] {
     { label: "MOQ", value: customerValue(product.standardMoq) },
     { label: "Lead Time", value: customerValue(product.leadTime) },
   ];
-  return commercialType === "Branded Wholesale"
+  return commercialType !== "Private Label / OEM ODM"
     ? [...sharedRows.slice(0, 4), { label: "Wholesale Terms", value: CUSTOMER_DETAILS }, ...sharedRows.slice(4)]
     : [...sharedRows.slice(0, 4), { label: "Private Label", value: customerValue(product.privateLabelStatus) }, ...sharedRows.slice(4)];
 }
@@ -213,14 +232,14 @@ export function getProductStandardTerms(product: Product) {
   return [
     { label: "MOQ", value: customerValue(product.standardMoq) },
     { label: "Lead Time", value: customerValue(product.leadTime) },
-    { label: "Free Samples", value: product.sampleAvailability || "Available" },
+    { label: "Free Samples", value: customerValue(product.sampleAvailability) },
   ];
 }
 
 export function getProductCustomTerms(product: Product) {
-  if (getProductCommercialType(product) === "Branded Wholesale") {
+  if (getProductCommercialType(product) !== "Private Label / OEM ODM") {
     return [
-      { label: "Commercial Type", value: "Branded Wholesale" },
+      { label: "Commercial Type", value: getProductCommercialType(product) },
       { label: "Wholesale Terms", value: "Contact us for details" },
     ];
   }

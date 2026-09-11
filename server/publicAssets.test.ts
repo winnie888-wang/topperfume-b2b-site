@@ -26,10 +26,20 @@ describe("public customer-facing asset URLs", () => {
     expect(clientSource).not.toContain("/manus-storage/");
   });
 
-  it("maps all 22 formal product detail visuals to Public Blob", () => {
-    expect(products).toHaveLength(22);
+  it("retains the original Blob visuals and resolves repository-hosted product assets", () => {
+    expect(products).toHaveLength(52);
     for (const product of products) {
-      expect(product.image).toMatch(/^https:\/\/mqy8jl9r1rvvbx0e\.public\.blob\.vercel-storage\.com\/topperfume-b2b-v2\//);
+      if (product.image.startsWith("/assets/")) {
+        expect(fs.existsSync(path.join(clientRoot, "public", product.image))).toBe(true);
+        expect(product.gallery?.length).toBeGreaterThan(0);
+        for (const image of product.gallery ?? []) {
+          for (const src of [image.src, image.thumbnail, image.fullSize ?? image.src, ...image.srcSet.split(", ").map(candidate => candidate.split(" ")[0])]) {
+            expect(fs.existsSync(path.join(clientRoot, "public", src))).toBe(true);
+          }
+        }
+      } else {
+        expect(product.image).toMatch(/^https:\/\/mqy8jl9r1rvvbx0e\.public\.blob\.vercel-storage\.com\/topperfume-b2b-v2\//);
+      }
     }
   });
 });

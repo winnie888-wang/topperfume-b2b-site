@@ -29,6 +29,12 @@ describe("WhatsApp-first CTA messages", () => {
     expect(buildWhatsAppCtaSummary({ intent: "project", context })).toContain("Hi, I'm interested in private label / OEM / ODM customization for this product.");
   });
 
+  it("omits unconfirmed prices from inquiry drafts", () => {
+    const message = buildWhatsAppCtaSummary({ intent: "quote", context: { ...context, unitPrice: "[TO CONFIRM]" } });
+    expect(message).not.toContain("Unit Price:");
+    expect(message).not.toContain("[TO CONFIRM]");
+  });
+
   it("creates a wa.me URL without exposing any server-side credential", () => {
     const url = getWhatsAppCtaUrl({ intent: "quote", context });
     expect(url).toMatch(/^https:\/\/wa\.me\/8619066782710\?text=/);

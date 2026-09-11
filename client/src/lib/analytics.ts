@@ -4,6 +4,8 @@ import {
   buildViewItemEvent,
   buildWhatsAppEvents,
   createPageViewDeduper,
+  isAnalyticsEnabled,
+  buildInquirySuccessEvent,
   type AnalyticsProductContext,
   type WhatsAppTrackingIntent,
 } from "@shared/analytics";
@@ -21,11 +23,17 @@ const shouldTrackPageView = createPageViewDeduper();
 
 function sendEvent(name: string, params: Record<string, unknown>) {
   if (typeof window === "undefined") return;
+  if (!isAnalyticsEnabled(window.location.hostname, document.querySelector('meta[name="robots"]')?.getAttribute("content") ?? "")) return;
   if (typeof window.gtag === "function") {
     window.gtag("event", name, params);
     return;
   }
   window.dataLayer?.push(["event", name, params]);
+}
+
+export function trackInquirySuccess(intent: string) {
+  const event = buildInquirySuccessEvent(intent);
+  sendEvent(event.name, event.params);
 }
 
 function canonicalPageLocation(path: string) {

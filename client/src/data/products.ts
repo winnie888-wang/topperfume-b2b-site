@@ -1,6 +1,29 @@
 export type ProductCategory = "fragrance" | "skincare" | "makeup";
 
 import { publicAssetUrl } from "@/data/publicAssets";
+import { combinedListingProducts } from "@/data/combinedListing";
+import { latestListingProducts } from "@/data/latestListing";
+
+export type ProductImage = {
+  src: string;
+  srcSet: string;
+  thumbnail: string;
+  alt: string;
+  label: string;
+  width: number;
+  height: number;
+  fullSize?: string;
+};
+
+export type ProductVariant = {
+  id: string;
+  name: string;
+  imagePosition: string;
+  unitPrice: number;
+  minimumOrderQuantity: number;
+  note?: string;
+  format?: string;
+};
 
 export type Product = {
   slug: string;
@@ -10,6 +33,19 @@ export type Product = {
   format: string;
   descriptor: string;
   image: string;
+  gallery?: ProductImage[];
+  imageDisclosure?: string;
+  commercialType?: "Wholesale" | "Branded Wholesale" | "Private Label / OEM ODM";
+  unitPrice?: number;
+  minimumOrderQuantity?: number;
+  orderUnit?: "piece" | "bottle" | "set";
+  variants?: ProductVariant[];
+  intakeIds?: string[];
+  sourceBatch?: "01" | "02" | "03" | "04" | "05";
+  variantLabel?: "size";
+  labelInformation?: string[];
+  seoDescription?: string;
+  missingInformation?: string[];
   realImage?: boolean;
   tags: string[];
   notes?: { top: string; heart: string; base: string };
@@ -93,6 +129,47 @@ const realVisual = {
 };
 
 export const products: Product[] = [
+  ...latestListingProducts,
+  ...combinedListingProducts,
+  {
+    slug: "vitamin-c-body-lotion-502ml",
+    name: "Vitamin C Body Lotion — 502 mL",
+    category: "skincare",
+    format: "502 mL / 17 FL OZ",
+    descriptor: "Body Lotion · 502 mL · Pump Bottle",
+    image: "/assets/products/vitamin-c-body-lotion-502ml/01-vitamin-c-body-lotion-502ml-main-800.webp",
+    gallery: [
+      { file: "01-vitamin-c-body-lotion-502ml-main", label: "Front view", alt: "Vitamin C body lotion, 502 mL, front view" },
+      { file: "02-vitamin-c-body-lotion-502ml-texture", label: "Texture artwork", alt: "Vitamin C body lotion with a lotion texture illustration" },
+      { file: "03-vitamin-c-body-lotion-502ml-benefits", label: "Label & artwork", alt: "Vitamin C body lotion with supplied product benefit descriptions" },
+      { file: "04-vitamin-c-body-lotion-502ml-two-bottles", label: "Alternate views", alt: "Two bottles of the same Vitamin C body lotion shown at different angles" },
+    ].map(({ file, label, alt }) => ({
+      src: `/assets/products/vitamin-c-body-lotion-502ml/${file}-1254.webp`,
+      srcSet: [480, 800, 1254].map(size => `/assets/products/vitamin-c-body-lotion-502ml/${file}-${size}.webp ${size}w`).join(", "),
+      thumbnail: `/assets/products/vitamin-c-body-lotion-502ml/${file}-160.webp`,
+      label, alt, width: 1254, height: 1254,
+    })),
+    imageDisclosure: "Supplied product artwork; front image digitally edited. Texture and benefit descriptions are part of the artwork; independent supporting evidence has not been provided. The two-bottle view shows the same product. Price is per bottle.",
+    tags: ["Body Care", "Body Lotion", "502 mL", "2-bottle MOQ"],
+    briefing: "Vitamin C Body Lotion in a 502 mL pump bottle, labelled 17 FL OZ / 502 mL. Offered at US$2.99 per bottle, with a minimum order of 2 bottles. Ask for ingredient documentation, availability and delivery terms for your market before ordering.",
+    productType: "Body Lotion",
+    b2bPrice: "US$2.99 / bottle",
+    standardMoq: "2 bottles",
+    unitPrice: 2.99,
+    minimumOrderQuantity: 2,
+    commercialType: "Wholesale",
+    packaging: "Single pump bottle, as shown in the supplied artwork.",
+    dataStatus: "confirmed",
+    missingInformation: [
+      "Supplier SKU and brand details",
+      "Full INCI ingredients and vitamin C concentration",
+      "Fragrance, shelf life and usage instructions",
+      "Stock, dispatch time, shipping and tax terms",
+      "Carton quantity, dimensions and shipping weight",
+      "Certifications and evidence for benefit claims",
+      "Sample policy and private-label or customization options",
+    ],
+  },
   { slug: "dior-sauvage-parfum-spray-men", name: "Dior Sauvage Parfum Spray for Men", category: "fragrance", format: "100 ml / 3.4 oz", descriptor: "Earthy · Woody · Spicy", image: realVisual.diorSauvage, realImage: true, tags: ["Men’s Perfume", "Parfum", "Product visual"], notes: { top: "Bergamot", heart: "Pepper", base: "Amber Wood" }, briefing: "A bold woody fragrance with a fresh masculine signature. Sauvage combines bright bergamot freshness with pepper and warm amber wood, creating a powerful fragrance profile for customers who prefer fresh, woody and sophisticated scents.", sku: "FR-DI-SAU-100", b2bPrice: "US$20.00 / pc", concentration: "Parfum", gender: "Men", fragranceFamily: "Earthy & Woody", packaging: "Dark navy-to-black gradient glass bottle with black cylindrical cap and matching premium black gift box.", dataStatus: "confirmed" },
   { slug: "carolina-herrera-good-girl-blush-tweed-talk-edp-women", name: "Carolina Herrera Good Girl Blush Tweed Talk Eau de Parfum for Women", category: "fragrance", format: "80 ml / 2.7 oz", descriptor: "Oriental Floral", image: realVisual.goodGirlBlushTweedTalk, realImage: true, tags: ["Women’s Perfume", "Eau de Parfum", "Product visual"], briefing: "A fashion-led women’s fragrance with a statement presentation. Good Girl Blush Tweed Talk combines a feminine oriental-floral positioning with an expressive high-heel bottle and coordinated tweed-inspired packaging. Its distinctive presentation makes it particularly suitable for gifting, fragrance retail and visually driven beauty collections.", sku: "FR-CH-GGBT-080", b2bPrice: "US$20.00 / pc", concentration: "Eau de Parfum", gender: "Women", fragranceFamily: "Oriental Floral", keyNotes: "[TO CONFIRM]", edition: "2025", packaging: "Sculptural high-heel bottle with a black-and-white tweed pattern, glossy black upper section, soft pink belt accent and matching patterned presentation box with gold-tone edging.", dataStatus: "confirmed" },
   { slug: "carolina-herrera-very-good-girl-glam-edp-women", name: "Carolina Herrera Very Good Girl Glam Eau de Parfum for Women", category: "fragrance", format: "80 ml / 2.7 fl oz", descriptor: "Cherry · Citrus · Woody", image: realVisual.veryGoodGirlGlam, realImage: true, tags: ["Women’s Perfume", "Eau de Parfum", "Product visual"], briefing: "A glamorous statement fragrance with a sparkling cherry signature. Very Good Girl Glam Eau de Parfum combines a bright, feminine fragrance character with an expressive stiletto-inspired presentation. Bergamot and mandarin provide a fresh citrus opening, while a sparkling cherry character gives the fragrance a vibrant and distinctive identity. Its deep pink glitter bottle, black detailing and metallic gold heel create a strong luxury gifting and retail-display presence.", sku: "FR-CH-VGGG-080", b2bPrice: "US$20.00 / pc", concentration: "Eau de Parfum", gender: "Women", fragranceFamily: "Citrus · Aromatic · Woody", visibleNotes: "Bergamot · Mandarin · Sparkling Cherry character", remainingNotes: "[TO CONFIRM]", packaging: "Deep pink-to-burgundy translucent glitter stiletto bottle with a glossy black upper section, slim metallic gold heel and coordinated black, pink-glitter and gold-trimmed presentation box.", dataStatus: "confirmed" },

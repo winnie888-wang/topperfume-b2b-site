@@ -1,0 +1,256 @@
+{
+  "batch": "Body Care Batch 01",
+  "product_count": 5,
+  "category_counts": {
+    "Body Lotion": 2,
+    "Body Wash": 2,
+    "Body Butter": 1
+  },
+  "user_price_instruction": "前3款价格usd 2.99 后2款usd 4.99/pieces",
+  "source_order_rule": "Prices map strictly to the order of the five attachments in this message.",
+  "moq_rule": "Not supplied for this batch. Do not inherit MOQ 2 from the earlier Vitamin C 502 mL product.",
+  "schema_note": "This is intake data, not an application-specific import schema. Adapt after inspecting the existing project.",
+  "products": [
+    {
+      "intake_id": "BC-01",
+      "upload_order": 1,
+      "working_name_zh": "烟酰胺身体乳（蓝泵）",
+      "draft_display_name_en": "Daily Niacinamide Body Lotion",
+      "suggested_parent_category": "Body Care",
+      "subcategory": "Body Lotion",
+      "suggested_slug_candidate": "daily-niacinamide-body-lotion",
+      "supplier_sku": null,
+      "confirmed_by_user": {
+        "currency": "USD",
+        "price_per_piece": 2.99
+      },
+      "moq_pieces": null,
+      "size_observed_on_image": null,
+      "observed_label_text": "Daily Brightening; Niacinamide; Serum in Lotion",
+      "brand_observed_on_image": null,
+      "draft_copy_en": {
+        "short_description": "A body lotion presented in a white bottle with a blue pump. Unit price: US$2.99. Contact us for available sizes and order details.",
+        "seo_title": "Daily Niacinamide Body Lotion | TopPerfume",
+        "meta_description": "A body lotion presented in a white bottle with a blue pump. Unit price: US$2.99. Contact us for available sizes and order details.",
+        "cta": "Inquire About This Product"
+      },
+      "image": {
+        "file": "images/BC-01-daily-niacinamide-body-lotion-supplied.png",
+        "source_filename": "528fc34b-dc8d-46bc-98a4-b3b3c3991b1b.png",
+        "sha256": "04376e0e9463c966c819f44457ac9ffc47d6345ab4283b4b516899d96dce3226",
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "alt": "White lotion bottle with a blue pump and niacinamide-themed artwork",
+        "processing": "Original image copied and renamed; image pixels unchanged"
+      },
+      "missing_information": [
+        "MOQ",
+        "Capacity / net contents",
+        "Full product specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and lead-time terms",
+        "Customization and sample policy"
+      ],
+      "review_notes": [
+        "Supplied image includes extensive benefit text and is best suited to a secondary gallery image. A cleaner main image is not included in this batch.",
+        "Niacinamide is shown in the artwork; full INCI and concentration were not supplied."
+      ],
+      "status": "Intake organized; incomplete product facts; not published",
+      "possible_later_update": {
+        "record": "B05-01",
+        "match_confirmed": false,
+        "latest_price_if_same_product": 2.99,
+        "latest_moq_if_same_product": 6,
+        "note": "Identity and capacity remain to be confirmed. Do not update the other batch-01 products."
+      }
+    },
+    {
+      "intake_id": "BC-02",
+      "upload_order": 2,
+      "working_name_zh": "Luminous Glow 沐浴露（粉瓶）",
+      "draft_display_name_en": "Luminous Glow Body Wash",
+      "suggested_parent_category": "Body Care",
+      "subcategory": "Body Wash",
+      "suggested_slug_candidate": "luminous-glow-body-wash",
+      "supplier_sku": null,
+      "confirmed_by_user": {
+        "currency": "USD",
+        "price_per_piece": 2.99
+      },
+      "moq_pieces": null,
+      "size_observed_on_image": null,
+      "observed_label_text": "Body Wash; Luminous Glow",
+      "brand_observed_on_image": null,
+      "draft_copy_en": {
+        "short_description": "Luminous Glow body wash in a pink pump bottle. Unit price: US$2.99. Contact us for available sizes and order details.",
+        "seo_title": "Luminous Glow Body Wash | TopPerfume",
+        "meta_description": "Luminous Glow body wash in a pink pump bottle. Unit price: US$2.99. Contact us for available sizes and order details.",
+        "cta": "Inquire About This Product"
+      },
+      "image": {
+        "file": "images/BC-02-luminous-glow-body-wash-supplied.png",
+        "source_filename": "04dc2efc-8bc8-4744-bc36-ef76d272c6c7.png",
+        "sha256": "3a4b6b7433a8e68de9ac7244f79c8b6c1b2ea7fb7cca8c3392ead5313a747fe0",
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "alt": "Pink Luminous Glow body wash bottle with a white pump",
+        "processing": "Original image copied and renamed; image pixels unchanged"
+      },
+      "missing_information": [
+        "MOQ",
+        "Capacity / net contents",
+        "Full product specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and lead-time terms",
+        "Customization and sample policy"
+      ],
+      "review_notes": [
+        "Supplied image includes extensive benefit text and is best suited to a secondary gallery image. A cleaner main image is not included in this batch."
+      ],
+      "status": "Intake organized; incomplete product facts; not published"
+    },
+    {
+      "intake_id": "BC-03",
+      "upload_order": 3,
+      "working_name_zh": "Gluta Glow 身体乳（粉泵）",
+      "draft_display_name_en": "Gluta Glow Body Lotion — 500 mL",
+      "suggested_parent_category": "Body Care",
+      "subcategory": "Body Lotion",
+      "suggested_slug_candidate": "gluta-glow-body-lotion-500ml",
+      "supplier_sku": null,
+      "confirmed_by_user": {
+        "currency": "USD",
+        "price_per_piece": 2.99
+      },
+      "moq_pieces": null,
+      "size_observed_on_image": "500 mL",
+      "observed_label_text": "UV Extra Brightening; Gluta Glow Lotion; Moisturizing Body Lotion; 500 mL",
+      "brand_observed_on_image": null,
+      "draft_copy_en": {
+        "short_description": "Gluta Glow body lotion in a 500 mL pump bottle, as labeled in the supplied image. Unit price: US$2.99. Contact us for order details.",
+        "seo_title": "Gluta Glow Body Lotion — 500 mL | TopPerfume",
+        "meta_description": "Gluta Glow body lotion in a 500 mL pump bottle, as labeled in the supplied image. Unit price: US$2.99. Contact us for order details.",
+        "cta": "Inquire About This Product"
+      },
+      "image": {
+        "file": "images/BC-03-gluta-glow-body-lotion-500ml-supplied.png",
+        "source_filename": "bdb1f691-518c-43f9-a9ab-2db7619e35e3.png",
+        "sha256": "db9427150ceacf0834a2613e19478e138f67b7e73d7409bd71018f142e59c75a",
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "alt": "White Gluta Glow body lotion bottle with a pink pump, labeled 500 mL",
+        "processing": "Original image copied and renamed; image pixels unchanged"
+      },
+      "missing_information": [
+        "MOQ",
+        "Full product specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and lead-time terms",
+        "Customization and sample policy"
+      ],
+      "review_notes": [
+        "Supplied image includes extensive benefit text and is best suited to a secondary gallery image. A cleaner main image is not included in this batch.",
+        "Artwork contains UV-protection claims. No SPF, UVA/UVB test data or formula was supplied. Do not add sun-protection claims to titles, SEO, or copy. Resolve the artwork claims before final publication; do not invent an SPF or expand Gluta into a verified ingredient list."
+      ],
+      "status": "Intake organized; incomplete product facts; not published"
+    },
+    {
+      "intake_id": "BC-04",
+      "upload_order": 4,
+      "working_name_zh": "Vanilla Cashmere 身体霜（罐装）",
+      "draft_display_name_en": "Vanilla Cashmere Whipped Oil Body Butter — 283 g",
+      "suggested_parent_category": "Body Care",
+      "subcategory": "Body Butter",
+      "suggested_slug_candidate": "vanilla-cashmere-whipped-oil-body-butter-283g",
+      "supplier_sku": null,
+      "confirmed_by_user": {
+        "currency": "USD",
+        "price_per_piece": 4.99
+      },
+      "moq_pieces": null,
+      "size_observed_on_image": "10 OZ / 283 g",
+      "observed_label_text": "eos; shea better; Cashmere Whipped Oil Butter; vanilla cashmere; NET WT. 10 OZ. (283g)",
+      "brand_observed_on_image": "eos",
+      "draft_copy_en": {
+        "short_description": "Vanilla Cashmere whipped oil body butter in a 283 g tub, as labeled in the supplied image. Unit price: US$4.99. Contact us for order details.",
+        "seo_title": "Vanilla Cashmere Whipped Oil Body Butter — 283 g | TopPerfume",
+        "meta_description": "Vanilla Cashmere whipped oil body butter in a 283 g tub, as labeled in the supplied image. Unit price: US$4.99. Contact us for order details.",
+        "cta": "Inquire About This Product"
+      },
+      "image": {
+        "file": "images/BC-04-vanilla-cashmere-whipped-oil-body-butter-283g-supplied.png",
+        "source_filename": "0a31cf6e-1e82-4547-9448-87a95ad4a37d.png",
+        "sha256": "15dbcecd77cba65cc55f176a30f04f30e6f08ebe31d4600b9a170088d4a68c7a",
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "alt": "White tub of Vanilla Cashmere whipped oil body butter, labeled 283 g",
+        "processing": "Original image copied and renamed; image pixels unchanged"
+      },
+      "missing_information": [
+        "MOQ",
+        "Full product specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and lead-time terms",
+        "Customization and sample policy"
+      ],
+      "review_notes": [
+        "The source image visibly includes eos branding. Record this as an image observation only; do not infer authenticity, authorization, manufacturer affiliation, or private-label availability. Preserve the supplied image in this intake package."
+      ],
+      "status": "Intake organized; incomplete product facts; not published"
+    },
+    {
+      "intake_id": "BC-05",
+      "upload_order": 5,
+      "working_name_zh": "Vanilla Cashmere 沐浴露（紫瓶）",
+      "draft_display_name_en": "Vanilla Cashmere Body Wash — 473 mL",
+      "suggested_parent_category": "Body Care",
+      "subcategory": "Body Wash",
+      "suggested_slug_candidate": "vanilla-cashmere-body-wash-473ml",
+      "supplier_sku": null,
+      "confirmed_by_user": {
+        "currency": "USD",
+        "price_per_piece": 4.99
+      },
+      "moq_pieces": null,
+      "size_observed_on_image": "16 FL OZ / 473 mL",
+      "observed_label_text": "Cashmere Body Wash; Vanilla Cashmere; 16 FL OZ (473 mL)",
+      "brand_observed_on_image": null,
+      "draft_copy_en": {
+        "short_description": "Vanilla Cashmere body wash in a 473 mL bottle, as labeled in the supplied image. Unit price: US$4.99. Contact us for order details.",
+        "seo_title": "Vanilla Cashmere Body Wash — 473 mL | TopPerfume",
+        "meta_description": "Vanilla Cashmere body wash in a 473 mL bottle, as labeled in the supplied image. Unit price: US$4.99. Contact us for order details.",
+        "cta": "Inquire About This Product"
+      },
+      "image": {
+        "file": "images/BC-05-vanilla-cashmere-body-wash-473ml-supplied.png",
+        "source_filename": "619f917f-18ee-4bca-bc0f-9de70521f470.png",
+        "sha256": "28505e32bd6a35162be615eb32a1b229ca0cc2a634aadb276a707f160572db69",
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "alt": "Purple Vanilla Cashmere body wash bottle, labeled 473 mL",
+        "processing": "Original image copied and renamed; image pixels unchanged"
+      },
+      "missing_information": [
+        "MOQ",
+        "Full product specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and lead-time terms",
+        "Customization and sample policy"
+      ],
+      "review_notes": [
+        "Artwork includes pH-balanced and sensitive-skin claims without supporting data. Do not add a numerical pH or guaranteed suitability claims."
+      ],
+      "status": "Intake organized; incomplete product facts; not published"
+    }
+  ]
+}

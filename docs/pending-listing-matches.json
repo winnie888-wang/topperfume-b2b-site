@@ -1,0 +1,148 @@
+[
+  {
+    "intakeId": "B04-03",
+    "sourceBatch": "04",
+    "name": "Gluta Ceramide Body Care",
+    "possibleExistingId": "B02-01-05",
+    "priceUSD": 2.99,
+    "moq": 6,
+    "format": "200 mL",
+    "gallery": [
+      {
+        "src": "/assets/products/intake-b04-03/supplied-1-800.webp",
+        "srcSet": "/assets/products/intake-b04-03/supplied-1-480.webp 480w, /assets/products/intake-b04-03/supplied-1-800.webp 800w, /assets/products/intake-b04-03/supplied-1-1254.webp 1254w",
+        "thumbnail": "/assets/products/intake-b04-03/supplied-1-160.webp",
+        "fullSize": "/assets/products/intake-b04-03/supplied-1-1254.webp",
+        "width": 1706,
+        "height": 1279,
+        "alt": "Transparent pink-capped Gluta Ceramide bottle labeled 200 mL",
+        "label": "Supplied view"
+      }
+    ],
+    "reason": "Gluta Ceramide 名称、粉盖和 200 mL 相符，但新图品牌被遮盖，标签细节不同，确切产品类型也未确认。",
+    "status": "identity-unconfirmed",
+    "action": "Held out of customer catalogue; original quote unchanged",
+    "sourceImageFiles": [
+      "images/B04-03-gluta-ceramide-200ml.jpg"
+    ]
+  },
+  {
+    "intakeId": "B04-04",
+    "sourceBatch": "04",
+    "name": "Sunlit Glow Body Gel Oil",
+    "possibleExistingId": "B02-01-03",
+    "priceUSD": 2.99,
+    "moq": 6,
+    "format": "200 mL",
+    "gallery": [
+      {
+        "src": "/assets/products/intake-b04-04/supplied-1-800.webp",
+        "srcSet": "/assets/products/intake-b04-04/supplied-1-480.webp 480w, /assets/products/intake-b04-04/supplied-1-800.webp 800w, /assets/products/intake-b04-04/supplied-1-1254.webp 1254w",
+        "thumbnail": "/assets/products/intake-b04-04/supplied-1-160.webp",
+        "fullSize": "/assets/products/intake-b04-04/supplied-1-1254.webp",
+        "width": 1280,
+        "height": 1280,
+        "alt": "Sunlit Glow gel oil in a gold-toned bottle with a blue cap, labeled 200 mL",
+        "label": "Supplied view"
+      },
+      {
+        "src": "/assets/products/intake-b04-04/supplied-2-800.webp",
+        "srcSet": "/assets/products/intake-b04-04/supplied-2-480.webp 480w, /assets/products/intake-b04-04/supplied-2-800.webp 800w, /assets/products/intake-b04-04/supplied-2-1254.webp 1254w",
+        "thumbnail": "/assets/products/intake-b04-04/supplied-2-160.webp",
+        "fullSize": "/assets/products/intake-b04-04/supplied-2-1254.webp",
+        "width": 1280,
+        "height": 1280,
+        "alt": "Alternate supplied image of Sunlit Glow gel oil labeled 200 mL",
+        "label": "Alternate view"
+      }
+    ],
+    "reason": "Sunlit Glow 名称和 200 mL 相符，但新图写 Gel Oil，旧图写 Body Oil，标签与包装外观不同。第四批两张新图可确认为同一候选款的两个视角。",
+    "status": "identity-unconfirmed",
+    "action": "Held out of customer catalogue; original quote unchanged",
+    "sourceImageFiles": [
+      "images/B04-04-sunlit-glow-gel-oil-200ml-main.jpg",
+      "images/B04-04-sunlit-glow-gel-oil-200ml-alternate.jpg"
+    ]
+  },
+  {
+    "intakeId": "B05-01",
+    "sourceBatch": "05",
+    "name": "Daily Niacinamide Body Lotion",
+    "possibleExistingId": "BC-01",
+    "priceUSD": 2.99,
+    "moq": 6,
+    "format": null,
+    "gallery": [
+      {
+        "src": "/assets/products/intake-b05-01/supplied-1-800.webp",
+        "srcSet": "/assets/products/intake-b05-01/supplied-1-480.webp 480w, /assets/products/intake-b05-01/supplied-1-800.webp 800w, /assets/products/intake-b05-01/supplied-1-1200.webp 1200w",
+        "thumbnail": "/assets/products/intake-b05-01/supplied-1-160.webp",
+        "fullSize": "/assets/products/intake-b05-01/supplied-1-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "alt": "Pink body lotion bottle with a blue pump and Daily Brightening niacinamide label",
+        "label": "Supplied view"
+      }
+    ],
+    "reason": "Daily Brightening / Niacinamide 与蓝泵相似，但瓶身颜色和标签细节不同；BC-01 已确认 500 mL，B05-01 容量仍未知，缺少 SKU 或背标证据。",
+    "status": "identity-unconfirmed",
+    "action": "Held out of customer catalogue; identity remains unconfirmed. BC-01 MOQ independently confirmed by the user as 6 pieces; price unchanged.",
+    "sourceImageFiles": [
+      "images/B05-01-daily-niacinamide-body-lotion.jpg"
+    ]
+  },
+  {
+    "intakeId": "B05-04",
+    "sourceBatch": "05",
+    "name": "Vitamin B3 Body Oil",
+    "possibleExistingId": "B02-01-01",
+    "priceUSD": 2.99,
+    "moq": 6,
+    "format": "200 mL",
+    "gallery": [
+      {
+        "src": "/assets/products/intake-b05-04/supplied-1-800.webp",
+        "srcSet": "/assets/products/intake-b05-04/supplied-1-480.webp 480w, /assets/products/intake-b05-04/supplied-1-800.webp 800w, /assets/products/intake-b05-04/supplied-1-1200.webp 1200w",
+        "thumbnail": "/assets/products/intake-b05-04/supplied-1-160.webp",
+        "fullSize": "/assets/products/intake-b05-04/supplied-1-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "alt": "Pink-capped Vitamin B3 body oil bottle labeled 200 mL",
+        "label": "Supplied view"
+      }
+    ],
+    "reason": "Vitamin B3、粉盖、200 mL 相符，但主品牌被遮盖，未提供可核对的 SKU / 背标。",
+    "status": "identity-unconfirmed",
+    "action": "Held out of customer catalogue; original quote unchanged",
+    "sourceImageFiles": [
+      "images/B05-04-vitamin-b3-body-oil-200ml.jpg"
+    ]
+  },
+  {
+    "intakeId": "B05-05",
+    "sourceBatch": "05",
+    "name": "Cocoa Radiant Body Oil",
+    "possibleExistingId": "B02-01-02",
+    "priceUSD": 2.99,
+    "moq": 6,
+    "format": "200 mL",
+    "gallery": [
+      {
+        "src": "/assets/products/intake-b05-05/supplied-1-800.webp",
+        "srcSet": "/assets/products/intake-b05-05/supplied-1-480.webp 480w, /assets/products/intake-b05-05/supplied-1-800.webp 800w, /assets/products/intake-b05-05/supplied-1-1200.webp 1200w",
+        "thumbnail": "/assets/products/intake-b05-05/supplied-1-160.webp",
+        "fullSize": "/assets/products/intake-b05-05/supplied-1-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "alt": "Pale Cocoa Radiant body oil bottle with a blue cap, labeled 200 mL",
+        "label": "Supplied view"
+      }
+    ],
+    "reason": "Cocoa Radiant Body Oil 与 200 mL 相符，但新旧瓶型及标签差异明显，品牌被遮盖；不能凭名称自动合并。",
+    "status": "identity-unconfirmed",
+    "action": "Held out of customer catalogue; original quote unchanged",
+    "sourceImageFiles": [
+      "images/B05-05-cocoa-radiant-body-oil-200ml.jpg"
+    ]
+  }
+]

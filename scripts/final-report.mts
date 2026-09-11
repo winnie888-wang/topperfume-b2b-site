@@ -1,0 +1,45 @@
+import fs from "node:fs";
+import path from "node:path";
+import { createHash } from "node:crypto";
+import { products } from "../client/src/data/products";
+import { withOrderTerms } from "../shared/productTerms";
+const read = (name: string) => JSON.parse(fs.readFileSync(`docs/${name}`, "utf8"));
+const pending = read("pending-listing-matches.json");
+const audit = read("combined-listing-audit.json");
+const manifest = read("combined-listing-source-manifest.json");
+const latestImages = read("latest-listing-images.json");
+const root = "tmp/intake-combined-listing-v2/TopPerfume_Combined_Listing_Pack";
+const imageAudit = manifest.images.map((image: any) => {
+  const bytes = fs.readFileSync(path.join(root, image.path));
+  if (createHash("sha256").update(bytes).digest("hex") !== image.sha256) throw new Error(`Changed source ${image.path}`);
+  const entry = audit.entries.find((e: any) => e.sourceSHA256 === image.sha256);
+  const optimized = latestImages.find((i: any) => i.sha256 === image.sha256)?.optimized;
+  const product = entry ? products.find(p => p.slug === entry.slug) : products.find(p => p.gallery?.some(g => g.src === optimized?.src));
+  const candidate = pending.find((p: any) => p.gallery.some((g: any) => g.src === optimized?.src));
+  if (!product && !candidate) throw new Error(`Unmapped source ${image.path}`);
+  return { ...image, ids: product?.intakeIds ?? [candidate.intakeId], product: product?.name ?? candidate.name, page: product ? `/products/${product.slug}` : "/previews/combined-listing-review.html#matches", status: product ? "已接入；合照按单品/容量选项展示，不按套装出售" : "疑似同款待确认，未新建产品页", image: product?.gallery?.[0].thumbnail ?? candidate.gallery[0].thumbnail };
+});
+const capacity = products.filter(p => p.sourceBatch && p.format === "Capacity to be confirmed").map(p => ({ ids: p.intakeIds!, name:p.name, image:p.gallery![0].thumbnail, missing:"容量 / 净含量；以清晰背标或供应商资料确认", impact:"可保留明确标注容量待确认的询价页；确认规格后才能作最终销售报价" }));
+for (const p of pending.filter((p: any) => !p.format)) capacity.push({ ids:[p.intakeId], name:p.name, image:p.gallery[0].thumbnail, missing:"容量 / 净含量，以及与 BC-01 的同款关系", impact:"影响：暂不新增产品页；BC-01 已确认 500 mL，独立保留" });
+if (capacity.length !== 12) throw new Error(`Expected 12 capacity records, got ${capacity.length}`);
+const otherMissing = products.flatMap(source => {
+  const p = withOrderTerms(source);
+  const missing = [...(p.missingInformation ?? [])];
+  if (!p.format || p.format.includes("[TO CONFIRM]")) missing.unshift("容量 / 净含量");
+  if (p.minimumOrderQuantity === undefined) missing.unshift("MOQ");
+  if (p.unitPrice === undefined && !p.variants) missing.unshift("单价");
+  return missing.length ? [{ ids: p.intakeIds ?? [p.sku ?? p.slug], name:p.name, image:p.gallery?.[0].thumbnail ?? p.image, missing, impact: /Evidence|claims|statement|UV /i.test(missing.join(" ")) ? "宣传图片声明需证明或替换图片后再正式发布；其余缺项按实际报价确认" : "保留已知事实的询价预览；未知规格、订单和定制条件须确认后才能承诺" }] : [];
+});
+const result = { checkedAt:new Date().toISOString(), sourceArchive:manifest.archive, imageCount:imageAudit.length, batches:["01","02","03","04","05"].map(batch => ({batch,images:imageAudit.filter((i:any)=>i.batch===batch).length, pages:products.filter(p=>p.sourceBatch===batch).length,pending:pending.filter((p:any)=>p.sourceBatch===batch).map((p:any)=>p.intakeId)})), cataloguePages:products.length, capacityMissingCount:capacity.length, packMoqMissingCount:products.filter(p=>p.sourceBatch && withOrderTerms(p).minimumOrderQuantity===undefined).length, capacity, pendingMatches:pending, allProductMissingInformation:otherMissing, imageAudit };
+fs.writeFileSync("docs/final-product-audit.json",JSON.stringify(result,null,2));
+const esc=(s:any)=>String(s??"").replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]!));
+const img=(src:string)=>`<a href="${esc(src.replace('-160.webp','-800.webp'))}" target="_blank"><img src="${esc(src)}" alt="产品参考图片" loading="lazy"></a>`;
+const table=(rows:any[])=>`<div class="table-wrap"><table><thead><tr><th>产品图片</th><th>编号 / 名称</th><th>待确认内容</th><th>是否影响发布</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${img(r.image)}</td><td>${esc(r.ids.join(' / '))}<br>${esc(r.name)}</td><td>${esc(Array.isArray(r.missing)?r.missing.join('；'):r.missing)}</td><td>${esc(r.impact)}</td></tr>`).join('')}</tbody></table></div>`;
+const pairs=pending.map((p:any)=>{
+ const old=products.find(x=>x.intakeIds?.includes(p.possibleExistingId))!;
+ const variant=old.variants?.find(v=>v.id===p.possibleExistingId);
+ return `<article><h3>${esc(p.intakeId)} ↔ ${esc(p.possibleExistingId)} · ${esc(p.name)}</h3><div class="pair"><div>${p.gallery.map((g:any)=>img(g.thumbnail)).join('')}<p>本批：${esc(p.name)}；USD 2.99 / piece，MOQ 6</p></div><div>${img(old.gallery![0].thumbnail!)}<p>原记录：${esc(variant?.name??old.name)}${variant?`（合照位置：${esc(variant.imagePosition)}）`:''}；${esc(old.b2bPrice)}，MOQ ${esc(old.standardMoq)}</p></div></div><p>${esc(p.reason)}</p><p>影响：新候选页暂不上架；旧页、旧报价保留。需明确同款结论或供应商 SKU / 背标。</p></article>`;
+}).join('');
+const html=`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>TopPerfume 最终验收与待确认表</title><style>body{font:16px/1.65 system-ui;margin:0;background:#faf7f3;color:#332b32}main{max-width:1180px;margin:auto;padding:28px}a{color:#6b3558}nav{display:flex;gap:18px;flex-wrap:wrap}img{width:150px;height:150px;object-fit:contain;background:white}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:14px;border:1px solid #ddd;vertical-align:top}th{background:#ede3e8}.table-wrap{overflow:auto}article{padding:22px;background:white;margin:20px 0;border:1px solid #ddd}.pair{display:grid;grid-template-columns:1fr 1fr;gap:20px}.pair img{width:220px;height:220px;max-width:100%}p,td{overflow-wrap:anywhere}@media(max-width:600px){main{padding:16px}.pair{grid-template-columns:1fr}th,td{padding:8px}td img{width:86px;height:100px}}</style></head><body><main><h1>TopPerfume 最终验收</h1><p>仅本地预览，未正式上线。52 个产品/系列页；五批 35 张图片均有对应记录；12 条容量缺项、总包 MOQ 缺项 0；五组疑似同款暂不合并。</p><nav><a href="/">首页</a><a href="/collections/fragrance/">香水分类</a><a href="/collections/skincare/">护肤分类</a><a href="/products/daily-niacinamide-body-lotion/">500 mL 新确认身体乳</a><a href="/products/vitamin-c-body-lotion-502ml/">502 mL 维C身体乳</a><a href="/contact/">联系页</a><a href="#matches">五组对照</a><a href="#capacity">12 条容量缺项</a><a href="#all">全部产品资料缺项</a><a href="#images">35 张图片映射</a></nav><h2>已确认</h2><p>BC-01 / BC-02 / BC-03：500 mL、USD 2.99/件、MOQ 6；BC-04：283 g、USD 4.99/件、MOQ 6；BC-05：473 mL、USD 4.99/件、MOQ 6。502 mL 维C身体乳 USD 2.99/瓶、MOQ 2；原 444 mL 产品保留。确认信息互不覆盖。</p><h2 id="matches">五组疑似同款：新旧图片对照</h2>${pairs}<h2 id="capacity">本次总包 12 条容量缺项</h2>${table(capacity)}<h2 id="all">全部已记录的产品资料缺项（含原产品）</h2><p>以下逐项保留资料中的原始字段名称，未用推测补齐。供应商 SKU、INCI、香调、保质期、样品、定制、库存和交期，仅在取得实际资料后才能承诺。此表用于验收，不在客户导航或站点地图中展示。</p>${table(otherMissing)}<h2 id="images">35 张图片逐张用途</h2>${table(imageAudit.map((i:any)=>({ids:i.ids,name:i.product,image:i.image,missing:`Batch${i.batch} / ${i.path}`,impact:i.status})))}<h2>发布前集中确认</h2><ul><li>确认公开 WhatsApp +86 190 6678 2710、邮箱 melody888666@yeah.net 由销售团队接收；当前保留原配置。</li><li>Resend API key、已验证发件域和发件邮箱、收件邮箱；测试使用模拟结果，未验证真实投递。预览 INQUIRY_ENABLED 默认关闭。</li><li>确认正式域名、Vercel 项目、DNS 和 GA4 G-4BX79STS9F 账号权限；仅正式域名且解除 noindex 后记录统计。WhatsApp 点击、表单服务接受与真实有效询盘不等同。</li><li>未发现现有隐私、运输、退款或交易政策页；需业务方提供适用政策。未编造政策条款。</li><li>含功效/UV 声明的供应商图片需相应证明或清洁主图。未知库存、交期、认证不作承诺。</li></ul></main></body></html>`;
+fs.writeFileSync("client/public/previews/final-acceptance.html",html);
+console.log(JSON.stringify({images:imageAudit.length,batches:result.batches,capacity:capacity.length,allMissingRows:otherMissing.length}));

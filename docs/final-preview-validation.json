@@ -1,0 +1,391 @@
+{
+  "checkedAt": "2026-09-11T08:31:49.308Z",
+  "pageCount": 8,
+  "assetCount": 61,
+  "internalLinkCount": 23,
+  "notFoundStatus": 404,
+  "missingAssetStatus": 404,
+  "robots": "User-agent: *\nDisallow: /\n",
+  "checks": [
+    {
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "title": "TopPerfume | Beauty &amp; Fragrance Wholesale Sourcing",
+      "canonical": "https://topperfume.cn/",
+      "schemas": 1,
+      "noindex": true
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "h1": 1,
+      "title": "Contact TopPerfume | Wholesale Beauty Enquiries",
+      "canonical": "https://topperfume.cn/contact",
+      "schemas": 1,
+      "noindex": true
+    },
+    {
+      "route": "/low-moq-perfume-manufacturer",
+      "status": 200,
+      "h1": 1,
+      "title": "Low MOQ Perfume Wholesale Sourcing Partner - From 2 Pcs | TopPerfume",
+      "canonical": "https://topperfume.cn/low-moq-perfume-manufacturer",
+      "schemas": 1,
+      "noindex": true
+    },
+    {
+      "route": "/products/daily-niacinamide-body-lotion",
+      "status": 200,
+      "h1": 1,
+      "title": "Daily Niacinamide Body Lotion | Skincare &amp; Body Care Wholesale | TopPerfume",
+      "canonical": "https://topperfume.cn/products/daily-niacinamide-body-lotion",
+      "schemas": 1,
+      "noindex": true
+    },
+    {
+      "route": "/products/luminous-glow-body-wash",
+      "status": 200,
+      "h1": 1,
+      "title": "Luminous Glow Body Wash | Skincare &amp; Body Care Wholesale | TopPerfume",
+      "canonical": "https://topperfume.cn/products/luminous-glow-body-wash",
+      "schemas": 1,
+      "noindex": true
+    },
+    {
+      "route": "/products/vitamin-c-body-lotion-502ml",
+      "status": 200,
+      "h1": 1,
+      "title": "Vitamin C Body Lotion — 502 mL | Skincare &amp; Body Care Wholesale | TopPerfume",
+      "canonical": "https://topperfume.cn/products/vitamin-c-body-lotion-502ml",
+      "schemas": 1,
+      "noindex": true
+    },
+    {
+      "route": "/products/lattafa-khamrah-qahwa",
+      "status": 200,
+      "h1": 1,
+      "title": "Lattafa Khamrah Qahwa | Fragrance Wholesale | TopPerfume",
+      "canonical": "https://topperfume.cn/products/lattafa-khamrah-qahwa",
+      "schemas": 1,
+      "noindex": true
+    },
+    {
+      "route": "/products/dior-sauvage-parfum-spray-men",
+      "status": 200,
+      "h1": 1,
+      "title": "Dior Sauvage Parfum Spray for Men | Fragrance Wholesale | TopPerfume",
+      "canonical": "https://topperfume.cn/products/dior-sauvage-parfum-spray-men",
+      "schemas": 1,
+      "noindex": true
+    }
+  ],
+  "assetResults": [
+    {
+      "asset": "/assets/index-BUc4gORe.js",
+      "status": 200,
+      "type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "asset": "/assets/products/khadlaj-hareem-al-sultan/supplied-800.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/vitamin-c-body-lotion-502ml/01-vitamin-c-body-lotion-502ml-main-800.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/topperfume-mark_8166258c.png",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-11-vegan-hydrating-lip-oil-gloss_f92e8c52.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "asset": "/assets/products/khadlaj-hareem-al-sultan/supplied-480.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/khadlaj-hareem-al-sultan/supplied-810.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/vitamin-c-body-lotion-502ml/01-vitamin-c-body-lotion-502ml-main-480.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/vitamin-c-body-lotion-502ml/01-vitamin-c-body-lotion-502ml-main-1254.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/phase14e1/01-hero-private-label-single-scene.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "asset": "/assets/phase14d/fragrance-reference-poster.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "asset": "/assets/phase14d/fragrance-reference-loop.mp4",
+      "status": 200,
+      "type": "video/mp4"
+    },
+    {
+      "asset": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/rd-concept_3454ead1.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "asset": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/topperfume-packaging-study_f7ac65c2.jpg",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/topperfume-hero-niche-fragrance-campaign-v2_755605ca.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "asset": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/packaging-concept_345f706f.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "asset": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-01-dior-sauvage-bottle-box_51b02500.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "asset": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-02-good-girl-blush-tweed-talk_1ae0d387.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "asset": "/assets/phase14d/amber-romance-reference.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "asset": "/assets/phase14d/coconut-passion-reference.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "asset": "/assets/phase14d/toffee-coffee-reference.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "asset": "/assets/phase14d/good-girl-pink-reference.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "asset": "/assets/phase14d/love-spell-reference.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "asset": "/assets/phase14d/velvet-petals-reference.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "asset": "/assets/phase14d/odyssey-spectra-rainbow-reference.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "asset": "/assets/phase14d/odyssey-spectra-blue-reference.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "asset": "/assets/phase14d/go-mango-reference.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "asset": "/assets/phase14e1/02-midpage-custom-bottle-array.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "asset": "/assets/products/daily-niacinamide-body-lotion/supplied-800.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/glutaglow-body-lotion-400ml-600ml/supplied-1-800.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/healthy-white-body-lotion-400ml/supplied-1-800.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/cocoa-radiant-body-gel-oil/supplied-1-800.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/daily-niacinamide-body-lotion/supplied-480.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/daily-niacinamide-body-lotion/supplied-1254.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/glutaglow-body-lotion-400ml-600ml/supplied-1-480.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/glutaglow-body-lotion-400ml-600ml/supplied-1-1200.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/healthy-white-body-lotion-400ml/supplied-1-480.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/healthy-white-body-lotion-400ml/supplied-1-1200.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/cocoa-radiant-body-gel-oil/supplied-1-480.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/cocoa-radiant-body-gel-oil/supplied-1-1200.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/luminous-glow-body-wash/supplied-800.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/luminous-glow-body-wash/supplied-480.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/luminous-glow-body-wash/supplied-1254.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/vitamin-c-body-lotion-502ml/01-vitamin-c-body-lotion-502ml-main-160.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/vitamin-c-body-lotion-502ml/02-vitamin-c-body-lotion-502ml-texture-160.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/vitamin-c-body-lotion-502ml/03-vitamin-c-body-lotion-502ml-benefits-160.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/vitamin-c-body-lotion-502ml/04-vitamin-c-body-lotion-502ml-two-bottles-160.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/lattafa-khamrah-qahwa/supplied-800.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/lattafa-al-noble-ameer/supplied-800.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/lattafa-badee-al-oud-sublime/supplied-800.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/lattafa-khamrah-qahwa/supplied-480.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/lattafa-khamrah-qahwa/supplied-810.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/lattafa-al-noble-ameer/supplied-480.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/lattafa-al-noble-ameer/supplied-810.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/lattafa-badee-al-oud-sublime/supplied-480.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "/assets/products/lattafa-badee-al-oud-sublime/supplied-810.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "asset": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-04-mon-paris-bottle_3357056d.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "asset": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-10-bare-vanilla-body-mist_bf37ea81.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "asset": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-23-pure-seduction-mist-lotion-set_c74ce5a3.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "asset": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/production-concept_2a358be3.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "asset": "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2/product-03-very-good-girl-glam-bottle-box_9405022e.png",
+      "status": 200,
+      "type": "image/png"
+    }
+  ],
+  "issues": []
+}

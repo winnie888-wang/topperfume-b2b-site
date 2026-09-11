@@ -1,0 +1,70 @@
+{
+  "artifact": "Combined listing intake, five batches",
+  "total_candidate_entries": 41,
+  "count_explanation": "5 + 17 + 7 + 5 + 7 = 41 source intake records before deduplication. Five cross-batch matches remain unresolved. This is not a distinct-product or new-live-product count.",
+  "batches": [
+    {
+      "directory": "Batch01_5BodyCare",
+      "entry_count": 5,
+      "pricing": "BC-01 through BC-03: USD 2.99 per piece; BC-04 and BC-05: USD 4.99 per piece",
+      "moq": null
+    },
+    {
+      "directory": "Batch02_11Groups",
+      "entry_count": 17,
+      "pricing": "USD 3.00 per piece for every candidate variant",
+      "moq": 6
+    },
+    {
+      "directory": "Batch03_7Perfumes",
+      "entry_count": 7,
+      "pricing": "USD 5.00 per piece for every perfume",
+      "moq": 2
+    },
+    {
+      "directory": "Batch04_Lotions_And_GelOils",
+      "entry_count": 5,
+      "group_count": 4,
+      "pricing": "USD 2.99 per piece for all pictured products and sizes",
+      "moq": 6
+    },
+    {
+      "directory": "Batch05_Lotions_And_BodyOils",
+      "entry_count": 7,
+      "pricing": "USD 2.99 per piece for the seven pictured records",
+      "moq": 6
+    }
+  ],
+  "existing_502ml_vitamin_c_product": "Not included as a new entry; preserve prior work and previously confirmed USD 2.99 / MOQ 2.",
+  "scope_interpretation": "Batch-02 quote applies to its preceding table; batch-03 quote to seven perfume images; batch-04 USD 2.99 / MOQ 6 applies only to the five new images. Batch-01 explicit prices and unknown MOQ remain unchanged. Batch-05 USD 2.99 / MOQ 6 applies only to its seven pictures; matching earlier records may be updated after identity confirmation.",
+  "site_status": "This archive is a handoff artifact; it does not modify or deploy the website.",
+  "revision": "3 — added batch 05 and deduplication pointers",
+  "confirmed_unique_product_count": null,
+  "pending_cross_batch_matches": [
+    {
+      "new": "B04-03",
+      "possible_existing": "B02-01-05",
+      "rule": "If same product, latest price USD 2.99 overrides prior USD 3 only for the matched variant."
+    },
+    {
+      "new": "B04-04",
+      "possible_existing": "B02-01-03",
+      "rule": "If same product, latest price USD 2.99 overrides prior USD 3 only for the matched variant."
+    },
+    {
+      "new": "B05-01",
+      "possible_existing": "BC-01",
+      "rule": "If same product, apply latest USD 2.99 per piece / MOQ 6 only to the matched record."
+    },
+    {
+      "new": "B05-04",
+      "possible_existing": "B02-01-01",
+      "rule": "If same product, apply latest USD 2.99 per piece / MOQ 6 only to the matched record."
+    },
+    {
+      "new": "B05-05",
+      "possible_existing": "B02-01-02",
+      "rule": "If same product, apply latest USD 2.99 per piece / MOQ 6 only to the matched record."
+    }
+  ]
+}

@@ -22,6 +22,8 @@ export function Seo({ page }: { page: SeoPage }) {
     setMeta('meta[property="og:description"]', "property", "og:description", page.description);
     setMeta('meta[property="og:url"]', "property", "og:url", canonical);
     setMeta('meta[property="og:type"]', "property", "og:type", page.type ?? "website");
+    if (page.image) setMeta('meta[property="og:image"]', "property", "og:image", page.image);
+    else document.head.querySelector('meta[property="og:image"]')?.remove();
 
     let canonicalLink = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!canonicalLink) {

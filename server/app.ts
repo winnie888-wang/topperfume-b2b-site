@@ -11,6 +11,10 @@ import { registerStorageProxy } from "./_core/storageProxy";
  */
 export function createApp(): Express {
   const app = express();
+  app.use((req, res, next) => {
+    if (process.env.SITE_INDEXABLE !== "true" || !["topperfume.cn", "www.topperfume.cn"].includes(req.hostname) || req.path.startsWith("/previews/")) res.setHeader("X-Robots-Tag", "noindex, nofollow");
+    next();
+  });
 
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));

@@ -1,0 +1,225 @@
+{
+  "batch": "04",
+  "uploaded_image_count": 5,
+  "group_count": 4,
+  "capacity_variant_record_count": 5,
+  "user_confirmed": {
+    "currency": "USD",
+    "price_per_piece": 2.99,
+    "moq_pieces": 6,
+    "source_text": "MOQ 6 PIECES PRICE USD 2.99/PIECES",
+    "scope": "The five images attached to this message; not a global repricing of earlier batches."
+  },
+  "groups": [
+    {
+      "group_id": "B04-01",
+      "name_zh": "GlutaGlow 身体乳（粉泵）",
+      "name_en": "GlutaGlow Body Lotion",
+      "category": "Body Lotion",
+      "brand": null,
+      "brand_note": "Brand wording is absent or obscured in supplied artwork; do not infer brand from bottle shape or blue label area.",
+      "images": [
+        {
+          "file": "images/B04-01-glutaglow-lotion-400ml-600ml.jpg",
+          "source_filename": "26dd8d1e-bad8-4b6a-8373-406d5f0b369c.jpg",
+          "sha256": "9c7a60136ae027f50d4cc47c746b23666b706d1c75e13355db8422bdfcdfeb67",
+          "alt": "Two pink-pump GlutaGlow lotion bottles labeled 400 mL and 600 mL",
+          "processing": "Original image copied and renamed; pixels unchanged"
+        }
+      ],
+      "variants": [
+        {
+          "intake_id": "B04-01-400",
+          "size_observed_on_image": "400 mL",
+          "price_usd_per_piece": 2.99,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "draft_copy_en": {
+            "display_name": "GlutaGlow Body Lotion — 400 mL",
+            "short_description": "GlutaGlow Body Lotion, 400 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "GlutaGlow Body Lotion — 400 mL | TopPerfume",
+            "meta_description": "GlutaGlow Body Lotion, 400 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "price_display": "US$2.99 / piece",
+            "moq_display": "MOQ: 6 pieces",
+            "cta": "Inquire About This Product"
+          }
+        },
+        {
+          "intake_id": "B04-01-600",
+          "size_observed_on_image": "600 mL",
+          "price_usd_per_piece": 2.99,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "draft_copy_en": {
+            "display_name": "GlutaGlow Body Lotion — 600 mL",
+            "short_description": "GlutaGlow Body Lotion, 600 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "GlutaGlow Body Lotion — 600 mL | TopPerfume",
+            "meta_description": "GlutaGlow Body Lotion, 600 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "price_display": "US$2.99 / piece",
+            "moq_display": "MOQ: 6 pieces",
+            "cta": "Inquire About This Product"
+          }
+        }
+      ],
+      "review_notes": [
+        "One photograph shows two capacity variants, 400 mL on the left and 600 mL on the right. Apply the user’s uniform price and MOQ to both as supplied, pending any later correction. Do not infer a two-bottle bundle.",
+        "Different capacity and label from Batch01 BC-03, which was labeled 500 mL; do not overwrite its capacity or replace that record automatically.",
+        "UV, lightening and timed-result text visible in the original artwork is not independent efficacy verification. Do not add SPF, 7-day or quantified performance claims."
+      ],
+      "possible_existing_record": null
+    },
+    {
+      "group_id": "B04-02",
+      "name_zh": "Healthy White 身体乳（粉泵）",
+      "name_en": "Healthy White Body Lotion",
+      "category": "Body Lotion",
+      "brand": null,
+      "brand_note": "Brand wording is absent or obscured in supplied artwork; do not infer brand from bottle shape or blue label area.",
+      "images": [
+        {
+          "file": "images/B04-02-healthy-white-lotion-400ml.jpg",
+          "source_filename": "5b15437f8389d612f20baa8ec5dd31a2.jpg",
+          "sha256": "7cabe1c2429d726eadc35859f785264c742ab2bcb8806f013fcb72e7822b767c",
+          "alt": "Healthy White lotion in a pink-pump bottle labeled 400 mL",
+          "processing": "Original image copied and renamed; pixels unchanged"
+        }
+      ],
+      "variants": [
+        {
+          "intake_id": "B04-02",
+          "size_observed_on_image": "400 mL",
+          "price_usd_per_piece": 2.99,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "draft_copy_en": {
+            "display_name": "Healthy White Body Lotion — 400 mL",
+            "short_description": "Healthy White Body Lotion, 400 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "Healthy White Body Lotion — 400 mL | TopPerfume",
+            "meta_description": "Healthy White Body Lotion, 400 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "price_display": "US$2.99 / piece",
+            "moq_display": "MOQ: 6 pieces",
+            "cta": "Inquire About This Product"
+          }
+        }
+      ],
+      "review_notes": [
+        "Keep separate from B04-01: label wording and layout differ, although both use pink pumps.",
+        "The source label mentions vitamin B3 and sunscreens; no full ingredient list, SPF or substantiation is supplied. Do not infer formula percentages or two-week results."
+      ],
+      "possible_existing_record": null
+    },
+    {
+      "group_id": "B04-03",
+      "name_zh": "Gluta Ceramide 透明粉盖款",
+      "name_en": "Gluta Ceramide Body Care",
+      "category": "Body Care — exact type pending",
+      "brand": null,
+      "brand_note": "Brand wording is absent or obscured in supplied artwork; do not infer brand from bottle shape or blue label area.",
+      "images": [
+        {
+          "file": "images/B04-03-gluta-ceramide-200ml.jpg",
+          "source_filename": "91e64d0f50ffb963cd5cf21380ff2a58.jpg",
+          "sha256": "bbe8b1c8462696daeecee3d2f7e71e97365b37b2a3957b2501f8301bd37ad9a8",
+          "alt": "Transparent pink-capped Gluta Ceramide bottle labeled 200 mL",
+          "processing": "Original image copied and renamed; pixels unchanged"
+        }
+      ],
+      "variants": [
+        {
+          "intake_id": "B04-03",
+          "size_observed_on_image": "200 mL",
+          "price_usd_per_piece": 2.99,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "draft_copy_en": {
+            "display_name": "Gluta Ceramide Body Care — 200 mL",
+            "short_description": "Gluta Ceramide Body Care, 200 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "Gluta Ceramide Body Care — 200 mL | TopPerfume",
+            "meta_description": "Gluta Ceramide Body Care, 200 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "price_display": "US$2.99 / piece",
+            "moq_display": "MOQ: 6 pieces",
+            "cta": "Inquire About This Product"
+          }
+        }
+      ],
+      "review_notes": [
+        "The front label shows Gluta Ceramide and 200 mL. Precise product type is not established by the visible label alone.",
+        "Likely related to the pink 200 mL Gluta Ceramide variant in Batch02’s six-bottle lineup; current brand wording is obscured and artwork differs. Treat as a possible image/quote update, not a confirmed new SKU or automatic identity merge.",
+        "If same-product identity is confirmed, apply this latest USD 2.99 / MOQ 6 quotation only to that matched variant; do not reprice the whole six-variant lineup.",
+        "Several small words are distorted. Do not use them to infer ingredients or performance."
+      ],
+      "possible_existing_record": {
+        "candidate_id": "B02-01-05",
+        "match_status": "probable; requires same-product confirmation",
+        "basis": "Matching Gluta Ceramide / UV Extra Brightening wording, pink cap and 200 mL capacity",
+        "latest_quote_if_matched": {
+          "price_usd_per_piece": 2.99,
+          "moq_pieces": 6
+        }
+      }
+    },
+    {
+      "group_id": "B04-04",
+      "name_zh": "Sunlit Glow 身体凝胶油",
+      "name_en": "Sunlit Glow Body Gel Oil",
+      "category": "Body Oil",
+      "brand": null,
+      "brand_note": "Brand wording is absent or obscured in supplied artwork; do not infer brand from bottle shape or blue label area.",
+      "images": [
+        {
+          "file": "images/B04-04-sunlit-glow-gel-oil-200ml-main.jpg",
+          "source_filename": "1096dbb8b1689e9f3c7714c65294d060.jpg",
+          "sha256": "ae26ac96dd137c1da9c443346372a462d2b4a6e6ae65c030b114f0ba8d585351",
+          "alt": "Sunlit Glow gel oil in a gold-toned bottle with a blue cap, labeled 200 mL",
+          "processing": "Original image copied and renamed; pixels unchanged"
+        },
+        {
+          "file": "images/B04-04-sunlit-glow-gel-oil-200ml-alternate.jpg",
+          "source_filename": "c8dc52f33e9d32c532c8a70a559ee76e.jpg",
+          "sha256": "dcdf3f7068f6d44457bf77c06ff710b1f5278fc937628d64e9265e6051793d3a",
+          "alt": "Alternate supplied image of Sunlit Glow gel oil labeled 200 mL",
+          "processing": "Original image copied and renamed; pixels unchanged"
+        }
+      ],
+      "variants": [
+        {
+          "intake_id": "B04-04",
+          "size_observed_on_image": "200 mL",
+          "price_usd_per_piece": 2.99,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "draft_copy_en": {
+            "display_name": "Sunlit Glow Body Gel Oil — 200 mL",
+            "short_description": "Sunlit Glow Body Gel Oil, 200 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "Sunlit Glow Body Gel Oil — 200 mL | TopPerfume",
+            "meta_description": "Sunlit Glow Body Gel Oil, 200 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "price_display": "US$2.99 / piece",
+            "moq_display": "MOQ: 6 pieces",
+            "cta": "Inquire About This Product"
+          }
+        }
+      ],
+      "review_notes": [
+        "Uploads 4 and 5 show the same named 200 mL product in two different image files; preserve as two images of one candidate, not two products.",
+        "The first image is the suggested main and second an alternate. Some small label lettering is distorted; do not extract a full ingredient list from it.",
+        "Likely related to Batch02’s Sunlit Glow 200 mL variant. Brand lettering is obscured and artwork differs; establish same-product identity before merging.",
+        "If matched, replace only that variant’s earlier USD 3 quote with the latest USD 2.99 / MOQ 6; other variants keep their prices."
+      ],
+      "possible_existing_record": {
+        "candidate_id": "B02-01-03",
+        "match_status": "probable; requires same-product confirmation",
+        "basis": "Matching Sunlit Glow wording, blue cap, gold-toned content and 200 mL capacity",
+        "latest_quote_if_matched": {
+          "price_usd_per_piece": 2.99,
+          "moq_pieces": 6
+        }
+      }
+    }
+  ],
+  "not_provided": [
+    "Supplier SKU and same-product matching evidence for the two possible overlaps",
+    "Full ingredient and product specification sheets",
+    "Shipping, dispatch, sample and customization terms"
+  ],
+  "status": "Intake organized; two potential cross-batch matches unresolved; not published"
+}
