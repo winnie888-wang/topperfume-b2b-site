@@ -38,7 +38,7 @@
 
 ## 当前交付状态
 
-- 保留的Preview：https://topperfume-b2b-site-78m25b2ya-winnie9.vercel.app/
+- 最新Preview：https://topperfume-b2b-site-h86iot4yo-winnie9.vercel.app/（需有项目权限的Vercel账号登录）
 - 优化分支：feat/website-optimization-body-lotion。
 - 正式站保持原部署 dpl_7KZmhScqdBDfLezr43kqLCHjdvjk。
 - 未重复全站扫描或真实发送；本轮受影响代码类型检查、13项测试及构建通过。发布与回退方案见 release-and-rollback.md；中文待填项见 privacy-decisions-zh.md；逐项产品暂缓清单见 product-publication-holds.md。

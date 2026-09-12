@@ -1,6 +1,20 @@
-# Cloud Preview handoff — 2026-09-11
+# Cloud Preview handoff
 
-## Latest status — owner confirmed receipt (2026-09-12)
+## Latest Preview — form fixes and release preparation (2026-09-13 Asia/Shanghai)
+
+- Preview: https://topperfume-b2b-site-h86iot4yo-winnie9.vercel.app/
+- Contact checked: https://topperfume-b2b-site-h86iot4yo-winnie9.vercel.app/contact
+- Deployment: `dpl_4HRGHJ99LWRPQa2tibLga4NJpYQU`, READY, Preview in existing project `prj_4bTtZO7MSea1AHlXqvtYApYr5qBE`.
+- Application source: `923e2d400c064a533756d127c652c1f2454e7737`, pushed and verified on `feat/website-optimization-body-lotion`. A following documentation-only commit records this deployment receipt; application code is identical.
+- GitHub main is still `bab3a9eb6fa99e0cdb3371ba54ca84ae858a76fc`. Project API confirms Production is still `dpl_7KZmhScqdBDfLezr43kqLCHjdvjk`; no merge or Production deployment.
+- Local TypeScript, 13 affected tests and production-mode build passed. Vercel cloud build passed; only existing build warnings remain. Previously passed browser form tests were reused, not repeated.
+- Authenticated browser loaded the new Contact page. Its robots meta is `noindex,nofollow`; the loaded application asset is `index-Dpv1uA1j.js`, matching the new cloud build. No Google Tag Manager script was present. Browser automation initially timed out, then recovered; final access verification succeeded.
+- Deployment explicitly set build/runtime `SITE_INDEXABLE=false` and runtime `INQUIRY_ENABLED=false`. Existing code also rejects delivery in `VERCEL_ENV=preview`. No Preview form was submitted and no real mail was sent. Local mock receiver was stopped.
+- Access protection remains `all_except_custom_domains`: phone visitors must sign in to a Vercel account with project access. No protection was disabled and no bypass credential was created.
+- Unified acceptance: `acceptance-2026-09-12.md`; Chinese privacy fields: `privacy-decisions-zh.md`; product holds: `product-publication-holds.md`; release/rollback: `release-and-rollback.md`. These repository documents supersede stale questions in older cloud review/form pages; those historical pages are not the current outstanding-information list.
+- Remaining formal-release gates: user privacy decisions, product display scope/material resolution for affected products, and final Production authorization. Verified contacts, dispatch/transaction guidance and delivered mail do not need repeating.
+
+## Prior status — owner confirmed receipt (2026-09-12)
 
 - Email delivery verification: PASS. One authorized test was sent at 2026-09-12 14:52:34 Asia/Shanghai; Resend recorded Delivered, and the owner subsequently confirmed actual receipt. Do not send again or repeat completed verification.
 - Evidence: `mail-delivery-verification.json`. Remaining release work and ownership: `release-readiness-2026-09-12.md`.
