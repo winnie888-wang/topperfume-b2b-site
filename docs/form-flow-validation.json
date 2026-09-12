@@ -1,0 +1,85 @@
+{
+  "mode": "success",
+  "calls": 4,
+  "pending": 0,
+  "requests": [
+    {
+      "at": "2026-09-12T09:19:05.333Z",
+      "mode": "hold",
+      "payload": {
+        "from": "TopPerfume B2B Inquiry <qa@example.invalid>",
+        "to": [
+          "receiver@example.invalid"
+        ],
+        "reply_to": "buyer@example.invalid",
+        "subject": "[TopPerfume Inquiry TP-9331148F] QUOTE — Vitamin C Body Lotion — 502 mL",
+        "text": "A new TopPerfume B2B inquiry has been submitted.\n\nRequest ID: TP-9331148F\nInquiry Type: quote\n\nPRODUCT CONTEXT\nProduct Name: Vitamin C Body Lotion — 502 mL\nSKU: Not provided\nProduct URL: https://topperfume.cn/products/vitamin-c-body-lotion-502ml\nCategory: Body Lotion\nSize / format: 502 mL / 17 FL OZ\nMOQ: 2 bottles\nUnit price: US$2.99 / bottle\nProduct subtotal: US$5.98 (excludes shipping and taxes)\nFinal delivered quotation requires destination, availability and shipping confirmation. This is an inquiry, not an order.\nEstimated dispatch is usually around 7 days. The start date and order arrangements are agreed when you contact us. This is not a delivery estimate or a guarantee for every order.\nThis website is for product display and inquiries. Payment methods, shipping costs, taxes, the dispatch timeline start date, returns, exchanges and other transaction terms are negotiated for each order and confirmed in writing. Submitting an inquiry does not create an order.\n\nBUYER DETAILS\nCustomer Name: QA Mock Buyer\nCustomer Email: buyer@example.invalid\nCustomer WhatsApp: Not provided\nCountry / Market: QA Market\nQuantity: 2\nCustomization Requirement: Not specified\nNotes: QA browser mock only — no real email"
+      }
+    },
+    {
+      "at": "2026-09-12T09:20:01.144Z",
+      "mode": "failure",
+      "payload": {
+        "from": "TopPerfume B2B Inquiry <qa@example.invalid>",
+        "to": [
+          "receiver@example.invalid"
+        ],
+        "reply_to": "buyer@example.invalid",
+        "subject": "[TopPerfume Inquiry TP-23776EE4] QUOTE — Vitamin C Body Lotion — 502 mL",
+        "text": "A new TopPerfume B2B inquiry has been submitted.\n\nRequest ID: TP-23776EE4\nInquiry Type: quote\n\nPRODUCT CONTEXT\nProduct Name: Vitamin C Body Lotion — 502 mL\nSKU: Not provided\nProduct URL: https://topperfume.cn/products/vitamin-c-body-lotion-502ml\nCategory: Body Lotion\nSize / format: 502 mL / 17 FL OZ\nMOQ: 2 bottles\nUnit price: US$2.99 / bottle\nProduct subtotal: US$5.98 (excludes shipping and taxes)\nFinal delivered quotation requires destination, availability and shipping confirmation. This is an inquiry, not an order.\nEstimated dispatch is usually around 7 days. The start date and order arrangements are agreed when you contact us. This is not a delivery estimate or a guarantee for every order.\nThis website is for product display and inquiries. Payment methods, shipping costs, taxes, the dispatch timeline start date, returns, exchanges and other transaction terms are negotiated for each order and confirmed in writing. Submitting an inquiry does not create an order.\n\nBUYER DETAILS\nCustomer Name: QA Mock Buyer\nCustomer Email: buyer@example.invalid\nCustomer WhatsApp: Not provided\nCountry / Market: QA Market\nQuantity: 2\nCustomization Requirement: Not specified\nNotes: QA failure case — no real email"
+      }
+    },
+    {
+      "at": "2026-09-12T09:21:47.851Z",
+      "mode": "success",
+      "payload": {
+        "from": "TopPerfume B2B Inquiry <qa@example.invalid>",
+        "to": [
+          "receiver@example.invalid"
+        ],
+        "reply_to": "buyer@example.invalid",
+        "subject": "[TopPerfume Inquiry TP-5DD76B90] QUOTE — Vitamin C Body Lotion — 502 mL",
+        "text": "A new TopPerfume B2B inquiry has been submitted.\n\nRequest ID: TP-5DD76B90\nInquiry Type: quote\n\nPRODUCT CONTEXT\nProduct Name: Vitamin C Body Lotion — 502 mL\nSKU: Not provided\nProduct URL: https://topperfume.cn/products/vitamin-c-body-lotion-502ml\nCategory: Body Lotion\nSize / format: 502 mL / 17 FL OZ\nMOQ: 2 bottles\nUnit price: US$2.99 / bottle\nProduct subtotal: US$5.98 (excludes shipping and taxes)\nFinal delivered quotation requires destination, availability and shipping confirmation. This is an inquiry, not an order.\nEstimated dispatch is usually around 7 days. The start date and order arrangements are agreed when you contact us. This is not a delivery estimate or a guarantee for every order.\nThis website is for product display and inquiries. Payment methods, shipping costs, taxes, the dispatch timeline start date, returns, exchanges and other transaction terms are negotiated for each order and confirmed in writing. Submitting an inquiry does not create an order.\n\nBUYER DETAILS\nCustomer Name: QA Retry Buyer\nCustomer Email: buyer@example.invalid\nCustomer WhatsApp: Not provided\nCountry / Market: QA Market\nQuantity: 2\nCustomization Requirement: Not specified\nNotes: Not provided"
+      }
+    },
+    {
+      "at": "2026-09-12T09:22:37.325Z",
+      "mode": "success",
+      "payload": {
+        "from": "TopPerfume B2B Inquiry <qa@example.invalid>",
+        "to": [
+          "receiver@example.invalid"
+        ],
+        "reply_to": "mobile@example.invalid",
+        "subject": "[TopPerfume Inquiry TP-706D5B3B] QUOTE — General beauty project",
+        "text": "A new TopPerfume B2B inquiry has been submitted.\n\nRequest ID: TP-706D5B3B\nInquiry Type: quote\n\nPRODUCT CONTEXT\nProduct Name: Not provided\nSKU: Not provided\nProduct URL: Not provided\nCategory: Not provided\nSize / format: Not provided\nMOQ: Not provided\nUnit price: Not provided\nProduct subtotal: Not provided (excludes shipping and taxes)\nFinal delivered quotation requires destination, availability and shipping confirmation. This is an inquiry, not an order.\nEstimated dispatch is usually around 7 days. The start date and order arrangements are agreed when you contact us. This is not a delivery estimate or a guarantee for every order.\nThis website is for product display and inquiries. Payment methods, shipping costs, taxes, the dispatch timeline start date, returns, exchanges and other transaction terms are negotiated for each order and confirmed in writing. Submitting an inquiry does not create an order.\n\nBUYER DETAILS\nCustomer Name: Mobile QA Buyer\nCustomer Email: mobile@example.invalid\nCustomer WhatsApp: Not provided\nCountry / Market: QA Market\nQuantity: 6\nCustomization Requirement: Not specified\nNotes: Mobile browser mock only"
+      }
+    }
+  ],
+  "realEmailSending": false,
+  "testedAt": "2026-09-12",
+  "coverage": [
+    "Browser form fill and submit through actual Express/tRPC and product resolver",
+    "Required/email/minimum/integer validation: zero transport calls",
+    "Double click plus Enter while pending: one transport call",
+    "Mock HTTP 503 failure feedback; no automatic retry; reopen clears stale error",
+    "Success and explicit new inquiry; canonical WhatsApp follow-up product URL",
+    "Mobile contact form success at 375x812 without horizontal overflow"
+  ],
+  "validation": {
+    "suites": [
+      "server/whatsappCta.test.ts",
+      "server/finalization.test.ts"
+    ],
+    "typescript": "passed",
+    "actualNewEmailsSent": 0,
+    "productionBuild": "passed",
+    "affectedTests": 13,
+    "limitations": [
+      "Not a new real-mail browser end-to-end send",
+      "No persistent cross-tab/reload idempotency claim",
+      "Actual mailbox reply and GA4 account events untested"
+    ],
+    "warning": "Existing Vite chunk size warning"
+  }
+}

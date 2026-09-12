@@ -1,0 +1,55 @@
+{
+  "subject": "TEST｜TopPerfume 网站询盘邮件验证",
+  "sentAtUtc": "2026-09-12T06:52:34.817Z",
+  "sentAtAsiaShanghai": "2026-09-12 14:52:34",
+  "providerHttpStatus": 200,
+  "providerStatusObserved": "delivered",
+  "resendEmailId": "4c99e332-20d8-4f7c-86f3-ff25e1820e98",
+  "requestId": "TP-80794179",
+  "sendCalls": 1,
+  "existingResendKeyId": "60e7e863-872b-46a7-887a-a10c0c7f7d62",
+  "from": "TopPerfume B2B Inquiry <inquiry@mail.topperfume.cn>",
+  "to": "melody888666@yeah.net",
+  "replyTo": "melody888666@yeah.net",
+  "product": "Vitamin C Body Lotion — 502 mL",
+  "quantity": 2,
+  "unitPriceUsd": 2.99,
+  "productSubtotalUsd": 5.98,
+  "coverage": [
+    "Existing server inquiry input validation",
+    "Server-side product and MOQ resolution",
+    "Existing inquiry email text generation",
+    "Existing Vercel runtime key and sender",
+    "Existing Resend send function",
+    "Exact authorized subject via isolated transport wrapper",
+    "Resend sent and delivered events"
+  ],
+  "limitations": [
+    "Complete browser form fill-and-submit flow is NOT verified",
+    "Actual reply operation is NOT verified",
+    "Real analytics conversion is NOT verified"
+  ],
+  "temporaryDeploymentRemovalConfirmed": [
+    "dpl_BXFW6Y7fMvcZZQ3Cw2GNrwEuyQ6x",
+    "dpl_5KniJUgfQk7fJB95oNG3tNZrSb5T",
+    "dpl_JBC9nE7J7ehNAgyPpy8qqCeejkn6"
+  ],
+  "deliveryVerification": "passed",
+  "ownerReceiptConfirmation": {
+    "confirmed": true,
+    "repeatSendAuthorized": false,
+    "inboxFolderSpecified": false,
+    "source": "User explicitly confirmed actual receipt in conversation"
+  },
+  "cleanup": {
+    "temporaryAutomationAccessRevoked": true,
+    "productionUnchanged": true,
+    "temporaryDeploymentsDeleted": true,
+    "originalPreviewRemainsEmailDisabled": true
+  },
+  "followUpMockBrowserVerification": {
+    "status": "passed",
+    "evidence": "form-flow-validation.json",
+    "note": "The limitations above describe only the original real-mail test. Browser fill/submit was subsequently verified with a mock receiver; no further real email sent."
+  }
+}

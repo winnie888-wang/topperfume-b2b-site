@@ -127,7 +127,7 @@ export function buildInquirySummary(input: InquirySummaryInput) {
     ...(!isPendingValue(input.context?.format) ? [`Size / format: ${input.context!.format}`] : []),
     ...(!isPendingValue(input.context?.unitPrice) ? [`Unit Price: ${input.context!.unitPrice}`] : []),
     ...(input.context?.subtotal ? [`Product subtotal: ${input.context.subtotal} (excludes shipping and taxes; final delivered quote to be confirmed).`] : []),
-    `Product URL: ${input.context?.productUrl || "Not specified"}`,
+    `Product URL: ${getCanonicalProductUrl(input.context?.productUrl) || "Not specified"}`,
     `Category: ${input.context?.category || "Not specified"}`,
     `Name: ${input.name || "Not provided"}`,
     `Country / Market: ${input.country || "Not provided"}`,

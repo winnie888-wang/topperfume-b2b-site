@@ -1,7 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { buildWhatsAppCtaSummary, getCanonicalProductUrl, getWhatsAppCtaUrl } from "@/data/business";
+import { buildInquirySummary, buildWhatsAppCtaSummary, getCanonicalProductUrl, getWhatsAppCtaUrl } from "@/data/business";
 
 describe("WhatsApp-first CTA messages", () => {
+  it("makes the submitted-form follow-up product link usable outside the website", () => {
+    const summary = buildInquirySummary({ intent: "quote", context: { productUrl: "/products/vitamin-c-body-lotion-502ml" }, name: "QA", country: "QA", email: "qa@example.invalid", quantity: "2", whatsapp: "", customization: "", notes: "" });
+    expect(summary).toContain("Product URL: https://topperfume.cn/products/vitamin-c-body-lotion-502ml");
+    expect(summary).not.toContain("Product URL: /products/");
+  });
   const context = {
     productName: "Production QA Product",
     sku: "QA-001",

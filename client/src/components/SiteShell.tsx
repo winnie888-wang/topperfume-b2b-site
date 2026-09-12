@@ -4,7 +4,7 @@ import { transactionGuidance } from "@shared/businessPolicy";
  * and exact B2B information. Use Porcelain Ivory, Plum Ink, Mineral Rose, thin index lines,
  * and interaction that supports browsing then a truthful inquiry action.
  */
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { ArrowRight, Menu, MessageCircle, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -44,6 +44,7 @@ export function InquiryDrawer({ triggerLabel = "Start Your Project", intent = "p
   const [open, setOpen] = useState(false);
   const [submitted, setSubmitted] = useState<{ requestId: string; summary: string } | null>(null);
   const [formStartedAt, setFormStartedAt] = useState(() => Date.now());
+  const submissionGate = useRef({ pending: false, completed: false });
   const copy = inquiryCopy[intent];
   const displayState = getInquiryDisplayState(Boolean(submitted));
   const submitInquiry = trpc.inquiry.submit.useMutation({
@@ -52,14 +53,20 @@ export function InquiryDrawer({ triggerLabel = "Start Your Project", intent = "p
     },
   });
   function openDrawer(nextOpen: boolean) {
+    // Keep the active request attached to its form until a result is known.
+    if (submissionGate.current.pending) return;
     setOpen(nextOpen);
     if (nextOpen) {
+      submitInquiry.reset();
+      submissionGate.current.completed = false;
       setSubmitted(null);
       setFormStartedAt(Date.now());
     }
   }
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    // A synchronous guard also covers rapid Enter/double-click submissions before React rerenders.
+    if (submissionGate.current.pending || submissionGate.current.completed || !event.currentTarget.checkValidity()) return;
     const data = new FormData(event.currentTarget);
     const formValues = {
       name: String(data.get("name") || ""),
@@ -72,6 +79,7 @@ export function InquiryDrawer({ triggerLabel = "Start Your Project", intent = "p
     };
     const numericPrice = context?.unitPrice?.match(/US\$(\d+(?:\.\d+)?)/);
     const summary = buildInquirySummary({ intent, context: { ...context, subtotal: numericPrice ? `US$${(Number(numericPrice[1]) * Number(formValues.quantity)).toFixed(2)}` : undefined }, ...formValues });
+    submissionGate.current.pending = true;
     submitInquiry.mutate({
       intent,
       productName: context?.productName,
@@ -89,17 +97,19 @@ export function InquiryDrawer({ triggerLabel = "Start Your Project", intent = "p
       formStartedAt,
     }, {
       onSuccess: (result) => {
+        submissionGate.current.completed = true;
         setSubmitted({ requestId: result.requestId, summary });
         trackInquirySuccess(intent);
         toast("Inquiry received", { description: "Your inquiry has been submitted to our team." });
       },
+      onSettled: () => { submissionGate.current.pending = false; },
     });
   }
   return <Sheet open={open} onOpenChange={openDrawer}>
     <Button className={`button-primary ${triggerClassName}`} onClick={() => openDrawer(true)}>{triggerLabel} <ArrowRight size={16} strokeWidth={1.8} /></Button>
     <SheetContent side="right" className="inquiry-sheet">
       <SheetHeader><p className="eyebrow">{copy.eyebrow}</p><SheetTitle className="sheet-title">{copy.title}</SheetTitle><SheetDescription className="sheet-description">{copy.intro}</SheetDescription><p className="form-disclaimer">Your completed inquiry is sent directly to {businessProfile.companyName}. WhatsApp remains available as a separate quick-contact option.</p></SheetHeader>
-      <div className="submission-note" role="status" aria-live="polite" hidden={!displayState.showSuccess}><span className="mini-index">01</span><h3>Thank you. Your inquiry has been received.</h3><p>Your submission was accepted for delivery. Reference: {submitted?.requestId}</p><div className="inquiry-route-status"><span>Company</span><strong>{businessProfile.companyName}</strong><span>Sales email</span><strong>{businessProfile.email}</strong><span>WhatsApp</span><strong>{businessProfile.whatsappDisplay}</strong></div><div className="inquiry-route-actions"><a className="button-secondary button-whatsapp" href={getInquiryWhatsAppUrl(submitted?.summary || buildInquirySummary({ intent, context }))} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppCta("whatsapp", "Continue on WhatsApp", context)}>Continue on WhatsApp</a></div><Button variant="outline" className="button-secondary" onClick={() => { setSubmitted(null); setFormStartedAt(Date.now()); }}>Submit another inquiry</Button></div>
+      <div className="submission-note" role="status" aria-live="polite" hidden={!displayState.showSuccess}><span className="mini-index">01</span><h3>Thank you. Your inquiry has been received.</h3><p>Your submission was accepted for delivery. Reference: {submitted?.requestId}</p><div className="inquiry-route-status"><span>Company</span><strong>{businessProfile.companyName}</strong><span>Sales email</span><strong>{businessProfile.email}</strong><span>WhatsApp</span><strong>{businessProfile.whatsappDisplay}</strong></div><div className="inquiry-route-actions"><a className="button-secondary button-whatsapp" href={getInquiryWhatsAppUrl(submitted?.summary || buildInquirySummary({ intent, context }))} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppCta("whatsapp", "Continue on WhatsApp", context)}>Continue on WhatsApp</a></div><Button variant="outline" className="button-secondary" onClick={() => { submissionGate.current.completed = false; submitInquiry.reset(); setSubmitted(null); setFormStartedAt(Date.now()); }}>Submit another inquiry</Button></div>
       <form className="inquiry-form" onSubmit={handleSubmit} hidden={!displayState.showForm}>
           {context?.productName && <div className="inquiry-context"><span>Product context attached</span><strong>{context.productName}</strong><p>{context.sku ? `${context.sku} · ` : ""}{context.category} · {context.productUrl}</p></div>}
           <div className="inquiry-two-up"><label>Name<Input required name="name" placeholder="Your name" /></label><label>Country<Input required name="country" placeholder="Country / market" /></label></div>

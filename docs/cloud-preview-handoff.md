@@ -1,6 +1,16 @@
 # Cloud Preview handoff — 2026-09-11
 
-## Current follow-up: confirmed contacts and order terms (2026-09-12)
+## Latest status — owner confirmed receipt (2026-09-12)
+
+- Email delivery verification: PASS. One authorized test was sent at 2026-09-12 14:52:34 Asia/Shanghai; Resend recorded Delivered, and the owner subsequently confirmed actual receipt. Do not send again or repeat completed verification.
+- Evidence: `mail-delivery-verification.json`. Remaining release work and ownership: `release-readiness-2026-09-12.md`.
+- Existing Vercel runtime credentials matched the melody888666 workspace's existing sending key and sender inquiry@mail.topperfume.cn. Recipient and Reply-to were melody888666@yeah.net. No key was replaced or disclosed.
+- GitHub branch synchronization is complete: local and remote feat/website-optimization-body-lotion matched a3921bad340b72ec2d6b439d5af9ecb4f6de182b. Main remained bab3a9eb6fa99e0cdb3371ba54ca84ae858a76fc.
+- All three temporary mail-test deployments were deleted and the temporary CLI-created automation access credential was revoked. The existing website Preview stays Ready, noindex and email-disabled; Production is unchanged.
+- Follow-up: complete browser form flow PASSED with a local mock receiver (form-flow-validation.json). Real mail was not repeated. Actual mailbox reply handling and analytics account verification remain untested. See acceptance-2026-09-12.md for current release gates.
+- This documentation update does not deploy or change the website. The older cloud acceptance/form pages and historical sections below predate this result; their old mail/GitHub outstanding items are superseded by this section.
+
+## Historical follow-up: confirmed contacts and order terms (2026-09-12, before mail test)
 
 - Final Preview: https://topperfume-b2b-site-78m25b2ya-winnie9.vercel.app/ (Vercel account with project access required).
 - Updated form: https://topperfume-b2b-site-78m25b2ya-winnie9.vercel.app/previews/business-information-form.html
