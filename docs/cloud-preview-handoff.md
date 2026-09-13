@@ -1,5 +1,11 @@
 # Cloud Preview handoff
 
+## Current scope — TopPerfume privacy and release readiness
+
+- MELODY article intake is cancelled in this task. Continue only `topperfume-b2b-site`; preserve each project's existing changes independently.
+- Current business confirmations and remaining release decisions: `topperfume-release-status.md`. P-01/P-04/P-05/P-07 no longer require resubmission; retention and marketing mechanics remain internal decisions.
+- Customer privacy copy remains an unpublished draft. The records below document the existing Preview, not a deployment of the later privacy draft. No new deployment or repeated product/mail/form test was performed in this scope-return update.
+
 ## Latest Preview — form fixes and release preparation (2026-09-13 Asia/Shanghai)
 
 - Preview: https://topperfume-b2b-site-h86iot4yo-winnie9.vercel.app/

@@ -12,14 +12,14 @@
 
 ## 本轮 Preview
 
-仅部署当前分支到已有 Vercel 项目的 Preview，保持 `SITE_INDEXABLE=false`、`INQUIRY_ENABLED=false`。代码另有 `VERCEL_ENV=preview` 禁发保护；沿用现有访问登录限制。发布资料只存仓库 docs，不加入公开客户导航。QA 模拟脚本只允许显式本地启动，不成为线上接口。
+仅部署当前分支到已有 Vercel 项目的 Preview，保持 `SITE_INDEXABLE=false`、`INQUIRY_ENABLED=false`。代码另有 `VERCEL_ENV=preview` 禁发保护；沿用现有访问登录限制。发布资料存仓库 docs；新增内部决策页只在本地/Preview 构建生成，不加入客户导航或 sitemap，Production 构建不生成。QA 模拟脚本只允许显式本地启动，不成为线上接口。
 
 ## 未来上线步骤（本轮不执行）
 
 1. 接入经用户填写确认的隐私事实；落实逐项产品暂缓范围。保存未发布产品及旧规格历史，不删除或混合 SKU。
 2. 用户统一批准最终候选。使用正常 GitHub 权限审核、合并至 main；只有明确授权才进行 Production 部署。
 3. 在 Vercel 项目 Settings → Environment Variables 留存发布前配置清单/版本。密钥值仅留在平台，禁止放入文档或聊天。复用已验证邮件配置；正式开启表单时才设 Production 的 `INQUIRY_ENABLED=true`，收件仍为已确认销售邮箱。仅正式环境设可索引，Preview 继续双重禁发及 noindex。
-4. 按用户统计选择启用已有 GA4 或关闭统计；不重新安装。区分按钮点击、表单接受与业务有效询盘。
+4. 用户于 2026-09-13 已确认继续使用已有 GA4。开发流量过滤已启用、四个事件接收已通过；上线前补齐过滤传播后的报表核对，以及 A-01 访客同意方式的实现与验证。当前结论见 ga4-verification-result.md，不重新安装、不重复成功测试。后台过滤如需停用，在管理 → 数据过滤器 → TopPerfume Developer QA 更改为未启用；只能停止未来排除，已过滤数据不能恢复。不得修改原 Internal Traffic 规则扩大范围。
 5. 发布后只做部署相关冒烟检查：域名/关键页面、robots/canonical、静态资源、配置生效。不自动重发已验证的 TEST 邮件；新增真实发送仍需明确授权。
 
 ## 回退触发与操作
