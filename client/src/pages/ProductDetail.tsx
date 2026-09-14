@@ -1,3 +1,4 @@
+import { CONSENT_CHANGED } from "@/lib/consent";
 /**
  * Maison Mercantile design reminder: a Product Detail page is a buyer decision surface.
  * The product visual remains dominant; visible specifications, confirmed order terms and direct commercial actions make the next step clear.
@@ -39,7 +40,10 @@ function ProductDetailContent({ product }: { product: Product }) {
   const canCustomize = canCustomizeProduct(product);
 
   useEffect(() => {
-    trackProductView({ productName: product.name, sku: product.sku || product.slug, category: product.category }, `/products/${product.slug}`);
+    const track = () => trackProductView({ productName: product.name, sku: product.sku || product.slug, category: product.category }, `/products/${product.slug}`);
+    track();
+    window.addEventListener(CONSENT_CHANGED, track);
+    return () => window.removeEventListener(CONSENT_CHANGED, track);
   }, [product.category, product.name, product.sku, product.slug]);
 
   return <><Seo page={getProductSeo(product)} /><SiteShell>

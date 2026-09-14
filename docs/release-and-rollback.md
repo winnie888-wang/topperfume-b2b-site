@@ -1,3 +1,5 @@
+> 历史验收资料：最终答案已于 2026-09-14 落实。当前状态以 [正式发布准备记录](production-release-2026-09-14.md) 和 [最终决定](final-release-decisions.json) 为准；下列旧待填项不需重复作答。
+
 # 发布候选与回退方案
 
 候选标识：TopPerfume-RC-2026-09-12。分支 `feat/website-optimization-body-lotion`。本轮 Git 提交及 Preview 部署编号记录在 `cloud-preview-handoff.md` 最新条目。候选已通过类型检查、13 项受影响测试、生产模式构建及模拟网页表单验收；仍需隐私答案和正式展示范围确认后才能作为最终上线版本。

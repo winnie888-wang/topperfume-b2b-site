@@ -1,3 +1,4 @@
+import { publicationHolds } from "@shared/publication";
 export type ProductCategory = "fragrance" | "skincare" | "makeup";
 
 import { publicAssetUrl } from "@/data/publicAssets";
@@ -128,7 +129,7 @@ const realVisual = {
   fragranceBlue: publicAssetUrl("fragrance-santal-berry_0dac099c.jpg"),
 };
 
-export const products: Product[] = [
+export const allProducts: Product[] = [
   ...latestListingProducts,
   ...combinedListingProducts,
   {
@@ -200,4 +201,5 @@ export const categoryMeta: Record<ProductCategory, { eyebrow: string; title: str
   makeup: { eyebrow: "03 / Makeup portfolio", title: "Makeup Catalogue", intro: "Browse confirmed colour-makeup SKU formats for your buyer brief.", tone: "plum", materials: "Shade scope · components · packaging" },
 };
 
+export const products = allProducts.filter(product => !publicationHolds[product.slug]);
 export const getProduct = (slug: string) => products.find((product) => product.slug === slug);

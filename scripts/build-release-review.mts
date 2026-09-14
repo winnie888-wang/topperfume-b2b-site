@@ -1,6 +1,6 @@
 import { readFileSync, mkdirSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { products, type Product } from '../client/src/data/products';
+import { allProducts as products, type Product } from '../client/src/data/products';
 
 // Internal review is generated only for local/Preview builds, never Production.
 if (process.env.VERCEL_ENV === 'production') {

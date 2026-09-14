@@ -6,6 +6,7 @@ import Collection from "../client/src/pages/Collection";
 import ProductDetail from "../client/src/pages/ProductDetail";
 import LowMoqPerfume from "../client/src/pages/LowMoqPerfume";
 import Contact from "../client/src/pages/Contact";
+import Privacy from '../client/src/pages/Privacy';
 import NotFound from "../client/src/pages/NotFound";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { trpc } from "../client/src/lib/trpc";
@@ -21,6 +22,7 @@ export function prerenderBody(path: string) {
     <Route path="/products/:slug" component={ProductDetail} />
     <Route path="/low-moq-perfume-manufacturer" component={LowMoqPerfume} />
     <Route path="/contact" component={Contact} />
+    <Route path="/privacy" component={Privacy} />
     <Route component={NotFound} />
   </Switch></Router></QueryClientProvider></trpc.Provider>);
 }

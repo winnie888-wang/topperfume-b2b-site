@@ -8,7 +8,7 @@ import { canonicalPublicWebsiteUrl } from "@shared/seo";
 
 export const TO_CONFIRM = "[TO CONFIRM]";
 export const CUSTOMER_DETAILS = "Contact us for details";
-export const catalogueMoqGuidance = "Low MOQ available — MOQ varies by SKU. Selected fragrance products and the 502 mL Vitamin C Body Lotion from 2 pieces. Other product terms vary by SKU.";
+export const catalogueMoqGuidance = "Low MOQ available — MOQ varies by SKU. Selected fragrance products from 2 pieces. Other product terms vary by SKU.";
 
 const brandedWholesaleSlugs = new Set([
   "dior-sauvage-parfum-spray-men",
@@ -202,7 +202,7 @@ const variableByCategory: Record<ProductCategory, { label: string; value: string
 
 export const collectionBuyerGuide: Record<ProductCategory, { reference: BuyerGuideField; variable: BuyerGuideField; packaging: BuyerGuideField; commercial: BuyerGuideField }> = {
   fragrance: { reference: { value: "Confirmed fragrance formats" }, variable: { value: "Fragrance brief — contact us for details" }, packaging: { value: "Bottle, cap and carton — contact us for details" }, commercial: { value: "MOQ varies by SKU · selected fragrance products from 2 pcs" } },
-  skincare: { reference: { value: "Confirmed body-care formats" }, variable: { value: "Formula + claims — contact us for details" }, packaging: { value: "Pump, component and carton — contact us for details" }, commercial: { value: "502 mL Vitamin C Body Lotion from 2 bottles · other MOQ varies by product" } },
+  skincare: { reference: { value: "Confirmed body-care formats" }, variable: { value: "Formula + claims — contact us for details" }, packaging: { value: "Pump, component and carton — contact us for details" }, commercial: { value: "MOQ varies by product · see individual order terms" } },
   makeup: { reference: { value: "Confirmed colour-makeup formats" }, variable: { value: "Shade + finish — contact us for details" }, packaging: { value: "Component, artwork and carton — contact us for details" }, commercial: { value: "MOQ varies by SKU · many makeup products from 12 pcs" } },
 };
 

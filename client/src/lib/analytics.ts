@@ -10,7 +10,8 @@ import {
   type WhatsAppTrackingIntent,
 } from "@shared/analytics";
 
-type GtagCommand = ["event", string, Record<string, unknown>];
+import { canTrack, initializeAnalytics } from './consent';
+type GtagCommand = unknown[];
 
 declare global {
   interface Window {
@@ -22,7 +23,8 @@ declare global {
 const shouldTrackPageView = createPageViewDeduper();
 
 function sendEvent(name: string, params: Record<string, unknown>) {
-  if (typeof window === "undefined") return;
+  if (!canTrack()) return;
+  initializeAnalytics();
   if (!isAnalyticsEnabled(window.location.hostname, document.querySelector('meta[name="robots"]')?.getAttribute("content") ?? "")) return;
   if (typeof window.gtag === "function") {
     window.gtag("event", name, params);
@@ -41,6 +43,7 @@ function canonicalPageLocation(path: string) {
 }
 
 export function trackPageView(path: string, title = document.title) {
+  if (!canTrack()) return;
   const pageLocation = canonicalPageLocation(path);
   if (!shouldTrackPageView(path, title)) return;
   const event = buildPageViewEvent(path, title, pageLocation);

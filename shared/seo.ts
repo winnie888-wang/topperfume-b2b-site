@@ -3,6 +3,12 @@ import { getProduct, type Product, type ProductCategory } from "@/data/products"
 import { withOrderTerms } from "./productTerms";
 
 export const canonicalPublicWebsiteUrl = "https://topperfume.cn";
+export const privacySeo: SeoPage = {
+  title: 'Privacy & Cookies | TopPerfume',
+  description: 'How TopPerfume handles inquiries, retention, privacy requests and optional analytics cookies.',
+  path: '/privacy',
+  structuredData: { '@context': 'https://schema.org', '@type': 'WebPage', name: 'Privacy & Cookies', url: 'https://topperfume.cn/privacy' },
+};
 
 export type SeoPage = {
   title: string;
@@ -292,6 +298,7 @@ export function buildSitemapXml(products: Product[]) {
   const urls = [
     { path: "/", priority: "1.0" },
     { path: "/contact", priority: "0.7" },
+    { path: "/privacy", priority: "0.3" },
     { path: "/collections/fragrance", priority: "0.8" },
     { path: "/collections/skincare", priority: "0.8" },
     { path: "/collections/makeup", priority: "0.8" },

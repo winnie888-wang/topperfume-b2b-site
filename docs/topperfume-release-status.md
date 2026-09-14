@@ -1,3 +1,5 @@
+> 历史验收资料：最终答案已于 2026-09-14 落实。当前状态以 [正式发布准备记录](production-release-2026-09-14.md) 和 [最终决定](final-release-decisions.json) 为准；下列旧待填项不需重复作答。
+
 # TopPerfume 隐私与发布准备：当前统一记录
 
 范围：TopPerfume 香水、护肤和彩妆 B2B 网站。MELODY 文章任务已取消，本记录不涉及其仓库或内容。工作目录为 `C:/Users/Administrator/Desktop/topperfume-b2b-site`，当前分支 `feat/website-optimization-body-lotion`，保留所有既有修改。

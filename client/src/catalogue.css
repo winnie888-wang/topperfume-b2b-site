@@ -161,3 +161,15 @@ body { font-size: 16px; }
   .site-shell .desktop-nav, .site-shell .header-actions .desktop-only { display: none; }
   .site-shell .menu-button { display: inline-flex; }
 }
+
+.cookie-consent { position:fixed; z-index:100; bottom:16px; left:16px; width:min(560px,calc(100vw - 32px)); max-height:80dvh; overflow:auto; background:#fffdf8; color:#302723; padding:20px; border:1px solid #8b7667; border-radius:8px; box-shadow:0 5px 25px #0002; font-size:14px; line-height:1.55; }
+.cookie-consent h2 {font-size:21px; margin:0 0 8px;}
+.cookie-consent p {margin:0 0 8px;}
+.cookie-consent a,.privacy-page a {text-decoration:underline;}
+.cookie-consent > div {display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;}
+.cookie-consent button {border:1px solid #5b473a;background:#fff;color:#302723;padding:10px 14px;min-height:44px;border-radius:4px;cursor:pointer;}
+.cookie-consent button:focus-visible {outline:3px solid #856443;outline-offset:2px;}
+.privacy-page {max-width:900px;margin:auto;overflow-wrap:anywhere;}
+.privacy-page h2 {font-size:24px;margin:28px 0 10px;}
+.privacy-page p {line-height:1.75;}
+.footer-index button {text-align:left;text-decoration:underline;cursor:pointer;}

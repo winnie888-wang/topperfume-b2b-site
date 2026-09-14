@@ -281,6 +281,24 @@ function isRateLimited(attempts, key, now = Date.now()) {
   return false;
 }
 
+// shared/publication.ts
+var publicationHolds = {
+  "glutaglow-body-lotion-400ml-600ml": "725 mL \u5DF2\u786E\u8BA4\uFF1B\u4EC5\u6709\u65E7 400/600 mL \u7D20\u6750",
+  "healthy-white-body-lotion-400ml": "500 mL \u5DF2\u786E\u8BA4\uFF1B\u4EC5\u6709\u65E7 400 mL \u7D20\u6750",
+  "essential-healing-body-lotion-725ml": "500 mL \u5DF2\u786E\u8BA4\uFF1B\u4EC5\u6709\u65E7 725 mL \u7D20\u6750",
+  "advanced-repair-body-lotion-725ml": "500 mL \u5DF2\u786E\u8BA4\uFF1B\u4EC5\u6709\u65E7 725 mL \u7D20\u6750",
+  "vaseline-body-care-series-200ml": "\u56DB\u6B3E\u5DF2\u6539 237 mL\uFF1B\u516D\u74F6\u5408\u7167\u65E0\u6CD5\u63D0\u4F9B\u51C6\u786E\u72EC\u7ACB\u56FE\u7247\uFF0C\u53E6\u4E24\u6B3E\u4ECD\u4E3A 200 mL",
+  "daily-niacinamide-body-lotion": "\u4EC5\u6709\u542B\u672A\u6838\u5B9E\u529F\u6548\u7684\u4F9B\u5E94\u5546\u5BA3\u4F20\u56FE\uFF1B\u6CA1\u6709\u53EF\u7528\u4E2D\u6027\u66FF\u4EE3\u56FE",
+  "luminous-glow-body-wash": "\u4EC5\u6709\u542B\u672A\u6838\u5B9E\u529F\u6548\u7684\u4F9B\u5E94\u5546\u5BA3\u4F20\u56FE\uFF1B\u6CA1\u6709\u53EF\u7528\u4E2D\u6027\u66FF\u4EE3\u56FE",
+  "gluta-glow-body-lotion-500ml": "\u4EC5\u6709\u542B\u672A\u6838\u5B9E UV/\u529F\u6548\u5BA3\u4F20\u7684\u56FE\u7247\uFF1B\u6CA1\u6709\u53EF\u7528\u4E2D\u6027\u66FF\u4EE3\u56FE",
+  "vanilla-cashmere-body-wash-473ml": "\u552F\u4E00\u56FE\u7247\u5305\u542B\u672A\u6838\u5B9E pH/\u654F\u611F\u808C\u5BA3\u4F20\uFF1B\u6CA1\u6709\u53EF\u7528\u4E2D\u6027\u66FF\u4EE3\u56FE",
+  "vitamin-c-body-lotion-502ml": "\u56DB\u5F20\u5747\u4E3A\u4F9B\u5E94\u5546\u7F16\u8F91/\u5BA3\u4F20\u7D20\u6750\uFF1B\u7F3A\u771F\u5B9E\u672A\u6539\u6807\u7B7E 502 mL \u5305\u88C5\u7167",
+  "nivea-q10-day-cream": "\u552F\u4E00\u5305\u88C5\u7167\u7247\u542B\u5F85\u6838\u5B9E SPF/\u91CF\u5316\u5BA3\u4F20\uFF1B\u6CA1\u6709\u9002\u7528\u66FF\u4EE3\u56FE",
+  "garnier-vitamin-c-body-serum-lotion": "\u552F\u4E00\u7167\u7247\u5305\u542B\u5F85\u6838\u5B9E UV/\u91CF\u5316\u5BA3\u4F20\uFF1B\u6CA1\u6709\u9002\u7528\u66FF\u4EE3\u56FE",
+  "cocoa-radiant-body-gel-oil": "237 mL \u5DF2\u786E\u8BA4\uFF1B\u73B0\u6709\u7167\u7247\u6807\u7B7E\u4E3A 200 mL\uFF0C\u4EA6\u7F3A\u62DF\u4FDD\u7559\u5BA3\u4F20\u4F9D\u636E",
+  "calm-healing-body-lotion": "500 mL \u5DF2\u786E\u8BA4\uFF1B\u73B0\u6709\u7167\u7247\u6807\u7B7E\u4E3A 400 mL\uFF0C\u4EA6\u7F3A\u62DF\u4FDD\u7559\u5BA3\u4F20\u4F9D\u636E"
+};
+
 // client/src/data/publicAssets.ts
 var PUBLIC_BLOB_ASSET_BASE_URL = "https://mqy8jl9r1rvvbx0e.public.blob.vercel-storage.com/topperfume-b2b-v2";
 function publicAssetUrl(key) {
@@ -1842,7 +1860,7 @@ var realVisual = {
   fragranceAmber: publicAssetUrl("fragrance-vanilla-amber_ac1dc3b6.jpg"),
   fragranceBlue: publicAssetUrl("fragrance-santal-berry_0dac099c.jpg")
 };
-var products = [
+var allProducts = [
   ...latestListingProducts,
   ...combinedListingProducts,
   {
@@ -1910,6 +1928,7 @@ var products = [
   { slug: "12-color-face-contour-correcting-palette", name: "12-Color Face Contour & Correcting Palette", category: "makeup", format: "[TO CONFIRM]", descriptor: "12 Colors \xB7 Sculpt \xB7 Define \xB7 Correct", image: realVisual.faceContourCorrectingPalette, realImage: true, tags: ["Face Makeup", "12 COLORS", "CONTOUR PALETTE", "PRIVATE LABEL", "Product visual"], briefing: "A bold purple compact with twelve visible directions spanning light beige through rich chocolate brown, with bright orange, red and deep red / burgundy accents. This multi-pan format gives buyers a concise contouring and face-makeup color-direction reference for curated face-makeup assortments. The accent pans may be suitable for correcting or artistic face-makeup applications depending on final confirmed formula and shade positioning. Formula structure, finish, coverage, texture, ingredients, precise shade names and codes, and pan weight remain to be confirmed.", sku: "MU-FACE-CONTOUR-012", b2bPrice: "US$2.99 / pc", productType: "Contour Palette / Multi-Use Face Palette", primaryBenefit: "Sculpting \xB7 Contouring \xB7 Correcting", numberOfShades: "12", colorFamily: "Beige \xB7 Tan \xB7 Brown \xB7 Orange \xB7 Red \xB7 Deep Red", paletteFormat: "Compact 12-Pan", finish: "[TO CONFIRM]", coverage: "[TO CONFIRM]", texture: "[TO CONFIRM]", individualPanWeight: "[TO CONFIRM]", vegan: "Vegan positioning according to supplied product information", veganCertification: "[TO CONFIRM]", shadeOptions: "Light Beige \xB7 Soft Sand \xB7 Warm Beige \xB7 Honey Beige \xB7 Golden Tan \xB7 Taupe Brown \xB7 Medium Brown \xB7 Deep Brown \xB7 Rich Chocolate Brown \xB7 Bright Orange \xB7 Red \xB7 Deep Red / Burgundy", shadeCodes: "[TO CONFIRM]", ingredients: "[TO CONFIRM]", standardMoq: "12 pcs", leadTime: "Approx. 7 days", sampleAvailability: "Available", packaging: "Bold purple compact with a 12-pan layout; supplied visual shows neutral beige-to-brown directions alongside bright orange, red and deep red / burgundy accents.", privateLabelAvailable: true, privateLabelStatus: "Available according to supplied product information", customLogoStatus: "[TO CONFIRM]", customPackagingStatus: "[TO CONFIRM]", customShadesStatus: "[TO CONFIRM]", customizationMoq: "[TO CONFIRM]", customizationStatus: "[TO CONFIRM]", dataStatus: "confirmed" },
   { slug: "pure-seduction-fragrance-mist-lotion-set", name: "Pure Seduction Fragrance Mist & Lotion Set", category: "fragrance", format: "2-Piece Set \xB7 250 ml + 236 ml", descriptor: "2-Piece Set \xB7 Fragrance Layering \xB7 Gift Ready", image: realVisual.pureSeductionMistLotionSet, realImage: true, tags: ["2-PIECE SET", "BODY MIST + LOTION", "GIFT READY", "Product visual"], briefing: "A coordinated women\u2019s body-fragrance and body-care duo for everyday layering and gifting. This set pairs a 250 ml Fragrance Mist with a matching 236 ml Fragrance Lotion in a unified pink presentation. The two-piece format gives buyers a clear Body Mist + Lotion option for women\u2019s fragrance collections, gift assortments and beauty retail. Fragrance notes, ingredients and product-specific customization scope remain to be confirmed.", sku: "FR-SET-PS-250236", b2bPrice: "US$3.99 / set", gender: "Women", productType: "2-Piece Fragrance Mist & Body Lotion Set", primaryBenefit: "Body Mist + Lotion \xB7 Fragrance Layering \xB7 Gift Ready", setComponents: "2 pieces: Fragrance Mist \u2014 250 ml / 8.4 fl oz \xB7 Fragrance Lotion \u2014 236 ml / 8 fl oz", fragrance: "[TO CONFIRM]", ingredients: "[TO CONFIRM]", standardMoq: "12 sets", leadTime: "Approx. 7 days", sampleAvailability: "Available", packaging: "Transparent pink fragrance-mist bottle with a gold-tone cap paired with a soft metallic-pink fragrance-lotion tube; supplied visual is a coordinated pink floral gift presentation.", privateLabelStatus: "[TO CONFIRM]", customLogoStatus: "[TO CONFIRM]", customPackagingStatus: "[TO CONFIRM]", customFragranceStatus: "[TO CONFIRM]", customizationMoq: "[TO CONFIRM]", customizationStatus: "[TO CONFIRM]", dataStatus: "confirmed" }
 ];
+var products = allProducts.filter((product) => !publicationHolds[product.slug]);
 var getProduct = (slug) => products.find((product) => product.slug === slug);
 
 // shared/productTerms.ts

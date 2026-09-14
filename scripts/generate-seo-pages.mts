@@ -1,11 +1,16 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile, rm } from "node:fs/promises";
 import path from "node:path";
 import { prerenderBody } from "./prerender";
 import { products } from "../client/src/data/products";
-import { buildRobotsTxt, buildSitemapXml, collectionSeo, contactSeo, getProductSeo, homeSeo, lowMoqPerfumeSeo, type SeoPage } from "../shared/seo";
+import { buildRobotsTxt, buildSitemapXml, collectionSeo, contactSeo, privacySeo, getProductSeo, homeSeo, lowMoqPerfumeSeo, type SeoPage } from "../shared/seo";
 
 const outputDirectory = path.resolve(import.meta.dirname, "..", "dist", "public");
 const indexable = process.env.VERCEL_ENV !== "preview" && process.env.SITE_INDEXABLE === "true";
+if (process.env.VERCEL_ENV === 'production') {
+  const internalDirectory = path.resolve(outputDirectory, 'previews');
+  if (path.dirname(internalDirectory) !== outputDirectory) throw new Error('Unsafe internal build path');
+  await rm(internalDirectory, { recursive: true, force: true });
+}
 
 function escapeHtml(value: string) {
   return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -38,6 +43,7 @@ const template = await readFile(path.join(outputDirectory, "index.html"), "utf8"
 await writeFile(path.join(outputDirectory, "index.html"), renderPageHtml(template, homeSeo), "utf8");
 await writePage("low-moq-perfume-manufacturer", renderPageHtml(template, lowMoqPerfumeSeo));
 await writePage("contact", renderPageHtml(template, contactSeo));
+await writePage('privacy', renderPageHtml(template, privacySeo));
 await writeFile(path.join(outputDirectory, "404.html"), renderPageHtml(template, { title: "Page not found | TopPerfume", description: "This page could not be found.", path: "/404", structuredData: [] }).replace('content="index,follow"', 'content="noindex,nofollow"'), "utf8");
 
 for (const [category, seo] of Object.entries(collectionSeo)) {
