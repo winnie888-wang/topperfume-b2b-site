@@ -37,7 +37,7 @@ describe("GA4 analytics event definitions", () => {
     expect(JSON.stringify(event)).not.toContain("price");
   });
 
-  it("maps the three principal WhatsApp actions to generate_lead and whatsapp_click", () => {
+  it("records outbound intent without treating a WhatsApp click as a received lead", () => {
     const cases = [
       ["sample", "Request Free Sample", "sample"],
       ["quote", "Get Wholesale Quote", "quote"],
@@ -46,14 +46,13 @@ describe("GA4 analytics event definitions", () => {
 
     for (const [intent, label, leadType] of cases) {
       const events = buildWhatsAppEvents({ intent, ctaLabel: label, context: product, pageLocation });
-      expect(events).toHaveLength(2);
-      expect(events[0]).toMatchObject({ name: "generate_lead", params: { lead_type: leadType, cta_label: label, product_name: product.productName, sku: product.sku, category: product.category, page_location: pageLocation } });
-      expect(events[1]).toMatchObject({ name: "whatsapp_click", params: { lead_type: leadType, cta_label: label } });
+      expect(events).toHaveLength(1);
+      expect(events[0]).toMatchObject({ name: "whatsapp_click", params: { lead_type: leadType, cta_label: label, product_name: product.productName, sku: product.sku, category: product.category, page_location: pageLocation, interaction_type: "outbound_click" } });
     }
   });
 
   it("records generic WhatsApp use without inventing a lead type", () => {
     const events = buildWhatsAppEvents({ intent: "whatsapp", ctaLabel: "WhatsApp", context: product, pageLocation });
-    expect(events).toEqual([{ name: "whatsapp_click", params: { page_location: pageLocation, cta_label: "WhatsApp", product_name: product.productName, sku: product.sku, category: product.category } }]);
+    expect(events).toEqual([{ name: "whatsapp_click", params: { page_location: pageLocation, cta_label: "WhatsApp", product_name: product.productName, sku: product.sku, category: product.category, interaction_type: "outbound_click" } }]);
   });
 });

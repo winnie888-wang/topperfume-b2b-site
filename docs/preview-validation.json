@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "pages": 57,
+  "httpRoutesChecked": 57,
+  "canonicalDomain": "https://topperfume.cn",
+  "reviewPage": "http://localhost:3001/previews/combined-listing-review.html",
+  "sitePreview": "http://localhost:3001/collections/skincare",
+  "productionDeployment": false
+}

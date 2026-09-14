@@ -1,0 +1,182 @@
+{
+  "archive": "TopPerfume_Combined_Listing_Pack (2).zip",
+  "archiveSHA256": "e71000b30edd661c6abc04c1c85a11ceeb06c3fc890b67424c8ab976bdc27adc",
+  "imageCount": 35,
+  "images": [
+    {
+      "batch": "01",
+      "path": "Batch01_5BodyCare/images/BC-01-daily-niacinamide-body-lotion-supplied.png",
+      "sha256": "04376e0e9463c966c819f44457ac9ffc47d6345ab4283b4b516899d96dce3226"
+    },
+    {
+      "batch": "01",
+      "path": "Batch01_5BodyCare/images/BC-02-luminous-glow-body-wash-supplied.png",
+      "sha256": "3a4b6b7433a8e68de9ac7244f79c8b6c1b2ea7fb7cca8c3392ead5313a747fe0"
+    },
+    {
+      "batch": "01",
+      "path": "Batch01_5BodyCare/images/BC-03-gluta-glow-body-lotion-500ml-supplied.png",
+      "sha256": "db9427150ceacf0834a2613e19478e138f67b7e73d7409bd71018f142e59c75a"
+    },
+    {
+      "batch": "01",
+      "path": "Batch01_5BodyCare/images/BC-04-vanilla-cashmere-whipped-oil-body-butter-283g-supplied.png",
+      "sha256": "15dbcecd77cba65cc55f176a30f04f30e6f08ebe31d4600b9a170088d4a68c7a"
+    },
+    {
+      "batch": "01",
+      "path": "Batch01_5BodyCare/images/BC-05-vanilla-cashmere-body-wash-473ml-supplied.png",
+      "sha256": "28505e32bd6a35162be615eb32a1b229ca0cc2a634aadb276a707f160572db69"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-01-vaseline-body-oil-six-variants.png",
+      "sha256": "75ede2d5c72f3cb19cf49ff8430ef79cacb4874f89f4dd5a873ad671aa1a01b4"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-02-khadlaj-hareem-al-sultan.png",
+      "sha256": "fc41dcca1350b8f36e2d4e9bdef889fa50f99673b670e7f325d1579f65f6b136"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-03-olay-regenerist-day-night.png",
+      "sha256": "75020a73a2e1871a399b2743667486ff3f2b180a74bc1ae843c7387172a97dfc"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-04-nivea-q10-day-cream.png",
+      "sha256": "f6cd8fce899420a448379bed22f11a6d443d8be4251b1276c1e55f0d2c1b0843"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-05-the-ordinary-glycolic-toner.png",
+      "sha256": "bc636bb62e9cf77ad0191e0577c8aeb43705f53429ccf3cdce3e05502fb488de"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-06-hobby-pure-orchid-shower-gel.png",
+      "sha256": "2319a4a8c69abb1e6fec6ce1b60a272ab9e73da18da0ea620e1bdb78910cec3e"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-07-dr-teals-lavender-body-lotion.png",
+      "sha256": "67c183255a0f9f9b9cf0ad4897ac65a72134087ae30e7460c7c144fe833cbc06"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-08-st-ives-oatmeal-shea-body-lotion.png",
+      "sha256": "4646609620ab63518542878fabe04dee31b9c6df05b7d5423b3d606fce7ad831"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-09-st-ives-coconut-orchid-body-lotion.png",
+      "sha256": "dd1a1ccd3eca80051c57040f4b4a803122b3464a3b672cb9da69c12c1850eaee"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-10-garnier-vitamin-c-body-serum-lotion.png",
+      "sha256": "b6fc71069f7e1ee1e72dc9381e5fb30b206e21e44680b523f75297bd2cef0034"
+    },
+    {
+      "batch": "02",
+      "path": "Batch02_11Groups/images/B02-11-simple-moisturising-facial-wash.png",
+      "sha256": "3bbc6730ea1aad4638773b2b68fd247a48be16a36c13a008ae941cdfa248984b"
+    },
+    {
+      "batch": "03",
+      "path": "Batch03_7Perfumes/images/PF-01-lattafa-al-noble-ameer-supplied.png",
+      "sha256": "bc65c1eec906855043976f3f5b6854cb187a7cdbfa9dbac785dba43a8c16e490"
+    },
+    {
+      "batch": "03",
+      "path": "Batch03_7Perfumes/images/PF-02-lattafa-badee-al-oud-sublime-supplied.png",
+      "sha256": "381eb5fc7cee6d07041709b7b5528a02410b1e53d9c8a751abe3c1ba97514671"
+    },
+    {
+      "batch": "03",
+      "path": "Batch03_7Perfumes/images/PF-03-lattafa-khamrah-qahwa-supplied.png",
+      "sha256": "5bb9d5ca14bc262ecc9a3f67fc9e4216f634041a1e460b105918d64e37c5adc9"
+    },
+    {
+      "batch": "03",
+      "path": "Batch03_7Perfumes/images/PF-04-lattafa-khamrah-supplied.png",
+      "sha256": "33b77fa42f3f0ebb8fb52eca657993bdd65aae1cfd52121fff7fa5e3829f4a52"
+    },
+    {
+      "batch": "03",
+      "path": "Batch03_7Perfumes/images/PF-05-lattafa-al-noble-safeer-supplied.png",
+      "sha256": "8216b8bc27b93640604cac328d4e72cda78d0b0672cdc2d745f3cc6fe4047105"
+    },
+    {
+      "batch": "03",
+      "path": "Batch03_7Perfumes/images/PF-06-kayali-oudgasm-cafe-oud-19-supplied.png",
+      "sha256": "6571bd56efb378b3c99f067eaf4fb5234dd748bfabdc5ad9710ab29837417da7"
+    },
+    {
+      "batch": "03",
+      "path": "Batch03_7Perfumes/images/PF-07-french-avenue-liquid-brun-supplied.png",
+      "sha256": "0083354578581f41ebf5b3e71f8f161ec252f9685d67076418dc1dcb5a94a200"
+    },
+    {
+      "batch": "04",
+      "path": "Batch04_Lotions_And_GelOils/images/B04-01-glutaglow-lotion-400ml-600ml.jpg",
+      "sha256": "9c7a60136ae027f50d4cc47c746b23666b706d1c75e13355db8422bdfcdfeb67"
+    },
+    {
+      "batch": "04",
+      "path": "Batch04_Lotions_And_GelOils/images/B04-02-healthy-white-lotion-400ml.jpg",
+      "sha256": "7cabe1c2429d726eadc35859f785264c742ab2bcb8806f013fcb72e7822b767c"
+    },
+    {
+      "batch": "04",
+      "path": "Batch04_Lotions_And_GelOils/images/B04-03-gluta-ceramide-200ml.jpg",
+      "sha256": "bbe8b1c8462696daeecee3d2f7e71e97365b37b2a3957b2501f8301bd37ad9a8"
+    },
+    {
+      "batch": "04",
+      "path": "Batch04_Lotions_And_GelOils/images/B04-04-sunlit-glow-gel-oil-200ml-main.jpg",
+      "sha256": "ae26ac96dd137c1da9c443346372a462d2b4a6e6ae65c030b114f0ba8d585351"
+    },
+    {
+      "batch": "04",
+      "path": "Batch04_Lotions_And_GelOils/images/B04-04-sunlit-glow-gel-oil-200ml-alternate.jpg",
+      "sha256": "dcdf3f7068f6d44457bf77c06ff710b1f5278fc937628d64e9265e6051793d3a"
+    },
+    {
+      "batch": "05",
+      "path": "Batch05_Lotions_And_BodyOils/images/B05-01-daily-niacinamide-body-lotion.jpg",
+      "sha256": "43ae748176830aa302866f1dcea119f3926073bb94afa714aaa1d43441ded7b4"
+    },
+    {
+      "batch": "05",
+      "path": "Batch05_Lotions_And_BodyOils/images/B05-02-cocoa-radiant-body-gel-oil.jpg",
+      "sha256": "ae32e264d46bebd5a844ac7e268a46797443994c02e5abbcb68b86a38fc52d4b"
+    },
+    {
+      "batch": "05",
+      "path": "Batch05_Lotions_And_BodyOils/images/B05-03-essential-healing-body-lotion-725ml.jpg",
+      "sha256": "0f887c825cbd4073e19fc8dac6fb597c9121336ac57a21a8318a17541d1bf99a"
+    },
+    {
+      "batch": "05",
+      "path": "Batch05_Lotions_And_BodyOils/images/B05-04-vitamin-b3-body-oil-200ml.jpg",
+      "sha256": "cf59850b45d4fc18e1f98d142f3b1f03fc4462d2c69fbd48aecd44c2d7395c35"
+    },
+    {
+      "batch": "05",
+      "path": "Batch05_Lotions_And_BodyOils/images/B05-05-cocoa-radiant-body-oil-200ml.jpg",
+      "sha256": "68424294cb27aece79e477e0ea9f4298d74b2077434672ad834104005eb8bad4"
+    },
+    {
+      "batch": "05",
+      "path": "Batch05_Lotions_And_BodyOils/images/B05-06-advanced-repair-body-lotion-725ml.jpg",
+      "sha256": "8e14ef14921bcc7cffe3c9bd5420a67225d1b47d6a367d44b24cd145fa4fd3e8"
+    },
+    {
+      "batch": "05",
+      "path": "Batch05_Lotions_And_BodyOils/images/B05-07-calm-healing-body-lotion.jpg",
+      "sha256": "9b01eddcb4ce84a1b15b4850ed501241dbfabac87896432b820eddace25d4c3a"
+    }
+  ]
+}

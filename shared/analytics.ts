@@ -1,5 +1,13 @@
 export const GA4_MEASUREMENT_ID = "G-4BX79STS9F";
 
+export function isAnalyticsEnabled(hostname: string, robots: string) {
+  return ["topperfume.cn", "www.topperfume.cn"].includes(hostname) && !robots.includes("noindex");
+}
+
+export function buildInquirySuccessEvent(intent: string) {
+  return { name: "inquiry_submit_success", params: { inquiry_intent: intent, interaction_type: "provider_accepted_submission" } };
+}
+
 export type AnalyticsProductContext = {
   productName?: string;
   sku?: string;
@@ -72,7 +80,6 @@ export function buildWhatsAppEvents({
   };
 
   return [
-    ...(leadType ? [{ name: "generate_lead", params: baseParams }] : []),
-    { name: "whatsapp_click", params: baseParams },
+    { name: "whatsapp_click", params: { ...baseParams, interaction_type: "outbound_click" } },
   ] as const;
 }

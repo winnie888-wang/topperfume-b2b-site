@@ -1,0 +1,71 @@
+{
+  "document_type": "Product intake facts; adapt to the existing application schema",
+  "product_count": 1,
+  "suggested_display_name": "Vitamin C Body Lotion — 502 mL",
+  "suggested_category": "Skincare",
+  "suggested_subcategory": "Body Lotion",
+  "suggested_slug_candidate": "vitamin-c-body-lotion-502ml",
+  "sku": null,
+  "user_confirmed": {
+    "currency": "USD",
+    "price_per_piece": 2.99,
+    "minimum_order_quantity_pieces": 2,
+    "source_text": "MOQ: 2 PIECES price USD 2.99/PIECES",
+    "recommended_price_display": "US$2.99 / piece",
+    "recommended_moq_display": "MOQ: 2 pieces"
+  },
+  "observed_on_supplied_label": {
+    "product_label_name": "Vitamin C Brightening Body Lotion",
+    "size_as_printed": "17 FL OZ / 502 mL",
+    "additional_label_text": "Radiant & Moisturizing",
+    "verification_note": "Transcribed from supplied artwork; full ingredient list and claim substantiation have not been provided."
+  },
+  "gallery": [
+    {
+      "order": 1,
+      "file": "images/01-vitamin-c-body-lotion-502ml-main.png",
+      "role": "main",
+      "alt": "Vitamin C body lotion, 502 mL, front view",
+      "provenance": "AI-edited main image based on the supplied single-bottle image"
+    },
+    {
+      "order": 2,
+      "file": "images/02-vitamin-c-body-lotion-502ml-texture.png",
+      "role": "texture",
+      "alt": "Vitamin C body lotion with a lotion texture illustration",
+      "provenance": "User-supplied product artwork"
+    },
+    {
+      "order": 3,
+      "file": "images/03-vitamin-c-body-lotion-502ml-benefits.png",
+      "role": "benefits_artwork",
+      "alt": "Vitamin C body lotion with supplied product benefit descriptions",
+      "provenance": "User-supplied product artwork"
+    },
+    {
+      "order": 4,
+      "file": "images/04-vitamin-c-body-lotion-502ml-two-bottles.png",
+      "role": "alternate_views",
+      "alt": "Two bottles of the same Vitamin C body lotion shown at different angles",
+      "provenance": "User-supplied product artwork; not a two-piece bundle offer"
+    }
+  ],
+  "important_rules": [
+    "These four images belong to ONE product. Repeated uploads are duplicates, not additional products.",
+    "US$2.99 is the price per piece, including when the two-bottle image is displayed. MOQ is two pieces; no bundle price has been supplied.",
+    "Do not overwrite a 444 mL / 15 fl oz Vitamin C + Niacinamide product merely because its name is similar.",
+    "Validate any proposed slug against existing routes. Do not invent a supplier SKU.",
+    "An orange illustration does not establish fragrance, ingredient concentration, or a full formulation.",
+    "Artwork claim text is not independent substantiation. Do not extend it into medical, guaranteed-result, or duration claims.",
+    "Keep price and MOQ as editable webpage text, not part of image pixels."
+  ],
+  "not_provided": [
+    "Supplier SKU and brand ownership details",
+    "Full INCI ingredient list and vitamin C concentration",
+    "Fragrance, shelf life, and detailed usage instructions",
+    "Stock availability, dispatch time, and shipping or tax terms",
+    "Carton dimensions, carton quantity, and shipping weight",
+    "Certifications and supporting evidence for benefit claims",
+    "Sample policy and private-label/customization capability or MOQ"
+  ]
+}

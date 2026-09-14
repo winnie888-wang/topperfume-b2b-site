@@ -23,7 +23,7 @@ describe("Production SEO foundation", () => {
     const sitemap = buildSitemapXml(products);
     const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
 
-    expect(urls).toHaveLength(products.length + 5);
+    expect(urls).toHaveLength(products.length + 6);
     expect(urls[0]).toBe("https://topperfume.cn/");
     expect(urls).toContain("https://topperfume.cn/collections/fragrance");
     expect(urls).toContain("https://topperfume.cn/collections/skincare");
@@ -36,7 +36,7 @@ describe("Production SEO foundation", () => {
   });
 
   it("publishes a crawlable robots policy that references the canonical sitemap", () => {
-    const robots = buildRobotsTxt();
+    const robots = buildRobotsTxt(true);
     expect(robots).toContain("User-agent: *");
     expect(robots).toContain("Allow: /");
     expect(robots).toContain("Disallow: /api/");
@@ -46,7 +46,7 @@ describe("Production SEO foundation", () => {
 
   it("publishes real offers for products with confirmed prices without inventing ratings or inventory", () => {
     const pricedProducts = products.filter(product => getProductOffer(product));
-    expect(pricedProducts).toHaveLength(21);
+    expect(pricedProducts).toHaveLength(51);
 
     for (const product of pricedProducts) {
       const offer = getProductOffer(product);
@@ -58,10 +58,14 @@ describe("Production SEO foundation", () => {
         url: `https://topperfume.cn/products/${product.slug}`,
       });
       expect(typeof offer?.price).toBe("number");
-      expect(schema).toMatchObject({ "@type": "Product", offers: offer });
+      if (product.variants) {
+        expect(schema).toMatchObject({ "@type": "ProductGroup" });
+        expect(schema.hasVariant).toHaveLength(product.variants.length);
+      } else expect(schema).toMatchObject({ "@type": "Product", offers: offer });
       expect(JSON.stringify(schema)).not.toContain("aggregateRating");
       expect(JSON.stringify(schema)).not.toContain("review");
-      expect(JSON.stringify(schema)).not.toContain("availability");
+      expect(schema).not.toHaveProperty("availability");
+      expect(offer).not.toHaveProperty("availability");
       expect(JSON.stringify(schema)).not.toContain("itemCondition");
     }
 

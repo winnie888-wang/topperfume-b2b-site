@@ -1,7 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { buildWhatsAppCtaSummary, getCanonicalProductUrl, getWhatsAppCtaUrl } from "@/data/business";
+import { buildInquirySummary, buildWhatsAppCtaSummary, getCanonicalProductUrl, getWhatsAppCtaUrl } from "@/data/business";
 
 describe("WhatsApp-first CTA messages", () => {
+  it("makes the submitted-form follow-up product link usable outside the website", () => {
+    const summary = buildInquirySummary({ intent: "quote", context: { productUrl: "/products/vitamin-c-body-lotion-502ml" }, name: "QA", country: "QA", email: "qa@example.invalid", quantity: "2", whatsapp: "", customization: "", notes: "" });
+    expect(summary).toContain("Product URL: https://topperfume.cn/products/vitamin-c-body-lotion-502ml");
+    expect(summary).not.toContain("Product URL: /products/");
+  });
   const context = {
     productName: "Production QA Product",
     sku: "QA-001",
@@ -21,12 +26,21 @@ describe("WhatsApp-first CTA messages", () => {
     expect(message).not.toContain(".vercel.app");
     expect(message).toContain("Category: fragrance");
     expect(message).toContain("MOQ: 2 pcs");
-    expect(message).toContain("Lead Time: Approx. 7 days");
+    expect(message).toContain("Estimated dispatch is usually around 7 days");
+    expect(message).toContain("not a delivery estimate or a guarantee for every order");
+    expect(message).toContain("confirmed in writing");
+    expect(message).toContain("Submitting an inquiry does not create an order");
   });
 
   it("uses the requested wholesale-quote and customization intent copy", () => {
     expect(buildWhatsAppCtaSummary({ intent: "quote", context })).toContain("Hi, I'd like to get a wholesale quote for this product.");
     expect(buildWhatsAppCtaSummary({ intent: "project", context })).toContain("Hi, I'm interested in private label / OEM / ODM customization for this product.");
+  });
+
+  it("omits unconfirmed prices from inquiry drafts", () => {
+    const message = buildWhatsAppCtaSummary({ intent: "quote", context: { ...context, unitPrice: "[TO CONFIRM]" } });
+    expect(message).not.toContain("Unit Price:");
+    expect(message).not.toContain("[TO CONFIRM]");
   });
 
   it("creates a wa.me URL without exposing any server-side credential", () => {

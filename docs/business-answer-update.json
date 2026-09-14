@@ -1,0 +1,648 @@
+{
+  "sourceFile": "TopPerfume_业务信息答案.json",
+  "sourceSHA256": "d28d87785efc9efec12e5ab4a5840b6dedda987e939511a35b8bb331f99bf8e1",
+  "nonemptyAnswers": 27,
+  "appliedAnswerIds": [
+    "B02-02",
+    "B02-06",
+    "B02-08",
+    "B02-09",
+    "B02-10",
+    "B05-01",
+    "B05-02",
+    "B05-07",
+    "PF-02",
+    "PF-03",
+    "PF-04",
+    "PF-07",
+    "MATCH-B04-03",
+    "MATCH-B04-04",
+    "MATCH-B05-01",
+    "MATCH-B05-04",
+    "MATCH-B05-05",
+    "DOC-B04-01-400",
+    "DOC-B04-02",
+    "DOC-B05-02",
+    "DOC-B05-03",
+    "DOC-B05-06",
+    "DOC-B05-07",
+    "DOC-BC-01",
+    "DOC-BC-02",
+    "DOC-BC-03",
+    "DOC-BC-04"
+  ],
+  "changedProducts": [
+    {
+      "ids": [
+        "BC-01"
+      ],
+      "slug": "daily-niacinamide-body-lotion",
+      "name": "Daily Niacinamide Body Lotion — 500 mL",
+      "before": {
+        "format": "500 mL",
+        "unitPrice": 2.99,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      },
+      "after": {
+        "format": "500 mL",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "BC-02"
+      ],
+      "slug": "luminous-glow-body-wash",
+      "name": "Luminous Glow Body Wash — 500 mL",
+      "before": {
+        "format": "500 mL",
+        "unitPrice": 2.99,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      },
+      "after": {
+        "format": "500 mL",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "BC-03"
+      ],
+      "slug": "gluta-glow-body-lotion-500ml",
+      "name": "Gluta Glow Body Lotion — 500 mL",
+      "before": {
+        "format": "500 mL",
+        "unitPrice": 2.99,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      },
+      "after": {
+        "format": "500 mL",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "BC-04"
+      ],
+      "slug": "vanilla-cashmere-whipped-oil-body-butter-283g",
+      "name": "Vanilla Cashmere Whipped Oil Body Butter — 283 g",
+      "before": {
+        "format": "10 OZ / 283 g",
+        "unitPrice": 4.99,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      },
+      "after": {
+        "format": "283 g",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "B02-01-01",
+        "B02-01-02",
+        "B02-01-03",
+        "B02-01-04",
+        "B02-01-05",
+        "B02-01-06"
+      ],
+      "slug": "vaseline-body-care-series-200ml",
+      "name": "Vaseline Body Care Series — 200 mL / 237 mL",
+      "before": {
+        "format": "200 mL",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": [
+          {
+            "id": "B02-01-01",
+            "name": "Vaseline Vitamin B3 Body Oil",
+            "imagePosition": "leftmost",
+            "unitPrice": 3.0,
+            "minimumOrderQuantity": 6
+          },
+          {
+            "id": "B02-01-02",
+            "name": "Vaseline Cocoa Radiant Body Oil",
+            "imagePosition": "second from left",
+            "unitPrice": 3.0,
+            "minimumOrderQuantity": 6
+          },
+          {
+            "id": "B02-01-03",
+            "name": "Vaseline Sunlit Glow Body Oil",
+            "imagePosition": "third from left",
+            "unitPrice": 3.0,
+            "minimumOrderQuantity": 6
+          },
+          {
+            "id": "B02-01-04",
+            "name": "Vaseline Golden Glow Body Oil",
+            "imagePosition": "fourth from left",
+            "unitPrice": 3.0,
+            "minimumOrderQuantity": 6
+          },
+          {
+            "id": "B02-01-05",
+            "name": "Vaseline UV Extra Brightening Gluta Ceramide",
+            "imagePosition": "fifth from left",
+            "unitPrice": 3.0,
+            "minimumOrderQuantity": 6,
+            "note": "The precise product format of Gluta Ceramide is to be confirmed."
+          },
+          {
+            "id": "B02-01-06",
+            "name": "Vaseline Cera Glow Body Gel Oil",
+            "imagePosition": "rightmost",
+            "unitPrice": 3.0,
+            "minimumOrderQuantity": 6
+          }
+        ]
+      },
+      "after": {
+        "format": "200 mL / 237 mL, by selected variant",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": [
+          {
+            "id": "B02-01-01",
+            "name": "Vaseline Vitamin B3 Body Oil — 237 mL",
+            "imagePosition": "leftmost",
+            "unitPrice": 3.0,
+            "minimumOrderQuantity": 6,
+            "format": "237 mL",
+            "note": "Confirmed net contents: 237 mL. The reference image shows the previous 200 mL label; updated packaging photography is pending."
+          },
+          {
+            "id": "B02-01-02",
+            "name": "Vaseline Cocoa Radiant Body Oil — 237 mL",
+            "imagePosition": "second from left",
+            "unitPrice": 3.0,
+            "minimumOrderQuantity": 6,
+            "format": "237 mL",
+            "note": "Confirmed net contents: 237 mL. The reference image shows the previous 200 mL label; updated packaging photography is pending."
+          },
+          {
+            "id": "B02-01-03",
+            "name": "Vaseline Sunlit Glow Body Oil — 237 mL",
+            "imagePosition": "third from left",
+            "unitPrice": 3.0,
+            "minimumOrderQuantity": 6,
+            "format": "237 mL",
+            "note": "Confirmed net contents: 237 mL. The reference image shows the previous 200 mL label; updated packaging photography is pending."
+          },
+          {
+            "id": "B02-01-04",
+            "name": "Vaseline Golden Glow Body Oil — 200 mL",
+            "imagePosition": "fourth from left",
+            "unitPrice": 3.0,
+            "minimumOrderQuantity": 6,
+            "format": "200 mL"
+          },
+          {
+            "id": "B02-01-05",
+            "name": "Vaseline UV Extra Brightening Gluta Ceramide — 237 mL",
+            "imagePosition": "fifth from left",
+            "unitPrice": 3.0,
+            "minimumOrderQuantity": 6,
+            "note": "The precise product format of Gluta Ceramide is to be confirmed. Confirmed net contents: 237 mL. The reference image shows the previous 200 mL label; updated packaging photography is pending.",
+            "format": "237 mL"
+          },
+          {
+            "id": "B02-01-06",
+            "name": "Vaseline Cera Glow Body Gel Oil — 200 mL",
+            "imagePosition": "rightmost",
+            "unitPrice": 3.0,
+            "minimumOrderQuantity": 6,
+            "format": "200 mL"
+          }
+        ]
+      }
+    },
+    {
+      "ids": [
+        "B02-02"
+      ],
+      "slug": "khadlaj-hareem-al-sultan",
+      "name": "Khadlaj Hareem Al Sultan — 100 mL",
+      "before": {
+        "format": "Capacity to be confirmed",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      },
+      "after": {
+        "format": "100 mL",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "B02-06"
+      ],
+      "slug": "hobby-pure-orchid-shower-gel",
+      "name": "HOBBY Fresh Care Pure Orchid Shower Gel — 500 mL",
+      "before": {
+        "format": "Capacity to be confirmed",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      },
+      "after": {
+        "format": "500 mL",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "B02-08"
+      ],
+      "slug": "st-ives-oatmeal-shea-body-lotion",
+      "name": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion — 500 mL",
+      "before": {
+        "format": "Capacity to be confirmed",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      },
+      "after": {
+        "format": "500 mL",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "B02-09"
+      ],
+      "slug": "st-ives-coconut-orchid-body-lotion",
+      "name": "St. Ives Softening Coconut & Orchid Body Lotion — 500 mL",
+      "before": {
+        "format": "Capacity to be confirmed",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      },
+      "after": {
+        "format": "500 mL",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "B02-10"
+      ],
+      "slug": "garnier-vitamin-c-body-serum-lotion",
+      "name": "Garnier Bright Complete Vitamin C Body Serum Lotion — 500 mL",
+      "before": {
+        "format": "Capacity to be confirmed",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      },
+      "after": {
+        "format": "500 mL",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "PF-02"
+      ],
+      "slug": "lattafa-badee-al-oud-sublime",
+      "name": "Lattafa Bade’e Al Oud Sublime — 100 mL",
+      "before": {
+        "format": "Capacity to be confirmed",
+        "unitPrice": 5.0,
+        "minimumOrderQuantity": 2,
+        "variants": null
+      },
+      "after": {
+        "format": "100 mL",
+        "unitPrice": 5.0,
+        "minimumOrderQuantity": 2,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "PF-03"
+      ],
+      "slug": "lattafa-khamrah-qahwa",
+      "name": "Lattafa Khamrah Qahwa — 100 mL",
+      "before": {
+        "format": "Capacity to be confirmed",
+        "unitPrice": 5.0,
+        "minimumOrderQuantity": 2,
+        "variants": null
+      },
+      "after": {
+        "format": "100 mL",
+        "unitPrice": 5.0,
+        "minimumOrderQuantity": 2,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "PF-04"
+      ],
+      "slug": "lattafa-khamrah",
+      "name": "Lattafa Khamrah — 100 mL",
+      "before": {
+        "format": "Capacity to be confirmed",
+        "unitPrice": 5.0,
+        "minimumOrderQuantity": 2,
+        "variants": null
+      },
+      "after": {
+        "format": "100 mL",
+        "unitPrice": 5.0,
+        "minimumOrderQuantity": 2,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "PF-07"
+      ],
+      "slug": "french-avenue-liquid-brun",
+      "name": "French Avenue Liquid Brun — 100 mL",
+      "before": {
+        "format": "Capacity to be confirmed",
+        "unitPrice": 5.0,
+        "minimumOrderQuantity": 2,
+        "variants": null
+      },
+      "after": {
+        "format": "100 mL",
+        "unitPrice": 5.0,
+        "minimumOrderQuantity": 2,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "B04-01-400",
+        "B04-01-600"
+      ],
+      "slug": "glutaglow-body-lotion-400ml-600ml",
+      "name": "GlutaGlow Body Lotion — 725 mL",
+      "before": {
+        "format": "400 mL / 600 mL",
+        "unitPrice": 2.99,
+        "minimumOrderQuantity": 6,
+        "variants": [
+          {
+            "id": "B04-01-400",
+            "name": "GlutaGlow Body Lotion — 400 mL",
+            "format": "400 mL",
+            "imagePosition": "on the left",
+            "unitPrice": 2.99,
+            "minimumOrderQuantity": 6
+          },
+          {
+            "id": "B04-01-600",
+            "name": "GlutaGlow Body Lotion — 600 mL",
+            "format": "600 mL",
+            "imagePosition": "on the right",
+            "unitPrice": 2.99,
+            "minimumOrderQuantity": 6
+          }
+        ]
+      },
+      "after": {
+        "format": "725 mL",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "B04-02"
+      ],
+      "slug": "healthy-white-body-lotion-400ml",
+      "name": "Healthy White Body Lotion — 500 mL",
+      "before": {
+        "format": "400 mL",
+        "unitPrice": 2.99,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      },
+      "after": {
+        "format": "500 mL",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "B05-02"
+      ],
+      "slug": "cocoa-radiant-body-gel-oil",
+      "name": "Cocoa Radiant Body Gel Oil — 237 mL",
+      "before": {
+        "format": "Capacity to be confirmed",
+        "unitPrice": 2.99,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      },
+      "after": {
+        "format": "237 mL",
+        "unitPrice": 2.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "B05-03"
+      ],
+      "slug": "essential-healing-body-lotion-725ml",
+      "name": "Essential Healing Body Lotion — 500 mL",
+      "before": {
+        "format": "725 mL",
+        "unitPrice": 2.99,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      },
+      "after": {
+        "format": "500 mL",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "B05-06"
+      ],
+      "slug": "advanced-repair-body-lotion-725ml",
+      "name": "Advanced Repair Body Lotion — 500 mL",
+      "before": {
+        "format": "725 mL",
+        "unitPrice": 2.99,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      },
+      "after": {
+        "format": "500 mL",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      }
+    },
+    {
+      "ids": [
+        "B05-07"
+      ],
+      "slug": "calm-healing-body-lotion",
+      "name": "Calm Healing Body Lotion — 500 mL",
+      "before": {
+        "format": "Capacity to be confirmed",
+        "unitPrice": 2.99,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      },
+      "after": {
+        "format": "500 mL",
+        "unitPrice": 3.0,
+        "minimumOrderQuantity": 6,
+        "variants": null
+      }
+    }
+  ],
+  "capacityMissingCount": 0,
+  "pendingFragranceGroups": 5,
+  "materialReplacementGroups": [
+    {
+      "ids": [
+        "B04-01-400",
+        "B04-01-600"
+      ],
+      "name": "GlutaGlow Body Lotion — 725 mL",
+      "oldLabel": "400 mL / 600 mL",
+      "confirmedSize": "725 mL",
+      "images": [
+        "/assets/products/glutaglow-body-lotion-400ml-600ml/supplied-1-160.webp"
+      ],
+      "action": "需提供当前容量真实包装图；旧图标签未修改"
+    },
+    {
+      "ids": [
+        "B04-02"
+      ],
+      "name": "Healthy White Body Lotion — 500 mL",
+      "oldLabel": "400 mL",
+      "confirmedSize": "500 mL",
+      "images": [
+        "/assets/products/healthy-white-body-lotion-400ml/supplied-1-160.webp"
+      ],
+      "action": "需提供当前容量真实包装图；旧图标签未修改"
+    },
+    {
+      "ids": [
+        "B05-03"
+      ],
+      "name": "Essential Healing Body Lotion — 500 mL",
+      "oldLabel": "725 mL",
+      "confirmedSize": "500 mL",
+      "images": [
+        "/assets/products/essential-healing-body-lotion-725ml/supplied-1-160.webp"
+      ],
+      "action": "需提供当前容量真实包装图；旧图标签未修改"
+    },
+    {
+      "ids": [
+        "B05-06"
+      ],
+      "name": "Advanced Repair Body Lotion — 500 mL",
+      "oldLabel": "725 mL",
+      "confirmedSize": "500 mL",
+      "images": [
+        "/assets/products/advanced-repair-body-lotion-725ml/supplied-1-160.webp"
+      ],
+      "action": "需提供当前容量真实包装图；旧图标签未修改"
+    },
+    {
+      "ids": [
+        "B04-03",
+        "B02-01-05"
+      ],
+      "name": "Gluta Ceramide Body Care",
+      "oldLabel": "200 mL",
+      "confirmedSize": "237 mL",
+      "images": [
+        "/assets/products/intake-b04-03/supplied-1-160.webp",
+        "/assets/products/vaseline-body-care-series-200ml/supplied-160.webp"
+      ],
+      "action": "对照两侧均需237 mL真实包装图；不扩展到合照其他两款"
+    },
+    {
+      "ids": [
+        "B04-04",
+        "B02-01-03"
+      ],
+      "name": "Sunlit Glow Body Gel Oil",
+      "oldLabel": "200 mL",
+      "confirmedSize": "237 mL",
+      "images": [
+        "/assets/products/intake-b04-04/supplied-1-160.webp",
+        "/assets/products/intake-b04-04/supplied-2-160.webp",
+        "/assets/products/vaseline-body-care-series-200ml/supplied-160.webp"
+      ],
+      "action": "对照两侧均需237 mL真实包装图；不扩展到合照其他两款"
+    },
+    {
+      "ids": [
+        "B05-04",
+        "B02-01-01"
+      ],
+      "name": "Vitamin B3 Body Oil",
+      "oldLabel": "200 mL",
+      "confirmedSize": "237 mL",
+      "images": [
+        "/assets/products/intake-b05-04/supplied-1-160.webp",
+        "/assets/products/vaseline-body-care-series-200ml/supplied-160.webp"
+      ],
+      "action": "对照两侧均需237 mL真实包装图；不扩展到合照其他两款"
+    },
+    {
+      "ids": [
+        "B05-05",
+        "B02-01-02"
+      ],
+      "name": "Cocoa Radiant Body Oil",
+      "oldLabel": "200 mL",
+      "confirmedSize": "237 mL",
+      "images": [
+        "/assets/products/intake-b05-05/supplied-1-160.webp",
+        "/assets/products/vaseline-body-care-series-200ml/supplied-160.webp"
+      ],
+      "action": "对照两侧均需237 mL真实包装图；不扩展到合照其他两款"
+    }
+  ],
+  "retiredVariants": "C:/Users/Administrator/Desktop/topperfume-b2b-site/docs/history/before-business-answers-2026-09-11.json",
+  "note": "Existing slugs and original intake IDs are stable provenance; old GlutaGlow variants are removed from active offers and retained only in history."
+}

@@ -1,0 +1,780 @@
+{
+  "candidateCount": 41,
+  "newPages": 29,
+  "updatedExistingProducts": [],
+  "retainedExistingProducts": 23,
+  "entries": [
+    {
+      "intakeIds": [
+        "BC-01"
+      ],
+      "slug": "daily-niacinamide-body-lotion",
+      "name": "Daily Niacinamide Body Lotion",
+      "sourceBatch": "01",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "result": "new-product",
+      "sourceImage": "images/BC-01-daily-niacinamide-body-lotion-supplied.png",
+      "sourceSHA256": "04376e0e9463c966c819f44457ac9ffc47d6345ab4283b4b516899d96dce3226",
+      "missingInformation": [
+        "Full product specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and lead-time terms",
+        "Customization and sample policy"
+      ],
+      "format": "500 mL"
+    },
+    {
+      "intakeIds": [
+        "BC-02"
+      ],
+      "slug": "luminous-glow-body-wash",
+      "name": "Luminous Glow Body Wash",
+      "sourceBatch": "01",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "result": "new-product",
+      "sourceImage": "images/BC-02-luminous-glow-body-wash-supplied.png",
+      "sourceSHA256": "3a4b6b7433a8e68de9ac7244f79c8b6c1b2ea7fb7cca8c3392ead5313a747fe0",
+      "missingInformation": [
+        "Full product specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and lead-time terms",
+        "Customization and sample policy"
+      ],
+      "format": "500 mL"
+    },
+    {
+      "intakeIds": [
+        "BC-03"
+      ],
+      "slug": "gluta-glow-body-lotion-500ml",
+      "name": "Gluta Glow Body Lotion — 500 mL",
+      "sourceBatch": "01",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "result": "new-product",
+      "sourceImage": "images/BC-03-gluta-glow-body-lotion-500ml-supplied.png",
+      "sourceSHA256": "db9427150ceacf0834a2613e19478e138f67b7e73d7409bd71018f142e59c75a",
+      "missingInformation": [
+        "Full product specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and lead-time terms",
+        "Customization and sample policy",
+        "Evidence for the UV statements in the artwork, or replacement artwork"
+      ]
+    },
+    {
+      "intakeIds": [
+        "BC-04"
+      ],
+      "slug": "vanilla-cashmere-whipped-oil-body-butter-283g",
+      "name": "Vanilla Cashmere Whipped Oil Body Butter — 283 g",
+      "sourceBatch": "01",
+      "priceUSD": 4.99,
+      "moq": 6,
+      "result": "new-product",
+      "sourceImage": "images/BC-04-vanilla-cashmere-whipped-oil-body-butter-283g-supplied.png",
+      "sourceSHA256": "15dbcecd77cba65cc55f176a30f04f30e6f08ebe31d4600b9a170088d4a68c7a",
+      "missingInformation": [
+        "Full product specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and lead-time terms",
+        "Customization and sample policy"
+      ]
+    },
+    {
+      "intakeIds": [
+        "BC-05"
+      ],
+      "slug": "vanilla-cashmere-body-wash-473ml",
+      "name": "Vanilla Cashmere Body Wash — 473 mL",
+      "sourceBatch": "01",
+      "priceUSD": 4.99,
+      "moq": 6,
+      "result": "new-product",
+      "sourceImage": "images/BC-05-vanilla-cashmere-body-wash-473ml-supplied.png",
+      "sourceSHA256": "28505e32bd6a35162be615eb32a1b229ca0cc2a634aadb276a707f160572db69",
+      "missingInformation": [
+        "Full product specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and lead-time terms",
+        "Customization and sample policy"
+      ]
+    },
+    {
+      "intakeIds": [
+        "B02-01-01",
+        "B02-01-02",
+        "B02-01-03",
+        "B02-01-04",
+        "B02-01-05",
+        "B02-01-06"
+      ],
+      "slug": "vaseline-body-care-series-200ml",
+      "name": "Vaseline Body Care Series — 200 mL",
+      "sourceBatch": "02",
+      "priceUSD": 3.0,
+      "moq": 6,
+      "result": "new-series",
+      "sourceImage": "images/B02-01-vaseline-body-oil-six-variants.png",
+      "sourceSHA256": "75ede2d5c72f3cb19cf49ff8430ef79cacb4874f89f4dd5a873ad671aa1a01b4",
+      "missingInformation": [
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Individual product photographs for each variant",
+        "Exact product type of the Gluta Ceramide variant",
+        "Full label details and evidence for any UV or quantified artwork claims"
+      ]
+    },
+    {
+      "intakeIds": [
+        "B02-02"
+      ],
+      "slug": "khadlaj-hareem-al-sultan",
+      "name": "Khadlaj Hareem Al Sultan",
+      "sourceBatch": "02",
+      "priceUSD": 3.0,
+      "moq": 6,
+      "result": "new-product",
+      "sourceImage": "images/B02-02-khadlaj-hareem-al-sultan.png",
+      "sourceSHA256": "fc41dcca1350b8f36e2d4e9bdef889fa50f99673b670e7f325d1579f65f6b136",
+      "missingInformation": [
+        "Capacity / net contents",
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Main bottle formulation / concentration",
+        "Verified fragrance notes"
+      ]
+    },
+    {
+      "intakeIds": [
+        "B02-03-01",
+        "B02-03-02"
+      ],
+      "slug": "olay-regenerist-cream-50g",
+      "name": "OLAY Regenerist Cream — 50 g",
+      "sourceBatch": "02",
+      "priceUSD": 3.0,
+      "moq": 6,
+      "result": "new-series",
+      "sourceImage": "images/B02-03-olay-regenerist-day-night.png",
+      "sourceSHA256": "75020a73a2e1871a399b2743667486ff3f2b180a74bc1ae843c7387172a97dfc",
+      "missingInformation": [
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Individual product photographs for each variant"
+      ]
+    },
+    {
+      "intakeIds": [
+        "B02-04"
+      ],
+      "slug": "nivea-q10-day-cream",
+      "name": "NIVEA Q10 Anti-Wrinkle Power Multi Protective Day Cream",
+      "sourceBatch": "02",
+      "priceUSD": 3.0,
+      "moq": 6,
+      "result": "new-product",
+      "sourceImage": "images/B02-04-nivea-q10-day-cream.png",
+      "sourceSHA256": "f6cd8fce899420a448379bed22f11a6d443d8be4251b1276c1e55f0d2c1b0843",
+      "missingInformation": [
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Supporting documentation for the printed SPF statement"
+      ]
+    },
+    {
+      "intakeIds": [
+        "B02-05"
+      ],
+      "slug": "the-ordinary-glycolic-toner",
+      "name": "The Ordinary Glycolic Acid 7% Exfoliating Toner",
+      "sourceBatch": "02",
+      "priceUSD": 3.0,
+      "moq": 6,
+      "result": "new-product",
+      "sourceImage": "images/B02-05-the-ordinary-glycolic-toner.png",
+      "sourceSHA256": "bc636bb62e9cf77ad0191e0577c8aeb43705f53429ccf3cdce3e05502fb488de",
+      "missingInformation": [
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy"
+      ]
+    },
+    {
+      "intakeIds": [
+        "B02-06"
+      ],
+      "slug": "hobby-pure-orchid-shower-gel",
+      "name": "HOBBY Fresh Care Pure Orchid Shower Gel",
+      "sourceBatch": "02",
+      "priceUSD": 3.0,
+      "moq": 6,
+      "result": "new-product",
+      "sourceImage": "images/B02-06-hobby-pure-orchid-shower-gel.png",
+      "sourceSHA256": "2319a4a8c69abb1e6fec6ce1b60a272ab9e73da18da0ea620e1bdb78910cec3e",
+      "missingInformation": [
+        "Capacity / net contents",
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy"
+      ]
+    },
+    {
+      "intakeIds": [
+        "B02-07"
+      ],
+      "slug": "dr-teals-lavender-body-lotion",
+      "name": "Dr Teal's Lavender Body Lotion",
+      "sourceBatch": "02",
+      "priceUSD": 3.0,
+      "moq": 6,
+      "result": "new-product",
+      "sourceImage": "images/B02-07-dr-teals-lavender-body-lotion.png",
+      "sourceSHA256": "67c183255a0f9f9b9cf0ad4897ac65a72134087ae30e7460c7c144fe833cbc06",
+      "missingInformation": [
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy"
+      ]
+    },
+    {
+      "intakeIds": [
+        "B02-08"
+      ],
+      "slug": "st-ives-oatmeal-shea-body-lotion",
+      "name": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion",
+      "sourceBatch": "02",
+      "priceUSD": 3.0,
+      "moq": 6,
+      "result": "new-product",
+      "sourceImage": "images/B02-08-st-ives-oatmeal-shea-body-lotion.png",
+      "sourceSHA256": "4646609620ab63518542878fabe04dee31b9c6df05b7d5423b3d606fce7ad831",
+      "missingInformation": [
+        "Clear net-contents label photograph (capacity remains unconfirmed)",
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy"
+      ]
+    },
+    {
+      "intakeIds": [
+        "B02-09"
+      ],
+      "slug": "st-ives-coconut-orchid-body-lotion",
+      "name": "St. Ives Softening Coconut & Orchid Body Lotion",
+      "sourceBatch": "02",
+      "priceUSD": 3.0,
+      "moq": 6,
+      "result": "new-product",
+      "sourceImage": "images/B02-09-st-ives-coconut-orchid-body-lotion.png",
+      "sourceSHA256": "dd1a1ccd3eca80051c57040f4b4a803122b3464a3b672cb9da69c12c1850eaee",
+      "missingInformation": [
+        "Clear net-contents label photograph (capacity remains unconfirmed)",
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy"
+      ]
+    },
+    {
+      "intakeIds": [
+        "B02-10"
+      ],
+      "slug": "garnier-vitamin-c-body-serum-lotion",
+      "name": "Garnier Bright Complete Vitamin C Body Serum Lotion",
+      "sourceBatch": "02",
+      "priceUSD": 3.0,
+      "moq": 6,
+      "result": "new-product",
+      "sourceImage": "images/B02-10-garnier-vitamin-c-body-serum-lotion.png",
+      "sourceSHA256": "b6fc71069f7e1ee1e72dc9381e5fb30b206e21e44680b523f75297bd2cef0034",
+      "missingInformation": [
+        "Capacity / net contents",
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Full label details and evidence for any UV or quantified artwork claims"
+      ]
+    },
+    {
+      "intakeIds": [
+        "B02-11"
+      ],
+      "slug": "simple-moisturising-facial-wash",
+      "name": "Simple Moisturising Facial Wash",
+      "sourceBatch": "02",
+      "priceUSD": 3.0,
+      "moq": 6,
+      "result": "new-product",
+      "sourceImage": "images/B02-11-simple-moisturising-facial-wash.png",
+      "sourceSHA256": "3bbc6730ea1aad4638773b2b68fd247a48be16a36c13a008ae941cdfa248984b",
+      "missingInformation": [
+        "Full specifications and INCI",
+        "Supplier SKU",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy"
+      ]
+    },
+    {
+      "intakeIds": [
+        "PF-01"
+      ],
+      "slug": "lattafa-al-noble-ameer",
+      "name": "Lattafa Al Noble Ameer",
+      "sourceBatch": "03",
+      "priceUSD": 5.0,
+      "moq": 2,
+      "result": "new-product",
+      "sourceImage": "images/PF-01-lattafa-al-noble-ameer-supplied.png",
+      "sourceSHA256": "bc65c1eec906855043976f3f5b6854cb187a7cdbfa9dbac785dba43a8c16e490",
+      "missingInformation": [
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms",
+        "Full formulation and ingredient list",
+        "Sample and customization policy"
+      ]
+    },
+    {
+      "intakeIds": [
+        "PF-02"
+      ],
+      "slug": "lattafa-badee-al-oud-sublime",
+      "name": "Lattafa Bade’e Al Oud Sublime",
+      "sourceBatch": "03",
+      "priceUSD": 5.0,
+      "moq": 2,
+      "result": "new-product",
+      "sourceImage": "images/PF-02-lattafa-badee-al-oud-sublime-supplied.png",
+      "sourceSHA256": "381eb5fc7cee6d07041709b7b5528a02410b1e53d9c8a751abe3c1ba97514671",
+      "missingInformation": [
+        "Capacity",
+        "Concentration / formulation",
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms",
+        "Full formulation and ingredient list",
+        "Sample and customization policy"
+      ]
+    },
+    {
+      "intakeIds": [
+        "PF-03"
+      ],
+      "slug": "lattafa-khamrah-qahwa",
+      "name": "Lattafa Khamrah Qahwa",
+      "sourceBatch": "03",
+      "priceUSD": 5.0,
+      "moq": 2,
+      "result": "new-product",
+      "sourceImage": "images/PF-03-lattafa-khamrah-qahwa-supplied.png",
+      "sourceSHA256": "5bb9d5ca14bc262ecc9a3f67fc9e4216f634041a1e460b105918d64e37c5adc9",
+      "missingInformation": [
+        "Capacity",
+        "Concentration / formulation",
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms",
+        "Full formulation and ingredient list",
+        "Sample and customization policy"
+      ]
+    },
+    {
+      "intakeIds": [
+        "PF-04"
+      ],
+      "slug": "lattafa-khamrah",
+      "name": "Lattafa Khamrah",
+      "sourceBatch": "03",
+      "priceUSD": 5.0,
+      "moq": 2,
+      "result": "new-product",
+      "sourceImage": "images/PF-04-lattafa-khamrah-supplied.png",
+      "sourceSHA256": "33b77fa42f3f0ebb8fb52eca657993bdd65aae1cfd52121fff7fa5e3829f4a52",
+      "missingInformation": [
+        "Capacity",
+        "Concentration / formulation",
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms",
+        "Full formulation and ingredient list",
+        "Sample and customization policy"
+      ]
+    },
+    {
+      "intakeIds": [
+        "PF-05"
+      ],
+      "slug": "lattafa-al-noble-safeer",
+      "name": "Lattafa Al Noble Safeer",
+      "sourceBatch": "03",
+      "priceUSD": 5.0,
+      "moq": 2,
+      "result": "new-product",
+      "sourceImage": "images/PF-05-lattafa-al-noble-safeer-supplied.png",
+      "sourceSHA256": "8216b8bc27b93640604cac328d4e72cda78d0b0672cdc2d745f3cc6fe4047105",
+      "missingInformation": [
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms",
+        "Full formulation and ingredient list",
+        "Sample and customization policy"
+      ]
+    },
+    {
+      "intakeIds": [
+        "PF-06"
+      ],
+      "slug": "kayali-oudgasm-cafe-oud-19",
+      "name": "KAYALI Oudgasm Café Oud | 19",
+      "sourceBatch": "03",
+      "priceUSD": 5.0,
+      "moq": 2,
+      "result": "new-product",
+      "sourceImage": "images/PF-06-kayali-oudgasm-cafe-oud-19-supplied.png",
+      "sourceSHA256": "6571bd56efb378b3c99f067eaf4fb5234dd748bfabdc5ad9710ab29837417da7",
+      "missingInformation": [
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms",
+        "Full formulation and ingredient list",
+        "Sample and customization policy"
+      ]
+    },
+    {
+      "intakeIds": [
+        "PF-07"
+      ],
+      "slug": "french-avenue-liquid-brun",
+      "name": "French Avenue Liquid Brun",
+      "sourceBatch": "03",
+      "priceUSD": 5.0,
+      "moq": 2,
+      "result": "new-product",
+      "sourceImage": "images/PF-07-french-avenue-liquid-brun-supplied.png",
+      "sourceSHA256": "0083354578581f41ebf5b3e71f8f161ec252f9685d67076418dc1dcb5a94a200",
+      "missingInformation": [
+        "Capacity",
+        "Concentration / formulation",
+        "Verified fragrance notes",
+        "Supplier SKU",
+        "Stock and dispatch terms",
+        "Full formulation and ingredient list",
+        "Sample and customization policy"
+      ]
+    },
+    {
+      "intakeIds": [
+        "B04-01-400",
+        "B04-01-600"
+      ],
+      "slug": "glutaglow-body-lotion-400ml-600ml",
+      "name": "GlutaGlow Body Lotion — 400 mL / 600 mL",
+      "sourceBatch": "04",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "result": "new-series",
+      "missingInformation": [
+        "Supplier SKU and brand details",
+        "Full specifications, ingredients and usage instructions",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Evidence for any benefit statements in the supplied artwork",
+        "Individual product photograph for each size"
+      ]
+    },
+    {
+      "intakeIds": [
+        "B04-02"
+      ],
+      "slug": "healthy-white-body-lotion-400ml",
+      "name": "Healthy White Body Lotion — 400 mL",
+      "sourceBatch": "04",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "result": "new-product",
+      "missingInformation": [
+        "Supplier SKU and brand details",
+        "Full specifications, ingredients and usage instructions",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Evidence for any benefit statements in the supplied artwork"
+      ]
+    },
+    {
+      "intakeIds": [
+        "B05-02"
+      ],
+      "slug": "cocoa-radiant-body-gel-oil",
+      "name": "Cocoa Radiant Body Gel Oil",
+      "sourceBatch": "05",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "result": "new-product",
+      "missingInformation": [
+        "Capacity / net contents",
+        "Supplier SKU and brand details",
+        "Full specifications, ingredients and usage instructions",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Evidence for any benefit statements in the supplied artwork",
+        "Formulation and identity comparison with Cocoa Radiant Body Oil (separate product format)"
+      ]
+    },
+    {
+      "intakeIds": [
+        "B05-03"
+      ],
+      "slug": "essential-healing-body-lotion-725ml",
+      "name": "Essential Healing Body Lotion — 725 mL",
+      "sourceBatch": "05",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "result": "new-product",
+      "missingInformation": [
+        "Supplier SKU and brand details",
+        "Full specifications, ingredients and usage instructions",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Evidence for any benefit statements in the supplied artwork"
+      ]
+    },
+    {
+      "intakeIds": [
+        "B05-06"
+      ],
+      "slug": "advanced-repair-body-lotion-725ml",
+      "name": "Advanced Repair Body Lotion — 725 mL",
+      "sourceBatch": "05",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "result": "new-product",
+      "missingInformation": [
+        "Supplier SKU and brand details",
+        "Full specifications, ingredients and usage instructions",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Evidence for any benefit statements in the supplied artwork"
+      ]
+    },
+    {
+      "intakeIds": [
+        "B05-07"
+      ],
+      "slug": "calm-healing-body-lotion",
+      "name": "Calm Healing Body Lotion",
+      "sourceBatch": "05",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "result": "new-product",
+      "missingInformation": [
+        "Capacity / net contents",
+        "Supplier SKU and brand details",
+        "Full specifications, ingredients and usage instructions",
+        "Stock, shipping and dispatch terms",
+        "Sample and customization policy",
+        "Evidence for any benefit statements in the supplied artwork"
+      ]
+    }
+  ],
+  "sourceImageCount": 35,
+  "batchImageCounts": {
+    "01": 5,
+    "02": 11,
+    "03": 7,
+    "04": 5,
+    "05": 7
+  },
+  "importedSourceRecords": 36,
+  "pendingSourceRecords": 5,
+  "pendingMatches": [
+    {
+      "intakeId": "B04-03",
+      "sourceBatch": "04",
+      "name": "Gluta Ceramide Body Care",
+      "possibleExistingId": "B02-01-05",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "format": "200 mL",
+      "gallery": [
+        {
+          "src": "/assets/products/intake-b04-03/supplied-1-800.webp",
+          "srcSet": "/assets/products/intake-b04-03/supplied-1-480.webp 480w, /assets/products/intake-b04-03/supplied-1-800.webp 800w, /assets/products/intake-b04-03/supplied-1-1254.webp 1254w",
+          "thumbnail": "/assets/products/intake-b04-03/supplied-1-160.webp",
+          "fullSize": "/assets/products/intake-b04-03/supplied-1-1254.webp",
+          "width": 1706,
+          "height": 1279,
+          "alt": "Transparent pink-capped Gluta Ceramide bottle labeled 200 mL",
+          "label": "Supplied view"
+        }
+      ],
+      "reason": "Gluta Ceramide 名称、粉盖和 200 mL 相符，但新图品牌被遮盖，标签细节不同，确切产品类型也未确认。",
+      "status": "identity-unconfirmed",
+      "action": "Held out of customer catalogue; original quote unchanged",
+      "sourceImageFiles": [
+        "images/B04-03-gluta-ceramide-200ml.jpg"
+      ]
+    },
+    {
+      "intakeId": "B04-04",
+      "sourceBatch": "04",
+      "name": "Sunlit Glow Body Gel Oil",
+      "possibleExistingId": "B02-01-03",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "format": "200 mL",
+      "gallery": [
+        {
+          "src": "/assets/products/intake-b04-04/supplied-1-800.webp",
+          "srcSet": "/assets/products/intake-b04-04/supplied-1-480.webp 480w, /assets/products/intake-b04-04/supplied-1-800.webp 800w, /assets/products/intake-b04-04/supplied-1-1254.webp 1254w",
+          "thumbnail": "/assets/products/intake-b04-04/supplied-1-160.webp",
+          "fullSize": "/assets/products/intake-b04-04/supplied-1-1254.webp",
+          "width": 1280,
+          "height": 1280,
+          "alt": "Sunlit Glow gel oil in a gold-toned bottle with a blue cap, labeled 200 mL",
+          "label": "Supplied view"
+        },
+        {
+          "src": "/assets/products/intake-b04-04/supplied-2-800.webp",
+          "srcSet": "/assets/products/intake-b04-04/supplied-2-480.webp 480w, /assets/products/intake-b04-04/supplied-2-800.webp 800w, /assets/products/intake-b04-04/supplied-2-1254.webp 1254w",
+          "thumbnail": "/assets/products/intake-b04-04/supplied-2-160.webp",
+          "fullSize": "/assets/products/intake-b04-04/supplied-2-1254.webp",
+          "width": 1280,
+          "height": 1280,
+          "alt": "Alternate supplied image of Sunlit Glow gel oil labeled 200 mL",
+          "label": "Alternate view"
+        }
+      ],
+      "reason": "Sunlit Glow 名称和 200 mL 相符，但新图写 Gel Oil，旧图写 Body Oil，标签与包装外观不同。第四批两张新图可确认为同一候选款的两个视角。",
+      "status": "identity-unconfirmed",
+      "action": "Held out of customer catalogue; original quote unchanged",
+      "sourceImageFiles": [
+        "images/B04-04-sunlit-glow-gel-oil-200ml-main.jpg",
+        "images/B04-04-sunlit-glow-gel-oil-200ml-alternate.jpg"
+      ]
+    },
+    {
+      "intakeId": "B05-01",
+      "sourceBatch": "05",
+      "name": "Daily Niacinamide Body Lotion",
+      "possibleExistingId": "BC-01",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "format": null,
+      "gallery": [
+        {
+          "src": "/assets/products/intake-b05-01/supplied-1-800.webp",
+          "srcSet": "/assets/products/intake-b05-01/supplied-1-480.webp 480w, /assets/products/intake-b05-01/supplied-1-800.webp 800w, /assets/products/intake-b05-01/supplied-1-1200.webp 1200w",
+          "thumbnail": "/assets/products/intake-b05-01/supplied-1-160.webp",
+          "fullSize": "/assets/products/intake-b05-01/supplied-1-1200.webp",
+          "width": 1200,
+          "height": 1200,
+          "alt": "Pink body lotion bottle with a blue pump and Daily Brightening niacinamide label",
+          "label": "Supplied view"
+        }
+      ],
+      "reason": "Daily Brightening / Niacinamide 与蓝泵相似，但瓶身颜色和标签细节不同；BC-01 已确认 500 mL，B05-01 容量仍未知，缺少 SKU 或背标证据。",
+      "status": "identity-unconfirmed",
+      "action": "Held out of customer catalogue; identity remains unconfirmed. BC-01 MOQ independently confirmed by the user as 6 pieces; price unchanged.",
+      "sourceImageFiles": [
+        "images/B05-01-daily-niacinamide-body-lotion.jpg"
+      ]
+    },
+    {
+      "intakeId": "B05-04",
+      "sourceBatch": "05",
+      "name": "Vitamin B3 Body Oil",
+      "possibleExistingId": "B02-01-01",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "format": "200 mL",
+      "gallery": [
+        {
+          "src": "/assets/products/intake-b05-04/supplied-1-800.webp",
+          "srcSet": "/assets/products/intake-b05-04/supplied-1-480.webp 480w, /assets/products/intake-b05-04/supplied-1-800.webp 800w, /assets/products/intake-b05-04/supplied-1-1200.webp 1200w",
+          "thumbnail": "/assets/products/intake-b05-04/supplied-1-160.webp",
+          "fullSize": "/assets/products/intake-b05-04/supplied-1-1200.webp",
+          "width": 1200,
+          "height": 1200,
+          "alt": "Pink-capped Vitamin B3 body oil bottle labeled 200 mL",
+          "label": "Supplied view"
+        }
+      ],
+      "reason": "Vitamin B3、粉盖、200 mL 相符，但主品牌被遮盖，未提供可核对的 SKU / 背标。",
+      "status": "identity-unconfirmed",
+      "action": "Held out of customer catalogue; original quote unchanged",
+      "sourceImageFiles": [
+        "images/B05-04-vitamin-b3-body-oil-200ml.jpg"
+      ]
+    },
+    {
+      "intakeId": "B05-05",
+      "sourceBatch": "05",
+      "name": "Cocoa Radiant Body Oil",
+      "possibleExistingId": "B02-01-02",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "format": "200 mL",
+      "gallery": [
+        {
+          "src": "/assets/products/intake-b05-05/supplied-1-800.webp",
+          "srcSet": "/assets/products/intake-b05-05/supplied-1-480.webp 480w, /assets/products/intake-b05-05/supplied-1-800.webp 800w, /assets/products/intake-b05-05/supplied-1-1200.webp 1200w",
+          "thumbnail": "/assets/products/intake-b05-05/supplied-1-160.webp",
+          "fullSize": "/assets/products/intake-b05-05/supplied-1-1200.webp",
+          "width": 1200,
+          "height": 1200,
+          "alt": "Pale Cocoa Radiant body oil bottle with a blue cap, labeled 200 mL",
+          "label": "Supplied view"
+        }
+      ],
+      "reason": "Cocoa Radiant Body Oil 与 200 mL 相符，但新旧瓶型及标签差异明显，品牌被遮盖；不能凭名称自动合并。",
+      "status": "identity-unconfirmed",
+      "action": "Held out of customer catalogue; original quote unchanged",
+      "sourceImageFiles": [
+        "images/B05-05-cocoa-radiant-body-oil-200ml.jpg"
+      ]
+    }
+  ],
+  "subsequentConfirmations": [
+    {
+      "intakeIds": [
+        "BC-01",
+        "BC-02",
+        "BC-03",
+        "BC-04",
+        "BC-05"
+      ],
+      "moqPieces": 6,
+      "source": "Explicit user confirmation in conversation",
+      "priceChange": false,
+      "identityMerge": false,
+      "note": "BC-01 MOQ is independently confirmed and does not depend on matching B05-01."
+    },
+    {
+      "source": "Explicit user confirmation, 2026-09-10",
+      "ids": [
+        "BC-01",
+        "BC-02"
+      ],
+      "format": "500 mL",
+      "priceUSD": 2.99,
+      "moq": 6,
+      "identityMerge": false
+    }
+  ]
+}

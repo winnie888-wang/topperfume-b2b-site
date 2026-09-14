@@ -1,0 +1,11 @@
+{
+  "date": "2026-09-13",
+  "propertyId": "551154847",
+  "measurementId": "G-4BX79STS9F",
+  "filter": {"name":"TopPerfume Developer QA","type":"developer","operation":"exclude","state":"active","condition":"debug_mode or debug_event populated","ordinarySourceHasMarkers":false,"internalTrafficFilterUnchanged":"testing"},
+  "test": {"runId":"tp-qa-20260913","queuedAtUTC":"2026-09-13T09:24:24.708Z","tagLoadedAtUTC":"2026-09-13T09:24:25.120Z","source":"local-only harness importing shared/analytics.ts","debugMode":true,"containsCustomerPII":false,"realMailSent":false,"realFormSubmitted":false,"automaticRetry":false},
+  "debugViewObserved": {"page_view":1,"view_item":1,"whatsapp_click":1,"inquiry_submit_success":1,"automatic_session_start":1,"expandedInquiryParameters":["debug_mode","qa_run_id=tp-qa-20260913"]},
+  "ordinaryPayloadTest": {"markersAbsent":true,"repeatedPageDedupe":[true,false]},
+  "backendEventRules": {"custom":0,"modifications":0,"historicalKeyEvents":["close_convert_lead","generate_lead","purchase","qualify_lead"]},
+  "limits": ["Filter propagation may take 24–36 hours; post-propagation standard-report exclusion not yet verified","Debug tool validates builder/tag/Google reception, not Production customer traffic or a real business inquiry","No product, form or mail tests repeated"]
+}

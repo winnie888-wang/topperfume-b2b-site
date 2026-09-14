@@ -1,0 +1,33 @@
+{
+  "verifiedAtUtc": "2026-09-12T16:57:33Z",
+  "verifiedAtAsiaShanghai": "2026-09-13 00:57:33",
+  "url": "https://topperfume-b2b-site-h86iot4yo-winnie9.vercel.app",
+  "deploymentId": "dpl_4HRGHJ99LWRPQa2tibLga4NJpYQU",
+  "projectId": "prj_4bTtZO7MSea1AHlXqvtYApYr5qBE",
+  "environment": "Preview",
+  "readyState": "READY",
+  "sourceCommit": "923e2d400c064a533756d127c652c1f2454e7737",
+  "branch": "feat/website-optimization-body-lotion",
+  "githubApplicationSourceVerified": true,
+  "mainCommitUnchanged": "bab3a9eb6fa99e0cdb3371ba54ca84ae858a76fc",
+  "productionDeploymentUnchanged": "dpl_7KZmhScqdBDfLezr43kqLCHjdvjk",
+  "cloudBuild": "passed",
+  "authenticatedBrowserContactAccess": "passed",
+  "observedRobotsMeta": "noindex,nofollow",
+  "observedBundle": "index-Dpv1uA1j.js",
+  "observedGoogleTagManagerScript": false,
+  "deploymentOptions": {
+    "buildSiteIndexable": false,
+    "runtimeSiteIndexable": false,
+    "runtimeInquiryEnabled": false,
+    "recipient": "melody888666@yeah.net"
+  },
+  "additionalCodeGuard": "VERCEL_ENV=preview always disables inquiry email",
+  "previewMailSubmissionRetested": false,
+  "newRealEmailsSent": 0,
+  "accessProtection": "all_except_custom_domains",
+  "requiresAuthorizedVercelLogin": true,
+  "createdBypassCredential": false,
+  "localMockReceiverStopped": true,
+  "note": "A documentation-only follow-up commit records this receipt. No application change after the deployed source. Existing mock browser test evidence was reused."
+}

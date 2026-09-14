@@ -6,6 +6,7 @@ import { z } from "zod";
 import { ENV } from "./_core/env";
 import { isRateLimited, sendInquiryEmail } from "./inquiry";
 import { publicProcedure, router } from "./_core/trpc";
+import { resolveInquiryProduct } from "./inquiryProduct";
 
 const inquiryAttempts = new Map<string, number[]>();
 const inquiryInput = z.object({
@@ -49,7 +50,7 @@ export const appRouter = router({
       const source = ctx.req.ip || ctx.req.socket.remoteAddress || "unknown";
 
       if (parsed.data.website) {
-        return { success: true, requestId: "TP-RECEIVED" } as const;
+        throw new TRPCError({ code: "BAD_REQUEST", message: "Unable to accept this submission." });
       }
       if (submittedAt - parsed.data.formStartedAt < 900) {
         throw new TRPCError({ code: "BAD_REQUEST", message: "Please take a moment to complete the inquiry form." });
@@ -57,12 +58,15 @@ export const appRouter = router({
       if (isRateLimited(inquiryAttempts, source, submittedAt)) {
         throw new TRPCError({ code: "TOO_MANY_REQUESTS", message: "Too many submissions. Please try again in a few minutes." });
       }
-      if (!ENV.resendApiKey || !ENV.inquiryFromEmail) {
+      let verifiedInput;
+      try { verifiedInput = resolveInquiryProduct(parsed.data); }
+      catch (error) { throw new TRPCError({ code: "BAD_REQUEST", message: error instanceof Error ? error.message : "Please check your product selection." }); }
+      if (!ENV.inquiryEnabled || !ENV.resendApiKey || !ENV.inquiryFromEmail) {
         throw new TRPCError({ code: "PRECONDITION_FAILED", message: "Inquiry delivery is temporarily unavailable. Please use WhatsApp while we restore the service." });
       }
 
       try {
-        const message = await sendInquiryEmail(parsed.data, {
+        const message = await sendInquiryEmail(verifiedInput, {
           apiKey: ENV.resendApiKey,
           fromEmail: ENV.inquiryFromEmail,
           recipient: ENV.inquiryRecipient,

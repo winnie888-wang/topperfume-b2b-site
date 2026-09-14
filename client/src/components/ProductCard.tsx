@@ -1,21 +1,28 @@
-/**
- * Maison Mercantile design reminder: product photographs lead, while concise B2B decisions
- * and request actions stay immediately available. Cards must feel like a premium buying catalogue, not an agency moodboard.
- */
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { WhatsAppCta } from "@/components/SiteShell";
-import { customerValue, getProductCommercialType, getProductInquiryCustomizationNote } from "@/data/business";
+import { customerValue, getProductCommercialType, isPendingValue } from "@/data/business";
 import type { Product } from "@/data/products";
 
 export function ProductCard({ product, index, showSampleCta = true, detailsLabel = "View Details" }: { product: Product; index: number; showSampleCta?: boolean; detailsLabel?: string }) {
-  const commercialType = getProductCommercialType(product);
-  const customField = commercialType === "Branded Wholesale" ? "Contact us for wholesale options" : customerValue(product.customizationStatus);
-  const privateLabelField = customerValue(product.privateLabelStatus);
-  const context = { productName: product.name, sku: product.sku, productUrl: `/products/${product.slug}`, category: product.category, standardMoq: product.standardMoq, leadTime: product.leadTime, sampleAvailability: product.sampleAvailability, customizationNote: getProductInquiryCustomizationNote(product) };
-  const hasConfirmedData = product.dataStatus === "confirmed";
+  const context = { productName: product.name, sku: product.sku, productUrl: `/products/${product.slug}`, category: product.category, standardMoq: product.standardMoq, leadTime: product.leadTime, unitPrice: product.b2bPrice, format: product.format };
+  const image = product.gallery?.[0];
   return <article className={`product-card product-card-${product.category} product-sku-${product.slug}`}>
-    <Link href={`/products/${product.slug}`} className="product-image-wrap" aria-label={`View ${product.name}`}><div className="product-card-index">{String(index + 1).padStart(2, "0")}</div><img src={product.image} alt={`${product.name} product visual`} className="product-image" /><span className="catalogue-plate-caption">{hasConfirmedData ? "Confirmed product plate" : "Product plate"}</span><span className="product-view">{detailsLabel} <ArrowRight size={15} /></span></Link>
-    <div className="product-meta"><div className="product-format"><span>{product.category}</span><span>{product.realImage ? "Product visual" : "Concept visual"}</span></div><Link href={`/products/${product.slug}`} className="product-name">{product.name}{product.nameStatus && <span className="product-name-status">{product.nameStatus}</span>}</Link><p className="product-type">{hasConfirmedData && product.gender ? `${product.gender} · ${customerValue(product.format)}` : hasConfirmedData ? customerValue(product.format) : `Reference format: ${customerValue(product.format)}`}</p>{product.b2bPrice && <p className="product-b2b-price"><span>B2B PRICE</span>{customerValue(product.b2bPrice)}</p>}{product.standardMoq && <p className="product-b2b-minimum"><span>MOQ</span>{customerValue(product.standardMoq)}</p>}<div className="product-commercial"><span><b>Product Type</b>{product.descriptor}</span><span><b>Commercial Type</b>{commercialType}</span><span><b>{commercialType === "Branded Wholesale" ? "Wholesale Terms" : "Custom Scope"}</b>{customField}</span>{commercialType !== "Branded Wholesale" && <span><b>Private Label</b>{privateLabelField}</span>}</div><div className="product-card-actions"><Link href={`/products/${product.slug}`} className="card-details-action">{detailsLabel} <ArrowRight size={14} /></Link>{showSampleCta && <WhatsAppCta label="Request Free Sample" intent="sample" context={context} className="card-sample-action" />}</div></div>
+    <Link href={`/products/${product.slug}`} className="product-image-wrap" aria-label={`View ${product.name}`}>
+      <img src={product.image} srcSet={image?.srcSet} sizes="(max-width: 620px) 90vw, (max-width: 1099px) 44vw, 28vw" width={image?.width ?? 800} height={image?.height ?? 1000} alt={image?.alt ?? `${product.name} product visual`} className="product-image" loading="lazy" decoding="async" />
+      <span className="product-view">{detailsLabel} <ArrowRight size={15} /></span>
+    </Link>
+    <div className="product-meta">
+      <div className="product-format"><span>{product.category}</span><span>{getProductCommercialType(product)}</span></div>
+      <Link href={`/products/${product.slug}`} className="product-name">{product.name}{product.nameStatus && <span className="product-name-status">{product.nameStatus}</span>}</Link>
+      <p className="product-type">{customerValue(product.format)}</p>
+      {!isPendingValue(product.b2bPrice) && <p className="product-b2b-price"><span>UNIT PRICE</span>{product.b2bPrice}</p>}
+      <p className="product-b2b-minimum"><span>MOQ</span>{isPendingValue(product.standardMoq) ? "Ask for details" : product.standardMoq}</p>
+      {product.variants && <p className="product-type">{product.variants.length} {product.variantLabel === "size" ? "sizes" : "label variants"} · priced individually</p>}
+      <div className="product-card-actions">
+        <Link href={`/products/${product.slug}`} className="card-details-action">{detailsLabel} <ArrowRight size={14} /></Link>
+        {showSampleCta && (product.variants ? <Link href={`/products/${product.slug}`} className="text-link card-sample-action">Choose Variant <ArrowRight size={14} /></Link> : <WhatsAppCta label="Get Wholesale Quote" intent="quote" context={context} className="card-sample-action" />)}
+      </div>
+    </div>
   </article>;
 }

@@ -1,0 +1,352 @@
+{
+  "batch": "05",
+  "image_count": 7,
+  "intake_record_count": 7,
+  "category_counts": {
+    "Body Lotion": 4,
+    "Body Gel Oil": 1,
+    "Body Oil": 2
+  },
+  "count_note": "These are seven intake records, not seven proven new SKUs. Three have probable matches to earlier records; Cocoa Radiant gel oil and body oil need to remain distinguishable until confirmed.",
+  "pricing_scope": "USD 2.99 per piece and MOQ 6 for the seven images in this message; do not apply globally.",
+  "products": [
+    {
+      "intake_id": "B05-01",
+      "upload_order": 1,
+      "name_zh": "Daily 烟酰胺身体乳（粉瓶蓝泵）",
+      "name_en": "Daily Niacinamide Body Lotion",
+      "category": "Body Lotion",
+      "brand": null,
+      "supplier_sku": null,
+      "suggested_slug_candidate": "daily-niacinamide-body-lotion",
+      "size_observed_on_image": null,
+      "user_confirmed": {
+        "currency": "USD",
+        "price_per_piece": 2.99,
+        "moq_pieces": 6,
+        "source_text": "MOQ 6 PIECES PRICE USD 2.99/PIECES"
+      },
+      "draft_copy_en": {
+        "display_name": "Daily Niacinamide Body Lotion",
+        "short_description": "Daily Niacinamide Body Lotion. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+        "seo_title": "Daily Niacinamide Body Lotion | TopPerfume",
+        "meta_description": "Daily Niacinamide Body Lotion. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+        "price_display": "US$2.99 / piece",
+        "moq_display": "MOQ: 6 pieces",
+        "cta": "Inquire About This Product"
+      },
+      "image": {
+        "file": "images/B05-01-daily-niacinamide-body-lotion.jpg",
+        "source_filename": "2f0ad73f708fc10e4691ca23e513da5d.jpg",
+        "sha256": "43ae748176830aa302866f1dcea119f3926073bb94afa714aaa1d43441ded7b4",
+        "dimensions_px": [
+          1200,
+          1200
+        ],
+        "alt": "Pink body lotion bottle with a blue pump and Daily Brightening niacinamide label",
+        "processing": "Copied and renamed only; original pixels retained"
+      },
+      "possible_existing_record": {
+        "candidate_id": "BC-01",
+        "match_confirmed": false,
+        "latest_quote_if_matched": {
+          "price_usd_per_piece": 2.99,
+          "moq_pieces": 6
+        }
+      },
+      "review_notes": [
+        "Price and MOQ are user-confirmed for this batch only. Product name and legible size are transcribed from the supplied image.",
+        "Brand lettering is obscured in the main logo area; do not infer brand or official affiliation from the packaging silhouette.",
+        "Keep the supplied image intact. No new main or secondary images were generated in this intake step.",
+        "The image prints 48-hour moisturization and other benefit language; no supporting test report was supplied. Do not expand these into guaranteed-duration, skin-healing or medical claims.",
+        "A probable image/specification update for earlier BC-01. Capacity remains unreadable; do not invent a size or apply MOQ 6 to all five earlier products. If identity is confirmed, this establishes MOQ 6 only for matched BC-01."
+      ],
+      "status": "Intake record; cross-batch deduplication and final website import pending"
+    },
+    {
+      "intake_id": "B05-02",
+      "upload_order": 2,
+      "name_zh": "Cocoa Radiant 身体凝胶油（透明气泡款）",
+      "name_en": "Cocoa Radiant Body Gel Oil",
+      "category": "Body Gel Oil",
+      "brand": null,
+      "supplier_sku": null,
+      "suggested_slug_candidate": "cocoa-radiant-body-gel-oil",
+      "size_observed_on_image": null,
+      "user_confirmed": {
+        "currency": "USD",
+        "price_per_piece": 2.99,
+        "moq_pieces": 6,
+        "source_text": "MOQ 6 PIECES PRICE USD 2.99/PIECES"
+      },
+      "draft_copy_en": {
+        "display_name": "Cocoa Radiant Body Gel Oil",
+        "short_description": "Cocoa Radiant Body Gel Oil. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+        "seo_title": "Cocoa Radiant Body Gel Oil | TopPerfume",
+        "meta_description": "Cocoa Radiant Body Gel Oil. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+        "price_display": "US$2.99 / piece",
+        "moq_display": "MOQ: 6 pieces",
+        "cta": "Inquire About This Product"
+      },
+      "image": {
+        "file": "images/B05-02-cocoa-radiant-body-gel-oil.jpg",
+        "source_filename": "e8ca5464df56ac4883e21edf13e3a36d.jpg",
+        "sha256": "ae32e264d46bebd5a844ac7e268a46797443994c02e5abbcb68b86a38fc52d4b",
+        "dimensions_px": [
+          1200,
+          1200
+        ],
+        "alt": "Transparent Cocoa Radiant body gel oil bottle with a blue cap and brown label",
+        "processing": "Copied and renamed only; original pixels retained"
+      },
+      "possible_existing_record": null,
+      "review_notes": [
+        "Price and MOQ are user-confirmed for this batch only. Product name and legible size are transcribed from the supplied image.",
+        "Brand lettering is obscured in the main logo area; do not infer brand or official affiliation from the packaging silhouette.",
+        "Keep the supplied image intact. No new main or secondary images were generated in this intake step.",
+        "The lower label says Body Gel Oil, while the capacity lettering is distorted. Do not infer the capacity from an unclear number or from a different Cocoa Radiant image. Keep separate from B05-05 pending formulation/identity clarification."
+      ],
+      "status": "Intake record; cross-batch deduplication and final website import pending"
+    },
+    {
+      "intake_id": "B05-03",
+      "upload_order": 3,
+      "name_zh": "Essential Healing 身体乳（黄瓶）",
+      "name_en": "Essential Healing Body Lotion",
+      "category": "Body Lotion",
+      "brand": null,
+      "supplier_sku": null,
+      "suggested_slug_candidate": "essential-healing-body-lotion-725ml",
+      "size_observed_on_image": "725 mL",
+      "user_confirmed": {
+        "currency": "USD",
+        "price_per_piece": 2.99,
+        "moq_pieces": 6,
+        "source_text": "MOQ 6 PIECES PRICE USD 2.99/PIECES"
+      },
+      "draft_copy_en": {
+        "display_name": "Essential Healing Body Lotion — 725 mL",
+        "short_description": "Essential Healing Body Lotion, 725 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+        "seo_title": "Essential Healing Body Lotion — 725 mL | TopPerfume",
+        "meta_description": "Essential Healing Body Lotion, 725 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+        "price_display": "US$2.99 / piece",
+        "moq_display": "MOQ: 6 pieces",
+        "cta": "Inquire About This Product"
+      },
+      "image": {
+        "file": "images/B05-03-essential-healing-body-lotion-725ml.jpg",
+        "source_filename": "b6befb195b2d6a2085280b6078eab5de.jpg",
+        "sha256": "0f887c825cbd4073e19fc8dac6fb597c9121336ac57a21a8318a17541d1bf99a",
+        "dimensions_px": [
+          1200,
+          1200
+        ],
+        "alt": "Yellow Essential Healing body lotion bottle with a blue pump, labeled 725 mL",
+        "processing": "Copied and renamed only; original pixels retained"
+      },
+      "possible_existing_record": null,
+      "review_notes": [
+        "Price and MOQ are user-confirmed for this batch only. Product name and legible size are transcribed from the supplied image.",
+        "Brand lettering is obscured in the main logo area; do not infer brand or official affiliation from the packaging silhouette.",
+        "Keep the supplied image intact. No new main or secondary images were generated in this intake step.",
+        "The image prints 48-hour moisturization and other benefit language; no supporting test report was supplied. Do not expand these into guaranteed-duration, skin-healing or medical claims."
+      ],
+      "status": "Intake record; cross-batch deduplication and final website import pending"
+    },
+    {
+      "intake_id": "B05-04",
+      "upload_order": 4,
+      "name_zh": "Vitamin B3 身体油（粉盖）",
+      "name_en": "Vitamin B3 Body Oil",
+      "category": "Body Oil",
+      "brand": null,
+      "supplier_sku": null,
+      "suggested_slug_candidate": "vitamin-b3-body-oil-200ml",
+      "size_observed_on_image": "200 mL",
+      "user_confirmed": {
+        "currency": "USD",
+        "price_per_piece": 2.99,
+        "moq_pieces": 6,
+        "source_text": "MOQ 6 PIECES PRICE USD 2.99/PIECES"
+      },
+      "draft_copy_en": {
+        "display_name": "Vitamin B3 Body Oil — 200 mL",
+        "short_description": "Vitamin B3 Body Oil, 200 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+        "seo_title": "Vitamin B3 Body Oil — 200 mL | TopPerfume",
+        "meta_description": "Vitamin B3 Body Oil, 200 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+        "price_display": "US$2.99 / piece",
+        "moq_display": "MOQ: 6 pieces",
+        "cta": "Inquire About This Product"
+      },
+      "image": {
+        "file": "images/B05-04-vitamin-b3-body-oil-200ml.jpg",
+        "source_filename": "f6a78e43909e21c2aedfed08d5846f72.jpg",
+        "sha256": "cf59850b45d4fc18e1f98d142f3b1f03fc4462d2c69fbd48aecd44c2d7395c35",
+        "dimensions_px": [
+          1200,
+          1200
+        ],
+        "alt": "Pink-capped Vitamin B3 body oil bottle labeled 200 mL",
+        "processing": "Copied and renamed only; original pixels retained"
+      },
+      "possible_existing_record": {
+        "candidate_id": "B02-01-01",
+        "match_confirmed": false,
+        "latest_quote_if_matched": {
+          "price_usd_per_piece": 2.99,
+          "moq_pieces": 6
+        }
+      },
+      "review_notes": [
+        "Price and MOQ are user-confirmed for this batch only. Product name and legible size are transcribed from the supplied image.",
+        "Brand lettering is obscured in the main logo area; do not infer brand or official affiliation from the packaging silhouette.",
+        "Keep the supplied image intact. No new main or secondary images were generated in this intake step.",
+        "Probable match to B02-01-01 based on Vitamin B3 wording, pink cap and 200 mL. Current logo is obscured; verify same-product identity before merging. If matched, use latest USD 2.99 / MOQ 6 instead of the older USD 3 quote."
+      ],
+      "status": "Intake record; cross-batch deduplication and final website import pending"
+    },
+    {
+      "intake_id": "B05-05",
+      "upload_order": 5,
+      "name_zh": "Cocoa Radiant 身体油（浅色款）",
+      "name_en": "Cocoa Radiant Body Oil",
+      "category": "Body Oil",
+      "brand": null,
+      "supplier_sku": null,
+      "suggested_slug_candidate": "cocoa-radiant-body-oil-200ml",
+      "size_observed_on_image": "200 mL",
+      "user_confirmed": {
+        "currency": "USD",
+        "price_per_piece": 2.99,
+        "moq_pieces": 6,
+        "source_text": "MOQ 6 PIECES PRICE USD 2.99/PIECES"
+      },
+      "draft_copy_en": {
+        "display_name": "Cocoa Radiant Body Oil — 200 mL",
+        "short_description": "Cocoa Radiant Body Oil, 200 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+        "seo_title": "Cocoa Radiant Body Oil — 200 mL | TopPerfume",
+        "meta_description": "Cocoa Radiant Body Oil, 200 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+        "price_display": "US$2.99 / piece",
+        "moq_display": "MOQ: 6 pieces",
+        "cta": "Inquire About This Product"
+      },
+      "image": {
+        "file": "images/B05-05-cocoa-radiant-body-oil-200ml.jpg",
+        "source_filename": "f1addec39aa4d8cb36872803b12a03cf.jpg",
+        "sha256": "68424294cb27aece79e477e0ea9f4298d74b2077434672ad834104005eb8bad4",
+        "dimensions_px": [
+          1200,
+          1200
+        ],
+        "alt": "Pale Cocoa Radiant body oil bottle with a blue cap, labeled 200 mL",
+        "processing": "Copied and renamed only; original pixels retained"
+      },
+      "possible_existing_record": {
+        "candidate_id": "B02-01-02",
+        "match_confirmed": false,
+        "latest_quote_if_matched": {
+          "price_usd_per_piece": 2.99,
+          "moq_pieces": 6
+        }
+      },
+      "review_notes": [
+        "Price and MOQ are user-confirmed for this batch only. Product name and legible size are transcribed from the supplied image.",
+        "Brand lettering is obscured in the main logo area; do not infer brand or official affiliation from the packaging silhouette.",
+        "Keep the supplied image intact. No new main or secondary images were generated in this intake step.",
+        "Probable match to B02-01-02 based on Cocoa Radiant Body Oil and 200 mL. Do not automatically merge with B05-02, which says Body Gel Oil. If the older match is confirmed, apply latest USD 2.99 / MOQ 6 only to that product."
+      ],
+      "status": "Intake record; cross-batch deduplication and final website import pending"
+    },
+    {
+      "intake_id": "B05-06",
+      "upload_order": 6,
+      "name_zh": "Advanced Repair 身体乳（白瓶）",
+      "name_en": "Advanced Repair Body Lotion",
+      "category": "Body Lotion",
+      "brand": null,
+      "supplier_sku": null,
+      "suggested_slug_candidate": "advanced-repair-body-lotion-725ml",
+      "size_observed_on_image": "725 mL",
+      "user_confirmed": {
+        "currency": "USD",
+        "price_per_piece": 2.99,
+        "moq_pieces": 6,
+        "source_text": "MOQ 6 PIECES PRICE USD 2.99/PIECES"
+      },
+      "draft_copy_en": {
+        "display_name": "Advanced Repair Body Lotion — 725 mL",
+        "short_description": "Advanced Repair Body Lotion, 725 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+        "seo_title": "Advanced Repair Body Lotion — 725 mL | TopPerfume",
+        "meta_description": "Advanced Repair Body Lotion, 725 mL as labeled. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+        "price_display": "US$2.99 / piece",
+        "moq_display": "MOQ: 6 pieces",
+        "cta": "Inquire About This Product"
+      },
+      "image": {
+        "file": "images/B05-06-advanced-repair-body-lotion-725ml.jpg",
+        "source_filename": "22b00ba690e86f43525c51213cd4765b.jpg",
+        "sha256": "8e14ef14921bcc7cffe3c9bd5420a67225d1b47d6a367d44b24cd145fa4fd3e8",
+        "dimensions_px": [
+          1200,
+          1200
+        ],
+        "alt": "White Advanced Repair body lotion bottle with a blue pump, labeled 725 mL",
+        "processing": "Copied and renamed only; original pixels retained"
+      },
+      "possible_existing_record": null,
+      "review_notes": [
+        "Price and MOQ are user-confirmed for this batch only. Product name and legible size are transcribed from the supplied image.",
+        "Brand lettering is obscured in the main logo area; do not infer brand or official affiliation from the packaging silhouette.",
+        "Keep the supplied image intact. No new main or secondary images were generated in this intake step.",
+        "The image prints 48-hour moisturization and other benefit language; no supporting test report was supplied. Do not expand these into guaranteed-duration, skin-healing or medical claims."
+      ],
+      "status": "Intake record; cross-batch deduplication and final website import pending"
+    },
+    {
+      "intake_id": "B05-07",
+      "upload_order": 7,
+      "name_zh": "Calm Healing 身体乳（紫瓶）",
+      "name_en": "Calm Healing Body Lotion",
+      "category": "Body Lotion",
+      "brand": null,
+      "supplier_sku": null,
+      "suggested_slug_candidate": "calm-healing-body-lotion",
+      "size_observed_on_image": null,
+      "user_confirmed": {
+        "currency": "USD",
+        "price_per_piece": 2.99,
+        "moq_pieces": 6,
+        "source_text": "MOQ 6 PIECES PRICE USD 2.99/PIECES"
+      },
+      "draft_copy_en": {
+        "display_name": "Calm Healing Body Lotion",
+        "short_description": "Calm Healing Body Lotion. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+        "seo_title": "Calm Healing Body Lotion | TopPerfume",
+        "meta_description": "Calm Healing Body Lotion. US$2.99 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+        "price_display": "US$2.99 / piece",
+        "moq_display": "MOQ: 6 pieces",
+        "cta": "Inquire About This Product"
+      },
+      "image": {
+        "file": "images/B05-07-calm-healing-body-lotion.jpg",
+        "source_filename": "700612e392048fa99f0ff34858bc2c33.jpg",
+        "sha256": "9b01eddcb4ce84a1b15b4850ed501241dbfabac87896432b820eddace25d4c3a",
+        "dimensions_px": [
+          1200,
+          1200
+        ],
+        "alt": "Purple Calm Healing body lotion bottle with a blue pump",
+        "processing": "Copied and renamed only; original pixels retained"
+      },
+      "possible_existing_record": null,
+      "review_notes": [
+        "Price and MOQ are user-confirmed for this batch only. Product name and legible size are transcribed from the supplied image.",
+        "Brand lettering is obscured in the main logo area; do not infer brand or official affiliation from the packaging silhouette.",
+        "Keep the supplied image intact. No new main or secondary images were generated in this intake step.",
+        "The image prints 48-hour moisturization and other benefit language; no supporting test report was supplied. Do not expand these into guaranteed-duration, skin-healing or medical claims.",
+        "Small net-contents text is not reliable enough to transcribe; retain capacity as unknown rather than assume it matches the other pump bottles."
+      ],
+      "status": "Intake record; cross-batch deduplication and final website import pending"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+.git
+.vercel
+.env*
+node_modules
+tmp
+temp
+dist
+.pnpm-store
+*.log

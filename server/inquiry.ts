@@ -1,3 +1,4 @@
+import { dispatchGuidance, transactionGuidance } from "../shared/businessPolicy";
 import { randomUUID } from "node:crypto";
 
 export type InquiryEmailInput = {
@@ -6,6 +7,10 @@ export type InquiryEmailInput = {
   sku?: string;
   productUrl?: string;
   category?: string;
+  format?: string;
+  standardMoq?: string;
+  unitPrice?: string;
+  subtotal?: string;
   quantity: string;
   countryMarket: string;
   customerName: string;
@@ -38,6 +43,13 @@ export function buildInquiryEmail(input: InquiryEmailInput) {
     `SKU: ${displayValue(input.sku)}`,
     `Product URL: ${displayValue(input.productUrl)}`,
     `Category: ${displayValue(input.category)}`,
+    `Size / format: ${displayValue(input.format)}`,
+    `MOQ: ${displayValue(input.standardMoq)}`,
+    `Unit price: ${displayValue(input.unitPrice)}`,
+    `Product subtotal: ${displayValue(input.subtotal)} (excludes shipping and taxes)`,
+    "Final delivered quotation requires destination, availability and shipping confirmation. This is an inquiry, not an order.",
+    dispatchGuidance,
+    transactionGuidance,
     "",
     "BUYER DETAILS",
     `Customer Name: ${displayValue(input.customerName)}`,

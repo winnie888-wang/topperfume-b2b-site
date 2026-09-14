@@ -1,0 +1,607 @@
+{
+  "batch": "02",
+  "purpose": "Product image intake and listing candidates; not confirmed sale inventory",
+  "uploaded_image_count": 13,
+  "unique_image_count": 11,
+  "group_count": 11,
+  "candidate_variant_count": 17,
+  "pricing_rule": "User confirmed batch 02: US$3.00 per piece; MOQ 6 pieces. Applies to all 17 candidate variants across the 11 groups in the immediately preceding batch, including Hareem Al Sultan. Earlier batch 01 retains its separate prices.",
+  "scope_rule": "User originally planned 10 body lotions and 5 perfumes. These uploads include body oil and facial skincare; retain all as candidates and let the user select the final assortment. Do not silently count facial creams or cleansers as body lotion.",
+  "brand_rule": "Brand names identify visible packaging only; no authenticity, authorization, official-dealer relationship or OEM capability has been verified.",
+  "schema_note": "Adapt this intake data to the existing website schema after reading its code.",
+  "duplicate_uploads": [
+    {
+      "upload_order": 12,
+      "source_filename": "a2926181-539e-45c9-bea7-12118cad518b.png",
+      "same_bytes_as_upload_order": 11,
+      "retained_image": "images/B02-11-simple-moisturising-facial-wash.png"
+    },
+    {
+      "upload_order": 13,
+      "source_filename": "55032f25-4e97-45bc-9d90-e7b2826bb9af.png",
+      "same_bytes_as_upload_order": 11,
+      "retained_image": "images/B02-11-simple-moisturising-facial-wash.png"
+    }
+  ],
+  "groups": [
+    {
+      "group_id": "B02-01",
+      "upload_order": 1,
+      "name_zh": "Vaseline 身体油系列",
+      "brand_observed_on_image": "Vaseline",
+      "category": "Body Oil",
+      "candidate_variant_count": 6,
+      "image": {
+        "file": "images/B02-01-vaseline-body-oil-six-variants.png",
+        "source_filename": "7730e9bf-a78f-4303-afc2-141c8ca183a3.png",
+        "sha256": "75ede2d5c72f3cb19cf49ff8430ef79cacb4874f89f4dd5a873ad671aa1a01b4",
+        "alt": "Six differently labeled Vaseline bottles, each marked 200 mL",
+        "processing": "Copied and renamed only; original pixels retained",
+        "role": "Source photo; final main image not produced"
+      },
+      "variants": [
+        {
+          "candidate_id": "B02-01-01",
+          "name_from_image": "Vaseline Vitamin B3 Body Oil",
+          "size_observed_on_image": "200 mL",
+          "position_in_image": "leftmost",
+          "price_usd_per_piece": 3.0,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "listing_selected_by_user": null,
+          "draft_copy_en": {
+            "title": "Vaseline Vitamin B3 Body Oil",
+            "short_description": "Vaseline Vitamin B3 Body Oil, labeled 200 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "Vaseline Vitamin B3 Body Oil | TopPerfume",
+            "meta_description": "Vaseline Vitamin B3 Body Oil, labeled 200 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "cta": "Request Product Details"
+          },
+          "draft_slug_candidate": "vaseline-body-oil-six-variants-variant-1",
+          "possible_later_update": {
+            "batch05_record": "B05-04",
+            "match_confirmed": false,
+            "latest_price_if_same_product": 2.99,
+            "latest_moq_if_same_product": 6,
+            "instruction": "Resolve identity and use latest quote only for the matched variant."
+          }
+        },
+        {
+          "candidate_id": "B02-01-02",
+          "name_from_image": "Vaseline Cocoa Radiant Body Oil",
+          "size_observed_on_image": "200 mL",
+          "position_in_image": "second from left",
+          "price_usd_per_piece": 3.0,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "listing_selected_by_user": null,
+          "draft_copy_en": {
+            "title": "Vaseline Cocoa Radiant Body Oil",
+            "short_description": "Vaseline Cocoa Radiant Body Oil, labeled 200 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "Vaseline Cocoa Radiant Body Oil | TopPerfume",
+            "meta_description": "Vaseline Cocoa Radiant Body Oil, labeled 200 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "cta": "Request Product Details"
+          },
+          "draft_slug_candidate": "vaseline-body-oil-six-variants-variant-2",
+          "possible_later_update": {
+            "batch05_record": "B05-05",
+            "match_confirmed": false,
+            "latest_price_if_same_product": 2.99,
+            "latest_moq_if_same_product": 6,
+            "instruction": "Resolve identity and use latest quote only for the matched variant."
+          }
+        },
+        {
+          "candidate_id": "B02-01-03",
+          "name_from_image": "Vaseline Sunlit Glow Body Oil",
+          "size_observed_on_image": "200 mL",
+          "position_in_image": "third from left",
+          "price_usd_per_piece": 3.0,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "listing_selected_by_user": null,
+          "draft_copy_en": {
+            "title": "Vaseline Sunlit Glow Body Oil",
+            "short_description": "Vaseline Sunlit Glow Body Oil, labeled 200 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "Vaseline Sunlit Glow Body Oil | TopPerfume",
+            "meta_description": "Vaseline Sunlit Glow Body Oil, labeled 200 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "cta": "Request Product Details"
+          },
+          "draft_slug_candidate": "vaseline-body-oil-six-variants-variant-3",
+          "possible_later_update": {
+            "batch04_group": "B04-04",
+            "match_confirmed": false,
+            "latest_price_if_same_product": 2.99,
+            "latest_moq_if_same_product": 6,
+            "instruction": "Resolve possible same-product identity before final import; latest quote applies only if matched."
+          }
+        },
+        {
+          "candidate_id": "B02-01-04",
+          "name_from_image": "Vaseline Golden Glow Body Oil",
+          "size_observed_on_image": "200 mL",
+          "position_in_image": "fourth from left",
+          "price_usd_per_piece": 3.0,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "listing_selected_by_user": null,
+          "draft_copy_en": {
+            "title": "Vaseline Golden Glow Body Oil",
+            "short_description": "Vaseline Golden Glow Body Oil, labeled 200 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "Vaseline Golden Glow Body Oil | TopPerfume",
+            "meta_description": "Vaseline Golden Glow Body Oil, labeled 200 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "cta": "Request Product Details"
+          },
+          "draft_slug_candidate": "vaseline-body-oil-six-variants-variant-4"
+        },
+        {
+          "candidate_id": "B02-01-05",
+          "name_from_image": "Vaseline UV Extra Brightening Gluta Ceramide",
+          "size_observed_on_image": "200 mL",
+          "position_in_image": "fifth from left",
+          "price_usd_per_piece": 3.0,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "listing_selected_by_user": null,
+          "draft_copy_en": {
+            "title": "Vaseline UV Extra Brightening Gluta Ceramide",
+            "short_description": "Vaseline UV Extra Brightening Gluta Ceramide, labeled 200 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "Vaseline UV Extra Brightening Gluta Ceramide | TopPerfume",
+            "meta_description": "Vaseline UV Extra Brightening Gluta Ceramide, labeled 200 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "cta": "Request Product Details"
+          },
+          "draft_slug_candidate": "vaseline-body-oil-six-variants-variant-5",
+          "possible_later_update": {
+            "batch04_group": "B04-03",
+            "match_confirmed": false,
+            "latest_price_if_same_product": 2.99,
+            "latest_moq_if_same_product": 6,
+            "instruction": "Resolve possible same-product identity before final import; latest quote applies only if matched."
+          }
+        },
+        {
+          "candidate_id": "B02-01-06",
+          "name_from_image": "Vaseline Cera Glow Body Gel Oil",
+          "size_observed_on_image": "200 mL",
+          "position_in_image": "rightmost",
+          "price_usd_per_piece": 3.0,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "listing_selected_by_user": null,
+          "draft_copy_en": {
+            "title": "Vaseline Cera Glow Body Gel Oil",
+            "short_description": "Vaseline Cera Glow Body Gel Oil, labeled 200 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "Vaseline Cera Glow Body Gel Oil | TopPerfume",
+            "meta_description": "Vaseline Cera Glow Body Gel Oil, labeled 200 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "cta": "Request Product Details"
+          },
+          "draft_slug_candidate": "vaseline-body-oil-six-variants-variant-6"
+        }
+      ],
+      "review_notes": [
+        "Six different front-label variants are visible; whether to sell all six individually or as variants requires selection. Do not presume a six-piece set.",
+        "The fifth bottle is grouped with body oils in the image but its precise product type requires confirmation.",
+        "Printed UV, 7 days, 8x and 10x statements are artwork observations, not independently verified benefits. Do not add SPF or quantified benefit claims."
+      ]
+    },
+    {
+      "group_id": "B02-02",
+      "upload_order": 2,
+      "name_zh": "Khadlaj Hareem Al Sultan 香氛",
+      "brand_observed_on_image": "Khadlaj",
+      "category": "Fragrance",
+      "candidate_variant_count": 1,
+      "image": {
+        "file": "images/B02-02-khadlaj-hareem-al-sultan.png",
+        "source_filename": "6053e2d7-41ed-4b68-84a9-c1051e202bb6.png",
+        "sha256": "fc41dcca1350b8f36e2d4e9bdef889fa50f99673b670e7f325d1579f65f6b136",
+        "alt": "Ornate gold Hareem Al Sultan bottle with its box and a separately marked sample",
+        "processing": "Copied and renamed only; original pixels retained",
+        "role": "Source photo; final main image not produced"
+      },
+      "variants": [
+        {
+          "candidate_id": "B02-02",
+          "name_from_image": "Khadlaj Hareem Al Sultan",
+          "size_observed_on_image": null,
+          "position_in_image": "ornate gold bottle on left",
+          "price_usd_per_piece": 3.0,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "listing_selected_by_user": null,
+          "draft_copy_en": {
+            "title": "Khadlaj Hareem Al Sultan",
+            "short_description": "Khadlaj Hareem Al Sultan. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "Khadlaj Hareem Al Sultan | TopPerfume",
+            "meta_description": "Khadlaj Hareem Al Sultan. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "cta": "Request Product Details"
+          },
+          "draft_slug_candidate": "khadlaj-hareem-al-sultan"
+        }
+      ],
+      "review_notes": [
+        "Main bottle capacity and formulation are not legible. Do not infer 35 mL or whether it is an oil, spray or alcohol-free product.",
+        "Right-hand red item visibly says SAMPLE NOT FOR SALE and Eau de Parfum; record as a sample prop, not an additional retail SKU or included gift. Its text does not establish the main bottle formulation.",
+        "Foreground main bottle and its box define this candidate; background stock is not part of the listing."
+      ]
+    },
+    {
+      "group_id": "B02-03",
+      "upload_order": 3,
+      "name_zh": "OLAY Regenerist 日霜／晚霜",
+      "brand_observed_on_image": "OLAY",
+      "category": "Face Cream",
+      "candidate_variant_count": 2,
+      "image": {
+        "file": "images/B02-03-olay-regenerist-day-night.png",
+        "source_filename": "9cb3de8a-ca44-46ed-b729-71724d1eff74.png",
+        "sha256": "75020a73a2e1871a399b2743667486ff3f2b180a74bc1ae843c7387172a97dfc",
+        "alt": "Two OLAY Regenerist cream boxes, standard and night versions, marked 50 g",
+        "processing": "Copied and renamed only; original pixels retained",
+        "role": "Source photo; final main image not produced"
+      },
+      "variants": [
+        {
+          "candidate_id": "B02-03-01",
+          "name_from_image": "OLAY Regenerist Micro-Sculpting Cream",
+          "size_observed_on_image": "50 g",
+          "position_in_image": "left box",
+          "price_usd_per_piece": 3.0,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "listing_selected_by_user": null,
+          "draft_copy_en": {
+            "title": "OLAY Regenerist Micro-Sculpting Cream",
+            "short_description": "OLAY Regenerist Micro-Sculpting Cream, labeled 50 g. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "OLAY Regenerist Micro-Sculpting Cream | TopPerfume",
+            "meta_description": "OLAY Regenerist Micro-Sculpting Cream, labeled 50 g. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "cta": "Request Product Details"
+          },
+          "draft_slug_candidate": "olay-regenerist-day-night-variant-1"
+        },
+        {
+          "candidate_id": "B02-03-02",
+          "name_from_image": "OLAY Regenerist Micro-Sculpting Cream Night",
+          "size_observed_on_image": "50 g",
+          "position_in_image": "right box",
+          "price_usd_per_piece": 3.0,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "listing_selected_by_user": null,
+          "draft_copy_en": {
+            "title": "OLAY Regenerist Micro-Sculpting Cream Night",
+            "short_description": "OLAY Regenerist Micro-Sculpting Cream Night, labeled 50 g. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "OLAY Regenerist Micro-Sculpting Cream Night | TopPerfume",
+            "meta_description": "OLAY Regenerist Micro-Sculpting Cream Night, labeled 50 g. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "cta": "Request Product Details"
+          },
+          "draft_slug_candidate": "olay-regenerist-day-night-variant-2"
+        }
+      ],
+      "review_notes": [
+        "Two distinct labels are visible: standard cream and night cream. Keep separate candidates; do not assume a two-piece set."
+      ]
+    },
+    {
+      "group_id": "B02-04",
+      "upload_order": 4,
+      "name_zh": "NIVEA Q10 日霜",
+      "brand_observed_on_image": "NIVEA",
+      "category": "Face Cream",
+      "candidate_variant_count": 1,
+      "image": {
+        "file": "images/B02-04-nivea-q10-day-cream.png",
+        "source_filename": "03f2b113-e50a-4955-8124-918b6e66dcbd.png",
+        "sha256": "f6cd8fce899420a448379bed22f11a6d443d8be4251b1276c1e55f0d2c1b0843",
+        "alt": "NIVEA Q10 cream jar and matching 50 mL box",
+        "processing": "Copied and renamed only; original pixels retained",
+        "role": "Source photo; final main image not produced"
+      },
+      "variants": [
+        {
+          "candidate_id": "B02-04",
+          "name_from_image": "NIVEA Q10 Anti-Wrinkle Power Multi Protective Day Cream",
+          "size_observed_on_image": "50 mL",
+          "position_in_image": "jar and matching box",
+          "price_usd_per_piece": 3.0,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "listing_selected_by_user": null,
+          "draft_copy_en": {
+            "title": "NIVEA Q10 Anti-Wrinkle Power Multi Protective Day Cream",
+            "short_description": "NIVEA Q10 Anti-Wrinkle Power Multi Protective Day Cream, labeled 50 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "NIVEA Q10 Anti-Wrinkle Power Multi Protective Day Cream | TopPerfume",
+            "meta_description": "NIVEA Q10 Anti-Wrinkle Power Multi Protective Day Cream, labeled 50 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "cta": "Request Product Details"
+          },
+          "draft_slug_candidate": "nivea-q10-day-cream"
+        }
+      ],
+      "review_notes": [
+        "SPF 30 is printed on the box. Record as label information; do not infer test evidence or expand protection claims.",
+        "Jar and box represent one product, not two."
+      ]
+    },
+    {
+      "group_id": "B02-05",
+      "upload_order": 5,
+      "name_zh": "The Ordinary 甘醇酸爽肤水",
+      "brand_observed_on_image": "The Ordinary",
+      "category": "Toner",
+      "candidate_variant_count": 1,
+      "image": {
+        "file": "images/B02-05-the-ordinary-glycolic-toner.png",
+        "source_filename": "9dfcc254-9042-4149-a22e-63a81d9b0714.png",
+        "sha256": "bc636bb62e9cf77ad0191e0577c8aeb43705f53429ccf3cdce3e05502fb488de",
+        "alt": "Three matching The Ordinary Glycolic Acid 7% toner bottles with 100 mL boxes",
+        "processing": "Copied and renamed only; original pixels retained",
+        "role": "Source photo; final main image not produced"
+      },
+      "variants": [
+        {
+          "candidate_id": "B02-05",
+          "name_from_image": "The Ordinary Glycolic Acid 7% Exfoliating Toner",
+          "size_observed_on_image": "100 mL",
+          "position_in_image": "three matching bottles and boxes",
+          "price_usd_per_piece": 3.0,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "listing_selected_by_user": null,
+          "draft_copy_en": {
+            "title": "The Ordinary Glycolic Acid 7% Exfoliating Toner",
+            "short_description": "The Ordinary Glycolic Acid 7% Exfoliating Toner, labeled 100 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "The Ordinary Glycolic Acid 7% Exfoliating Toner | TopPerfume",
+            "meta_description": "The Ordinary Glycolic Acid 7% Exfoliating Toner, labeled 100 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "cta": "Request Product Details"
+          },
+          "draft_slug_candidate": "the-ordinary-glycolic-toner"
+        }
+      ],
+      "review_notes": [
+        "7% and 100 mL are visible label text. Three identical foreground bottles count as one candidate; no three-piece bundle is confirmed.",
+        "Do not invent application frequency, clinical effects, full INCI or suitability advice."
+      ]
+    },
+    {
+      "group_id": "B02-06",
+      "upload_order": 6,
+      "name_zh": "HOBBY 兰花沐浴露",
+      "brand_observed_on_image": "HOBBY",
+      "category": "Body Wash",
+      "candidate_variant_count": 1,
+      "image": {
+        "file": "images/B02-06-hobby-pure-orchid-shower-gel.png",
+        "source_filename": "e34caca1-0c1e-48d6-94f0-0d0c05b0b28c.png",
+        "sha256": "2319a4a8c69abb1e6fec6ce1b60a272ab9e73da18da0ea620e1bdb78910cec3e",
+        "alt": "Three matching HOBBY Fresh Care Pure Orchid shower gel bottles",
+        "processing": "Copied and renamed only; original pixels retained",
+        "role": "Source photo; final main image not produced"
+      },
+      "variants": [
+        {
+          "candidate_id": "B02-06",
+          "name_from_image": "HOBBY Fresh Care Pure Orchid Shower Gel",
+          "size_observed_on_image": null,
+          "position_in_image": "three matching bottles",
+          "price_usd_per_piece": 3.0,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "listing_selected_by_user": null,
+          "draft_copy_en": {
+            "title": "HOBBY Fresh Care Pure Orchid Shower Gel",
+            "short_description": "HOBBY Fresh Care Pure Orchid Shower Gel. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "HOBBY Fresh Care Pure Orchid Shower Gel | TopPerfume",
+            "meta_description": "HOBBY Fresh Care Pure Orchid Shower Gel. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "cta": "Request Product Details"
+          },
+          "draft_slug_candidate": "hobby-pure-orchid-shower-gel"
+        }
+      ],
+      "review_notes": [
+        "Capacity is not legible. Repeated bottles represent one candidate."
+      ]
+    },
+    {
+      "group_id": "B02-07",
+      "upload_order": 7,
+      "name_zh": "Dr Teal’s 薰衣草身体乳",
+      "brand_observed_on_image": "Dr Teal's",
+      "category": "Body Lotion",
+      "candidate_variant_count": 1,
+      "image": {
+        "file": "images/B02-07-dr-teals-lavender-body-lotion.png",
+        "source_filename": "f347136f-ac1a-489f-b437-4324dccd4bec.png",
+        "sha256": "67c183255a0f9f9b9cf0ad4897ac65a72134087ae30e7460c7c144fe833cbc06",
+        "alt": "Three Dr Teal’s lavender body lotion pump bottles labeled 532 mL",
+        "processing": "Copied and renamed only; original pixels retained",
+        "role": "Source photo; final main image not produced"
+      },
+      "variants": [
+        {
+          "candidate_id": "B02-07",
+          "name_from_image": "Dr Teal's Lavender Body Lotion",
+          "size_observed_on_image": "18 FL OZ / 532 mL",
+          "position_in_image": "three matching bottles",
+          "price_usd_per_piece": 3.0,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "listing_selected_by_user": null,
+          "draft_copy_en": {
+            "title": "Dr Teal's Lavender Body Lotion",
+            "short_description": "Dr Teal's Lavender Body Lotion, labeled 18 FL OZ / 532 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "Dr Teal's Lavender Body Lotion | TopPerfume",
+            "meta_description": "Dr Teal's Lavender Body Lotion, labeled 18 FL OZ / 532 mL. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "cta": "Request Product Details"
+          },
+          "draft_slug_candidate": "dr-teals-lavender-body-lotion"
+        }
+      ],
+      "review_notes": [
+        "The supplied label includes Soothe & Sleep and 24 hour moisture. Do not turn these into medical sleep-treatment or guaranteed-duration claims."
+      ]
+    },
+    {
+      "group_id": "B02-08",
+      "upload_order": 8,
+      "name_zh": "St. Ives 燕麦乳木果身体乳",
+      "brand_observed_on_image": "St. Ives",
+      "category": "Body Lotion",
+      "candidate_variant_count": 1,
+      "image": {
+        "file": "images/B02-08-st-ives-oatmeal-shea-body-lotion.png",
+        "source_filename": "7e105f1f-d69b-407f-b50e-e2e34192910d.png",
+        "sha256": "4646609620ab63518542878fabe04dee31b9c6df05b7d5423b3d606fce7ad831",
+        "alt": "Three St. Ives oatmeal and shea butter body lotion pump bottles",
+        "processing": "Copied and renamed only; original pixels retained",
+        "role": "Source photo; final main image not produced"
+      },
+      "variants": [
+        {
+          "candidate_id": "B02-08",
+          "name_from_image": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion",
+          "size_observed_on_image": null,
+          "position_in_image": "three matching bottles",
+          "price_usd_per_piece": 3.0,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "listing_selected_by_user": null,
+          "draft_copy_en": {
+            "title": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion",
+            "short_description": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion | TopPerfume",
+            "meta_description": "St. Ives Soothing Oatmeal & Shea Butter Body Lotion. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "cta": "Request Product Details"
+          },
+          "draft_slug_candidate": "st-ives-oatmeal-shea-body-lotion"
+        }
+      ],
+      "review_notes": [
+        "Small net-contents text appears to read 21 FL OZ / 621 mL but needs confirmation. Keep the publishable size null until confirmed."
+      ]
+    },
+    {
+      "group_id": "B02-09",
+      "upload_order": 9,
+      "name_zh": "St. Ives 椰子兰花身体乳",
+      "brand_observed_on_image": "St. Ives",
+      "category": "Body Lotion",
+      "candidate_variant_count": 1,
+      "image": {
+        "file": "images/B02-09-st-ives-coconut-orchid-body-lotion.png",
+        "source_filename": "a067e6e7-bea5-48f0-9244-24204d5eb3c5.png",
+        "sha256": "dd1a1ccd3eca80051c57040f4b4a803122b3464a3b672cb9da69c12c1850eaee",
+        "alt": "Two St. Ives coconut and orchid body lotion pump bottles",
+        "processing": "Copied and renamed only; original pixels retained",
+        "role": "Source photo; final main image not produced"
+      },
+      "variants": [
+        {
+          "candidate_id": "B02-09",
+          "name_from_image": "St. Ives Softening Coconut & Orchid Body Lotion",
+          "size_observed_on_image": null,
+          "position_in_image": "two matching bottles",
+          "price_usd_per_piece": 3.0,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "listing_selected_by_user": null,
+          "draft_copy_en": {
+            "title": "St. Ives Softening Coconut & Orchid Body Lotion",
+            "short_description": "St. Ives Softening Coconut & Orchid Body Lotion. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "St. Ives Softening Coconut & Orchid Body Lotion | TopPerfume",
+            "meta_description": "St. Ives Softening Coconut & Orchid Body Lotion. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "cta": "Request Product Details"
+          },
+          "draft_slug_candidate": "st-ives-coconut-orchid-body-lotion"
+        }
+      ],
+      "review_notes": [
+        "Small net-contents text appears to read 21 FL OZ / 621 mL but needs confirmation. Keep the publishable size null until confirmed."
+      ]
+    },
+    {
+      "group_id": "B02-10",
+      "upload_order": 10,
+      "name_zh": "Garnier 维 C 身体乳",
+      "brand_observed_on_image": "Garnier",
+      "category": "Body Lotion",
+      "candidate_variant_count": 1,
+      "image": {
+        "file": "images/B02-10-garnier-vitamin-c-body-serum-lotion.png",
+        "source_filename": "ddd05c3b-ba16-4464-a75a-cc830e1e2a52.png",
+        "sha256": "b6fc71069f7e1ee1e72dc9381e5fb30b206e21e44680b523f75297bd2cef0034",
+        "alt": "Three yellow Garnier Bright Complete Vitamin C body serum lotion pump bottles",
+        "processing": "Copied and renamed only; original pixels retained",
+        "role": "Source photo; final main image not produced"
+      },
+      "variants": [
+        {
+          "candidate_id": "B02-10",
+          "name_from_image": "Garnier Bright Complete Vitamin C Body Serum Lotion",
+          "size_observed_on_image": null,
+          "position_in_image": "three matching yellow bottles",
+          "price_usd_per_piece": 3.0,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "listing_selected_by_user": null,
+          "draft_copy_en": {
+            "title": "Garnier Bright Complete Vitamin C Body Serum Lotion",
+            "short_description": "Garnier Bright Complete Vitamin C Body Serum Lotion. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "Garnier Bright Complete Vitamin C Body Serum Lotion | TopPerfume",
+            "meta_description": "Garnier Bright Complete Vitamin C Body Serum Lotion. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "cta": "Request Product Details"
+          },
+          "draft_slug_candidate": "garnier-vitamin-c-body-serum-lotion"
+        }
+      ],
+      "review_notes": [
+        "Capacity is not visible. Do not merge this with the previous unbranded 502 mL Vitamin C lotion or 444 mL Vitamin C + Niacinamide product.",
+        "Printed UV and 2x statements do not establish SPF or ingredient concentration."
+      ]
+    },
+    {
+      "group_id": "B02-11",
+      "upload_order": 11,
+      "name_zh": "Simple 保湿洁面",
+      "brand_observed_on_image": "Simple",
+      "category": "Facial Cleanser",
+      "candidate_variant_count": 1,
+      "image": {
+        "file": "images/B02-11-simple-moisturising-facial-wash.png",
+        "source_filename": "cfbc9911-874e-428e-af37-38f3a430bf78.png",
+        "sha256": "3bbc6730ea1aad4638773b2b68fd247a48be16a36c13a008ae941cdfa248984b",
+        "alt": "Two Simple moisturising facial wash tubes labeled 150 mL",
+        "processing": "Copied and renamed only; original pixels retained",
+        "role": "Source photo; final main image not produced"
+      },
+      "variants": [
+        {
+          "candidate_id": "B02-11",
+          "name_from_image": "Simple Moisturising Facial Wash",
+          "size_observed_on_image": "150 mL / 5.1 FL OZ",
+          "position_in_image": "two matching tubes",
+          "price_usd_per_piece": 3.0,
+          "moq_pieces": 6,
+          "supplier_sku": null,
+          "listing_selected_by_user": null,
+          "draft_copy_en": {
+            "title": "Simple Moisturising Facial Wash",
+            "short_description": "Simple Moisturising Facial Wash, labeled 150 mL / 5.1 FL OZ. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "seo_title": "Simple Moisturising Facial Wash | TopPerfume",
+            "meta_description": "Simple Moisturising Facial Wash, labeled 150 mL / 5.1 FL OZ. US$3.00 per piece. Minimum order: 6 pieces. Contact us for product specifications and order details.",
+            "cta": "Request Product Details"
+          },
+          "draft_slug_candidate": "simple-moisturising-facial-wash"
+        }
+      ],
+      "review_notes": [
+        "Uploads 11, 12 and 13 are byte-identical copies. Retain one image and one candidate.",
+        "Two tubes in the retained picture are not a confirmed two-piece bundle."
+      ]
+    }
+  ],
+  "confirmed_by_user": {
+    "price_usd_per_piece": 3.0,
+    "moq_pieces": 6,
+    "source_text": "上面的款式 moq 6 pieces price usd 3",
+    "scope": "Immediately preceding batch 02, 11 groups / 17 candidate variants"
+  }
+}
