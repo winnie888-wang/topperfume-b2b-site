@@ -1,3 +1,4 @@
+import { buyerGuides, guidePath } from "./buyerGuides";
 import { dispatchGuidance } from "./businessPolicy";
 import { getProduct, type Product, type ProductCategory } from "@/data/products";
 import { withOrderTerms } from "./productTerms";
@@ -14,7 +15,7 @@ export type SeoPage = {
   title: string;
   description: string;
   path: string;
-  type?: "website" | "product";
+  type?: "website" | "product" | "article";
   image?: string;
   structuredData: Record<string, unknown> | Array<Record<string, unknown>>;
 };
@@ -299,6 +300,8 @@ export function buildSitemapXml(products: Product[]) {
     { path: "/", priority: "1.0" },
     { path: "/contact", priority: "0.7" },
     { path: "/privacy", priority: "0.3" },
+    { path: "/buyer-guides", priority: "0.7" },
+    ...buyerGuides.map(article => ({ path: guidePath(article.slug), priority: "0.7" })),
     { path: "/collections/fragrance", priority: "0.8" },
     { path: "/collections/skincare", priority: "0.8" },
     { path: "/collections/makeup", priority: "0.8" },

@@ -23,7 +23,7 @@ describe("Production SEO foundation", () => {
     const sitemap = buildSitemapXml(products);
     const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
 
-    expect(urls).toHaveLength(products.length + 6);
+    expect(urls).toHaveLength(products.length + 10);
     expect(urls[0]).toBe("https://topperfume.cn/");
     expect(urls).toContain("https://topperfume.cn/collections/fragrance");
     expect(urls).toContain("https://topperfume.cn/collections/skincare");
@@ -46,7 +46,8 @@ describe("Production SEO foundation", () => {
 
   it("publishes real offers for products with confirmed prices without inventing ratings or inventory", () => {
     const pricedProducts = products.filter(product => getProductOffer(product));
-    expect(pricedProducts).toHaveLength(51);
+    // Approved September release: 38 public products, 37 with confirmed prices.
+    expect(pricedProducts).toHaveLength(37);
 
     for (const product of pricedProducts) {
       const offer = getProductOffer(product);

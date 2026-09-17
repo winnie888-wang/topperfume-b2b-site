@@ -1,3 +1,4 @@
+import { buyerGuides, buyerGuidesSeo, getBuyerGuideSeo, guidePath } from "../shared/buyerGuides";
 import { mkdir, readFile, writeFile, rm } from "node:fs/promises";
 import path from "node:path";
 import { prerenderBody } from "./prerender";
@@ -43,6 +44,8 @@ const template = await readFile(path.join(outputDirectory, "index.html"), "utf8"
 await writeFile(path.join(outputDirectory, "index.html"), renderPageHtml(template, homeSeo), "utf8");
 await writePage("low-moq-perfume-manufacturer", renderPageHtml(template, lowMoqPerfumeSeo));
 await writePage("contact", renderPageHtml(template, contactSeo));
+await writePage("buyer-guides", renderPageHtml(template, buyerGuidesSeo));
+for (const article of buyerGuides) await writePage(guidePath(article.slug).slice(1), renderPageHtml(template, getBuyerGuideSeo(article)));
 await writePage('privacy', renderPageHtml(template, privacySeo));
 await writeFile(path.join(outputDirectory, "404.html"), renderPageHtml(template, { title: "Page not found | TopPerfume", description: "This page could not be found.", path: "/404", structuredData: [] }).replace('content="index,follow"', 'content="noindex,nofollow"'), "utf8");
 
