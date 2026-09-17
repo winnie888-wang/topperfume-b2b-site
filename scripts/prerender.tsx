@@ -1,3 +1,5 @@
+import BuyerGuides from "../client/src/pages/BuyerGuides";
+import BuyerGuide from "../client/src/pages/BuyerGuide";
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { Router, Route, Switch } from "wouter";
@@ -21,6 +23,8 @@ export function prerenderBody(path: string) {
     <Route path="/collections/:category" component={Collection} />
     <Route path="/products/:slug" component={ProductDetail} />
     <Route path="/low-moq-perfume-manufacturer" component={LowMoqPerfume} />
+    <Route path="/buyer-guides" component={BuyerGuides} />
+    <Route path="/buyer-guides/:slug" component={BuyerGuide} />
     <Route path="/contact" component={Contact} />
     <Route path="/privacy" component={Privacy} />
     <Route component={NotFound} />

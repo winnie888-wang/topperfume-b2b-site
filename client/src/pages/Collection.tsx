@@ -1,3 +1,4 @@
+import { BuyerGuideLinks } from "@/components/BuyerGuideLinks";
 /**
  * Maison Mercantile design reminder: collections stay editorial in surface but Shopify-fast in function.
  * Keep the category statement compact, put the product grid near the top, and use commercial language buyers can act on.
@@ -68,5 +69,6 @@ export default function Collection() {
     <section className="collection-body collection-body-fast"><div className="collection-catalogue-break"><h2>{isFiltered ? activeTag : "All products"}</h2><span role="status" aria-live="polite">{resultSummary}</span></div><div className="product-grid collection-grid">{visibleProducts.map((product, index) => <ProductCard product={product} index={index} key={product.slug} />)}</div></section>
     <section className="collection-cta"><div><p className="eyebrow">NEED A DIFFERENT FORMAT?</p><h2>Move from product selection to quote.</h2><p>{catalogueMoqGuidance} Each product detail page shows its own confirmed MOQ and lead time. Contact us for details on customization terms.</p></div><WhatsAppCta label="Get Wholesale Quote" intent="quote" context={{ category }} /></section>
     <section className="next-category"><span>Continue browsing</span><Link href={category === "fragrance" ? "/collections/skincare" : category === "skincare" ? "/collections/makeup" : "/collections/fragrance"}>{category === "fragrance" ? "Skincare" : category === "skincare" ? "Makeup" : "Fragrance"} <ArrowRight size={18} /></Link></section>
+    {category === "fragrance" && <BuyerGuideLinks />}
   </SiteShell></>;
 }

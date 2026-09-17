@@ -1,3 +1,4 @@
+import { BuyerGuideLinks } from "@/components/BuyerGuideLinks";
 import { dispatchGuidance } from "@shared/businessPolicy";
 import { ArrowRight, Check, Clock3, MessageCircle, PackageCheck, Sparkles } from "lucide-react";
 import { Link } from "wouter";
@@ -324,5 +325,6 @@ export default function LowMoqPerfume() {
     <section id="faq" className="low-moq-faq"><div className="section-head"><div><p className="eyebrow">08 / BUYER FAQ</p><h2>Questions worth answering before you ask.</h2></div><MessageCircle size={21} /></div><div className="low-moq-faq-list">{faqs.map((faq, index) => <details key={faq.question} open={index === 0}><summary><span>{String(index + 1).padStart(2, "0")}</span>{faq.question}<ArrowRight size={15} /></summary><p>{faq.answer}</p></details>)}</div></section>
 
     <section id="final-cta" className="low-moq-final-cta"><div><p className="eyebrow">09 / YOUR NEXT STEP</p><h2>Choose a product.<br /><em>Start the right conversation.</em></h2><p>Samples, quotes and private-label questions stay WhatsApp-first, with product context added when a SKU is selected.</p></div><div className="low-moq-final-actions"><WhatsAppCta label="Request Free Sample" intent="sample" context={{ category: "fragrance" }} /><WhatsAppCta label="Get a Low MOQ Quote" intent="quote" context={{ category: "fragrance" }} className="button-rose" /><WhatsAppCta label="Discuss Private Label" intent="project" context={{ category: "fragrance" }} /></div></section>
+    <BuyerGuideLinks />
   </SiteShell></>;
 }
