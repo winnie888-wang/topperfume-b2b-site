@@ -16,9 +16,9 @@ describe("WhatsApp-first CTA messages", () => {
     leadTime: "Approx. 7 days",
   };
 
-  it("builds the required free-sample intent with full product context", () => {
+  it("builds a paid-sample inquiry without inferring SKU stock or dispatch", () => {
     const message = buildWhatsAppCtaSummary({ intent: "sample", context });
-    expect(message).toContain("Hi, I'm interested in requesting a free sample of this product.");
+    expect(message).toContain("Hi, I'd like to confirm paid sample availability and charges for this product.");
     expect(message).toContain("Product details:\n\nProduct Name: Production QA Product\n\nSKU: QA-001");
     expect(message).toContain("Product Name: Production QA Product");
     expect(message).toContain("SKU: QA-001");
@@ -26,8 +26,9 @@ describe("WhatsApp-first CTA messages", () => {
     expect(message).not.toContain(".vercel.app");
     expect(message).toContain("Category: fragrance");
     expect(message).toContain("MOQ: 2 pcs");
-    expect(message).toContain("Estimated dispatch is usually around 7 days");
-    expect(message).toContain("not a delivery estimate or a guarantee for every order");
+    expect(message).toContain("Confirm current stock and the dispatch schedule for this product before ordering.");
+    expect(message).not.toMatch(/free sample|7 days/i);
+    expect(message).toContain("Samples are charged, and shipping is paid by the buyer.");
     expect(message).toContain("confirmed in writing");
     expect(message).toContain("Submitting an inquiry does not create an order");
   });

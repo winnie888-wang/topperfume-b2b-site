@@ -1,0 +1,16 @@
+.perfume-commercial { padding: clamp(32px, 5vw, 76px) clamp(20px, 6vw, 96px); display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(28px, 6vw, 88px); border-top: 1px solid #d8ced2; }
+.perfume-commercial h2 { font-family: var(--font-display, Georgia, serif); font-size: clamp(28px, 3.4vw, 44px); line-height: 1.15; margin: 10px 0 20px; max-width: 20ch; }
+.perfume-commercial h3 { font-size: 21px; margin: 0 0 16px; }
+.perfume-commercial p { line-height: 1.7; margin-bottom: 20px; max-width: 68ch; }
+.perfume-project { background: #eee7e8; }
+.perfume-terms { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 0 0 28px; }
+.perfume-terms div { border-bottom: 1px solid #c8b7bd; padding-bottom: 18px; }
+.perfume-terms dt { font-size: 13px; margin-bottom: 8px; }
+.perfume-terms dd { font-size: 34px; margin: 0; line-height: 1.2; }
+.perfume-terms dd span { font-size: 15px; }
+.perfume-note { font-size: 14px; }
+.perfume-actions { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; margin-top: 22px; }
+.perfume-actions a, .perfume-actions button { max-width: 100%; white-space: normal; }
+.perfume-stock-intro { max-width: 76ch; line-height: 1.7; margin-bottom: 24px; }
+.collection-fragrance h1 { font-size: clamp(36px, 4.4vw, 64px); }
+@media (max-width: 760px) { .perfume-commercial { grid-template-columns: 1fr; } .perfume-terms { gap: 16px; } .perfume-actions > .button-primary { width: 100%; justify-content: center; } .pdp-copy > .perfume-note { order: 6; } }

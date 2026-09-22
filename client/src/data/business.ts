@@ -2,7 +2,8 @@
  * Phase 3 business-content reminder: these labels organise a buyer conversation only.
  * Verified commercial terms are stated exactly; internal pending source fields never render raw on buyer-facing pages.
  */
-import { dispatchGuidance, transactionGuidance } from "@shared/businessPolicy";
+import { dispatchGuidance, transactionGuidance, projectLeadTime, samplePolicy, skuDispatchGuidance } from "@shared/businessPolicy";
+import { perfumeProjectSummary, perfumeProjectScope, perfumeSamplePolicy, perfumeSkuDispatch } from "@shared/perfumeCommercialTerms";
 import type { Product, ProductCategory } from "@/data/products";
 import { canonicalPublicWebsiteUrl } from "@shared/seo";
 
@@ -66,18 +67,19 @@ export function getCanonicalProductUrl(productUrl?: string) {
 }
 
 export function dispatchValue(value?: string) {
-  return isPendingValue(value) || /approx\.?\s*7 days/i.test(value!) ? dispatchGuidance : value!;
+  // Legacy numeric leadTime fields have no verified inventory applicability.
+  return isPendingValue(value) || /(?:7|seven)[ -]*days?/i.test(value!) ? skuDispatchGuidance : value!;
 }
 
 export const commercialTerms = {
   standard: [
     { label: "MOQ guidance", value: "MOQ varies by SKU" },
     { label: "Estimated dispatch", value: dispatchGuidance },
-    { label: "Free Samples", value: "Available" },
+    { label: "Samples", value: samplePolicy },
   ],
   custom: [
     { label: "Custom Logo", value: "From 100 pcs" },
-    { label: "Custom Packaging", value: "From 100 pcs" },
+    { label: "Custom Packaging", value: "From 300 pcs" },
     { label: "Custom Fragrance", value: "From 100 pcs" },
   ],
 } as const;
@@ -95,6 +97,7 @@ export type InquiryIntentKey = "sample" | "quote" | "project" | "whatsapp";
 export type WhatsAppCtaIntent = "sample" | "quote" | "project";
 export type InquirySummaryInput = {
   intent: InquiryIntentKey;
+  confirmedPerfumeTerms?: boolean;
   context?: { productName?: string; sku?: string; productUrl?: string; pageUrl?: string; inquiryIntent?: string; category?: string; standardMoq?: string; leadTime?: string; sampleAvailability?: string; customizationNote?: string; quantity?: string; unitPrice?: string; format?: string; subtotal?: string };
   name?: string;
   country?: string;
@@ -113,9 +116,9 @@ const inquiryTitle: Record<InquiryIntentKey, string> = {
 };
 
 export function buildInquirySummary(input: InquirySummaryInput) {
+  if (input.confirmedPerfumeTerms) return buildConfirmedPerfumeSummary(input);
   const standardMoq = customerValue(input.context?.standardMoq);
-  const leadTime = dispatchValue(input.context?.leadTime);
-  const sampleAvailability = customerValue(input.context?.sampleAvailability);
+  const leadTime = input.intent === "project" ? projectLeadTime : dispatchValue(input.context?.leadTime);
   const customTerms = input.context?.customizationNote
     ? input.context.customizationNote
     : "Contact us for product-specific customization scope and commercial terms.";
@@ -137,7 +140,8 @@ export function buildInquirySummary(input: InquirySummaryInput) {
     `Customization: ${input.customization || "Not provided"}`,
     `Notes: ${input.notes || "Not provided"}`,
     "",
-    `Standard order: MOQ ${standardMoq}; ${leadTime}; Free samples: ${sampleAvailability}.`,
+    `Standard order: MOQ ${standardMoq}; ${leadTime}`,
+    samplePolicy,
     customTerms,
     transactionGuidance,
   ];
@@ -153,12 +157,13 @@ export function getInquiryWhatsAppUrl(summary: string) {
 }
 
 const whatsAppCtaIntro: Record<WhatsAppCtaIntent, string> = {
-  sample: "Hi, I'm interested in requesting a free sample of this product.",
+  sample: "Hi, I'd like to confirm paid sample availability and charges for this product.",
   quote: "Hi, I'd like to get a wholesale quote for this product.",
   project: "Hi, I'm interested in private label / OEM / ODM customization for this product.",
 };
 
-export function buildWhatsAppCtaSummary(input: { intent: WhatsAppCtaIntent; context?: InquirySummaryInput["context"] }) {
+export function buildWhatsAppCtaSummary(input: { intent: WhatsAppCtaIntent; context?: InquirySummaryInput["context"]; confirmedPerfumeTerms?: boolean }) {
+  if (input.confirmedPerfumeTerms) return buildConfirmedPerfumeSummary(input);
   const context = input.context;
   const productUrl = getCanonicalProductUrl(context?.productUrl);
   return [
@@ -179,7 +184,8 @@ export function buildWhatsAppCtaSummary(input: { intent: WhatsAppCtaIntent; cont
     "",
     `MOQ: ${customerValue(context?.standardMoq)}`,
     "",
-    `Dispatch guidance: ${dispatchValue(context?.leadTime)}`,
+    `Dispatch guidance: ${input.intent === "project" ? projectLeadTime : dispatchValue(context?.leadTime)}`,
+    samplePolicy,
     ...(!isPendingValue(context?.unitPrice) ? [`Unit Price: ${context!.unitPrice}`] : []),
     ...(context?.quantity ? [`Quantity: ${context.quantity}`] : []),
     ...(context?.subtotal ? [`Product subtotal: ${context.subtotal}`, "Subtotal excludes shipping and taxes. Final delivered quote to be confirmed."] : []),
@@ -187,8 +193,34 @@ export function buildWhatsAppCtaSummary(input: { intent: WhatsAppCtaIntent; cont
   ].join("\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
-export function getWhatsAppCtaUrl(input: { intent: WhatsAppCtaIntent; context?: InquirySummaryInput["context"] }) {
+export function getWhatsAppCtaUrl(input: { intent: WhatsAppCtaIntent; context?: InquirySummaryInput["context"]; confirmedPerfumeTerms?: boolean }) {
   return getInquiryWhatsAppUrl(buildWhatsAppCtaSummary(input));
+}
+
+/** Opt-in for the reviewed perfume commercial routes; separates SKU and service terms. */
+function buildConfirmedPerfumeSummary(input: InquirySummaryInput) {
+  const project = input.intent === "project";
+  const context = project ? undefined : input.context;
+  return [
+    project ? "Hi, I'd like to discuss a separate private-label perfume project." : input.intent === "sample" ? "Hi, I'd like to ask about paid sample availability and charges." : "Hi, I'd like a wholesale quote. Please confirm current stock and order terms.",
+    `Product Name: ${project ? "Separate private-label perfume project" : context?.productName || "Perfume wholesale inquiry"}`,
+    ...(context?.productUrl ? [`Product URL: ${getCanonicalProductUrl(context.productUrl)}`] : []),
+    ...(input.context?.pageUrl ? [`Page URL: ${input.context.pageUrl}`] : []),
+    ...(context?.sku ? [`SKU: ${context.sku}`] : []),
+    ...(!isPendingValue(context?.format) ? [`Size / format: ${context!.format}`] : []),
+    ...(!isPendingValue(context?.unitPrice) ? [`Unit Price: ${context!.unitPrice}`] : []),
+    ...(!project ? [`Wholesale MOQ: ${customerValue(context?.standardMoq)}`, perfumeSkuDispatch] : [perfumeProjectSummary, perfumeProjectScope, projectLeadTime]),
+    ...(input.quantity || context?.quantity ? [`Quantity: ${input.quantity || context?.quantity}`] : []),
+    ...(context?.subtotal ? [`Product subtotal: ${context.subtotal} (excludes shipping and taxes; final quote to be confirmed).`] : []),
+    perfumeSamplePolicy,
+    ...(input.name ? [`Name: ${input.name}`] : []),
+    ...(input.country ? [`Country / Market: ${input.country}`] : []),
+    ...(input.email ? [`Email: ${input.email}`] : []),
+    ...(input.whatsapp ? [`WhatsApp: ${input.whatsapp}`] : []),
+    ...(input.customization ? [`Requested scope: ${input.customization}`] : []),
+    ...(input.notes ? [`Notes: ${input.notes}`] : []),
+    transactionGuidance,
+  ].join("\n");
 }
 
 export type DecisionField = { label: string; value: string; status?: string };
@@ -239,7 +271,7 @@ export function getProductStandardTerms(product: Product) {
   return [
     { label: "MOQ", value: customerValue(product.standardMoq) },
     { label: "Estimated dispatch", value: dispatchValue(product.leadTime) },
-    { label: "Free Samples", value: customerValue(product.sampleAvailability) },
+    { label: "Samples", value: samplePolicy },
   ];
 }
 

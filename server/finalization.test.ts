@@ -3,45 +3,48 @@ import { resolveInquiryProduct } from "./inquiryProduct";
 import { buildInquiryEmail, sendInquiryEmail } from "./inquiry";
 import { appRouter } from "./routers";
 import { ENV } from "./_core/env";
-import { products } from "../client/src/data/products";
+import { allProducts, products, getProduct } from "../client/src/data/products";
 import { buildRobotsTxt } from "../shared/seo";
 import { buildInquirySuccessEvent, isAnalyticsEnabled } from "../shared/analytics";
 import { getWhatsAppCtaUrl } from "../client/src/data/business";
 import { readFileSync } from "node:fs";
 
-const input = { intent: "quote" as const, quantity: "6", countryMarket: "QA market", customerName: "Test only", customerEmail: "qa@example.invalid", formStartedAt: Date.now() - 5000, productUrl: "https://topperfume.cn/products/daily-niacinamide-body-lotion" };
+const input = { intent: "quote" as const, quantity: "6", countryMarket: "QA market", customerName: "Test only", customerEmail: "qa@example.invalid", formStartedAt: Date.now() - 5000, productUrl: "https://topperfume.cn/products/vanilla-cashmere-whipped-oil-body-butter-283g" };
 const originalEnv = { ...ENV };
 afterEach(() => { Object.assign(ENV, originalEnv); vi.restoreAllMocks(); vi.unstubAllGlobals(); });
 function caller() { return appRouter.createCaller({ user: null, req: { ip: `qa-${Math.random()}`, socket: {}, headers: {} }, res: {} } as any); }
 
 describe("Final release preparation, with no real delivery", () => {
-  it("applies all five confirmed BC facts, preserving price differences", () => {
+  it("retains all five BC source records and price differences while only BC-04 is public", () => {
     const expected = [["BC-01", "500 mL", 3], ["BC-02", "500 mL", 3], ["BC-03", "500 mL", 3], ["BC-04", "283 g", 3], ["BC-05", "16 FL OZ / 473 mL", 4.99]];
     for (const [id, format, price] of expected) {
-      const product = products.find(p => p.intakeIds?.includes(id as string))!;
+      const product = allProducts.find(p => p.intakeIds?.includes(id as string))!;
       expect(product).toMatchObject({ format, unitPrice: price, minimumOrderQuantity: 6 });
       expect(product.missingInformation?.join(" ")).not.toMatch(/Capacity|MOQ/);
+      expect(Boolean(getProduct(product.slug))).toBe(id === "BC-04");
     }
     const pending = JSON.parse(readFileSync(new URL("../docs/pending-listing-matches.json", import.meta.url), "utf8"));
     expect(products.filter(p => p.sourceBatch && /Capacity to be confirmed/.test(p.format)).length + pending.filter((p: any) => !p.format).length).toBe(0);
   });
   it("rejects fractional, insufficient and unselected-variant requests", () => {
-    for (const quantity of ["0", "5", "6.5", "garbage"]) expect(() => resolveInquiryProduct({ ...input, quantity })).toThrow();
-    expect(() => resolveInquiryProduct({ ...input, productUrl: "https://topperfume.cn/products/glutaglow-body-lotion-400ml-600ml?variant=B04-01-400" })).toThrow(/variant/);
+    for (const quantity of ["0", "6.5", "garbage"]) expect(() => resolveInquiryProduct({ ...input, quantity })).toThrow(/positive whole-number/);
+    expect(() => resolveInquiryProduct({ ...input, quantity: "5" })).toThrow(/Minimum order: 6/);
+    expect(() => resolveInquiryProduct({ ...input, productUrl: "https://topperfume.cn/products/glutaglow-body-lotion-400ml-600ml?variant=B04-01-400" })).toThrow(/catalogue/);
+    for (const suffix of ["", "?variant=invalid"]) expect(() => resolveInquiryProduct({ ...input, productUrl: `https://topperfume.cn/products/olay-regenerist-cream-50g${suffix}` })).toThrow(/variant/);
   });
   it("derives exact product, specification, price and subtotal server-side", () => {
     const result = resolveInquiryProduct({ ...input, productName: "Tampered name", unitPrice: "US$0.01", subtotal: "US$0.01" });
-    expect(result).toMatchObject({ productName: "Daily Niacinamide Body Lotion — 500 mL", format: "500 mL", unitPrice: "US$3.00 / piece", subtotal: "US$18.00", standardMoq: "6 pieces" });
+    expect(result).toMatchObject({ productName: "Vanilla Cashmere Whipped Oil Body Butter — 283 g", format: "283 g", unitPrice: "US$3.00 / piece", subtotal: "US$18.00", standardMoq: "6 pieces" });
     const body = buildInquiryEmail(result).text;
-    expect(body).toContain("Size / format: 500 mL");
+    expect(body).toContain("Size / format: 283 g");
     expect(body).toContain("US$18.00 (excludes shipping and taxes)");
-    const variant = resolveInquiryProduct({ ...input, quantity: "12", productUrl: "https://topperfume.cn/products/glutaglow-body-lotion-400ml-600ml" });
-    expect(variant).toMatchObject({ format: "725 mL", subtotal: "US$36.00" });
+    const variant = resolveInquiryProduct({ ...input, quantity: "12", productUrl: "https://topperfume.cn/products/olay-regenerist-cream-50g?variant=B02-03-02" });
+    expect(variant).toMatchObject({ format: "50 g", subtotal: "US$36.00" });
     const unknown = resolveInquiryProduct({ ...input, quantity: "2", productUrl: "https://topperfume.cn/products/lattafa-khamrah-qahwa" });
     expect(unknown.format).toBe("100 mL");
     expect(unknown.subtotal).toBe("US$10.00");
     const text = new URL(getWhatsAppCtaUrl({ intent: "quote", context: { ...result, quantity: "6 pieces" } })).searchParams.get("text");
-    for (const value of ["500 mL", "US$3.00", "6 pieces", "US$18.00", "excludes shipping and taxes"]) expect(text).toContain(value);
+    for (const value of ["283 g", "US$3.00", "6 pieces", "US$18.00", "excludes shipping and taxes"]) expect(text).toContain(value);
   });
   it("keeps preview delivery disabled even if credentials exist", async () => {
     const fetchMock = vi.fn(); vi.stubGlobal("fetch", fetchMock);

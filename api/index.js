@@ -207,7 +207,9 @@ import { TRPCError as TRPCError3 } from "@trpc/server";
 import { z as z2 } from "zod";
 
 // shared/businessPolicy.ts
-var dispatchGuidance = "Estimated dispatch is usually around 7 days. The start date and order arrangements are agreed when you contact us. This is not a delivery estimate or a guarantee for every order.";
+var projectLeadTime = "Lead time depends on the customization scope and project requirements.";
+var skuDispatchGuidance = "Confirm current stock and the dispatch schedule for this product before ordering.";
+var samplePolicy = "Sample availability can be confirmed for the selected product or project. Samples are charged, and shipping is paid by the buyer.";
 var transactionGuidance = "This website is for product display and inquiries. Payment methods, shipping costs, taxes, the dispatch timeline start date, returns, exchanges and other transaction terms are negotiated for each order and confirmed in writing. Submitting an inquiry does not create an order.";
 
 // server/inquiry.ts
@@ -233,7 +235,10 @@ function buildInquiryEmail(input) {
     `Unit price: ${displayValue(input.unitPrice)}`,
     `Product subtotal: ${displayValue(input.subtotal)} (excludes shipping and taxes)`,
     "Final delivered quotation requires destination, availability and shipping confirmation. This is an inquiry, not an order.",
-    dispatchGuidance,
+    // Neither the form nor the verified product record establishes current stock.
+    // A quote request with a customization brief is still a custom-project timeline.
+    input.intent === "project" || /private label|custom|\bOEM\b|\bODM\b/i.test(input.customizationRequirement ?? "") ? projectLeadTime : skuDispatchGuidance,
+    samplePolicy,
     transactionGuidance,
     "",
     "BUYER DETAILS",

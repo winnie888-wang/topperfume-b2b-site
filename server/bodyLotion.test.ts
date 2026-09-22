@@ -1,13 +1,15 @@
 import { describe, expect, it } from "vitest";
-import { getProduct, products } from "../client/src/data/products";
+import { allProducts, getProduct, products } from "../client/src/data/products";
 import { canCustomizeProduct, customerValue, getProductCommercialType, getProductStandardTerms, getWhatsAppCtaUrl, isValidOrderQuantity } from "../client/src/data/business";
 import { getProductSeo } from "../shared/seo";
 
-describe("502 mL Vitamin C body lotion intake", () => {
-  const product = getProduct("vitamin-c-body-lotion-502ml")!;
+describe("Held 502 mL body lotion source record (not a public offer)", () => {
+  const product = allProducts.find(p => p.slug === "vitamin-c-body-lotion-502ml")!;
 
-  it("adds one 502 mL product while preserving the separate 444 mL product", () => {
-    expect(products.filter(item => item.slug === product.slug)).toHaveLength(1);
+  it("retains one source record while excluding it from public lookup and preserving the separate product", () => {
+    expect(allProducts.filter(item => item.slug === product.slug)).toHaveLength(1);
+    expect(getProduct(product.slug)).toBeUndefined();
+    expect(products.filter(item => item.slug === product.slug)).toHaveLength(0);
     expect(new Set(products.map(item => item.slug)).size).toBe(products.length);
     expect(product).toMatchObject({ category: "skincare", format: "502 mL / 17 FL OZ", unitPrice: 2.99, minimumOrderQuantity: 2, b2bPrice: "US$2.99 / bottle", standardMoq: "2 bottles" });
     expect(getProduct("vitamin-c-niacinamide-brightening-body-lotion")).toMatchObject({ sku: "SK-BL-VC-444", format: "444 ml / 15 fl oz", b2bPrice: "US$3.99 / pc", standardMoq: "12 pcs" });

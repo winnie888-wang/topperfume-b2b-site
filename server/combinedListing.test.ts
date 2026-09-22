@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { combinedListingProducts } from "../client/src/data/combinedListing";
-import { getProduct, products } from "../client/src/data/products";
+import { allProducts, getProduct, products } from "../client/src/data/products";
 import { getSkincareType, skincareTypes } from "../client/src/data/productTaxonomy";
 import { canCustomizeProduct, getWhatsAppCtaUrl } from "../client/src/data/business";
 import { getProductSeo, getProductOffer } from "../shared/seo";
@@ -18,9 +18,10 @@ describe("Combined listing intake and preservation", () => {
   it("retains all 23 previous records without modifying any product facts or gallery", () => {
     const baseline = read("catalogue-before-combined.json");
     expect(baseline).toHaveLength(23);
-    for (const product of baseline) expect(getProduct(product.slug)).toEqual(product);
-    expect(products).toHaveLength(52);
-    expect(new Set(products.map(product => product.slug)).size).toBe(52);
+    for (const product of baseline) expect(allProducts.find(p => p.slug === product.slug)).toEqual(product);
+    expect(allProducts).toHaveLength(52);
+    expect(products).toHaveLength(38);
+    expect(new Set(allProducts.map(product => product.slug)).size).toBe(52);
   });
 
   it("represents all 29 intake candidates on 23 pages without duplicating group photos or Simple uploads", () => {
@@ -46,10 +47,18 @@ describe("Combined listing intake and preservation", () => {
       expect(product.missingInformation).not.toContain("MOQ");
       expect(getProductOffer(product)).toMatchObject({ eligibleQuantity: { minValue: 6 } });
       const html = prerenderBody(`/products/${product.slug}`).replace(/<!--.*?-->/g, "");
-      expect(html).toContain("Minimum order: 6 pieces");
-      expect(html).toContain(`Product subtotal: US$${(product.unitPrice! * 6).toFixed(2)}`);
-      expect(html).toContain('min="6"');
-      expect(html).not.toContain("MOQ is not yet confirmed");
+      // BC-04 is public; the other batch-01 records are intentionally held.
+      if (source.intake_id === "BC-04") {
+        expect(getProduct(product.slug)).toBeDefined();
+        expect(html).toContain("Minimum order: 6 pieces");
+        expect(html).toContain(`Product subtotal: US$${(product.unitPrice! * 6).toFixed(2)}`);
+        expect(html).toContain('min="6"');
+        expect(html).not.toContain("MOQ is not yet confirmed");
+      } else {
+        expect(getProduct(product.slug)).toBeUndefined();
+        expect(html).toContain("PRODUCT NOT FOUND");
+        expect(html).not.toContain("Product subtotal:");
+      }
       const message = new URL(getWhatsAppCtaUrl({ intent: "quote", context: { productName: product.name, productUrl: `/products/${product.slug}`, standardMoq: product.standardMoq, unitPrice: product.b2bPrice, quantity: "6 pieces" } })).searchParams.get("text");
       expect(message).toContain("MOQ: 6 pieces");
       expect(message).toContain(`Unit Price: ${product.b2bPrice}`);
@@ -69,7 +78,7 @@ describe("Combined listing intake and preservation", () => {
 
   it("uses all seven skincare filters and keeps facial products out of Body Lotion", () => {
     const counts = skincareTypes.map(type => products.filter(product => product.category === "skincare" && getSkincareType(product) === type.label).length);
-    expect(counts).toEqual([16, 3, 1, 2, 2, 1, 1]);
+    expect(counts).toEqual([7, 1, 1, 0, 1, 1, 1]);
     expect(getSkincareType(byId("B02-03-01"))).toBe("Face Cream");
     expect(getSkincareType(byId("B02-11"))).toBe("Facial Cleanser");
   });

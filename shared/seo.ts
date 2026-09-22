@@ -1,5 +1,5 @@
 import { buyerGuides, guidePath } from "./buyerGuides";
-import { dispatchGuidance } from "./businessPolicy";
+import { dispatchGuidance, projectLeadTime, samplePolicy } from "./businessPolicy";
 import { getProduct, type Product, type ProductCategory } from "@/data/products";
 import { withOrderTerms } from "./productTerms";
 
@@ -57,31 +57,31 @@ export const contactSeo: SeoPage = {
   structuredData: { "@context": "https://schema.org", "@type": "ContactPage", name: "Contact TopPerfume", url: canonicalUrl("/contact") },
 };
 
-const lowMoqPerfumeFaqs = [
+export const lowMoqPerfumeFaqs = [
   {
     "@type": "Question",
     name: "What is the lowest MOQ for perfume orders?",
-    acceptedAnswer: { "@type": "Answer", text: "Selected standard perfume orders from 2 pcs. Product eligibility, quantity and commercial route are confirmed by SKU." },
+    acceptedAnswer: { "@type": "Answer", text: "Wholesale MOQ varies by SKU; selected products start from 2 pcs. Private Label starts from 100 pcs as a separate project. Current stock and order terms require confirmation." },
   },
   {
     "@type": "Question",
-    name: "Are free samples available?",
-    acceptedAnswer: { "@type": "Answer", text: "Free samples are available. Availability and quantity are confirmed by SKU. Shipping terms are confirmed by destination." },
+    name: "Are samples available and how are they charged?",
+    acceptedAnswer: { "@type": "Answer", text: samplePolicy },
   },
   {
     "@type": "Question",
-    name: "How long does an eligible standard order take?",
-    acceptedAnswer: { "@type": "Answer", text: dispatchGuidance },
+    name: "How long do stock orders and custom projects take?",
+    acceptedAnswer: { "@type": "Answer", text: `${dispatchGuidance} ${projectLeadTime}` },
   },
   {
     "@type": "Question",
     name: "Can I add my logo from 100 pcs?",
-    acceptedAnswer: { "@type": "Answer", text: "Logo customization from 100 pcs. The selected product, label route and project scope are confirmed before quotation." },
+    acceptedAnswer: { "@type": "Answer", text: "Private Label from 100 pcs. Logo customization from 100 pcs. These are separate project terms, not permission to relabel a branded product. Product selection and project scope are confirmed before quotation." },
   },
   {
     "@type": "Question",
-    name: "Can I customize the packaging from 100 pcs?",
-    acceptedAnswer: { "@type": "Answer", text: "Custom packaging from 100 pcs. Individual bottle, cap, carton, label and artwork scope is confirmed per project." },
+    name: "Can I customize the packaging from 300 pcs?",
+    acceptedAnswer: { "@type": "Answer", text: "Custom packaging from 300 pcs. Individual bottle, cap, carton, label and artwork scope is confirmed per project." },
   },
   {
     "@type": "Question",
@@ -105,6 +105,8 @@ const lowMoqPerfumeProducts = [
 ] as const;
 
 const verifiedProductBrands: Record<string, string> = {
+  // combinedListing.ts labelInformation explicitly identifies Lattafa on this SKU.
+  "lattafa-khamrah": "Lattafa",
   "dior-sauvage-parfum-spray-men": "Dior",
   "carolina-herrera-good-girl-blush-tweed-talk-edp-women": "Carolina Herrera",
   "carolina-herrera-very-good-girl-glam-edp-women": "Carolina Herrera",
@@ -120,12 +122,13 @@ function getProductStructuredFields(product: Product) {
     ...(product.image ? { image: product.gallery ? product.gallery.map(image => new URL(image.src, canonicalPublicWebsiteUrl).href) : new URL(product.image, canonicalPublicWebsiteUrl).href } : {}),
     ...(productDescription ? { description: productDescription } : {}),
     ...(brandName ? { brand: { "@type": "Brand", name: brandName } } : {}),
+    ...(product.slug === "lattafa-khamrah" ? { size: product.format } : {}),
   };
 }
 
 export const lowMoqPerfumeSeo: SeoPage = {
-  title: "Low MOQ Perfume Wholesale Sourcing Partner - From 2 Pcs | TopPerfume",
-  description: "Selected standard perfume orders from 2 pcs. Free samples are available. Logo, packaging and custom fragrance options start from 100 pcs, subject to project confirmation.",
+  title: "Low MOQ Perfume Wholesale & Private Label | TopPerfume",
+  description: "Compare SKU-specific wholesale MOQs with separate private label, logo and fragrance projects from 100 pcs; packaging from 300 pcs. Paid samples; buyer pays freight.",
   path: "/low-moq-perfume-manufacturer",
   type: "website",
   structuredData: [
@@ -133,7 +136,7 @@ export const lowMoqPerfumeSeo: SeoPage = {
       "@context": "https://schema.org",
       "@type": "WebPage",
       name: "Low MOQ Perfume Options for New and Growing Brands",
-      description: "Selected standard perfume orders from 2 pcs, with free samples available and logo, packaging and custom fragrance options from 100 pcs subject to project confirmation.",
+      description: "Wholesale MOQ varies by SKU. Separate private label, logo and fragrance projects start from 100 pcs; custom packaging from 300 pcs. Samples are charged, and shipping costs are paid by the buyer.",
       url: canonicalUrl("/low-moq-perfume-manufacturer"),
       isPartOf: { "@type": "WebSite", name: "TopPerfume", url: canonicalPublicWebsiteUrl },
     },
@@ -176,8 +179,8 @@ export const lowMoqPerfumeSeo: SeoPage = {
 
 const collectionSeoCopy: Record<ProductCategory, Pick<SeoPage, "title" | "description">> = {
   fragrance: {
-    title: "Fragrance Wholesale Catalogue | TopPerfume",
-    description: "Browse TopPerfume fragrance formats for branded wholesale, private label, OEM and ODM buyer enquiries, samples and quotations.",
+    title: "Wholesale Perfume & Private Label Projects | TopPerfume",
+    description: "Compare perfume sizes, wholesale prices and SKU-specific MOQs. Explore separate private-label projects from 100 pcs, paid samples and sourcing with TopPerfume.",
   },
   skincare: {
     title: "Skincare & Body Care Wholesale Catalogue | TopPerfume",
@@ -196,6 +199,7 @@ export const collectionSeo: Record<ProductCategory, SeoPage> = (Object.keys(coll
     ...copy,
     path,
     type: "website",
+    ...(category === "fragrance" ? { image: new URL(getProduct("lattafa-khamrah")!.image, canonicalPublicWebsiteUrl).href } : {}),
     structuredData: {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
@@ -235,7 +239,9 @@ export function getProductOffer(product: Product) {
 export function getProductSeo(product: Product): SeoPage {
   const path = `/products/${product.slug}`;
   const categoryLabel = product.category === "skincare" ? "Skincare & Body Care" : product.category[0].toUpperCase() + product.category.slice(1);
-  const description = product.seoDescription ?? (product.minimumOrderQuantity
+  const description = product.slug === "lattafa-khamrah"
+    ? `Source Lattafa Khamrah ${product.format} at ${product.b2bPrice}, wholesale MOQ ${product.standardMoq}. Confirm stock, paid sample availability and dispatch with TopPerfume.`
+    : product.seoDescription ?? (product.minimumOrderQuantity
     ? `${product.name}, ${product.b2bPrice}. Minimum order: ${product.standardMoq}. View product images and request a wholesale quote from TopPerfume. Delivery terms confirmed on request.`
     : `${product.name} is a ${cleanDescriptor(product.descriptor)} ${categoryLabel.toLowerCase()} format for B2B buyers. Request a wholesale quote from TopPerfume.`);
   const offer = getProductOffer(product);
@@ -282,7 +288,7 @@ export function getProductSeo(product: Product): SeoPage {
   };
 
   return {
-    title: `${product.name} | ${categoryLabel} Wholesale | TopPerfume`,
+    title: product.slug === "lattafa-khamrah" ? `Lattafa Khamrah ${product.format} Wholesale | TopPerfume` : `${product.name} | ${categoryLabel} Wholesale | TopPerfume`,
     image: new URL(product.image, canonicalPublicWebsiteUrl).href,
     description,
     path,

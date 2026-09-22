@@ -27,7 +27,7 @@ describe("public customer-facing asset URLs", () => {
   });
 
   it("retains the original Blob visuals and resolves repository-hosted product assets", () => {
-    expect(products).toHaveLength(52);
+    expect(products).toHaveLength(38);
     for (const product of products) {
       if (product.image.startsWith("/assets/")) {
         expect(fs.existsSync(path.join(clientRoot, "public", product.image))).toBe(true);

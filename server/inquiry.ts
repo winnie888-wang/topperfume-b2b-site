@@ -1,4 +1,4 @@
-import { dispatchGuidance, transactionGuidance } from "../shared/businessPolicy";
+import { projectLeadTime, samplePolicy, skuDispatchGuidance, transactionGuidance } from "../shared/businessPolicy";
 import { randomUUID } from "node:crypto";
 
 export type InquiryEmailInput = {
@@ -48,7 +48,10 @@ export function buildInquiryEmail(input: InquiryEmailInput) {
     `Unit price: ${displayValue(input.unitPrice)}`,
     `Product subtotal: ${displayValue(input.subtotal)} (excludes shipping and taxes)`,
     "Final delivered quotation requires destination, availability and shipping confirmation. This is an inquiry, not an order.",
-    dispatchGuidance,
+    // Neither the form nor the verified product record establishes current stock.
+    // A quote request with a customization brief is still a custom-project timeline.
+    input.intent === "project" || /private label|custom|\bOEM\b|\bODM\b/i.test(input.customizationRequirement ?? "") ? projectLeadTime : skuDispatchGuidance,
+    samplePolicy,
     transactionGuidance,
     "",
     "BUYER DETAILS",
