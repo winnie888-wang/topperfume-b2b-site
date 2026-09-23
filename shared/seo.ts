@@ -236,12 +236,25 @@ export function getProductOffer(product: Product) {
   };
 }
 
+// Editorial metadata for the two catalogue references used by buyer guide 4.
+// These descriptions add no size, stock, wear-time or customization commitment.
+const makeupGuideProductMetadata: Record<string, { title: string; description: string }> = {
+  "hydrating-mirror-shine-lip-glaze": {
+    title: "Mirror-Shine Lip Glaze Wholesale | TopPerfume",
+    description: "Explore Hydrating Mirror-Shine Lip Glaze for wholesale buying. Confirm shade details, paid sample availability and customization eligibility for your request.",
+  },
+  "mocha-chocolate-9-shade-eyeshadow-palette": {
+    title: "9-Shade Mocha Eyeshadow Palette Wholesale | TopPerfume",
+    description: "Compare the Mocha Chocolate 9-Shade Eyeshadow Palette for wholesale buying. Confirm product details, paid sample availability and customization eligibility.",
+  },
+};
+
 export function getProductSeo(product: Product): SeoPage {
   const path = `/products/${product.slug}`;
   const categoryLabel = product.category === "skincare" ? "Skincare & Body Care" : product.category[0].toUpperCase() + product.category.slice(1);
   const description = product.slug === "lattafa-khamrah"
     ? `Source Lattafa Khamrah ${product.format} at ${product.b2bPrice}, wholesale MOQ ${product.standardMoq}. Confirm stock, paid sample availability and dispatch with TopPerfume.`
-    : product.seoDescription ?? (product.minimumOrderQuantity
+    : makeupGuideProductMetadata[product.slug]?.description ?? product.seoDescription ?? (product.minimumOrderQuantity
     ? `${product.name}, ${product.b2bPrice}. Minimum order: ${product.standardMoq}. View product images and request a wholesale quote from TopPerfume. Delivery terms confirmed on request.`
     : `${product.name} is a ${cleanDescriptor(product.descriptor)} ${categoryLabel.toLowerCase()} format for B2B buyers. Request a wholesale quote from TopPerfume.`);
   const offer = getProductOffer(product);
@@ -288,7 +301,7 @@ export function getProductSeo(product: Product): SeoPage {
   };
 
   return {
-    title: product.slug === "lattafa-khamrah" ? `Lattafa Khamrah ${product.format} Wholesale | TopPerfume` : `${product.name} | ${categoryLabel} Wholesale | TopPerfume`,
+    title: product.slug === "lattafa-khamrah" ? `Lattafa Khamrah ${product.format} Wholesale | TopPerfume` : makeupGuideProductMetadata[product.slug]?.title ?? `${product.name} | ${categoryLabel} Wholesale | TopPerfume`,
     image: new URL(product.image, canonicalPublicWebsiteUrl).href,
     description,
     path,

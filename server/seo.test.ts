@@ -23,7 +23,7 @@ describe("Production SEO foundation", () => {
     const sitemap = buildSitemapXml(products);
     const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
 
-    expect(urls).toHaveLength(products.length + 10);
+    expect(urls).toHaveLength(products.length + 12);
     expect(urls[0]).toBe("https://topperfume.cn/");
     expect(urls).toContain("https://topperfume.cn/collections/fragrance");
     expect(urls).toContain("https://topperfume.cn/collections/skincare");

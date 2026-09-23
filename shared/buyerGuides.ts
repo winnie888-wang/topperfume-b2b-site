@@ -4,9 +4,18 @@ import type { SeoPage } from './seo';
 export const buyerGuides = articleData;
 export type BuyerGuide = typeof buyerGuides[number];
 export const guidePath = (slug: string) => `/buyer-guides/${slug}`;
+export function getGuideConsultation(article: BuyerGuide) {
+  if (article.id === 'TP-SEO-003') return { intent: 'sample' as const, label: 'Discuss your sample shortlist' };
+  if (article.id === 'TP-SEO-004') return { intent: 'project' as const, label: 'Discuss your makeup project' };
+  return article.id === 'TP-SEO-001'
+    ? { intent: 'project' as const, label: 'Discuss your logo project' }
+    : { intent: 'quote' as const, label: 'Request a wholesale quote' };
+}
+export const guideCategoryLabel = (article: BuyerGuide) => article.category === 'makeup' ? 'MAKEUP PROCUREMENT' : 'PERFUME PROCUREMENT';
+export const guideDateLabel = (article: BuyerGuide) => new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${article.publishedDate}T00:00:00Z`));
 export const buyerGuidesSeo: SeoPage = {
-  title: 'Buyer Guides | Perfume Wholesale & Private Label | TopPerfume',
-  description: 'Practical buying guides for your first wholesale perfume order and eligible custom logo projects. Prepare product requirements, sample questions and a quotation brief.',
+  title: 'Perfume & Makeup Buyer Guides | TopPerfume',
+  description: 'Plan perfume and makeup purchases with guides to wholesale orders, sample comparison, custom logo briefs and first collections. Prepare a clear buying inquiry.',
   path: '/buyer-guides',
   structuredData: {
     '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'TopPerfume Buyer Guides',

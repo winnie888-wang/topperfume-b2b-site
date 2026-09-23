@@ -22,7 +22,7 @@ describe("Phase 3.1 business consistency across public surfaces", () => {
 
   it("keeps every public route free of free-sample promises and every SKU free of default seven-day claims", () => {
     const routes = [...buildSitemapXml(products).matchAll(/<loc>(.*?)<\/loc>/g)].map(m => new URL(m[1]).pathname);
-    expect(routes).toHaveLength(48);
+    expect(routes).toHaveLength(50);
     for (const route of routes) {
       const html = htmlFor(route);
       expect(html, route).not.toMatch(/free[ -]?samples?/i);
