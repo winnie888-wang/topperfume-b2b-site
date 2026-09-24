@@ -5,6 +5,7 @@ export const buyerGuides = articleData;
 export type BuyerGuide = Omit<typeof buyerGuides[number], 'publishedDate'> & { publishedDate: string | null };
 export const guidePath = (slug: string) => `/buyer-guides/${slug}`;
 export function getGuideConsultation(article: BuyerGuide) {
+  if (article.id === 'TP-SEO-006') return { intent: 'quote' as const, label: 'Send Your Product & Quote Details for Review' };
   if (article.id === 'TP-SEO-005') return { intent: 'project' as const, label: 'Send Your Quantity Plan for Review' };
   if (article.id === 'TP-SEO-003') return { intent: 'sample' as const, label: 'Discuss your sample shortlist' };
   if (article.id === 'TP-SEO-004') return { intent: 'project' as const, label: 'Discuss your makeup project' };

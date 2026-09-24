@@ -22,14 +22,26 @@ describe("Phase 3.1 business consistency across public surfaces", () => {
 
   it("keeps every public route free of free-sample promises and every SKU free of default seven-day claims", () => {
     const routes = [...buildSitemapXml(products).matchAll(/<loc>(.*?)<\/loc>/g)].map(m => new URL(m[1]).pathname);
-    expect(routes).toHaveLength(51);
+    expect(routes).toHaveLength(52);
     for (const route of routes) {
       const html = htmlFor(route);
       expect(html, route).not.toMatch(/free[ -]?samples?/i);
       if (route.startsWith("/products/")) expect(html, route).not.toMatch(/(?:7|seven)[ -]*days?/i);
       else {
-        // Any remaining seven-day statement must be the exact conditional stock policy.
-        expect(html.split(stockPolicy).join(""), route).not.toMatch(/(?:7|seven)[ -]*days?/i);
+        // Only the conditional stock policy is a promise. The locked supplier guide
+        // also explains a prohibited interpretation and asks how an ambiguous quote is defined.
+        let checked = html.split(stockPolicy).join("");
+        if (route === "/buyer-guides/verify-perfume-supplier-before-first-order") {
+          const explanatoryPhrases = [
+            "This applies to dispatch of confirmed in-stock orders. It is not a seven-day delivery or private-label production commitment.",
+            "<td>“Seven days” appears without a defined stage</td>\n<td>“Does this refer to dispatch of confirmed stock, production or transport? What starts the timing?”</td>",
+          ];
+          for (const phrase of explanatoryPhrases) {
+            expect(checked).toContain(phrase);
+            checked = checked.replace(phrase, "");
+          }
+        }
+        expect(checked, route).not.toMatch(/(?:7|seven)[ -]*days?/i);
       }
     }
   });

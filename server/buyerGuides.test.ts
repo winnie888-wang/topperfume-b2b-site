@@ -6,24 +6,24 @@ import { buildSitemapXml, getProductSeo } from '../shared/seo';
 import { getProduct, products } from '../client/src/data/products';
 import { prerenderBody } from '../scripts/prerender';
 
-const plain = (text: string) => text.replace(/<\/?a\b[^>]*>/g, '').replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"').replace(/\s+/g, ' ').trim();
+const plain = (text: string) => text.replace(/<\/?(?:a|strong|em)\b[^>]*>/g, '').replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"').replace(/\s+/g, ' ').trim();
 describe('approved SEO buyer guides', () => {
-  it('integrates the five approved bodies with every table, paragraph and list item preserved', () => {
-    expect(buyerGuides.map(a => a.id)).toEqual(['TP-SEO-001', 'TP-SEO-002', 'TP-SEO-003', 'TP-SEO-004', 'TP-SEO-005']);
+  it('integrates the six approved bodies with every table, paragraph and list item preserved', () => {
+    expect(buyerGuides.map(a => a.id)).toEqual(['TP-SEO-001', 'TP-SEO-002', 'TP-SEO-003', 'TP-SEO-004', 'TP-SEO-005', 'TP-SEO-006']);
     for (const article of buyerGuides) {
       const source = readFileSync(`content/buyer-guides/${article.id}.md`, 'utf8').replace(/\r\n/g, '\n');
       expect(createHash('sha256').update(source).digest('hex')).toBe(article.sourceSha256);
       expect(article.html).not.toMatch(/[\u4e00-\u9fff]|ENGLISH BODY|ARTICLE 1|ARTICLE 2|<script|<iframe|javascript:/);
       const rendered = plain(article.html);
       for (const line of source.split('\n').slice(1)) {
-        if (!line.trim() || /^\|[ -]+\|/.test(line)) continue;
+        if (!line.trim() || /^\|[ :\-]+\|/.test(line)) continue;
         const cells = line.startsWith('|') ? line.split('|').slice(1, -1) : [line];
         for (const cell of cells) {
           const text = cell.replace(/^#{1,6} |^- (?:\[ \] )?|^\d+\. /, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*/g, '').trim();
           expect(rendered).toContain(plain(text));
         }
       }
-      expect((article.html.match(/<table>/g) ?? []).length).toBe(article.id === 'TP-SEO-005' ? 5 : article.id === 'TP-SEO-002' ? 3 : 2);
+      expect((article.html.match(/<table>/g) ?? []).length).toBe(article.id === 'TP-SEO-006' ? 7 : article.id === 'TP-SEO-005' ? 5 : article.id === 'TP-SEO-002' ? 3 : 2);
     }
   });
   it('uses existing public product and consultation targets and unique canonical/schema/sitemap URLs', () => {
@@ -38,10 +38,11 @@ describe('approved SEO buyer guides', () => {
       expect(seo.structuredData).toMatchObject({ '@type': 'Article', headline: article.title, inLanguage: 'en' });
       if (!article.publishedDate) expect(seo.structuredData).not.toHaveProperty('datePublished');
       else expect(seo.structuredData).toHaveProperty('datePublished', article.publishedDate);
-      if (article.id !== 'TP-SEO-005') expect(article.publishedDate).toBe(article.id <= 'TP-SEO-002' ? '2026-09-17' : '2026-09-24');
+      if (article.id <= 'TP-SEO-005') expect(article.publishedDate).toBe(article.id <= 'TP-SEO-002' ? '2026-09-17' : '2026-09-24');
       expect(sitemap).toContain(`https://topperfume.cn${seo.path}`);
       for (const [, href] of article.html.matchAll(/href="([^"]+)"/g)) {
         const url = new URL(href);
+        if (article.id === 'TP-SEO-006' && href === 'https://www.fbi.gov/how-we-can-help-you/common-frauds-and-scams/business-email-compromise') continue;
         expect(url.origin).toBe('https://topperfume.cn');
         if (url.pathname.startsWith('/products/')) expect(getProduct(url.pathname.split('/')[2])).toBeDefined();
         else expect(['/contact', '/collections/fragrance', '/collections/makeup', '/low-moq-perfume-manufacturer', ...buyerGuides.map(a => guidePath(a.slug))]).toContain(url.pathname);
@@ -90,9 +91,29 @@ describe('approved SEO buyer guides', () => {
     expect(html).toContain('Illustrative example only:');
     expect(html).not.toMatch(/free[ -]?sample|7[ -]?day/i);
     expect(article.relatedIds).toEqual(['TP-SEO-001', 'TP-SEO-002', 'TP-SEO-003']);
-    for (const existing of buyerGuides.filter(a => a.id !== article.id)) {
+    for (const existing of buyerGuides.filter(a => a.id < article.id)) {
       expect(existing.relatedIds).not.toContain(article.id);
     }
+  });
+  it('preserves published supplier verification V1.1, its tools and official reference', () => {
+    const article = buyerGuides.find(a => a.id === 'TP-SEO-006')!;
+    const source = readFileSync('content/buyer-guides/TP-SEO-006.md', 'utf8').replace(/\r\n/g, '\n');
+    const approved = readFileSync('docs/TP-SEO-006_BODY_V1.1.md', 'utf8').replace(/\r\n/g, '\n');
+    expect(createHash('sha256').update(source).digest('hex')).toBe('b5b527ff099d4e2cf32d5d8351afc15d27cf7b6c93ec3cc5c00aac9b6f8be5e6');
+    expect(approved).toBe('**TP-SEO-006 English Body V1.1**\n\n' + source + '\nStandalone value: CONFIRMED\n');
+    expect(article.publishedDate).toBe('2026-09-25');
+    expect(() => assertBuyerGuidePublicationDates()).not.toThrow();
+    expect(getBuyerGuideSeo(article).structuredData).toMatchObject({ datePublished: '2026-09-25', dateModified: '2026-09-25' });
+    expect(prerenderBody(guidePath(article.slug))).not.toContain('Publication pending');
+    expect(getGuideConsultation(article)).toEqual({ intent: 'quote', label: 'Send Your Product & Quote Details for Review' });
+    expect((article.html.match(/type="checkbox"/g) ?? [])).toHaveLength(13);
+    expect((article.html.match(/href="https:\/\/www\.fbi\.gov\//g) ?? [])).toHaveLength(1);
+    expect((article.html.match(/href="https:\/\/topperfume\.cn\//g) ?? [])).toHaveLength(7);
+    expect(article.relatedIds).toEqual(['TP-SEO-001', 'TP-SEO-002', 'TP-SEO-003', 'TP-SEO-005']);
+    expect(article.html).toContain('Illustrative example only—not a TopPerfume order, customer case or confirmed service offer.');
+    expect(article.html).toContain('Samples are charged, and shipping is paid by the buyer.');
+    expect(article.html).toContain('For in-stock orders, dispatch is typically around 7 days after order confirmation.');
+    expect(article.html).not.toMatch(/Standalone value|English Body V1|<iframe|<script/);
   });
   it('does not invent a publication date and blocks Production until an actual date is supplied', () => {
     const article = { ...buyerGuides.find(a => a.id === 'TP-SEO-005')!, publishedDate: null };

@@ -67,7 +67,7 @@ describe("First commercial page batch: fact boundaries", () => {
     expect(html).toContain("id=\"private-label\"");
     expect(html).not.toMatch(/free samples?/i);
     expect(collectionSeo.fragrance.image).toContain("lattafa-khamrah");
-    expect((buildSitemapXml(products).match(/<loc>/g) || []).length).toBe(51);
+    expect((buildSitemapXml(products).match(/<loc>/g) || []).length).toBe(52);
   });
 
   it("does not enable the new project blocks on other products or collections", () => {
