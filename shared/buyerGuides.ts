@@ -2,9 +2,10 @@ import articleData from './buyer-guides.json';
 import type { SeoPage } from './seo';
 
 export const buyerGuides = articleData;
-export type BuyerGuide = typeof buyerGuides[number];
+export type BuyerGuide = Omit<typeof buyerGuides[number], 'publishedDate'> & { publishedDate: string | null };
 export const guidePath = (slug: string) => `/buyer-guides/${slug}`;
 export function getGuideConsultation(article: BuyerGuide) {
+  if (article.id === 'TP-SEO-005') return { intent: 'project' as const, label: 'Send Your Quantity Plan for Review' };
   if (article.id === 'TP-SEO-003') return { intent: 'sample' as const, label: 'Discuss your sample shortlist' };
   if (article.id === 'TP-SEO-004') return { intent: 'project' as const, label: 'Discuss your makeup project' };
   return article.id === 'TP-SEO-001'
@@ -12,7 +13,20 @@ export function getGuideConsultation(article: BuyerGuide) {
     : { intent: 'quote' as const, label: 'Request a wholesale quote' };
 }
 export const guideCategoryLabel = (article: BuyerGuide) => article.category === 'makeup' ? 'MAKEUP PROCUREMENT' : 'PERFUME PROCUREMENT';
-export const guideDateLabel = (article: BuyerGuide) => new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${article.publishedDate}T00:00:00Z`));
+export const guideDateLabel = (article: BuyerGuide) => article.publishedDate
+  ? new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${article.publishedDate}T00:00:00Z`))
+  : 'Publication pending';
+
+// Preview may contain an approved body awaiting its actual first-publication date.
+export function assertBuyerGuidePublicationDates(articles: BuyerGuide[] = buyerGuides) {
+  for (const article of articles) {
+    const date = article.publishedDate;
+    const parsed = date ? new Date(`${date}T00:00:00Z`) : null;
+    if (!date || !/^\d{4}-\d{2}-\d{2}$/.test(date) || !parsed || Number.isNaN(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== date) {
+      throw new Error(`Set the actual publication date for ${article.id} before a Production build.`);
+    }
+  }
+}
 export const buyerGuidesSeo: SeoPage = {
   title: 'Perfume & Makeup Buyer Guides | TopPerfume',
   description: 'Plan perfume and makeup purchases with guides to wholesale orders, sample comparison, custom logo briefs and first collections. Prepare a clear buying inquiry.',
@@ -32,7 +46,7 @@ export function getBuyerGuideSeo(article: BuyerGuide): SeoPage {
       '@context': 'https://schema.org', '@type': 'Article', '@id': `${url}#article`,
       headline: article.title, description: article.description, inLanguage: 'en',
       url, mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-      datePublished: article.publishedDate, dateModified: article.publishedDate,
+      ...(article.publishedDate ? { datePublished: article.publishedDate, dateModified: article.publishedDate } : {}),
       author: { '@type': 'Organization', name: 'TopPerfume', url: 'https://topperfume.cn/contact' },
       publisher: { '@type': 'Organization', name: 'TopPerfume', url: 'https://topperfume.cn/' },
     },

@@ -1,4 +1,4 @@
-import { buyerGuides, buyerGuidesSeo, getBuyerGuideSeo, guidePath } from "../shared/buyerGuides";
+import { buyerGuides, buyerGuidesSeo, getBuyerGuideSeo, guidePath, assertBuyerGuidePublicationDates } from "../shared/buyerGuides";
 import { mkdir, readFile, writeFile, rm } from "node:fs/promises";
 import path from "node:path";
 import { prerenderBody } from "./prerender";
@@ -8,6 +8,7 @@ import { buildRobotsTxt, buildSitemapXml, collectionSeo, contactSeo, privacySeo,
 const outputDirectory = path.resolve(import.meta.dirname, "..", "dist", "public");
 const indexable = process.env.VERCEL_ENV !== "preview" && process.env.SITE_INDEXABLE === "true";
 if (process.env.VERCEL_ENV === 'production') {
+  assertBuyerGuidePublicationDates();
   const internalDirectory = path.resolve(outputDirectory, 'previews');
   if (path.dirname(internalDirectory) !== outputDirectory) throw new Error('Unsafe internal build path');
   await rm(internalDirectory, { recursive: true, force: true });
