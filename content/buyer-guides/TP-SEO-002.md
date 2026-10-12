@@ -51,6 +51,8 @@ Use reasonably consistent conditions when comparing samples, and record the time
 
 Ask the supplier to clarify any mismatch between the sample, the product description and the proposed bulk supply before proceeding.
 
+Use the [perfume sample comparison guide](https://topperfume.cn/buyer-guides/compare-perfume-samples-wholesale) to keep an observation record before choosing quantities.
+
 ## Confirm buying terms product by product
 
 A low minimum advertised for one item does not establish the minimum for an entire catalogue. Check the exact SKU and any variants you want to order.
@@ -80,6 +82,8 @@ Keep the product subtotal separate from the full purchasing cost. Use the actual
 | Other applicable charges | Amounts confirmed for your transaction and destination |
 
 Compare suppliers on the same product specification, quantities and included services. If an amount is unknown, keep it visible as an item to confirm rather than treating it as zero.
+
+Before comparing totals, [check each quotation against the product and supply scope](https://topperfume.cn/buyer-guides/verify-perfume-supplier-before-first-order).
 
 TopPerfume’s [order information](https://topperfume.cn/contact#order-terms) explains that listed product subtotals exclude shipping and taxes and that transaction arrangements are agreed for each order.
 
